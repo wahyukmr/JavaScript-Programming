@@ -6,7 +6,7 @@
 
 <details><summary>
 
-## [Fundamentals-Part-1](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/01-Fundamentals-Part-1/script.js)
+## [Fundamentals-Part-1](https://github.com/wahyukmr/JavaScript-Programming/blob/master/01-Fundamentals-Part-1/script.js)
 </summary>
 
   ### ~ Type conversion and coercion :
@@ -15,7 +15,7 @@
 
 <details> <summary>
 
-## [Fundamentals-Part-2](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/02-Fundamentals-Part-2/script.js)
+## [Fundamentals-Part-2](https://github.com/wahyukmr/JavaScript-Programming/blob/master/02-Fundamentals-Part-2/script.js)
 </summary>
   
   ### ~ Activating Strict Mode :
@@ -44,7 +44,7 @@
 
 <details> <summary>
 
-## [Developer-Skills](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/03-Developer-Skills/script.js)
+## [Developer-Skills](https://github.com/wahyukmr/JavaScript-Programming/blob/master/03-Developer-Skills/script.js)
 </summary>
 
   ### ~ 4 Step to solve any problem :
@@ -75,7 +75,7 @@
 
 <details> <summary>
 
-## [Behind-the-Scenes](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/08-Behind-the-Scenes/script.js)
+## [Behind-the-Scenes](https://github.com/wahyukmr/JavaScript-Programming/blob/master/08-Behind-the-Scenes/script.js)
 </summary>
   
   ### ~ Scope in JavaScript :
@@ -133,7 +133,7 @@
 
 <details> <summary>
 
-## [Data-Structures-Operators](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/09-Data-Structures-Operators/script.js)
+## [Data-Structures-Operators](https://github.com/wahyukmr/JavaScript-Programming/blob/master/09-Data-Structures-Operators/script.js)
 </summary>
 
    ### ~ Data Structure Overview :
@@ -225,7 +225,7 @@
 
 <details> <summary>
 
-## [Functions](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/10-Functions/script.js)
+## [Functions](https://github.com/wahyukmr/JavaScript-Programming/blob/master/10-Functions/script.js)
 </summary>
   
   ### How Passing Argument Works: Value Vs Reference :
@@ -262,7 +262,7 @@
 
 <details> <summary>
 
-## [Arrays-Bankist](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/11-Arrays-Bankist/script.js)
+## [Arrays-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/11-Arrays-Bankist/script.js)
 </summary>
   
   ### Looping Arrays: forEach
@@ -328,7 +328,7 @@
 
 <details> <summary>
 
-## [Advanced-DOM-Bankist](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/13-Advanced-DOM-Bankist/script.js)
+## [Advanced-DOM-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/13-Advanced-DOM-Bankist/script.js)
 </summary>
 
   ### Event Propagation: Bubbling and Cupturing :
@@ -347,7 +347,7 @@
 
 <details> <summary>
 
-## [OOP](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/14-OOP/script.js)
+## [OOP](https://github.com/wahyukmr/JavaScript-Programming/blob/master/14-OOP/script.js)
 </summary>
   
   ### TECHNIQUE USING PROTOTYPE INHERITANCE: Constructor functions :
@@ -425,7 +425,7 @@
 
 <details> <summary>
 
-## [Asynchronous](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/15-Asynchronous/script.js)
+## [Asynchronous](https://github.com/wahyukmr/JavaScript-Programming/blob/master/15-Asynchronous/script.js)
 </summary>
   
   ### old version of ajax calling with XML Http Request function :
@@ -454,7 +454,7 @@
 
 <details> <summary>
 
-## [Modern-JS-Modules-Tooling](https://github.com/wahyukmr/Complete-JavaScript-Material/blob/master/16-Modern-JS-Modules-Tooling/script.js)
+## [Modern-JS-Modules-Tooling](https://github.com/wahyukmr/JavaScript-Programming/blob/master/16-Modern-JS-Modules-Tooling/script.js)
 </summary>
   
   ### Introduction to NPM :
