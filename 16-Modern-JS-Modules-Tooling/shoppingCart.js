@@ -9,7 +9,7 @@ console.log("****************Exporting the module*******************");
 console.log("Start fetching user");
 
 const getUserResponse = await fetch(
-  "https://jsonplaceholder.typicode.com/users"
+    "https://jsonplaceholder.typicode.com/users"
 );
 console.log(getUserResponse);
 

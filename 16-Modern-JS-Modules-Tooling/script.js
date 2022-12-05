@@ -36,34 +36,37 @@ console.log(cart);
 /*  ***************************************************************************************************
  *   Top-Level await (ES2020)
  *  ***************************************************************************************************/
-/*
+
 ////////////////////////////////////////////////////////////////////////////
 // Await keyword in moduls (will block code)
-console.log("...starting...");
+// console.log("...starting...");
 
-const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-const data = await res.json();
-console.log(data);
+// const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+// const data = await res.json();
+// console.log(data);
 
-console.log("...Finished...");
+// console.log("...Finished...");
 
 ////////////////////////////////////////////////////////////////////////////
 // how await top level works in the real world
 async function getLAstPost() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const data = await res.json();
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await res.json();
 
-  // return data;
-  return { title: data.at(-1).title, text: data.at(-1).body };
+    // return data;
+    return { title: data.at(-1).title, text: data.at(-1).body };
 }
 
-// "Not very clean"
-// lastPost.then((last) => console.log(last));
-
-// "best practice"
-const lastPost = await getLAstPost();
+const lastPost = getLAstPost();
 console.log(lastPost);
 
+// "Not very clean"
+lastPost.then((last) => console.log(last));
+
+// "best practice" in the CommonJS Module
+// const lastPost2 = await getLAstPost();
+// console.log(lastPost2);
+/*
 ////////////////////////////////////////////////////////////////////////////
 // Implementing the module pattern
 const ShoppingCart2 = (function () {
@@ -158,9 +161,10 @@ Promise.resolve("TEST").then((x) => console.log(x));
 
 ////////////////////////////////////////////////////////////////////////////
 // Polyfilling
+
 /* core-js packages (Polyfilling Promises and all method arrays) */
 import "core-js";
-// import "core-js/stable/array/find"
+// import "core-js/stable/array/find";
 // import "core-js/stable/promise"
 
 /* regenerator-runtime packages (Polyfilling async functions) */
