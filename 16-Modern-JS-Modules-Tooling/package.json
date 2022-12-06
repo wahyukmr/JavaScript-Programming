@@ -2,14 +2,10 @@
     "name": "starter",
     "version": "1.0.0",
     "description": "",
-    "source": "index.html",
-    "browserslist": "> 0.5%, last 2 versions, not dead",
-    "targets": {
-        "main": false
-    },
+    "browserslist": "last 2 versions, > 0.5%, ie >= 11",
     "scripts": {
         "start": "parcel index.html",
-        "build": "parcel build index.html --no-optimize"
+        "build": "parcel build index.html"
     },
     "author": "wahyu",
     "license": "ISC",

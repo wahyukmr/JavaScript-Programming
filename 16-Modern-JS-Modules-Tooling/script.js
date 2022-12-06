@@ -163,7 +163,7 @@ Promise.resolve("TEST").then((x) => console.log(x));
 // Polyfilling
 
 /* core-js packages (Polyfilling Promises and all method arrays) */
-import "core-js";
+import "core-js/actual";
 // import "core-js/stable/array/find";
 // import "core-js/stable/promise"
 
