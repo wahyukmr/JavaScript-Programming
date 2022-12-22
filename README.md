@@ -169,14 +169,14 @@
     - Map is an important data structure for now
   
   ### ~ Destructuring Arrays :
-  - destructuring is an ESX feature for disassembling array or object values into separate variables. In other words destructuring is breaking down complex data structures into small data structures such as variables.
+  - destructuring is an ES6 feature for disassembling array or object values into separate variables. In other words destructuring is breaking down complex data structures into small data structures such as variables.
   - In arrays, we use distructuring to retrieve elements from the array and store them on a variable
   
   ### ~ Destructuring objects :
   - In the unimportant order object, just call the name of the property to be retrieved
   
   ### ~ Spread Operators ( ... ) :
-  - Spread operator = unpacking arrays into individual elements
+  - Spread operator = used to split up array elements OR object properties
   - The use of the spread operator is to create a new array or pass some value into a function
   - Spread operators are similar to Destructuring, as they help output elements on arrays
   - The big difference is that the spread operator takes the entire element on the array and does't create a new variable
@@ -185,7 +185,8 @@
   - Spread operators work on all iterable data types (can be changed)
   
   ### ~ Rest Pattern and Parameters :
-  - Rest Pattern = collect some elements (the rest of the elements) and condense them into an array
+  - Rest Pattern = used to marge a list of functions arguments into an array
+  - Uses it in the argument list of the function, which allows it to accept an unlimited number of arguments and they will all be concatenated into one array
   - Rest Pattern is the opposite of spread operator
   - Operator spread used when writing values and separated by commas
   - While Rest Pattern used when writing variable names and separated by commas
