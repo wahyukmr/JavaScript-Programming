@@ -7,15 +7,40 @@
 <details><summary>
 
 ## [Fundamentals-Part-1](https://github.com/wahyukmr/JavaScript-Programming/blob/master/01-Fundamentals-Part-1/script.js)
+
 </summary>
 
-  ### ~ Type conversion and coercion :
-  - Coercion or type coercion is the conversion of values ​​from different data types and determines which one has a higher position to be executed first.
-</details>
+### ~ Introduction of JavaScript
+
+<strong>JavaScript is a High-Level, Object-oriented, Multi-paradigm programming language.</strong>
+
+-   Programming language hanyalah alat yang memungkinkan kita untuk menulis kode yang akan memerintahkan komputer untuk melakukan sesuatu.
+-   High-level berarti kita tidak perlu memikirkan banyak hal rumit, seperti mengelola memeori komputer.
+-   Object-oriented berarti bahasa tersebut sebagian besar didasarkan pada konsep objek untuk menyimpan sebagian besar jenis data.
+-   Multi-paradigm berarti fleksibel dan serbaguna, sehingga kita dapat menggunakan semua jenis gaya pemrograman yang berbeda (cara berbeda untuk menyusun kode) seperti imperative dan deklarative programming.
+
+    ### ~ Type conversion and coercion :
+
+    Type Coercion atau type coercion adalah konversi nilai dari tipe data yang berbeda dan menentukan mana yang memiliki posisi lebih tinggi untuk dieksekusi terlebih dahulu.
+
+    -   Type conversion (ketika kita secara menual mengonversi dari satu tipe data ke tipe lainnya).
+    -   Type coercion (terjadi setiap kali operator berurusan dengan dua nilai yang memiliki tipe data berbeda, Jadi javascript dibalik layar mengonversi salah satu nilai agar sesuai dengan nilai lainnya sehingga operasi dapat dijalankan).
+
+    ### ~ Truthy and falsy operators
+
+    -   Nilai falsy adalah nalai yang tidak sepenuhnya salah, tetapi akan menjadi false ketika kita mencoba mengubahnya menjadi boolean.
+    -   Lima nilai falsy di javascript: 0, "", undefined, null, NaN
+
+    ### ~ Statements and expressions
+
+    -   Expressions adalah bagian kode yang menghasilkan nilai.
+    -   Statements seperti kalimat yang menerjemahkan tindakan kita, tindakan yang kita ingin program lakukan. Jadi pada dasarnya setiap kali sesuatu yang diakhiri dengan titik koma itu adalah statement.
+    </details>
 
 <details> <summary>
 
 ## [Fundamentals-Part-2](https://github.com/wahyukmr/JavaScript-Programming/blob/master/02-Fundamentals-Part-2/script.js)
+
 </summary>
   
   ### ~ Activating Strict Mode :
@@ -45,37 +70,42 @@
 <details> <summary>
 
 ## [Developer-Skills](https://github.com/wahyukmr/JavaScript-Programming/blob/master/03-Developer-Skills/script.js)
+
 </summary>
 
-  ### ~ 4 Step to solve any problem :
-   1. Make sure you 100% understand the problem. **"Ask the right questions"** to get a clear picture of the problem
-   2. **"Divide and conquer"**: Break a big problem into smaller sub-problems
-   3. Don't be afraid to do **"research"** on each problem
-      - Google, stackoverflow, MDN web docs,...
-   4. For bigger problems, **"write pseudo-code"** before writing the actual code
-  
-  ### ~ The Debugging Process :
-  - **Identify** (Aware that there is a bug)
-    - :point_right: During development
-    - :point_right: Testing software
-    - :point_right: User reports during production
-    - :point_right: Context: browsers, user, etc
-  
-  - **Find** (Isolating where exactly the bug is happening in code)
-    - :point_right: Developer console (simple code)
-    - :point_right: Debugger (complex code)
-  
-  - **Fix** (Correct the bug)
-    - :point_right: Change wrong solution with correct solution
-  
-  - **Prevent** (Preventing it from happening again)
-    - :point_right: Searching for the same bug in similar code
-    - :point_right: Writing tests using testing software
+### ~ 4 Step to solve any problem :
+
+1. Make sure you 100% understand the problem. **"Ask the right questions"** to get a clear picture of the problem
+2. **"Divide and conquer"**: Break a big problem into smaller sub-problems
+3. Don't be afraid to do **"research"** on each problem
+    - Google, stackoverflow, MDN web docs,...
+4. For bigger problems, **"write pseudo-code"** before writing the actual code
+
+### ~ The Debugging Process :
+
+-   **Identify** (Aware that there is a bug)
+
+    -   :point_right: During development
+    -   :point_right: Testing software
+    -   :point_right: User reports during production
+    -   :point_right: Context: browsers, user, etc
+
+-   **Find** (Isolating where exactly the bug is happening in code)
+
+    -   :point_right: Developer console (simple code)
+    -   :point_right: Debugger (complex code)
+
+-   **Fix** (Correct the bug)
+
+    -   :point_right: Change wrong solution with correct solution
+
+-   **Prevent** (Preventing it from happening again) - :point_right: Searching for the same bug in similar code - :point_right: Writing tests using testing software
 </details>
 
 <details> <summary>
 
 ## [Behind-the-Scenes](https://github.com/wahyukmr/JavaScript-Programming/blob/master/08-Behind-the-Scenes/script.js)
+
 </summary>
   
   ### ~ Scope in JavaScript :
@@ -134,98 +164,113 @@
 <details> <summary>
 
 ## [Data-Structures-Operators](https://github.com/wahyukmr/JavaScript-Programming/blob/master/09-Data-Structures-Operators/script.js)
+
 </summary>
 
-   ### ~ Data Structure Overview :
-  - Array or Set = simple list of values and have only values without any description
-  - Object or Map = if necessary key and value pairs. So with keys, we have a way of describing or describing values
-  - The use of Array Object is also common in JavaScript
-  
-  ### ~ Arrays Vs Sets :
-  - Array
-    - Use when you need an ordered list of values (might contain duplicates)
-    - Use it when you need to manipulate data
-  - Set
-    - Use it when you need to work with unique values
-    - Use when high performance is really important
-    - Use to remove duplicates from arrays
-  
-  ### ~ Objects Vs Maps :
-  - Object
-    - More “traditional” to store keys/values
-    - Easier to write and access values whit the dot operator( . ) and bracket( [] )
-    - Keys are just type strings
-    - Many developers are familiar with Object
-    - Use when you need to include functions (method)
-    - Use when working with JSON
-    - Objects are still being used all the time
-  - Map
-    - Better performance
-    - Keys can have any data type
-    - Easy to iterate
-    - Easy to calculate length/size data
-    - Use when you simply need to map key to values
-    - Use when you need keys that are not strings
-    - Map is an important data structure for now
-  
-  ### ~ Destructuring Arrays :
-  - destructuring is an ESX feature for disassembling array or object values into separate variables. In other words destructuring is breaking down complex data structures into small data structures such as variables.
-  - In arrays, we use distructuring to retrieve elements from the array and store them on a variable
-  
-  ### ~ Destructuring objects :
-  - In the unimportant order object, just call the name of the property to be retrieved
-  
-  ### ~ Spread Operators ( ... ) :
-  - Spread operator = unpacking arrays into individual elements
-  - The use of the spread operator is to create a new array or pass some value into a function
-  - Spread operators are similar to Destructuring, as they help output elements on arrays
-  - The big difference is that the spread operator takes the entire element on the array and does't create a new variable
-  - That way we can only use it in the place where it should write values separated by commas
-  - Two important cases of using spread operators are Copy array and combine with two or more arrays
-  - Spread operators work on all iterable data types (can be changed)
-  
-  ### ~ Rest Pattern and Parameters :
-  - Rest Pattern = collect some elements (the rest of the elements) and condense them into an array
-  - Rest Pattern is the opposite of spread operator
-  - Operator spread used when writing values and separated by commas
-  - While Rest Pattern used when writing variable names and separated by commas
-  
-  ### ~ Short Circuiting ( && and || ) :
-  - We can use the OR operator to specify a default value
-  - We can use the AND operator to execute the code in the second operand if the first operand is true
-  - Short Circuiting in OR ( || ) = returns the first truth value, or only the last value if everything is false (doesn't have to be a BOOLEAN)
-  - Short Circuiting in OR ( || ) are opposite to Short Circuiting in AND ( && )
-  - Short Circuiting in AND ( && ) = returns the first false value, or the last value if everything is true (doesn't have to be a BOOLEAN)
-  - Don't use short circuiting to replace if statements, because it will make the code difficult to read
-  
-  ### ~ The Nullish Coalescing Operator ( ?? ) :
-  - It works similarly to the OR operator, and will fix errors there
-  - It works to Nullish: Null and Undefined (***Not For:*** 0 or "")
-  
-  ### ~ Logical Assignment Operators :
-  - The principle of its work is the same as that of the OR, AND, NULLISH operators. but with this it is simpler
-  - operator OR for give a default value
-  - operator NULLISH for used if there is a value Null or Undefined
-  - operator AND we can use it if we want to change an existing value
-  
-  ### ~ Looping Arrays: The for-of Loop
-  - Use a for-of loop when dealing with data iterables( arrays, strings, maps, sets )
-  - Use a for-in loop when dealing with data Objects
-  - With the for-of loop we can still use the continue and break keywords
+### ~ Data Structure Overview :
 
-  ### ~ Optional Chaining ( ?. ) :
-  - Optional Chaining = check if the value exists or not, otherwise, it will return Undefined
-  - If you want to use variable names as property names, you need to use brackets []
-  - Use Nullish ( ?? ) to create default values ​​and handle values ​​0 or undefined
-  
-  ### ~ Working with String :
-  - Remember that strings cannot be changed (primitive), when using the string method it becomes a string object, after it is finished returning the string back
-  - All methods will return a new string
+-   Array or Set = simple list of values and have only values without any description
+-   Object or Map = if necessary key and value pairs. So with keys, we have a way of describing or describing values
+-   The use of Array Object is also common in JavaScript
+
+### ~ Arrays Vs Sets :
+
+-   Array
+    -   Use when you need an ordered list of values (might contain duplicates)
+    -   Use it when you need to manipulate data
+-   Set
+    -   Use it when you need to work with unique values
+    -   Use when high performance is really important
+    -   Use to remove duplicates from arrays
+
+### ~ Objects Vs Maps :
+
+-   Object
+    -   More “traditional” to store keys/values
+    -   Easier to write and access values whit the dot operator( . ) and bracket( [] )
+    -   Keys are just type strings
+    -   Many developers are familiar with Object
+    -   Use when you need to include functions (method)
+    -   Use when working with JSON
+    -   Objects are still being used all the time
+-   Map
+    -   Better performance
+    -   Keys can have any data type
+    -   Easy to iterate
+    -   Easy to calculate length/size data
+    -   Use when you simply need to map key to values
+    -   Use when you need keys that are not strings
+    -   Map is an important data structure for now
+
+### ~ Destructuring Arrays :
+
+-   destructuring is an ESX feature for disassembling array or object values into separate variables. In other words destructuring is breaking down complex data structures into small data structures such as variables.
+-   In arrays, we use distructuring to retrieve elements from the array and store them on a variable
+
+### ~ Destructuring objects :
+
+-   In the unimportant order object, just call the name of the property to be retrieved
+
+### ~ Spread Operators ( ... ) :
+
+-   Spread operator = unpacking arrays into individual elements
+-   The use of the spread operator is to create a new array or pass some value into a function
+-   Spread operators are similar to Destructuring, as they help output elements on arrays
+-   The big difference is that the spread operator takes the entire element on the array and does't create a new variable
+-   That way we can only use it in the place where it should write values separated by commas
+-   Two important cases of using spread operators are Copy array and combine with two or more arrays
+-   Spread operators work on all iterable data types (can be changed)
+
+### ~ Rest Pattern and Parameters :
+
+-   Rest Pattern = collect some elements (the rest of the elements) and condense them into an array
+-   Rest Pattern is the opposite of spread operator
+-   Operator spread used when writing values and separated by commas
+-   While Rest Pattern used when writing variable names and separated by commas
+
+### ~ Short Circuiting ( && and || ) :
+
+-   We can use the OR operator to specify a default value
+-   We can use the AND operator to execute the code in the second operand if the first operand is true
+-   Short Circuiting in OR ( || ) = returns the first truth value, or only the last value if everything is false (doesn't have to be a BOOLEAN)
+-   Short Circuiting in OR ( || ) are opposite to Short Circuiting in AND ( && )
+-   Short Circuiting in AND ( && ) = returns the first false value, or the last value if everything is true (doesn't have to be a BOOLEAN)
+-   Don't use short circuiting to replace if statements, because it will make the code difficult to read
+
+### ~ The Nullish Coalescing Operator ( ?? ) :
+
+-   It works similarly to the OR operator, and will fix errors there
+-   It works to Nullish: Null and Undefined (**_Not For:_** 0 or "")
+
+### ~ Logical Assignment Operators :
+
+-   The principle of its work is the same as that of the OR, AND, NULLISH operators. but with this it is simpler
+-   operator OR for give a default value
+-   operator NULLISH for used if there is a value Null or Undefined
+-   operator AND we can use it if we want to change an existing value
+
+### ~ Looping Arrays: The for-of Loop
+
+-   Use a for-of loop when dealing with data iterables( arrays, strings, maps, sets )
+-   Use a for-in loop when dealing with data Objects
+-   With the for-of loop we can still use the continue and break keywords
+
+### ~ Optional Chaining ( ?. ) :
+
+-   Optional Chaining = check if the value exists or not, otherwise, it will return Undefined
+-   If you want to use variable names as property names, you need to use brackets []
+-   Use Nullish ( ?? ) to create default values ​​and handle values ​​0 or undefined
+
+### ~ Working with String :
+
+-   Remember that strings cannot be changed (primitive), when using the string method it becomes a string object, after it is finished returning the string back
+-   All methods will return a new string
 </details>
 
 <details> <summary>
 
 ## [Functions](https://github.com/wahyukmr/JavaScript-Programming/blob/master/10-Functions/script.js)
+
 </summary>
   
   ### How Passing Argument Works: Value Vs Reference :
@@ -263,6 +308,7 @@
 <details> <summary>
 
 ## [Arrays-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/11-Arrays-Bankist/script.js)
+
 </summary>
   
   ### Looping Arrays: forEach
@@ -288,66 +334,74 @@
         reduce((nilaiSebelumnya, nilaiSaatIni, indexSaatIni, array) => { ... }, nilaiAwal)
 
         // callback function
-        reduce(callbackFn, nilaiAwal)   
-  - Should always return accumulator to do the next iteration
-  
-  ### The Magic of Chaining Methods :
-  - don't use the Chaining method for apps at scale
-  - don't use methods that change the original array( such as splice method )
-  - for small-scale applications, the above rules can be used
-  
-  ### The Find Method :
-  - The Find Method: retrieves a single array element based on a condition
-  - usually the purpose of the find method is to find exactly one element, therefore create a condition where only one element can satisfy that condition
-  - the find method is similar to the filter method, the difference is:
-    - filter returns all elements that match the condition, while the find method returns only the first
-    - most importantly, the filter returns a new array while the find method returns the element itself and is not an array
-  
-  ### Method some and avery :
-  - Method Some = Similar to the include method, the difference is that some methods can perform a condition to test whether at least one element of the array passed when tested with a callback function it will return true.
-  - This method not change the original array
-  - every method: similar to Some Method, the difference is that this method will return true if the condition for all array elements is true
-  
-  ### Method flat and flatMap :
-  - method flat: flattens nested array elements to have the appropriate depth to the specified
-  - method flatMap: combine Map method and Flat method into one part
-  - method flapMap can only enter one depth
-  
-  ### Sorting arrays :
-  - Method sort: sort arrays in alphabetical order or from A-Z
-  - it can be interpreted that the Sort method does sorting by string
-  - This method will change the original array
-  
-  ### More Ways of Creating And Filling Arrays :
-  - The fill method specifed element in an array with a value
-    - The method overwrites the origina array
-    - Syntax:
-  
-          array.fill(value, start, end)
-</details>
+        reduce(callbackFn, nilaiAwal)
+
+-   Should always return accumulator to do the next iteration
+
+### The Magic of Chaining Methods :
+
+-   don't use the Chaining method for apps at scale
+-   don't use methods that change the original array( such as splice method )
+-   for small-scale applications, the above rules can be used
+
+### The Find Method :
+
+-   The Find Method: retrieves a single array element based on a condition
+-   usually the purpose of the find method is to find exactly one element, therefore create a condition where only one element can satisfy that condition
+-   the find method is similar to the filter method, the difference is:
+    -   filter returns all elements that match the condition, while the find method returns only the first
+    -   most importantly, the filter returns a new array while the find method returns the element itself and is not an array
+
+### Method some and avery :
+
+-   Method Some = Similar to the include method, the difference is that some methods can perform a condition to test whether at least one element of the array passed when tested with a callback function it will return true.
+-   This method not change the original array
+-   every method: similar to Some Method, the difference is that this method will return true if the condition for all array elements is true
+
+### Method flat and flatMap :
+
+-   method flat: flattens nested array elements to have the appropriate depth to the specified
+-   method flatMap: combine Map method and Flat method into one part
+-   method flapMap can only enter one depth
+
+### Sorting arrays :
+
+-   Method sort: sort arrays in alphabetical order or from A-Z
+-   it can be interpreted that the Sort method does sorting by string
+-   This method will change the original array
+
+### More Ways of Creating And Filling Arrays :
+
+-   The fill method specifed element in an array with a value - The method overwrites the origina array - Syntax:
+    array.fill(value, start, end)
+    </details>
 
 <details> <summary>
 
 ## [Advanced-DOM-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/13-Advanced-DOM-Bankist/script.js)
+
 </summary>
 
-  ### Event Propagation: Bubbling and Cupturing :
-  - Bubbling phase the event goes up from the inside(target) to the top through the parent like a bubble in water
-  - Cupturing phase the event goes down to the element(target)
-  - Cupturing is rarely used, if you want to use it, set the third parameter in the event listener to true
-  - Target is the place where the event came from
-  - currentTarget is the element to which the event handler is attached
-  - cuurrentTarget is exactly the same as "this" in the event handler
-  
-  ### DOM Traversing :
-  - DOM Traversing means we can select elements based on other elements
-  - The closest() method searches up the DOM tree for elements which matches a specified CSS selector
- 
+### Event Propagation: Bubbling and Cupturing :
+
+-   Bubbling phase the event goes up from the inside(target) to the top through the parent like a bubble in water
+-   Cupturing phase the event goes down to the element(target)
+-   Cupturing is rarely used, if you want to use it, set the third parameter in the event listener to true
+-   Target is the place where the event came from
+-   currentTarget is the element to which the event handler is attached
+-   cuurrentTarget is exactly the same as "this" in the event handler
+
+### DOM Traversing :
+
+-   DOM Traversing means we can select elements based on other elements
+-   The closest() method searches up the DOM tree for elements which matches a specified CSS selector
+
 </details>
 
 <details> <summary>
 
 ## [OOP](https://github.com/wahyukmr/JavaScript-Programming/blob/master/14-OOP/script.js)
+
 </summary>
   
   ### TECHNIQUE USING PROTOTYPE INHERITANCE: Constructor functions :
@@ -426,6 +480,7 @@
 <details> <summary>
 
 ## [Asynchronous](https://github.com/wahyukmr/JavaScript-Programming/blob/master/15-Asynchronous/script.js)
+
 </summary>
   
   ### old version of ajax calling with XML Http Request function :
@@ -455,6 +510,7 @@
 <details> <summary>
 
 ## [Modern-JS-Modules-Tooling](https://github.com/wahyukmr/JavaScript-Programming/blob/master/16-Modern-JS-Modules-Tooling/script.js)
+
 </summary>
   
   ### Introduction to NPM :
@@ -471,12 +527,13 @@
   - Using NPX = npx parcel berkas_html (write on the command line)
   - Using NPM script = in the script object add a property with the name start(optional) and the value is parcel_html file in the package.json file, to call it go to command line then write npm run start
 
-  - besides being able to be used like a "live-server", parcel is also used to combine several modules together (bundling)
-  - to combine modules go to package.json file then in script object add property with the name build(optional) and value is parcel build index.html, to call it go to command line then write npm run build
-  - then parcel will create a "dist" folder containing the bundling results, and this folder will be sent for production
-  
-  ### Configuring Babel and Polyfilling :
-  - configuring Babel for a super modern code transpiler reverts back to ES5 code
-  - in parcel automatically uses babel to modify the code to make our code support old browsers
-  - for features like Promises, all array methods, and async functions we can polyfill them, by installing packages  "core-js" and "regenerator-runtime"
+-   besides being able to be used like a "live-server", parcel is also used to combine several modules together (bundling)
+-   to combine modules go to package.json file then in script object add property with the name build(optional) and value is parcel build index.html, to call it go to command line then write npm run build
+-   then parcel will create a "dist" folder containing the bundling results, and this folder will be sent for production
+
+### Configuring Babel and Polyfilling :
+
+-   configuring Babel for a super modern code transpiler reverts back to ES5 code
+-   in parcel automatically uses babel to modify the code to make our code support old browsers
+-   for features like Promises, all array methods, and async functions we can polyfill them, by installing packages "core-js" and "regenerator-runtime"
 </details>

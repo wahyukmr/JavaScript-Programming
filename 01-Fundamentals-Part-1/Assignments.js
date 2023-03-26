@@ -1,8 +1,8 @@
 "use strict";
 
-/*  ***************************************************************************************************
+/*  ************************
  *   VALUES AND VARIABLES
- *  ***************************************************************************************************/
+ *  ************************/
 let country = "indonesian";
 let continent = "asian";
 let population = 40;
@@ -10,9 +10,9 @@ console.log(country);
 console.log(continent);
 console.log(population);
 
-/*  ***************************************************************************************************
+/*  ***************
  *   DATA TYPES
- *  ***************************************************************************************************/
+ *  ***************/
 let isIsland = true;
 let language;
 console.log(typeof country);
@@ -21,17 +21,17 @@ console.log(typeof population);
 console.log(typeof isIsland);
 console.log(typeof language);
 
-/*  ***************************************************************************************************
+/*  ***********************
  *   LET, CONST, AND VAR
- *  ***************************************************************************************************/
+ *  ***********************/
 // change let to const
 // language = "indonesia";
 // const country = 'indonesian';
 // const continent = 'asian';
 
-/*  ***************************************************************************************************
+/*  *******************
  *   BASIC OPERATORS
- *  ***************************************************************************************************/
+ *  *******************/
 console.log((population /= 2));
 console.log(++population);
 console.log(population > 6);
@@ -46,9 +46,9 @@ let description =
     language;
 console.log(description);
 
-/*  ***************************************************************************************************
+/*  ***********************
  *   CODING CHALLENGE 01
- *  **************************************************************************************************
+ *  ***********************
 Your tasks:
     1. Store Mark's and John's mass and height in variables
     2. Calculate both their BMIs using the formula (you can even implement both
@@ -78,25 +78,25 @@ johnBMI = johnWeight / (johnHeight * johnHeight);
 markHigherBMI = markBMI > johnBMI;
 console.log(markBMI, johnBMI, markHigherBMI);
 
-/*  ***************************************************************************************************
+/*  *********************************
  *   STRINGS AND TEMPLATE LITERALS
- *  ***************************************************************************************************/
+ *  *********************************/
 // better this way than the above
 description = `${country} is in ${continent}, and is in ${population} million people speak ${language}`;
 console.log(description);
 
-/*  ***************************************************************************************************
+/*  ******************************************
  *   TAKING DECISIONS : IF / ELSE STATEMENT
- *  ***************************************************************************************************/
+ *  ******************************************/
 if (population > 33) {
     console.log(`${country} population is above average`);
 } else {
     console.log(`${country} is ${33 - population} million below average`);
 }
 
-/*  ***************************************************************************************************
+/*  ************************
  *   CODING CHALLENGE 02
- *  **************************************************************************************************
+ *  ************************
 Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
    Your tasks:
     1. Print a nice output to the console, saying who has the higher BMI. The message
@@ -114,9 +114,9 @@ if (marksHeight > johnHeight) {
     );
 }
 
-/*  ***************************************************************************************************
+/*  ********************************
  *   TYPE CONVERSION AND COERCION
- *  ***************************************************************************************************/
+ *  ********************************/
 let x = 4 - "5"; // if added will result string 45
 console.log(x); // result -1
 
@@ -135,9 +135,9 @@ console.log(x); // result false
 x = 5 + 6 + "4" + 9 - 4 - 2;
 console.log(x); // result '114' + 9 - 4 - 2 = 1143
 
-/*  ***************************************************************************************************
+/*  *********************************
  *   quality Operators: == vs. ===
- *  ***************************************************************************************************/
+ *  *********************************/
 // const sumNeighbours = Number(
 //     prompt("How many neighbour countries does your country have?")
 // );
@@ -149,18 +149,18 @@ console.log(x); // result '114' + 9 - 4 - 2 = 1143
 //     console.log("no border");
 // }
 
-/*  ***************************************************************************************************
+/*  ********************
  *   LOGICAL OPERATOR
- *  ***************************************************************************************************/
+ *  ********************/
 if (language === "english" && population < 50 && !isIsland) {
     console.log(`you should live in ${country}`);
 } else {
     console.log(`${country} does not meet your criteria`);
 }
 
-/*  ***************************************************************************************************
+/*  ***********************
  *   CODING CHALLENGE 03
- *  **************************************************************************************************
+ *  ***********************
 There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
     
 Your tasks:
@@ -205,9 +205,9 @@ if (dolphinsScore > koalasScore && dolphinsScore >= 100) {
     console.log(`Nothing to win`);
 }
 
-/*  ***************************************************************************************************
+/*  ***********************
  *   THE SWITCH STATEMENT
- *  ***************************************************************************************************/
+ *  ***********************/
 switch (language) {
     case "chinese":
     case "mandarin":
@@ -229,16 +229,16 @@ switch (language) {
         console.log(`Great language too :D`);
 }
 
-/*  ***************************************************************************************************
+/*  ***************************************
  *   THE CONDITIONAL ( TERNARY ) OPERATOR
- *  ***************************************************************************************************/
+ *  ***************************************/
 console.log(
     `${country} population is ${population > 33 ? "above" : "below"} average`
 );
 
-/*  ***************************************************************************************************
+/*  ***********************
  *   CODING CHALLENGE 04
- *  **************************************************************************************************
+ *  ***********************
 Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
 Your tasks:
     1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)

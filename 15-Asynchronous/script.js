@@ -341,22 +341,22 @@ GOOD LUCK 😀
 /*  ****************************************************************************************
  *   Event loops in practice
  *  *****************************************************************************************/
-// {
-//     console.log("test start");
+{
+    console.log("test start");
 
-//     setTimeout(() => console.log("0 sec timer"), 0);
+    setTimeout(() => console.log("0 sec timer"), 0);
 
-//     Promise.resolve("Resolved promise 1").then((response) =>
-//         console.log(response)
-//     );
+    Promise.resolve("Resolved promise 1").then((response) =>
+        console.log(response)
+    );
 
-//     Promise.resolve("Resolved promise 2").then((response) => {
-//         for (let i = 0; i < 1000000000; i++) {}
-//         console.log(response);
-//     });
+    Promise.resolve("Resolved promise 2").then((response) => {
+        for (let i = 0; i < 1000000000; i++) {}
+        console.log(response);
+    });
 
-//     console.log("Test end");
-// }
+    console.log("Test end");
+}
 
 /*  ****************************************************************************************
  *   create a simple Promises with the Promises constructor
