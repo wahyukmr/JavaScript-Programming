@@ -167,7 +167,87 @@
 
 </summary>
 
+<<<<<<< HEAD
 ### ~ Data Structure Overview :
+=======
+   ### ~ Data Structure Overview :
+  - Array or Set = simple list of values and have only values without any description
+  - Object or Map = if necessary key and value pairs. So with keys, we have a way of describing or describing values
+  - The use of Array Object is also common in JavaScript
+  
+  ### ~ Arrays Vs Sets :
+  - Array
+    - Use when you need an ordered list of values (might contain duplicates)
+    - Use it when you need to manipulate data
+  - Set
+    - Use it when you need to work with unique values
+    - Use when high performance is really important
+    - Use to remove duplicates from arrays
+  
+  ### ~ Objects Vs Maps :
+  - Object
+    - More “traditional” to store keys/values
+    - Easier to write and access values whit the dot operator( . ) and bracket( [] )
+    - Keys are just type strings
+    - Many developers are familiar with Object
+    - Use when you need to include functions (method)
+    - Use when working with JSON
+    - Objects are still being used all the time
+  - Map
+    - Better performance
+    - Keys can have any data type
+    - Easy to iterate
+    - Easy to calculate length/size data
+    - Use when you simply need to map key to values
+    - Use when you need keys that are not strings
+    - Map is an important data structure for now
+  
+  ### ~ Destructuring Arrays :
+  - destructuring is an ES6 feature for disassembling array or object values into separate variables. In other words destructuring is breaking down complex data structures into small data structures such as variables.
+  - In arrays, we use distructuring to retrieve elements from the array and store them on a variable
+  
+  ### ~ Destructuring objects :
+  - In the unimportant order object, just call the name of the property to be retrieved
+  
+  ### ~ Spread Operators ( ... ) :
+  - Spread operator = used to split up array elements OR object properties
+  - The use of the spread operator is to create a new array or pass some value into a function
+  - Spread operators are similar to Destructuring, as they help output elements on arrays
+  - The big difference is that the spread operator takes the entire element on the array and does't create a new variable
+  - That way we can only use it in the place where it should write values separated by commas
+  - Two important cases of using spread operators are Copy array and combine with two or more arrays
+  - Spread operators work on all iterable data types (can be changed)
+  
+  ### ~ Rest Pattern and Parameters :
+  - Rest Pattern = used to marge a list of functions arguments into an array
+  - Uses it in the argument list of the function, which allows it to accept an unlimited number of arguments and they will all be concatenated into one array
+  - Rest Pattern is the opposite of spread operator
+  - Operator spread used when writing values and separated by commas
+  - While Rest Pattern used when writing variable names and separated by commas
+  
+  ### ~ Short Circuiting ( && and || ) :
+  - We can use the OR operator to specify a default value
+  - We can use the AND operator to execute the code in the second operand if the first operand is true
+  - Short Circuiting in OR ( || ) = returns the first truth value, or only the last value if everything is false (doesn't have to be a BOOLEAN)
+  - Short Circuiting in OR ( || ) are opposite to Short Circuiting in AND ( && )
+  - Short Circuiting in AND ( && ) = returns the first false value, or the last value if everything is true (doesn't have to be a BOOLEAN)
+  - Don't use short circuiting to replace if statements, because it will make the code difficult to read
+  
+  ### ~ The Nullish Coalescing Operator ( ?? ) :
+  - It works similarly to the OR operator, and will fix errors there
+  - It works to Nullish: Null and Undefined (***Not For:*** 0 or "")
+  
+  ### ~ Logical Assignment Operators :
+  - The principle of its work is the same as that of the OR, AND, NULLISH operators. but with this it is simpler
+  - operator OR for give a default value
+  - operator NULLISH for used if there is a value Null or Undefined
+  - operator AND we can use it if we want to change an existing value
+  
+  ### ~ Looping Arrays: The for-of Loop
+  - Use a for-of loop when dealing with data iterables( arrays, strings, maps, sets )
+  - Use a for-in loop when dealing with data Objects
+  - With the for-of loop we can still use the continue and break keywords
+>>>>>>> 63240b895b31736c3acdf82659e369812c9b3ef8
 
 -   Array or Set = simple list of values and have only values without any description
 -   Object or Map = if necessary key and value pairs. So with keys, we have a way of describing or describing values

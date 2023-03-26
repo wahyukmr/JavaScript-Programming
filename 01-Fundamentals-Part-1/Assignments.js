@@ -46,9 +46,9 @@ let description =
     language;
 console.log(description);
 
-/*  ***********************
+/*  **********************
  *   CODING CHALLENGE 01
- *  ***********************
+ *  **********************
 Your tasks:
     1. Store Mark's and John's mass and height in variables
     2. Calculate both their BMIs using the formula (you can even implement both
