@@ -14,17 +14,17 @@
 
 <strong>JavaScript is a High-Level, Object-oriented, Multi-paradigm programming language.</strong>
 
--   **_Programming language_** hanyalah alat yang memungkinkan kita untuk menulis kode yang akan memerintahkan komputer untuk melakukan sesuatu.
--   **_High-level_** berarti kita tidak perlu memikirkan banyak hal rumit, seperti mengelola memeori komputer.
--   **_Object-oriented_** berarti bahasa tersebut sebagian besar didasarkan pada konsep objek untuk menyimpan sebagian besar jenis data.
--   **_Multi-paradigm_** berarti fleksibel dan serbaguna, sehingga kita dapat menggunakan semua jenis gaya pemrograman yang berbeda (cara berbeda untuk menyusun kode) seperti imperative dan deklarative programming.
+-   **Programming language** hanyalah alat yang memungkinkan kita untuk menulis kode yang akan memerintahkan komputer untuk melakukan sesuatu.
+-   **High-level** berarti kita tidak perlu memikirkan banyak hal rumit, seperti mengelola memeori komputer.
+-   **Object-oriented** berarti bahasa tersebut sebagian besar didasarkan pada konsep objek untuk menyimpan sebagian besar jenis data.
+-   **Multi-paradigm** berarti fleksibel dan serbaguna, sehingga kita dapat menggunakan semua jenis gaya pemrograman yang berbeda (cara berbeda untuk menyusun kode) seperti imperative dan deklarative programming.
 
     ### ~ Type conversion and coercion :
 
     Type Coercion atau type coercion adalah konversi nilai dari tipe data yang berbeda dan menentukan mana yang memiliki posisi lebih tinggi untuk dieksekusi terlebih dahulu.
 
-    -   **_Type conversion_** (ketika kita secara menual mengonversi dari satu tipe data ke tipe lainnya).
-    -   **_Type coercion_** (terjadi setiap kali operator berurusan dengan dua nilai yang memiliki tipe data berbeda, Jadi javascript dibalik layar mengonversi salah satu nilai agar sesuai dengan nilai lainnya sehingga operasi dapat dijalankan).
+    -   **Type conversion** (ketika kita secara menual mengonversi dari satu tipe data ke tipe lainnya).
+    -   **Type coercion** (terjadi setiap kali operator berurusan dengan dua nilai yang memiliki tipe data berbeda, Jadi javascript dibalik layar mengonversi salah satu nilai agar sesuai dengan nilai lainnya sehingga operasi dapat dijalankan).
 
     ### ~ Truthy and falsy operators
 
@@ -33,8 +33,8 @@
 
     ### ~ Statements and expressions
 
-    -   **_Expressions_** adalah bagian kode yang menghasilkan nilai.
-    -   **_Statements_** seperti kalimat yang menerjemahkan tindakan kita, tindakan yang kita ingin program lakukan. Jadi pada dasarnya setiap kali sesuatu yang diakhiri dengan titik koma itu adalah statement.
+    -   **Expressions** adalah bagian kode yang menghasilkan nilai.
+    -   **Statements** seperti kalimat yang menerjemahkan tindakan kita, tindakan yang kita ingin program lakukan. Jadi pada dasarnya setiap kali sesuatu yang diakhiri dengan titik koma itu adalah statement.
     </details>
 
 <details> <summary>
@@ -48,9 +48,9 @@
   
   ### ~ Reviewing Functions :
   Tiga perbedaan cara menulis fungsi, tetapi semua bekerja dengan cara yang sama. menerima input data, mengubah data, dan kemudian mengeluarkan data. 
-  1. ***Fuction declaration***, fungsi yang dapat digunakan sebelum di nyatakan sebelumnya.
-  2. ***Function expression***, pada dasarnya fungsu yang nilainya disimpan pada sebuah variabel.
-  3. ***Arrow function***, bagus untuk fungsi dengan hanya satu baris statement dan tidak memiliki kata kunci *this*.
+  1. **Fuction declaration**, fungsi yang dapat digunakan sebelum di nyatakan sebelumnya.
+  2. **Function expression**, pada dasarnya fungsu yang nilainya disimpan pada sebuah variabel.
+  3. **Arrow function**, bagus untuk fungsi dengan hanya satu baris statement dan tidak memiliki kata kunci *this*.
   
   ### ~ Primitive data types :
     1. Number
@@ -68,18 +68,18 @@
     4. Many more...
     
 ### ~ Breaking and Continuing
-- ***continue*** berarti keluar dari iterasi loop saat ini dan melanjutkan ke loop selanjutnya.
-- ***break*** digunakan untuk sepenuhnya mengakhiri seluruh loop.
+-   **continue** berarti keluar dari iterasi loop saat ini dan melanjutkan ke loop selanjutnya.
+-   **break** digunakan untuk sepenuhnya mengakhiri seluruh loop.
 
 ### ~ Looping
 
-Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan uncounted loop
+Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan uncounted loop.
 
-1. **_counted loop_**
+1. **counted loop**
     - Merupakan perulangan yang jelas dan sudah diketahui banyaknya perulangannya.
     - Contoh: for loop, forEach loop, repeat loop.
-2. **_uncounted loop_**
-    - merupakan perulangan yang tidak jelas berapa kali perulangannya.
+2. **uncounted loop**
+    - Merupakan perulangan yang tidak jelas berapa kali perulangannya.
     - Contoh: while loop dan do/while loop.
 
 </details>
