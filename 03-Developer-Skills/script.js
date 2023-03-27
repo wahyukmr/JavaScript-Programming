@@ -1,8 +1,8 @@
 "use strict";
 
-/*  ***************************************************************************************************
+/*  ***************************************
  *   Using Google, StackOverflow and MDN
- *  **************************************************************************************************
+ *  ***************************************
  PROBLEM 1:
 we work for a company building a smart home thermometer. Our most recent task is this: "Given an array of temperature of one day, calculate the temperature amplitude. Keep in mind that sometimes there mingt be a sensor error."
 
@@ -65,9 +65,9 @@ function calcTempAmplitudeNew(t1, t2) {
 }
 console.log(calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]));
 
-/*  ***************************************************************************************************
+/*  ***********************************************
  *   Debugging with the Console and Breakpoints
- *  **************************************************************************************************
+ *  ***********************************************
 Example:
     change data degree Celcius to Fahrenheit, and an error occurred in the result. how do we move in getting it done? here are the steps!
         */
@@ -122,9 +122,9 @@ console.log(calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]));
 // 2. SEARCH AND FIND ERRORS
 //  go to the browser, go to the source, and give a breakpoint by tapping on the part of the code that will be checked.
 
-/*  ***************************************************************************************************
+/*  ************************
  *   Coding Challenge #1
- *  **************************************************************************************************
+ *  ************************
 Given an array of forecasted maximum temperatures, the thermometer displays a string with these temperatures.
 
 Example:

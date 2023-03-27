@@ -92,11 +92,10 @@ Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan unco
 
 ### ~ 4 Step to solve any problem :
 
-1. Make sure you 100% understand the problem. **"Ask the right questions"** to get a clear picture of the problem
-2. **"Divide and conquer"**: Break a big problem into smaller sub-problems
-3. Don't be afraid to do **"research"** on each problem
-    - Google, stackoverflow, MDN web docs,...
-4. For bigger problems, **"write pseudo-code"** before writing the actual code
+1. Make sure you 100% understand the problem. **_Ask the right questions_** to get a clear picture of the problem
+2. **_Divide and conquer_**: Break a big problem into smaller sub-problems
+3. Don't be afraid to do **_research_** on each problem (Google, stackoverflow, MDN web docs,...)
+4. For bigger problems, **_write pseudo-code_** before writing the actual code
 
 ### ~ The Debugging Process :
 
