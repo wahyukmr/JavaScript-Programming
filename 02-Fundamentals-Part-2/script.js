@@ -1,8 +1,8 @@
 "use strict";
 
-/*  ***************************************************************************************************
+/*  **************************
  *   Activating Strict Mode
- *  ***************************************************************************************************/
+ *  **************************/
 {
     let hasDriversLicense = false;
     const passTest = true;
@@ -14,15 +14,15 @@
     // const private = 534;
 }
 
-/*  ***************************************************************************************************
+/*  **************
  *   Functions
- *  ***************************************************************************************************/
+ *  **************/
 {
-    // example function
+    // Example function
     function logger() {
         console.log("My name is wahyu");
     }
-    // calling / running / invoking function
+    // Calling / running / invoking function
     logger();
     logger();
     logger();
@@ -31,23 +31,23 @@
     function fruitProcessor(apples, oranges) {
         return `Juice with ${apples} apples and ${oranges} oranges.`;
     }
-    //pass arguments to function
+    // Pass arguments to function
     console.log(fruitProcessor(5, 0));
 
-    //to return the value, need to store it in a variable
+    // Calling function with parameters
     const appleJuice = fruitProcessor(9, 5);
     console.log(appleJuice);
     const appleOrangeJuice = fruitProcessor(2, 4);
     console.log(appleOrangeJuice);
 
-    //Number: Change the type data string to type data number
+    // Method Number = Change the type data string to type data number
     const num = Number("23");
     console.log(num);
 }
 
-/*  ***************************************************************************************************
+/*  ****************************************
  *   Function Declarations vs. Expressions
- *  ***************************************************************************************************/
+ *  ****************************************/
 {
     // Function declaration
     function calcAge1(birthYeah) {
@@ -64,16 +64,16 @@
     console.log(age1, age2);
 }
 
-/*  ***************************************************************************************************
+/*  *******************
  *   Arrow functions
- *  ***************************************************************************************************/
+ *  *******************/
 {
     // Arrow function one linear
     const calcAge3 = (birthYeah) => 2037 - birthYeah;
     const age3 = calcAge3(1991);
     console.log(age3);
 
-    // Arrow function one parameter
+    // Arrow function more than one linear
     const yearsUntilRetirement1 = (birthYeah) => {
         const age = 2037 - birthYeah;
         return 65 - age;
@@ -90,9 +90,9 @@
     console.log(yearsUntilRetirement2(1980, "Bob"));
 }
 
-/*  ***************************************************************************************************
+/*  *************************************
  *   Functions Calling Other Functions
- *  ***************************************************************************************************/
+ *  *************************************/
 {
     const cutFruitPieces = (fruit) => fruit * 4;
 
@@ -104,18 +104,17 @@
     console.log(fruitProcessor2(2, 3));
 }
 
-/*  ***************************************************************************************************
+/*  ***********************
  *   Reviewing Functions
- *  ***************************************************************************************************/
+ *  ***********************/
 {
     // the same two parameters in different functions, have nothing to do with each other
-    const calcAge = function (yourAge) {
-        //Function expression
-        return 2037 - yourAge;
+    const calcAge = function (birthYeah) {
+        return 2037 - birthYeah;
     };
 
     const yearsUntilRetirement = function (birthYeah, firstName) {
-        const age = calcAge(birthYeah); //Functions Calling Other Functions
+        const age = calcAge(birthYeah); // Functions Calling Other Functions
         const retirement = 65 - age;
 
         if (retirement > 0) {
@@ -131,9 +130,9 @@
     console.log(yearsUntilRetirement(1950, "Mike"));
 }
 
-/*  ***************************************************************************************************
+/*  ************************
  *   CODING CHALLENGE 01
- *  **************************************************************************************************
+ *  ************************
 Your tasks:
     1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
     2. Use the function to calculate the average for both teams
@@ -173,9 +172,9 @@ Hints:
     checkWinner(dolphinScore, koalaScore);
 }
 
-/*  ***************************************************************************************************
+/*  *************************
  *   Introduction to Arrays
- *  ***************************************************************************************************/
+ *  *************************/
 {
     // store data with variables
     const friend1 = "Michael";
@@ -227,48 +226,52 @@ Hints:
     console.log(ages);
 }
 
-/*  ***************************************************************************************************
+/*  ***********************************
  *   Basic Array Operations (Methods)
- *  ***************************************************************************************************/
+ *  ***********************************/
 {
     const people = ["Michael", "Steven", "Peter"];
 
     /* Add elements */
-    const newLength = people.push("wahyu"); //push: adding elements to the end of the array
-    console.log(people);
-    console.log(newLength); //returns the length of the array
-
-    people.unshift("John"); //unshift: adding elements to the first of the array
-    console.log(people);
+    //push method: adding elements to the end of the array
+    const newLength = people.push("wahyu");
+    console.log(people); // ["Michael", "Steven", "Peter", "wahyu"]
+    console.log(newLength); // 4
+    // unshift method: adding elements to the first of the array
+    people.unshift("John");
+    console.log(people); // ["Jhon", "Michael", "Steven", "Peter", "wahyu"]
 
     /* Remove elements */
-    people.pop(); // pop: remove array from last
-    console.log(people);
+    // pop method: remove element from last of the array
+    people.pop();
+    console.log(people); // ["Jhon", "Michael", "Steven", "Peter"]
+    // Mengembalikan elemen yang telah dihapus
     const popped = people.pop();
-    console.log(popped); //return array the removed
+    console.log(people); // ["Jhon", "Michael", "Steven"]
+    console.log(popped); // "Peter"
+    // shift method: menghapus element array dari bagian depan
+    people.shift();
+    console.log(people); // ["Michael", "Steven"]
 
-    people.shift(); // shift: remove array form first
-    console.log(people);
+    /* indexOf method: tells the position of an element on an array */
+    console.log(people.indexOf("Steven")); // 1
+    console.log(people.indexOf("Bob")); // -1
 
-    /* indexOf: tells the position of an element on an array */
-    console.log(people.indexOf("Steven"));
-    console.log(people.indexOf("Bob"));
+    /* includes method: method yang mirip dengan indexOf tetapi lebih modern untuk memeriksa ada atau tidaknya elemen pada array */
+    people.push(23); // ["Michael", "Steven", 23]
+    console.log(people.includes("Steven")); // true
+    console.log(people.includes("Bob")); // false
+    console.log(people.includes(23)); // false
 
-    /* includes: checking the presence or absence of elements on the array */
-    people.push(23);
-    console.log(people.includes("Steven"));
-    console.log(people.includes("Bob"));
-    console.log(people.includes(23));
-
-    //using include to write conditionals
+    // using include method to write conditionals
     if (people.includes("Steven")) {
         console.log("You have a friend called Steven");
     }
 }
 
-/*  ***************************************************************************************************
+/*  ***********************
  *   CODING CHALLENGE 02
- *  **************************************************************************************************
+ *  ***********************
 Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
 Your tasks:
     1. Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100
@@ -296,9 +299,9 @@ Hint:
     console.log(total);
 }
 
-/*  ***************************************************************************************************
+/*  **************************
  *   Introduction to Objects
- *  ***************************************************************************************************/
+ *  **************************/
 {
     // data array: access an array element with its sequence number(index)
     const jokoArray = [
@@ -321,11 +324,11 @@ Hint:
     console.log(andri);
 }
 
-/*  ***************************************************************************************************
+/*  ***************************
  *   Dot vs Bracket Notation
- *  ***************************************************************************************************/
+ *  ***************************/
 {
-    //object data
+    // object data
     const wahyu = {
         firstName: "wahyu",
         lastName: "komarudin",
@@ -335,15 +338,15 @@ Hint:
     };
     console.log(wahyu);
 
-    // two ways to get property name:
-    console.log(wahyu.lastName); //with dot (.)
-    console.log(wahyu["lastName"]); //with Bracket Notation ([])
+    // two ways to get property name of object:
+    console.log(wahyu.lastName); // with dot (.)
+    console.log(wahyu["lastName"]); // with Bracket Notation ([])
 
     // inserting an expression can only use Bracket Notation not with dot
     const nameKey = "Name";
     console.log(wahyu["first" + nameKey]);
     console.log(wahyu["last" + nameKey]);
-    // console.log(wahyu.'last' + nameKey) //error
+    // console.log(wahyu.'last' + nameKey) // error
 
     // get a property that doesn't already exist
     const interestedIn = prompt(
@@ -359,7 +362,7 @@ Hint:
         );
     }
 
-    //add new property with a dot and bracket notation
+    // Creating a new property with dot and bracket notation
     wahyu.location = "Indonesian";
     wahyu["twitter"] = "wahyukmr";
     console.log(wahyu);
@@ -371,9 +374,9 @@ Hint:
     );
 }
 
-/*  ***************************************************************************************************
+/*  ******************
  *   Object Methods
- *  ***************************************************************************************************/
+ *  ******************/
 {
     const wahyu = {
         firstName: "wahyu",
@@ -385,7 +388,8 @@ Hint:
 
         //function in an object are called 'Method'
         calcAge: function () {
-            this.age = 2037 - this.birthYeah; //this: called object property
+            // membuat objek properti baru(age)
+            this.age = 2037 - this.birthYeah; // this: called object property
             return this.age;
         },
 
@@ -401,15 +405,16 @@ Hint:
     };
 
     // accessing the method(function in an object)
-    console.log(wahyu.calcAge());
+    console.log(wahyu.calcAge()); // 46
+    console.log(wahyu["calcAge"]()); // 46
     console.log(wahyu["getSummary"]());
 
-    console.log(wahyu.age);
+    console.log(wahyu.age); // 46
 }
 
-/*  ***************************************************************************************************
+/*  ************************
  *   CODING CHALLENGE 03
- *  **************************************************************************************************
+ *  ************************
 Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 or (height * height) = mass. (mass in kg and height in a meter)
 Your tasks:
     1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
@@ -456,9 +461,9 @@ Test data:
     }
 }
 
-/*  ***************************************************************************************************
+/*  ***************************
  *   Iteration: The for Loop
- *  ***************************************************************************************************/
+ *  ***************************/
 {
     /* Example Manually */
     // console.log('Lifting weights repetition 1 🏋️‍♀️');
@@ -478,9 +483,9 @@ Test data:
     }
 }
 
-/*  ***************************************************************************************************
+/*  ******************************************
  *   Looping Arrays, Breaking and Continuing
- *  ***************************************************************************************************/
+ *  ******************************************/
 {
     const wahyu = [
         "wahyu",
@@ -497,13 +502,14 @@ Test data:
     // console.log(wahyu[5])
     // wahyu[6] does NOT exist
 
+    /* LOOPING ARRAYS */
     const types = [];
     for (let i = 0; i < wahyu.length; i++) {
         // Reading from wahyu array
         console.log(wahyu[i], typeof wahyu[i]);
 
         // Filling types array
-        // types[i] = typeof wahyu[i];
+        // types[i] = typeof wahyu[i]; Don't do this
         types.push(typeof wahyu[i]);
     }
     console.log(types);
@@ -515,25 +521,27 @@ Test data:
     }
     console.log(ages);
 
-    // continue and break
+    /* CONTINUE AND BREAK */
     console.log("--- ONLY STRINGS ---");
     for (let i = 0; i < wahyu.length; i++) {
-        if (typeof wahyu[i] !== "string") continue; // loop string only
+        // Jika bertipe bukan string, akan menghentikan perulangan saat ini dan melanjutkan ke perulangan selanjutnya
+        if (typeof wahyu[i] !== "string") continue;
 
         console.log(wahyu[i], typeof wahyu[i]);
     }
 
     console.log("--- BREAK WITH OBJECT ---");
     for (let i = 0; i < wahyu.length; i++) {
-        if (typeof wahyu[i] === "object") break; // stop loop until object
+        // jika bertipe objek terpenuhi maka perulangan berhenti sepenuhnya
+        if (typeof wahyu[i] === "object") break;
 
         console.log(wahyu[i], typeof wahyu[i]);
     }
 }
 
-/*  ***************************************************************************************************
+/*  ****************************************
  *   Looping Backwards and Loops in Loops
- *  ***************************************************************************************************/
+ *  ****************************************/
 {
     const wahyu = [
         "wahyu",
@@ -563,16 +571,16 @@ Test data:
     }
 }
 
-/*  ***************************************************************************************************
+/*  ******************
  *   The while Loop
- *  ***************************************************************************************************/
+ *  ******************/
 {
-    // for loop: run the loop under certain conditions. For example loop on array
+    // for loop: digunakan untuk perulangan yang dapat ditentukan berapa kali perulangan terjadi. Misalnya loop pada array
     for (let rep = 1; rep <= 3; rep++) {
         console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
     }
 
-    // While Loop: when you don't know how many times you will repeat
+    // While Loop: Perulangan jenis ini sama dengan perulangan for. Jika for loop jumlah perulangannya sudah ditetapkan, sedangkan while loop akan melakukan perulangan jika kondisi (syarat) terpenuhi / bernilai true tanpa henti (infinity loop).
     let rep = 1;
     while (rep <= 3) {
         console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♀️`);
@@ -580,17 +588,17 @@ Test data:
     }
 
     // example when shaking the dice
-    let dice = Math.trunc(Math.random() * 6) + 1; // generate random data
+    let dice = Math.trunc(Math.random() * 6) + 1; // generate random data from 1 - 6
     while (dice !== 6) {
         console.log(`You rolled a ${dice}`);
-        dice = Math.trunc(Math.random() * 6) + 1;
+        dice = Math.trunc(Math.random() * 6) + 1; // membuat random angka kembali agar tidak membuat infinite loop
         if (dice === 6) console.log("Loop is about to end...");
     }
 }
 
-/*  ***************************************************************************************************
+/*  ************************
  *   CODING CHALLENGE 02
- *  **************************************************************************************************
+ *  ************************
 Let's improve Steven's tip calculator even more, this time using loops!
 Your tasks:
     1. Create an array 'bills' containing all 10 test bill values

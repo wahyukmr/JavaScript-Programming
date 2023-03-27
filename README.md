@@ -14,17 +14,17 @@
 
 <strong>JavaScript is a High-Level, Object-oriented, Multi-paradigm programming language.</strong>
 
--   Programming language hanyalah alat yang memungkinkan kita untuk menulis kode yang akan memerintahkan komputer untuk melakukan sesuatu.
--   High-level berarti kita tidak perlu memikirkan banyak hal rumit, seperti mengelola memeori komputer.
--   Object-oriented berarti bahasa tersebut sebagian besar didasarkan pada konsep objek untuk menyimpan sebagian besar jenis data.
--   Multi-paradigm berarti fleksibel dan serbaguna, sehingga kita dapat menggunakan semua jenis gaya pemrograman yang berbeda (cara berbeda untuk menyusun kode) seperti imperative dan deklarative programming.
+-   **_Programming language_** hanyalah alat yang memungkinkan kita untuk menulis kode yang akan memerintahkan komputer untuk melakukan sesuatu.
+-   **_High-level_** berarti kita tidak perlu memikirkan banyak hal rumit, seperti mengelola memeori komputer.
+-   **_Object-oriented_** berarti bahasa tersebut sebagian besar didasarkan pada konsep objek untuk menyimpan sebagian besar jenis data.
+-   **_Multi-paradigm_** berarti fleksibel dan serbaguna, sehingga kita dapat menggunakan semua jenis gaya pemrograman yang berbeda (cara berbeda untuk menyusun kode) seperti imperative dan deklarative programming.
 
     ### ~ Type conversion and coercion :
 
     Type Coercion atau type coercion adalah konversi nilai dari tipe data yang berbeda dan menentukan mana yang memiliki posisi lebih tinggi untuk dieksekusi terlebih dahulu.
 
-    -   Type conversion (ketika kita secara menual mengonversi dari satu tipe data ke tipe lainnya).
-    -   Type coercion (terjadi setiap kali operator berurusan dengan dua nilai yang memiliki tipe data berbeda, Jadi javascript dibalik layar mengonversi salah satu nilai agar sesuai dengan nilai lainnya sehingga operasi dapat dijalankan).
+    -   **_Type conversion_** (ketika kita secara menual mengonversi dari satu tipe data ke tipe lainnya).
+    -   **_Type coercion_** (terjadi setiap kali operator berurusan dengan dua nilai yang memiliki tipe data berbeda, Jadi javascript dibalik layar mengonversi salah satu nilai agar sesuai dengan nilai lainnya sehingga operasi dapat dijalankan).
 
     ### ~ Truthy and falsy operators
 
@@ -33,8 +33,8 @@
 
     ### ~ Statements and expressions
 
-    -   Expressions adalah bagian kode yang menghasilkan nilai.
-    -   Statements seperti kalimat yang menerjemahkan tindakan kita, tindakan yang kita ingin program lakukan. Jadi pada dasarnya setiap kali sesuatu yang diakhiri dengan titik koma itu adalah statement.
+    -   **_Expressions_** adalah bagian kode yang menghasilkan nilai.
+    -   **_Statements_** seperti kalimat yang menerjemahkan tindakan kita, tindakan yang kita ingin program lakukan. Jadi pada dasarnya setiap kali sesuatu yang diakhiri dengan titik koma itu adalah statement.
     </details>
 
 <details> <summary>
@@ -44,12 +44,13 @@
 </summary>
   
   ### ~ Activating Strict Mode :
-  - always use ***'use strict'*** to help debug code
+  - Selalu gunakan ***'use strict'*** untuk membantu men-debug code.
   
   ### ~ Reviewing Functions :
-  - the same two parameters in different functions, have nothing to do with each other
-  - ***Expression*** is code that produces a value or is a value
-  - ***Statement*** is an action / action taken
+  Tiga perbedaan cara menulis fungsi, tetapi semua bekerja dengan cara yang sama. menerima input data, mengubah data, dan kemudian mengeluarkan data. 
+  1. ***Fuction declaration***, fungsi yang dapat digunakan sebelum di nyatakan sebelumnya.
+  2. ***Function expression***, pada dasarnya fungsu yang nilainya disimpan pada sebuah variabel.
+  3. ***Arrow function***, bagus untuk fungsi dengan hanya satu baris statement dan tidak memiliki kata kunci *this*.
   
   ### ~ Primitive data types :
     1. Number
@@ -65,6 +66,22 @@
     2. Arrays
     3. Function
     4. Many more...
+    
+### ~ Breaking and Continuing
+- ***continue*** berarti keluar dari iterasi loop saat ini dan melanjutkan ke loop selanjutnya.
+- ***break*** digunakan untuk sepenuhnya mengakhiri seluruh loop.
+
+### ~ Looping
+
+Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan uncounted loop
+
+1. **_counted loop_**
+    - Merupakan perulangan yang jelas dan sudah diketahui banyaknya perulangannya.
+    - Contoh: for loop, forEach loop, repeat loop.
+2. **_uncounted loop_**
+    - merupakan perulangan yang tidak jelas berapa kali perulangannya.
+    - Contoh: while loop dan do/while loop.
+
 </details>
 
 <details> <summary>
@@ -109,56 +126,59 @@
 </summary>
   
   ### ~ Scope in JavaScript :
-  - Scope Concepts
-    - scoping asks the question "where do variable live?" or "where can we access a certain variable, and where not?".
-    - There are 3 type Scope in JavaScript: Global Scope, Function Scope(local Scope), and Block Scope.
-    - Only let and const variable are block scope.
-    - in JavaScript, we have lexical scoping, so the rules of where we can access variables are based on exactly where in the code functions and code blocks are written.
-  - Scope Chain
-    - Every Scope always has access to all the variables from all its outer scope. This is the **scope chain!**
-    - When a variable is not in the current Scope, The engine looks up in the scope chain until it finds the variable it's looking for. This is called **variable lookup**.
-    - The Scope chain is a one-way street: a Scope will never, ever have access to the variables of  an inner Scope.
-    - The Scope chain in a certain Scope is equal to adding together all the variable environment of the all parent Scopes.
-    - The Scope chain has nothing to do with the order in which functions were called. it does not affect the scope chain at all!
-  - The 3 Types of scope
-    1. Global Scope
-        - 👉 Outside of any function or block
-        - 👉 Variable declared in global scope are accessible **everywhere**
-    2. Function Scope
-        - 👉 The scope of the **function**
-        - 👉 Variable are accessible only **inside function, NOT** outside
-        - 👉 Also called local scope
-    3. Block Scope (ES6)
-        - 👉 The scope of the **if block, for loop block, etc**
-  
-  ### ~ Hoisting and TDZ in Practice :
-  - The conclusions in this material are
-    - Don't use "var" to declare variables
-    - Use "const" at part of the time declaring variables
-    - Always declare variables above the Scope
-    - Always declare the function first before it is used
-  
-  ### ~ The "this" Keyword in Practice :
-  - use of the "this" keyword in calling functions
-    - Method 👉 "this" = Object that is calling the method
-    - Simple Function call 👉 "this" = undefined (if using strict mode)
-    - Arrow Function 👉 "this" = using the this keyword from the parent scope
-    - Event Listener 👉 "this" = DOM Element that the handler is attached to
-  
-  ### ~ Regular Functions vs. Arrow Functions :
-  - The conclusions in this material are
-    - Don't use Arrow function in object method
-    - The use of this keyword depends on the object that calls it
-    - When it has a function inside a method, best solution is use Arrow function
-    - Keyword arguments are no longer important in javascsript because there are more modern ways to it
-  
-  ### ~ Primitives Types vs. Objects (reference types) :
-  - The conclusions in this material are
-    - in primitives declare the const variable cannot be changed in value, but does not apply to object (reference types)
-    - Type Data Primitive: String, Number, Boolean, Null, bigint, simbool, undefined
-    - Type Data Object: Object Literal, Arrays, Functions, many more...
-    - in primitive = fetch last change
-    - in object(reference types) = every time you make changes to the copy, the original object changes too
+Scope Concepts:
+- scoping asks the question "where do variable live?" or "where can we access a certain variable, and where not?".
+- There are 3 type Scope in JavaScript: Global Scope, Function Scope(local Scope), and Block Scope.
+- Only let and const variable are block scope.
+- in JavaScript, we have lexical scoping, so the rules of where we can access variables are based on exactly where in the code functions and code blocks are written.
+
+Scope Chain:
+
+-   Every Scope always has access to all the variables from all its outer scope. This is the **scope chain!**
+-   When a variable is not in the current Scope, The engine looks up in the scope chain until it finds the variable it's looking for. This is called **variable lookup**.
+-   The Scope chain is a one-way street: a Scope will never, ever have access to the variables of an inner Scope.
+-   The Scope chain in a certain Scope is equal to adding together all the variable environment of the all parent Scopes.
+-   The Scope chain has nothing to do with the order in which functions were called. it does not affect the scope chain at all!
+
+The 3 Types of scope:
+
+1. Global Scope
+    - 👉 Outside of any function or block
+    - 👉 Variable declared in global scope are accessible **everywhere**
+2. Function Scope
+    - 👉 The scope of the **function**
+    - 👉 Variable are accessible only **inside function, NOT** outside
+    - 👉 Also called local scope
+3. Block Scope (ES6)
+    - 👉 The scope of the **if block, for loop block, etc**
+
+### ~ Hoisting and TDZ in Practice :
+
+-   The conclusions in this material are
+    -   Don't use "var" to declare variables
+    -   Use "const" at part of the time declaring variables
+    -   Always declare variables above the Scope
+    -   Always declare the function first before it is used
+
+### ~ The "this" Keyword in Practice :
+
+-   use of the "this" keyword in calling functions
+    -   Method 👉 "this" = Object that is calling the method
+    -   Simple Function call 👉 "this" = undefined (if using strict mode)
+    -   Arrow Function 👉 "this" = using the this keyword from the parent scope
+    -   Event Listener 👉 "this" = DOM Element that the handler is attached to
+
+### ~ Regular Functions vs. Arrow Functions :
+
+-   The conclusions in this material are
+    -   Don't use Arrow function in object method
+    -   The use of this keyword depends on the object that calls it
+    -   When it has a function inside a method, best solution is use Arrow function
+    -   Keyword arguments are no longer important in javascsript because there are more modern ways to it
+
+### ~ Primitives Types vs. Objects (reference types) :
+
+-   The conclusions in this material are - in primitives declare the const variable cannot be changed in value, but does not apply to object (reference types) - Type Data Primitive: String, Number, Boolean, Null, bigint, simbool, undefined - Type Data Object: Object Literal, Arrays, Functions, many more... - in primitive = fetch last change - in object(reference types) = every time you make changes to the copy, the original object changes too
 </details>
 
 <details> <summary>
@@ -167,87 +187,96 @@
 
 </summary>
 
-<<<<<<< HEAD
 ### ~ Data Structure Overview :
-=======
-   ### ~ Data Structure Overview :
-  - Array or Set = simple list of values and have only values without any description
-  - Object or Map = if necessary key and value pairs. So with keys, we have a way of describing or describing values
-  - The use of Array Object is also common in JavaScript
-  
-  ### ~ Arrays Vs Sets :
-  - Array
-    - Use when you need an ordered list of values (might contain duplicates)
-    - Use it when you need to manipulate data
-  - Set
-    - Use it when you need to work with unique values
-    - Use when high performance is really important
-    - Use to remove duplicates from arrays
-  
-  ### ~ Objects Vs Maps :
-  - Object
-    - More “traditional” to store keys/values
-    - Easier to write and access values whit the dot operator( . ) and bracket( [] )
-    - Keys are just type strings
-    - Many developers are familiar with Object
-    - Use when you need to include functions (method)
-    - Use when working with JSON
-    - Objects are still being used all the time
-  - Map
-    - Better performance
-    - Keys can have any data type
-    - Easy to iterate
-    - Easy to calculate length/size data
-    - Use when you simply need to map key to values
-    - Use when you need keys that are not strings
-    - Map is an important data structure for now
-  
-  ### ~ Destructuring Arrays :
-  - destructuring is an ES6 feature for disassembling array or object values into separate variables. In other words destructuring is breaking down complex data structures into small data structures such as variables.
-  - In arrays, we use distructuring to retrieve elements from the array and store them on a variable
-  
-  ### ~ Destructuring objects :
-  - In the unimportant order object, just call the name of the property to be retrieved
-  
-  ### ~ Spread Operators ( ... ) :
-  - Spread operator = used to split up array elements OR object properties
-  - The use of the spread operator is to create a new array or pass some value into a function
-  - Spread operators are similar to Destructuring, as they help output elements on arrays
-  - The big difference is that the spread operator takes the entire element on the array and does't create a new variable
-  - That way we can only use it in the place where it should write values separated by commas
-  - Two important cases of using spread operators are Copy array and combine with two or more arrays
-  - Spread operators work on all iterable data types (can be changed)
-  
-  ### ~ Rest Pattern and Parameters :
-  - Rest Pattern = used to marge a list of functions arguments into an array
-  - Uses it in the argument list of the function, which allows it to accept an unlimited number of arguments and they will all be concatenated into one array
-  - Rest Pattern is the opposite of spread operator
-  - Operator spread used when writing values and separated by commas
-  - While Rest Pattern used when writing variable names and separated by commas
-  
-  ### ~ Short Circuiting ( && and || ) :
-  - We can use the OR operator to specify a default value
-  - We can use the AND operator to execute the code in the second operand if the first operand is true
-  - Short Circuiting in OR ( || ) = returns the first truth value, or only the last value if everything is false (doesn't have to be a BOOLEAN)
-  - Short Circuiting in OR ( || ) are opposite to Short Circuiting in AND ( && )
-  - Short Circuiting in AND ( && ) = returns the first false value, or the last value if everything is true (doesn't have to be a BOOLEAN)
-  - Don't use short circuiting to replace if statements, because it will make the code difficult to read
-  
-  ### ~ The Nullish Coalescing Operator ( ?? ) :
-  - It works similarly to the OR operator, and will fix errors there
-  - It works to Nullish: Null and Undefined (***Not For:*** 0 or "")
-  
-  ### ~ Logical Assignment Operators :
-  - The principle of its work is the same as that of the OR, AND, NULLISH operators. but with this it is simpler
-  - operator OR for give a default value
-  - operator NULLISH for used if there is a value Null or Undefined
-  - operator AND we can use it if we want to change an existing value
-  
-  ### ~ Looping Arrays: The for-of Loop
-  - Use a for-of loop when dealing with data iterables( arrays, strings, maps, sets )
-  - Use a for-in loop when dealing with data Objects
-  - With the for-of loop we can still use the continue and break keywords
->>>>>>> 63240b895b31736c3acdf82659e369812c9b3ef8
+
+### ~ Data Structure Overview :
+
+-   Array or Set = simple list of values and have only values without any description
+-   Object or Map = if necessary key and value pairs. So with keys, we have a way of describing or describing values
+-   The use of Array Object is also common in JavaScript
+
+### ~ Arrays Vs Sets :
+
+-   Array
+    -   Use when you need an ordered list of values (might contain duplicates)
+    -   Use it when you need to manipulate data
+-   Set
+    -   Use it when you need to work with unique values
+    -   Use when high performance is really important
+    -   Use to remove duplicates from arrays
+
+### ~ Objects Vs Maps :
+
+-   Object
+    -   More “traditional” to store keys/values
+    -   Easier to write and access values whit the dot operator( . ) and bracket( [] )
+    -   Keys are just type strings
+    -   Many developers are familiar with Object
+    -   Use when you need to include functions (method)
+    -   Use when working with JSON
+    -   Objects are still being used all the time
+-   Map
+    -   Better performance
+    -   Keys can have any data type
+    -   Easy to iterate
+    -   Easy to calculate length/size data
+    -   Use when you simply need to map key to values
+    -   Use when you need keys that are not strings
+    -   Map is an important data structure for now
+
+### ~ Destructuring Arrays :
+
+-   destructuring is an ES6 feature for disassembling array or object values into separate variables. In other words destructuring is breaking down complex data structures into small data structures such as variables.
+-   In arrays, we use distructuring to retrieve elements from the array and store them on a variable
+
+### ~ Destructuring objects :
+
+-   In the unimportant order object, just call the name of the property to be retrieved
+
+### ~ Spread Operators ( ... ) :
+
+-   Spread operator = used to split up array elements OR object properties
+-   The use of the spread operator is to create a new array or pass some value into a function
+-   Spread operators are similar to Destructuring, as they help output elements on arrays
+-   The big difference is that the spread operator takes the entire element on the array and does't create a new variable
+-   That way we can only use it in the place where it should write values separated by commas
+-   Two important cases of using spread operators are Copy array and combine with two or more arrays
+-   Spread operators work on all iterable data types (can be changed)
+
+### ~ Rest Pattern and Parameters :
+
+-   Rest Pattern = used to marge a list of functions arguments into an array
+-   Uses it in the argument list of the function, which allows it to accept an unlimited number of arguments and they will all be concatenated into one array
+-   Rest Pattern is the opposite of spread operator
+-   Operator spread used when writing values and separated by commas
+-   While Rest Pattern used when writing variable names and separated by commas
+
+### ~ Short Circuiting ( && and || ) :
+
+-   We can use the OR operator to specify a default value
+-   We can use the AND operator to execute the code in the second operand if the first operand is true
+-   Short Circuiting in OR ( || ) = returns the first truth value, or only the last value if everything is false (doesn't have to be a BOOLEAN)
+-   Short Circuiting in OR ( || ) are opposite to Short Circuiting in AND ( && )
+-   Short Circuiting in AND ( && ) = returns the first false value, or the last value if everything is true (doesn't have to be a BOOLEAN)
+-   Don't use short circuiting to replace if statements, because it will make the code difficult to read
+
+### ~ The Nullish Coalescing Operator ( ?? ) :
+
+-   It works similarly to the OR operator, and will fix errors there
+-   It works to Nullish: Null and Undefined (**_Not For:_** 0 or "")
+
+### ~ Logical Assignment Operators :
+
+-   The principle of its work is the same as that of the OR, AND, NULLISH operators. but with this it is simpler
+-   operator OR for give a default value
+-   operator NULLISH for used if there is a value Null or Undefined
+-   operator AND we can use it if we want to change an existing value
+
+### ~ Looping Arrays: The for-of Loop
+
+-   Use a for-of loop when dealing with data iterables( arrays, strings, maps, sets )
+-   Use a for-in loop when dealing with data Objects
+-   With the for-of loop we can still use the continue and break keywords
 
 -   Array or Set = simple list of values and have only values without any description
 -   Object or Map = if necessary key and value pairs. So with keys, we have a way of describing or describing values
