@@ -1,9 +1,8 @@
 "use strict";
 
-/*  ***************************************************************************************************
+/*  ******************************
  *   Scope and The Scope Chain
- *  ***************************************************************************************************
- */
+ *  ******************************/
 {
     /* global scope */
     const myName = "wahyu";
@@ -70,9 +69,9 @@
     // printAge();
 }
 
-/*  ***************************************************************************************************
+/*  *******************************
  *   Hoisting and TDZ in Practice
- *  ***************************************************************************************************/
+ *  *******************************/
 {
     /* accessing variables before initialization their variables */
     console.log(me); // result: undefined
@@ -98,14 +97,13 @@
         return a + b;
     };
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /* arrow function */
     var addArr = (a, b) => a + b;
 }
 
-/*  ***************************************************************************************************
+/*  *******************************
  *   The this Keyword in Practice
- *  ***************************************************************************************************/
+ *  *******************************/
 {
     // THIS
     console.log(this);
@@ -128,8 +126,8 @@
     const budi = {
         year: 1991,
         age: function () {
-            console.log(this); //refers to the object being called
-            console.log(2037 - this.year); //2037 - object.year
+            console.log(this); // refers to the object being called
+            console.log(2037 - this.year); // 2037 - object.year
         },
     };
     budi.age(); // This refers to object budi
@@ -141,9 +139,9 @@
     dewi.age(); // This refers to object dewi
 }
 
-/*  ***************************************************************************************************
+/*  ****************************************
  *   Regular Functions vs. Arrow Functions
- *  ***************************************************************************************************/
+ *  ****************************************/
 {
     /* This Keyword */
     const sarah = {
@@ -169,7 +167,7 @@
             isMillenial();
         },
 
-        //Don't use arrow function
+        // Don't use arrow function to access this keyword
         greet: () => {
             console.log(this);
             console.log(`hey ${this.firstName}`); //hey undefined
@@ -188,9 +186,9 @@
     addExpr2(2, 5, 8, 12);
 }
 
-/*  ***************************************************************************************************
+/*  ********************************************
  *   primitives vs. Objects (reference types)
- *  ***************************************************************************************************/
+ *  ********************************************/
 {
     /* in primitives */
     let age1 = 30;
@@ -226,7 +224,7 @@
         family: ["alice", "bob"],
     };
 
-    // function assign() = concatenate two objects and return a new object
+    // Object.assign() = concatenate two objects and return a new object
     const jessicaAfter = Object.assign({}, jessicaBefore);
     jessicaAfter.lastName = "wahyu";
     jessicaAfter.family.push("dedi"); // not applicable

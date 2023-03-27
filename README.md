@@ -92,31 +92,35 @@ Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan unco
 
 ### ~ 4 Step to solve any problem :
 
-1. Make sure you 100% understand the problem. **_Ask the right questions_** to get a clear picture of the problem
-2. **_Divide and conquer_**: Break a big problem into smaller sub-problems
-3. Don't be afraid to do **_research_** on each problem (Google, stackoverflow, MDN web docs,...)
-4. For bigger problems, **_write pseudo-code_** before writing the actual code
+1. Pastikan untuk memahami 100% masalahnya. **_ajukan pertanyaan yang tepat_** untuk mendapatkan gambaran yang jelas tentang masalahnya.
+2. **_Membagi masalah_**. memecah masalah besar menjadi sub-masalah yang lebuh kecil.
+3. Jangan takut untuk melakukan **_research_** pada setiap masalah (Google, stackoverflow, MDN web docs,...)
+4. Untuk masalah yang lebih besar, **_tulis pseudo-code_** atau rancangan program sebelum menulis kode yang sebenarnya.
 
 ### ~ The Debugging Process :
 
--   **Identify** (Aware that there is a bug)
+1. **Identify** (sadar bahwa ada bug)
 
-    -   :point_right: During development
-    -   :point_right: Testing software
-    -   :point_right: User reports during production
-    -   :point_right: Context: browsers, user, etc
+    :point_right: Selama development
+    :point_right: Testing software
+    :point_right: Report dari pengguna selama production
+    :point_right: Context: browsers, user, etc
 
--   **Find** (Isolating where exactly the bug is happening in code)
+2. **Find** (Mengisolasi dimana tepatnya bug terjadi dalam kode)
 
-    -   :point_right: Developer console (simple code)
-    -   :point_right: Debugger (complex code)
+    :point_right: Developer console (simple code)
+    :point_right: Debugger (complex code)
 
--   **Fix** (Correct the bug)
+3. **Fix** (Perbaiki bugnya)
 
-    -   :point_right: Change wrong solution with correct solution
+    :point_right: Ubah solusi yang salah dengan solusi yang benar
 
--   **Prevent** (Preventing it from happening again) - :point_right: Searching for the same bug in similar code - :point_right: Writing tests using testing software
-</details>
+4. **Prevent** (Mencegahnya agar tidak terjadi lagi)
+
+    :point_right: Mencari untuk bug yang sama dalam kode serupa
+    :point_right: Menulis test menggunakan testing software
+
+    </details>
 
 <details> <summary>
 
