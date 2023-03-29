@@ -144,7 +144,7 @@ Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan unco
 -   **Call stack** adalah tempat kode kita sebenarnya dieksekusi menggunakan sesuatu yang disebut **_execution context_**.
 -   Execution context adalah environment di mana potongan javascript diekseksi, seperti kotak yang menyimpan semua informasi yang diperlukan untuk beberapa kode yang akan dieksekusi. execution context mengandung variable environment, scope chain dan this keyword.
 -   Variabel environment mencakup variable declaration(let, const dan var), function dan argument object.
--   **Heap** adalah kumpulan memori yang terstruktur yang menyimpan semua objek yang dibutuhkan aplikasi kita.
+-   **Heap** adalah tempat kumpulan memori yang terstruktur yang menyimpan semua objek(reference types) yang dibutuhkan.
 
 ### ~ JS Runtime
 
@@ -208,15 +208,18 @@ Tiga jenis Scope di Javascript:
     -   **Arrow Function** 👉 kata kunci **_this_** merujuk ke this dari fungsi induk terdekatnya.
     -   **Event Listener** 👉 kata kunci **_this_** merujuk ke elemen DOM tempat tempat penanganan dilampirkan.
 
-### ~ Primitives Types vs. Objects (reference types) :
+### ~ Primitives vs. Objects (Primitive vs. Reference Types) :
 
 Kesimpulan dari bagian ini:
 
--   Pada **_primitives types_**, mendeklarasikan variabel const tidak dapat mengubah nilai, tetapi tidak berlaku pada object (reference types).
--   Type Data Primitive: String, Number, Boolean, Null, bigint, simbool, undefined.
--   Type Data Object: Object Literal, Arrays, Functions, many more...
--   Pada **_primitives types_** akan mengambil perubahan terakhir.
--   Pada **_object(reference types)_** setiap kali membuat perubahan pada salinannya maka data aslinya juga ikut berubah.
+-   **Primitive data type**: String, Number, Boolean, Null, bigint, simbool, undefined.
+-   **Object**: selain dari primitive seperti Object Literal, Arrays, Functions, banyak lagi...
+-   Berbicara tentang memori dan manajemen memori, biasanya disebut **_primitives types_** dan **_reference types_**
+-   Semua objek atau dengan kata lain Reference types akan disimpan pada Heap di engine JS.
+-   Sedangkan Primitive atau Primitive types akan disimpan pada Call Stack tepatnya didalam execution context dimana mereka dideklarasikan.
+-   Pada primitives types, akan mengambil perubahan terakhir.
+-   Pada object(reference types), setiap kali membuat perubahan pada salinannya maka data aslinya juga ikut berubah. Karena ketika kita mencoba untuk meng-copy objek, hal ini tidak akan membuat objek baru pada Heap, itu hanya variabel lain pada Stack yang menyimpan referensi ke objek aslinya, jadi kedua variabel ini menunjuk ke alamat memori yang sama di Heap, oleh karenanya jika ada perubahan keduannya akan terpengaruh.
+-   Mendeklarasikan variabel const tidak dapat diubah nilainya hanya berlaku untuk nilai Primitive, tetapi tidak untuk nilai Reference. karena ini hanya mengubah nilai objek yang disimpan di Heap.
 
 ### ~ Regular Functions vs. Arrow Functions :
 

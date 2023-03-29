@@ -206,6 +206,7 @@
         age: 21,
     };
 
+    // menyalin objek tidak akan membuat objek baru pada HEAP, melainkan tetap merujuk ke objek yang sama dengan mengubah nilai age, Jadi kedua objek (me1 dan friend) akan memiliki nilai age yang sama yakni 30, begitu juga untuk friend2.
     const friend = me1;
     friend.age = 30;
 
