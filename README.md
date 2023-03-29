@@ -266,39 +266,45 @@ Kesimpulan dari bagian ini:
 
 </summary>
 
-### ~ Arrays vs Sets dan Objects vs Maps:
+### ~ Arrays vs Sets:
 
-**Array atau Set**
+Keduannya dapat digunakan jika hanya bermain dengan daftar nilai sederhana dan hanya memiliki nilai tanpa deskripsi apa pun.
 
--   Keduannya dapat digunakan jika hanya bermain dengan daftar nilai sederhana dan hanya memiliki nilai tanpa deskripsi apa pun.
--   Keunggulan Array:
-    1. Dapat digunakan jika membutuhkan daftar nilai yang berurutan (mungkin berisi nilai yang sama).
-    2. Dapat digunakan saat perlu untuk memaniplasi data.
--   Keunggulan Set:
-    1. Digunakan ketika perlu bekerja dengan nilai yang unik (tidak ada nilai yang sama).
-    2. Digunakan saat mementingkan kinerja yang tinggi.
-    3. Dapat digunakan untuk menghapus duplikasi nilai pada Array.
+Keunggulan Array:
 
-**Objects Vs Maps**
+1. Dapat digunakan jika membutuhkan daftar nilai yang berurutan (mungkin berisi nilai yang sama).
+2. Dapat digunakan saat perlu untuk memaniplasi data.
 
--   Keduanya dapat digunakan jika perlu pasangan key dan value. Jadi dengan key akan memiliki cara untuk mendeskripsikan atau menggambarkan value.
--   Keunggulan Object:
-    1. Cara **sederhana** untuk menyimpan keys/value.
-    2. Mudah untuk menulis dan mengakses value ( menggunakan operator dot atau bracket[] ).
-    3. Key hanya bisa bertipe **_String_**.
-    4. Gunakan saat membutuhkan fungsi didalamnya (method).
-    5. Gunakan jika ingin bekerja dengan JSON.
-    6. Penggunaan data Object masih digunakan sepanjang waktu.
--   Keunggulan Map:
-    1. Performa yang lebih baik.
-    2. Key bisa bertipe data apapun.
-    3. Mudah melakukan perulangan.
-    4. Mudah untuk menghitung panjang/ukuran data.
-    5. digunakan hanya ketika perlu memetakan key ke value.
-    6. Gunakan saat membutuhkan key yang bukan bertipe **_String_**.
-    7. Map merupakan data struktur yang penting saat ini.
+Keunggulan Set:
 
-**Penggunaan Objek Array juga umum di JavaScript.**
+1. Digunakan ketika perlu bekerja dengan nilai yang unik (tidak ada nilai yang sama).
+2. Digunakan saat mementingkan kinerja yang tinggi.
+3. Dapat digunakan untuk menghapus duplikasi nilai pada Array.
+
+### ~ Objects vs Maps:
+
+Keduanya dapat digunakan jika perlu pasangan key dan value. Jadi dengan key akan memiliki cara untuk mendeskripsikan atau menggambarkan value.
+
+Keunggulan Object:
+
+1. Cara **sederhana** untuk menyimpan keys/value.
+2. Mudah untuk menulis dan mengakses value ( menggunakan operator dot atau bracket[] ).
+3. Key hanya bisa bertipe **_String_**.
+4. Gunakan saat membutuhkan fungsi didalamnya (method).
+5. Gunakan jika ingin bekerja dengan JSON.
+6. Penggunaan data Object masih digunakan sepanjang waktu.
+
+Keunggulan Map:
+
+1. Performa yang lebih baik.
+2. Key bisa bertipe data apapun.
+3. Mudah melakukan perulangan.
+4. Mudah untuk menghitung panjang/ukuran data.
+5. digunakan hanya ketika perlu memetakan key ke value.
+6. Gunakan saat membutuhkan key yang bukan bertipe **_String_**.
+7. Map merupakan data struktur yang penting saat ini.
+
+Penggunaan Objek Array juga umum di JavaScript.
 
 ### ~ Destructuring Arrays :
 
