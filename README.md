@@ -113,9 +113,40 @@ Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan unco
 
 </summary>
 
--   **DOM** (Document Object Model) adalah Struktur yang merepresentasikan html documents. Memungkinkan javascript untuk mengakses elemen html dan memanipulasi style (mengubah teks, atribut html dan bahkan gaya CSS) nya.
+### ~ DOM (Document Object Model)
+
+-   **DOM** adalah Struktur yang merepresentasikan html documents. Memungkinkan javascript untuk mengakses elemen html dan memanipulasi style (mengubah teks, atribut html dan bahkan gaya CSS) nya.
 
 -   **DOM bukanlah javascript**, methods DOM dan properti untuk memanipulasi DOM bukan bagian dari JavaScript, tetapi dapat berinteraksi dengan javascript.
+
+### ~ Web Storage
+
+-   Web storage adalah salah satu Web API (perantara agar kode JavaScript bisa "berkomunikasi" dengan browser) yang dapat menyimpan data secara lokal pada sisi client (disimpan secara lokal pada perangkat kita).
+-   Web Storage dapat menampung data maksimal 10MB per domain.
+-   Fungsi dari Web Storage:
+
+    1. Menyimpan data dalam bentuk string yang dihasilkan oleh halaman web agar bisa diakses secara offline.
+    2. Cocok juga untuk menyimpan data konfigurasi preference untuk pengguna web.
+
+-   Macam-macam Web Storage:
+    1. **Local Storage**:
+       ~ Digunakan untuk menyimpan data tanpa ada batasan waktu. Data yang disimpan tidak akan hilang bila browser atau tabs browser ditutup kecuali jika kita menghapusnya.
+       ~ Untuk menggunakan local storage, kita harus mengaksesnya melalui objek yang bernama "localStorage".
+    2. **Session Storage**:
+       ~ Digunakan untuk menyimpan data sementara pada browser. Data akan hilang ketika browser atau tab browser ditutup.
+       ~ Untuk menerapkan Session Storage, kita dapat menggunakan global objek sessionStorage.
+-   Data yang tersimpan dalam sessionStorage atau localStorage adalah nilai dengan tipe data primitif seperti number, boolean, atau string. Bisa juga berbentuk JavaScript objek dengan mengubahnya ke dalam string (JSON)
+-   **_Key-value_** = Metode yang dapat digunakan untuk menyimpan dan mengakses data pada storage.
+-   Fungsi-fungsi yang ada pada Web Storage:
+    1. **_setItem_** = Digunakan untuk menyimpan data pada Web Storage. Fungsi ini membutuhkan dua parameter yakni key (sebagai kunci untuk mendapatkan nilai) dan value (sebagai nilai yang akan disimpan).
+    2. **_getItem_** = Digunakan untuk mengakses data pada Web Storage. Fungsi ini membutuhkan satu parameter yakni key (sebagai kunci untuk mendapatkan nilai), dan data yang disimpan pada Web Storage akan dikembalikan dalam bentuk string.
+    3. **_removeItem(key)_** = menghapus key beserta value-nya.
+    4. **_clear()_** = menghapus semuanya.
+    5. **_key(index)_** = mendapatkan key pada posisi tertentu.
+    6. **_length_** = jumlah item yang disimpan.
+-   Menyimpan dan Mendapatkan Data Kompleks pada Web Storage:
+    -   Untuk menyimpan data kompleks seperti objek JavaScript dapat dilakukan dengan mengubah objek menjadi string menggunakan JSON.stringify().
+    -   Untuk mendapatkan data kompleks seperti objek JavaScript dari Web Storage dapat dilakukan dengan mengubah string objek menjadi objek menggunakan JSON.parse().
 
 </details>
 
@@ -231,46 +262,43 @@ Kesimpulan dari bagian ini:
 
 <details> <summary>
 
-## [Data-Structures-Operators](https://github.com/wahyukmr/JavaScript-Programming/blob/master/09-Data-Structures-Operators/script.js)
+## [Data-Structures](https://github.com/wahyukmr/JavaScript-Programming/blob/master/09-Data-Structures-Operators/script.js)
 
 </summary>
 
-### ~ Data Structure Overview :
+### ~ Arrays vs Sets dan Objects vs Maps:
 
-### ~ Data Structure Overview :
+**Array atau Set**
 
--   Array or Set = simple list of values and have only values without any description
--   Object or Map = if necessary key and value pairs. So with keys, we have a way of describing or describing values
--   The use of Array Object is also common in JavaScript
+-   Keduannya dapat digunakan jika hanya bermain dengan daftar nilai sederhana dan hanya memiliki nilai tanpa deskripsi apa pun.
+-   Keunggulan Array:
+    1. Dapat digunakan jika membutuhkan daftar nilai yang berurutan (mungkin berisi nilai yang sama).
+    2. Dapat digunakan saat perlu untuk memaniplasi data.
+-   Keunggulan Set:
+    1. Digunakan ketika perlu bekerja dengan nilai yang unik (tidak ada nilai yang sama).
+    2. Digunakan saat mementingkan kinerja yang tinggi.
+    3. Dapat digunakan untuk menghapus duplikasi nilai pada Array.
 
-### ~ Arrays Vs Sets :
+**Objects Vs Maps**
 
--   Array
-    -   Use when you need an ordered list of values (might contain duplicates)
-    -   Use it when you need to manipulate data
--   Set
-    -   Use it when you need to work with unique values
-    -   Use when high performance is really important
-    -   Use to remove duplicates from arrays
+-   Keduanya dapat digunakan jika perlu pasangan key dan value. Jadi dengan key akan memiliki cara untuk mendeskripsikan atau menggambarkan value.
+-   Keunggulan Object:
+    1. Cara **sederhana** untuk menyimpan keys/value.
+    2. Mudah untuk menulis dan mengakses value ( menggunakan operator dot atau bracket[] ).
+    3. Key hanya bisa bertipe **_String_**.
+    4. Gunakan saat membutuhkan fungsi didalamnya (method).
+    5. Gunakan jika ingin bekerja dengan JSON.
+    6. Penggunaan data Object masih digunakan sepanjang waktu.
+-   Keunggulan Map:
+    1. Performa yang lebih baik.
+    2. Key bisa bertipe data apapun.
+    3. Mudah melakukan perulangan.
+    4. Mudah untuk menghitung panjang/ukuran data.
+    5. digunakan hanya ketika perlu memetakan key ke value.
+    6. Gunakan saat membutuhkan key yang bukan bertipe **_String_**.
+    7. Map merupakan data struktur yang penting saat ini.
 
-### ~ Objects Vs Maps :
-
--   Object
-    -   More “traditional” to store keys/values
-    -   Easier to write and access values whit the dot operator( . ) and bracket( [] )
-    -   Keys are just type strings
-    -   Many developers are familiar with Object
-    -   Use when you need to include functions (method)
-    -   Use when working with JSON
-    -   Objects are still being used all the time
--   Map
-    -   Better performance
-    -   Keys can have any data type
-    -   Easy to iterate
-    -   Easy to calculate length/size data
-    -   Use when you simply need to map key to values
-    -   Use when you need keys that are not strings
-    -   Map is an important data structure for now
+**Penggunaan Objek Array juga umum di JavaScript.**
 
 ### ~ Destructuring Arrays :
 
