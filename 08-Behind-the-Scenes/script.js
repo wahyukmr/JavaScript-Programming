@@ -161,7 +161,7 @@
 
             // solution 2 (modern)
             const isMillenial = () => {
-                console.log(this);
+                console.log(this); // merujuk ke induknya (objek sarah)
                 console.log(this.year >= 1981 && this.year <= 1996);
             };
             isMillenial();
@@ -169,7 +169,7 @@
 
         // Don't use arrow function to access this keyword
         greet: () => {
-            console.log(this);
+            console.log(this); // merujuk ke window object
             console.log(`hey ${this.firstName}`); //hey undefined
         },
     };

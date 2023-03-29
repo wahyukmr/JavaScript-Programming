@@ -19,23 +19,23 @@
 -   **Object-oriented** berarti bahasa tersebut sebagian besar didasarkan pada konsep objek untuk menyimpan sebagian besar jenis data.
 -   **Multi-paradigm** berarti fleksibel dan serbaguna, sehingga kita dapat menggunakan semua jenis gaya pemrograman yang berbeda (cara berbeda untuk menyusun kode) seperti imperative dan deklarative programming.
 
-    ### ~ Type conversion and coercion :
+### ~ Type conversion and coercion :
 
-    Type Coercion atau type coercion adalah konversi nilai dari tipe data yang berbeda dan menentukan mana yang memiliki posisi lebih tinggi untuk dieksekusi terlebih dahulu.
+Type Coercion atau type coercion adalah konversi nilai dari tipe data yang berbeda dan menentukan mana yang memiliki posisi lebih tinggi untuk dieksekusi terlebih dahulu.
 
-    -   **Type conversion** (ketika kita secara menual mengonversi dari satu tipe data ke tipe lainnya).
-    -   **Type coercion** (terjadi setiap kali operator berurusan dengan dua nilai yang memiliki tipe data berbeda, Jadi javascript dibalik layar mengonversi salah satu nilai agar sesuai dengan nilai lainnya sehingga operasi dapat dijalankan).
+-   **Type conversion** (ketika kita secara menual mengonversi dari satu tipe data ke tipe lainnya).
+-   **Type coercion** (terjadi setiap kali operator berurusan dengan dua nilai yang memiliki tipe data berbeda, Jadi javascript dibalik layar mengonversi salah satu nilai agar sesuai dengan nilai lainnya sehingga operasi dapat dijalankan).
 
-    ### ~ Truthy and falsy operators
+### ~ Truthy and falsy operators
 
-    -   Nilai falsy adalah nalai yang tidak sepenuhnya salah, tetapi akan menjadi false ketika kita mencoba mengubahnya menjadi boolean.
-    -   Lima nilai falsy di javascript: 0, "", undefined, null, NaN
+-   Nilai falsy adalah nalai yang tidak sepenuhnya salah, tetapi akan menjadi false ketika kita mencoba mengubahnya menjadi boolean.
+-   Lima nilai falsy di javascript: 0, "", undefined, null, NaN
 
-    ### ~ Statements and expressions
+### ~ Statements and expressions
 
-    -   **Expressions** adalah bagian kode yang menghasilkan nilai.
-    -   **Statements** seperti kalimat yang menerjemahkan tindakan kita, tindakan yang kita ingin program lakukan. Jadi pada dasarnya setiap kali sesuatu yang diakhiri dengan titik koma itu adalah statement.
-    </details>
+-   **Expressions** adalah bagian kode yang menghasilkan nilai.
+-   **Statements** seperti kalimat yang menerjemahkan tindakan kita, tindakan yang kita ingin program lakukan. Jadi pada dasarnya setiap kali sesuatu yang diakhiri dengan titik koma itu adalah statement.
+</details>
 
 <details> <summary>
 
@@ -52,21 +52,6 @@
   2. **Function expression**, pada dasarnya fungsu yang nilainya disimpan pada sebuah variabel.
   3. **Arrow function**, bagus untuk fungsi dengan hanya satu baris statement dan tidak memiliki kata kunci *this*.
   
-  ### ~ Primitive data types :
-    1. Number
-    2. String
-    3. Boolean
-    4. Undefined
-    5. Null
-    6. Symbol
-    7. BigInt
-  
-  ### ~ Object data types :
-    1. Object literal
-    2. Arrays
-    3. Function
-    4. Many more...
-    
 ### ~ Breaking and Continuing
 -   **continue** berarti keluar dari iterasi loop saat ini dan melanjutkan ke loop selanjutnya.
 -   **break** digunakan untuk sepenuhnya mengakhiri seluruh loop.
@@ -101,87 +86,144 @@ Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan unco
 
 1. **Identify** (sadar bahwa ada bug)
 
-    :point_right: Selama development
-    :point_right: Testing software
-    :point_right: Report dari pengguna selama production
-    :point_right: Context: browsers, user, etc
+    - Selama development
+    - Testing software
+    - Report dari pengguna selama production
+    - Context: browsers, user, etc
 
 2. **Find** (Mengisolasi dimana tepatnya bug terjadi dalam kode)
 
-    :point_right: Developer console (simple code)
-    :point_right: Debugger (complex code)
+    - Developer console (simple code)
+    - Debugger (complex code)
 
 3. **Fix** (Perbaiki bugnya)
 
-    :point_right: Ubah solusi yang salah dengan solusi yang benar
+    - Ubah solusi yang salah dengan solusi yang benar
 
 4. **Prevent** (Mencegahnya agar tidak terjadi lagi)
 
-    :point_right: Mencari untuk bug yang sama dalam kode serupa
-    :point_right: Menulis test menggunakan testing software
+    - Mencari untuk bug yang sama dalam kode serupa
+    - Menulis test menggunakan testing software
 
     </details>
+
+<details> <summary>
+
+## [DOM and Events](<https://github.com/wahyukmr/JavaScript-Programming/blob/master/05-Dom-And-Events-Fundamental-(Project#1-Guess-My-Number)/script.js>)
+
+</summary>
+
+-   **DOM** (Document Object Model) adalah Struktur yang merepresentasikan html documents. Memungkinkan javascript untuk mengakses elemen html dan memanipulasi style (mengubah teks, atribut html dan bahkan gaya CSS) nya.
+
+-   **DOM bukanlah javascript**, methods DOM dan properti untuk memanipulasi DOM bukan bagian dari JavaScript, tetapi dapat berinteraksi dengan javascript.
+
+</details>
 
 <details> <summary>
 
 ## [Behind-the-Scenes](https://github.com/wahyukmr/JavaScript-Programming/blob/master/08-Behind-the-Scenes/script.js)
 
 </summary>
-  
-  ### ~ Scope in JavaScript :
+
+### ~ JavaScript :
+
+-   **High-level** berarti kita tidak perlu memikirkan banyak hal rumit, seperti mengelola memeori komputer. Kelemahannya tidak akan secepat atau dioptimalkan seperti bahasa low-level.
+-   **Garbage-collected** adalah algoritma didalam javascript yang secara otomatis menghapus objek lama yang tidak digunakan dari memori.
+-   **Interpreted or just-in-time compiled** dengan ini javascript mengkompilasi seluruh kode kedalam mesin sekaligus dan kemudian mengeksekusinya segera.
+-   **Multi-paradigm** berarti fleksibel dan serbaguna, sehingga kita dapat menggunakan semua jenis gaya pemrograman yang berbeda (cara berbeda untuk menyusun kode) seperti imperative dan deklarative programming.
+-   **Prototype-based object-oriented** adalah pendekatan object-oriented berbasis prototype.
+-   **First-class functions** berarti bahwa fungsi diperlakukan seperti variabel biasa, jadi dapat meneruskan fungsi ke fungsi lain dan bahkan mereturn fungsi dari fungsi.
+-   **Dynamically-type language** Ini berarti bahwa JS tidak memerlukan deklarasi eksplisit dari variabel sebelum digunakan.
+-   **Single-threaded** berarti bahwa JS hanya dapat melakukan satu hal pada satu waktu. Thread pada dasarnya tempat kode kita dieksekusi di CPU.
+-   **Non-blocking event loop** event loop mengambil tugas yang berjalan, mengeksekusi mereka di background dan mengembalikannya ke thread utama setelah selesai.
+
+### ~ JS Engine
+
+-   JS Engine hanyalah sebuah program komputer yang mengeksekusi kode javascript, jadi bertanggung jawab untuk mengurai kode dan mengonversinya menjadi perintah yang dapat dijalankan.
+-   Setiap Engine JavaScript selalu berisi **_call stack_** dan **_heap_**.
+-   **Call stack** adalah tempat kode kita sebenarnya dieksekusi menggunakan sesuatu yang disebut **_execution context_**.
+-   Execution context adalah environment di mana potongan javascript diekseksi, seperti kotak yang menyimpan semua informasi yang diperlukan untuk beberapa kode yang akan dieksekusi. execution context mengandung variable environment, scope chain dan this keyword.
+-   Variabel environment mencakup variable declaration(let, const dan var), function dan argument object.
+-   **Heap** adalah kumpulan memori yang terstruktur yang menyimpan semua objek yang dibutuhkan aplikasi kita.
+
+### ~ JS Runtime
+
+-   **JavaScript runtime** seperti kotak yang menyediakan beberapa objek ke JavaScript yang kita butuhkan sehingga dapat berinteraksi dengan dunia luar.
+-   Inti dari setiap JS runtime selalu merupakan JS Engine. Misalnya, Browser Chrome dan node.js menggunakan Engine yang sama - V8, tetapi Runtime mereka berbeda: di Chrome memiliki window, objek DOM, dll., sedangkan node memberi kita require, Buffers dan processes.
+-   JavaScript runtime biasanya juga menyertakan **_callback queue_**, ini adalah struktur data yang berisi semua fungsi callback yang siap dieksekusi. Misalnya callback fungsi dari DOM event listener(click, timer, dll).
+-   ketika call stack kosong, fungsi callback diteruskan ke stack agar dapat dieksekusi. Dan ini terjadi berkat **Event loop**. Jadi event loop mengambil fungsi callback dari callback queue dan menempatkannya ke call stack sehingga dapat dieksekusi.
+
+### ~ Scope in JavaScript :
+
+Scope:
+
+-   ruang atau environment dimana sebuah variabel tertentu dideklarasikan.
+-   Ada Global Scope, Function Scope(local Scope), dan Block Scope.
+
 Scope Concepts:
-- scoping asks the question "where do variable live?" or "where can we access a certain variable, and where not?".
-- There are 3 type Scope in JavaScript: Global Scope, Function Scope(local Scope), and Block Scope.
-- Only let and const variable are block scope.
-- in JavaScript, we have lexical scoping, so the rules of where we can access variables are based on exactly where in the code functions and code blocks are written.
+
+-   scoping mengajukan pertanyaan "dimana variabel tinggal?" atau "dimana kita bisa mengakses variabel tertentu dan dimana yang tidak".
+-   Hanya let dan const variabel yang merupakan block scope. Variabel yang dideklarasikan dengan var berakhir di local function terdekat.
+-   Di JavaScript, kita mempunyai **_lexical scoping_**, Jadi aturan dimana kita bisa mengakses variabel berdasarkan pada dimana tepatnya kode functions dan kode blocks ditulis.
 
 Scope Chain:
 
--   Every Scope always has access to all the variables from all its outer scope. This is the **scope chain!**
--   When a variable is not in the current Scope, The engine looks up in the scope chain until it finds the variable it's looking for. This is called **variable lookup**.
--   The Scope chain is a one-way street: a Scope will never, ever have access to the variables of an inner Scope.
--   The Scope chain in a certain Scope is equal to adding together all the variable environment of the all parent Scopes.
--   The Scope chain has nothing to do with the order in which functions were called. it does not affect the scope chain at all!
+-   Semua Scope selalu memiliki akses ke semua variabel dari Scope terluarnya. Inilah yang disebut **scope chain!**.
+-   Ketika sebuah variabel tidak berada di Scope saat ini, Mesin akan mencari dalam Scope chain sampai menemukan variabel yang dicarinya. Inilah yang disebut **variable lookup**.
+-   Scope chain adalah one-way street: artinya Scope induk tidak akan pernah memiliki akses ke variabel dari inner Scope (merujuk pada lingkup variabel yang dibuat di dalam sebuah fungsi atau blok kode tertentu).
+-   Scope chain di dalam suatu Scope atau ruang lingkup tertentu sama dengan menambahkan semua variable environment dari semua Scope induk.
+-   Scope chain tidak memiliki hubungan dengan urutan di mana fungsi dipanggil. Hal ini sama sekali tidak memengaruhi Scope chain!
 
-The 3 Types of scope:
+Tiga jenis Scope di Javascript:
 
 1. Global Scope
-    - 👉 Outside of any function or block
-    - 👉 Variable declared in global scope are accessible **everywhere**
+    - Berada di luar dari function atau block apapun.
+    - Variabel yang dideklarasikan di global scope dapat diakses **dimana saja**.
 2. Function Scope
-    - 👉 The scope of the **function**
-    - 👉 Variable are accessible only **inside function, NOT** outside
-    - 👉 Also called local scope
+    - Scope atau ruang lingkup dari **function**.
+    - Variabel hanya dapat diakses **didalam function, Bukan** diluar.
+    - Juga biasa dipanggil **_local scope_**.
 3. Block Scope (ES6)
-    - 👉 The scope of the **if block, for loop block, etc**
+    - Scope atau ruang lingkup dari **if block, for loop block, etc**
 
-### ~ Hoisting and TDZ in Practice :
+### ~ Hoisting in javascript :
 
--   The conclusions in this material are
-    -   Don't use "var" to declare variables
-    -   Use "const" at part of the time declaring variables
-    -   Always declare variables above the Scope
-    -   Always declare the function first before it is used
+-   **Hoisting** adalah membuat beberapa jenis variabel dapat diakses/digunakan kembali pada kode sebelum mereka dideklarasikan
 
-### ~ The "this" Keyword in Practice :
+-   Kesimpulan dari bagian ini:
+    -   Jangan menggunakan **var** untuk mendeklarasikan variabel.
+    -   Gunakan "const" pada bagian dari waktu mendeklarasikan variabel.
+    -   Mengakses variabel sebelum mendeklarasikannya adalah praktik yang buruk dan harus dihindari.
+    -   Selalu mendeklarasikan fungsi terlebih dahulu sebelum menggunakannya.
 
--   use of the "this" keyword in calling functions
-    -   Method 👉 "this" = Object that is calling the method
-    -   Simple Function call 👉 "this" = undefined (if using strict mode)
-    -   Arrow Function 👉 "this" = using the this keyword from the parent scope
-    -   Event Listener 👉 "this" = DOM Element that the handler is attached to
+### ~ How the "this" Keyword works :
 
-### ~ Regular Functions vs. Arrow Functions :
+-   **this keyword/variable** adalah variabel spesial yang dibuat untuk setiap execution context(dalam kasus ini untuk setiap fungsi). Mengambil nilai yang merujuk ke "pemilik" dari fungsi dimana kata kunci **_this_** ini digunakan.
 
--   The conclusions in this material are
-    -   Don't use Arrow function in object method
-    -   The use of this keyword depends on the object that calls it
-    -   When it has a function inside a method, best solution is use Arrow function
-    -   Keyword arguments are no longer important in javascsript because there are more modern ways to it
+-   Pengertian diatas bukan static. Tergantung pada bagaimana fungsi dipanggil, dan nilainya hanya diberikan ketika fungsi sebenarnya dipanggil.
+
+-   Penerapan kata kunci **_this_**:
+    -   **Method** 👉 kata kunci **_this_** merujuk ke **objek** yang memanggil method.
+    -   **Simple Function call** 👉 kata kunci **_this_** mengembalikan **undefined** (jika menggunakan strict mode).
+    -   **Arrow Function** 👉 kata kunci **_this_** merujuk ke this dari fungsi induk terdekatnya.
+    -   **Event Listener** 👉 kata kunci **_this_** merujuk ke elemen DOM tempat tempat penanganan dilampirkan.
 
 ### ~ Primitives Types vs. Objects (reference types) :
 
--   The conclusions in this material are - in primitives declare the const variable cannot be changed in value, but does not apply to object (reference types) - Type Data Primitive: String, Number, Boolean, Null, bigint, simbool, undefined - Type Data Object: Object Literal, Arrays, Functions, many more... - in primitive = fetch last change - in object(reference types) = every time you make changes to the copy, the original object changes too
+Kesimpulan dari bagian ini:
+
+-   Pada **_primitives types_**, mendeklarasikan variabel const tidak dapat mengubah nilai, tetapi tidak berlaku pada object (reference types).
+-   Type Data Primitive: String, Number, Boolean, Null, bigint, simbool, undefined.
+-   Type Data Object: Object Literal, Arrays, Functions, many more...
+-   Pada **_primitives types_** akan mengambil perubahan terakhir.
+-   Pada **_object(reference types)_** setiap kali membuat perubahan pada salinannya maka data aslinya juga ikut berubah.
+
+### ~ Regular Functions vs. Arrow Functions :
+
+-   Jangan menggunakan Arrow Function pada object method.
+-   Ketika memiliki fungsi didalam method, solusi terbaik menggunakan arrow function.
+-   Penggunaan kata kunci **_this_** bergantung pada object yang memanggilnya.
+-   Kata kunci **arguments** tidak lagi penting di javascsript karena ada cara yang lebih modern untuk melakukannya.
 </details>
 
 <details> <summary>
