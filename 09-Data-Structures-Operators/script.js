@@ -48,9 +48,9 @@ const restaurant = {
     },
 };
 
-/*  ***************************************************************************************************
+/*  *************************
  *   Destructuring Arrays
- *  ***************************************************************************************************/
+ *  *************************/
 {
     const arr = [10, 15, 20];
     const a = arr[0];
@@ -83,9 +83,9 @@ const restaurant = {
     console.log(value1, value2, value3);
 }
 
-/*  ***************************************************************************************************
+/*  *************************
  *   Destructuring objects
- *  ***************************************************************************************************/
+ *  *************************/
 {
     // calling the property name as a variable
     const { openingHours, name, categories } = restaurant;
@@ -126,9 +126,9 @@ const restaurant = {
     });
 }
 
-/*  ***************************************************************************************************
+/*  **************************
  *   Spread Operators (...)
- *  ***************************************************************************************************/
+ *  **************************/
 {
     // SPREAD OPERATOR DESTRUCTURING
     // create a new array by adding an existing array
@@ -141,7 +141,7 @@ const restaurant = {
     const newMenu = ["nasi padang", ...restaurant.mainMenu, "rica guguk"];
     console.log(newMenu); //create new arrays
 
-    // Copy array
+    // Copy Array  (membuat shallow copy / array baru)
     const mainMenuCopy = [...restaurant.mainMenu];
     console.log(mainMenuCopy);
 
@@ -149,10 +149,11 @@ const restaurant = {
     const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
     console.log(menu);
 
-    // use operator spread in strings
     const str = "wahyu";
     const letters = [...str, " ", "K"];
     console.log(letters);
+    // use operator spread in strings
+    console.log(...str);
 
     // SPREAD OPERATOR FUNCTION
     // using spread operators to forward arguments in the function(Real-world example)
@@ -177,11 +178,10 @@ const restaurant = {
     console.log(restaurant);
 }
 
-/*  ***************************************************************************************************
+/*  *******************************
  *   Rest Pattern and Parameters
- *  ***************************************************************************************************/
+ *  *******************************/
 {
-    // REST PATTERN DESTRUCTURING
     // SPREAD OPERATOR, Because on RIGHT side of =
     const arr = [1, 2, ...[3, 4]];
 
@@ -189,17 +189,19 @@ const restaurant = {
     const [a, b, ...other] = [1, 2, 3, 4, 5, 6];
     console.log(a, b, other);
 
+    /* REST PATTERN DESTRUCTURING */
+    // REST PATTERN IN ARRAY DESTRUCTURING
     const [Pizza, , Risotto, ...otherFood] = [
         ...restaurant.mainMenu,
         ...restaurant.starterMenu,
     ];
     console.log(Pizza, Risotto, otherFood);
 
-    // REST PATTERN IN OBJECT
+    // REST PATTERN IN OBJECT DESTRUCTURING
     const { sat, ...weekdays } = restaurant.openingHours;
     console.log(weekdays);
 
-    // REST PATTERN FUNCTION
+    /* REST PATTERN FUNCTION */
     // rest parameters
     function add(...number) {
         let sum = 0;
@@ -216,36 +218,37 @@ const restaurant = {
     add(...x);
 
     restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
+    restaurant.orderPizza("mushrooms");
 }
 
-/*  ***************************************************************************************************
+/*  **********************************
  *   Short Circuiting ( && and || )
- *  ***************************************************************************************************/
+ *  **********************************/
 {
-    // OR ( || )
-    // Use Any data types, return Any data types, Short-circuiting
+    /* SHORT-CIRCUITING OR ( || ) */
     console.log("---- OR ----");
-    console.log(3 || "wahyu");
-    console.log("" || "wahyu");
-    console.log(true || 0);
-    console.log(undefined || null);
+    // Use Any data types, return Any data types, it's call SHORT-CIRCUITING
+    console.log(3 || "wahyu"); // 3
+    console.log("" || "wahyu"); // "wahyu"
+    console.log(true || 0); // true
+    console.log(undefined || null); // null
 
-    console.log(undefined || 0 || "" || "wahyu" || 23 || null);
+    console.log(undefined || 0 || "" || "wahyu" || 23 || null); // "wahyu"
 
-    // Easier to use Short-Circuiting ( || ) than ternary operators
+    // lebih mudah menggunakan Short-Circuiting ( || ) alih-alih ternary operators
     restaurant.numGuests = 23;
     const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-    console.log(guests1);
+    console.log(guests1); // 23
 
     const guests2 = restaurant.numGuests || 10;
-    console.log(guests2);
+    console.log(guests2); // 23
 
-    // AND ( && )
+    /* SHORT-CIRCUITING AND ( && ) */
     console.log("---- AND ----");
-    console.log(3 || "wahyu");
-    console.log(0 || "wahyu");
-    console.log(true || 0);
-    console.log(undefined || null);
+    console.log(3 && "wahyu"); // "wahyu"
+    console.log(0 && "wahyu"); // 0
+    console.log(true && 0); // 0
+    console.log(undefined && null); // undefined
 
     console.log("hello" && 23 && null && "wahyu");
 
@@ -253,13 +256,14 @@ const restaurant = {
     if (restaurant.orderPizza) {
         restaurant.orderPizza("tepung", "kol");
     }
-    // same with
+
+    // Jika restaurant.orderPizza tidak ada(undefined), maka akan short circuit dan evaluasi tidak akan terjadi lagi.
     restaurant.orderPizza && restaurant.orderPizza("tepung", "kol");
 }
 
-/*  ***************************************************************************************************
+/*  *****************************************
  *   The Nullish Coalescing Operator ( ?? )
- *  ***************************************************************************************************/
+ *  *****************************************/
 {
     // when we set the value to 0, it will error when using the OR operator
     restaurant.numGuests = 0;
@@ -271,9 +275,9 @@ const restaurant = {
     console.log(guestsCorrect);
 }
 
-/*  ***************************************************************************************************
+/*  *******************************
  *   Logical Assignment Operators
- *  ***************************************************************************************************/
+ *  *******************************/
 {
     const rest1 = {
         name: "mangkobar",
@@ -285,28 +289,24 @@ const restaurant = {
         owner: "wahyu komarudin",
     };
 
-    /* GIVE A DEFAULT VALUE */
-    // use OR Assignment Operators
-    // rest1.numGuests = rest1.numGuests || 10;
-    // rest2.numGuests = rest2.numGuests || 10;
-    rest2.numGuests ||= 10;
+    /* Or Assignment Operators (memberi nilai default) */
+    rest2.numGuests ||= 10; // sama seperti: rest1.numGuests = rest1.numGuests || 10
     console.log(rest2);
 
-    // use Nullish Assignment Operators (Null or Undefined)
+    /* Nullish Assignment Operators (Null or Undefined) */
     rest1.employee ??= 10;
     console.log(rest1);
 
-    /* REPLACING VALUES */
-    // use AND Assignment Operators
-    // rest1.owner = rest1.owner && "joko";
-    // rest2.owner = rest2.owner && "joko";
+    /* AND Assignment Operators (mengganti nilai) */
+    rest2.owner = rest2.owner && "joko";
+    console.log(rest2);
     rest2.owner &&= "joko";
     console.log(rest2);
 }
 
-/*  ***************************************************************************************************
+/*  ***********************
  *   CODING CHALLENGE #01
- *  **************************************************************************************************
+ *  ***********************
 We're building a football betting app (soccer for my American friends �)! Suppose we get data from a web service about a certain game ('game' variable on next page). In this challenge we're gonna work with that data.
 
 Your tasks:
@@ -392,9 +392,9 @@ const game = {
     team1 > team2 && console.log("Team 2 is more likely to win");
 }
 
-/*  ***************************************************************************************************
+/*  **********************************
  *   Looping Arrays: The for-of Loop
- *  ***************************************************************************************************/
+ *  **********************************/
 {
     const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
@@ -408,9 +408,9 @@ const game = {
     }
 }
 
-/*  ***************************************************************************************************
+/*  ***************************
  *   Enhanced Object Literals
- *  ***************************************************************************************************/
+ *  ***************************/
 /* three easy ways to write object literals */
 {
     // 3. change property name
@@ -475,9 +475,9 @@ const game = {
     console.log(restaurant);
 }
 
-/*  ***************************************************************************************************
+/*  ***************************
  *   Optional Chaining ( ?. )
- *  ***************************************************************************************************/
+ *  ***************************/
 /* Check the property name */
 {
     // console.log(restaurant.openingHours.mon.open); ERROR
@@ -510,15 +510,16 @@ const game = {
     else console.log("user array is empty");
 }
 
-/*  ***************************************************************************************************
+/*  ****************************************************
  *   Looping Object: Object Keys, Values, and Entries
- *  ***************************************************************************************************/
+ *  ****************************************************/
 /* Property Names ( Object.keys() ) */
 {
     const properties = Object.keys(restaurant.openingHours);
     console.log(properties);
 
     let openStr = `we are open on ${properties.length} days:  `;
+
     for (const day of properties) {
         openStr += `${day}, `;
     }
@@ -542,9 +543,9 @@ const game = {
     }
 }
 
-/*  ***************************************************************************************************
+/*  ***********************
  *   CODING CHALLENGE #02
- *  **************************************************************************************************
+ *  ***********************
 Let's continue with our football betting app! Keep using the 'game' variable from before.
 Your tasks:
     1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
@@ -588,9 +589,9 @@ Your tasks:
     console.log(scorers);
 }
 
-/*  ***************************************************************************************************
+/*  *********
  *   Sets
- *  ***************************************************************************************************/
+ *  *********/
 {
     // the same array will disappear
     const orderSet = new Set([
@@ -637,9 +638,9 @@ Your tasks:
     console.log(staffUnique);
 }
 
-/*  ***************************************************************************************************
+/*  **********************
  *   Maps: Fundamentals
- *  ***************************************************************************************************/
+ *  **********************/
 {
     // create a new Maps
     const rest = new Map();
@@ -682,9 +683,9 @@ Your tasks:
     console.log(rest.get(arr));
 }
 
-/*  ***************************************************************************************************
+/*  *******************
  *   Maps: Iteration
- *  ***************************************************************************************************/
+ *  *******************/
 {
     // Another way to add elements to maps
     const questions = new Map([
@@ -720,9 +721,9 @@ Your tasks:
     console.log([...questions.values()]);
 }
 
-/*  ***************************************************************************************************
+/*  ************************
  *   CODING CHALLENGE #03
- *  **************************************************************************************************
+ *  ************************
 Let's continue with our football betting app! This time, we have a map called 'gameEvents' (see below) with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
 Your tasks:
     1. Create an array 'events' of the different game events that happened (no duplicates)
@@ -770,9 +771,9 @@ Your tasks:
     }
 }
 
-/*  ***************************************************************************************************
+/*  ***********************
  *   Working with String
- *  ***************************************************************************************************/
+ *  ***********************/
 /* Working With String Part-1 */
 {
     const airplane = "TAP Air Indonesia";
@@ -948,9 +949,9 @@ Your tasks:
     planesInLine(8);
 }
 
-/*  ***************************************************************************************************
+/*  ************************
  *   CODING CHALLENGE #04
- *  **************************************************************************************************
+ *  ************************
 Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
 The input will come from a textarea inserted into the DOM (see code below to insert the elements), and conversion will happen when the button is pressed.
 
@@ -997,9 +998,9 @@ Afterwards, test with your own test data!
     });
 }
 
-/*  ***************************************************************************************************
+/*  **************************
  *   String Method Practice
- *  ***************************************************************************************************/
+ *  **************************/
 {
     const flights =
         "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";

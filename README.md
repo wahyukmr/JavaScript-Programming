@@ -246,10 +246,9 @@ Kesimpulan dari bagian ini:
 -   **Primitive data type**: String, Number, Boolean, Null, bigint, simbool, undefined.
 -   **Object**: selain dari primitive seperti Object Literal, Arrays, Functions, banyak lagi...
 -   Berbicara tentang memori dan manajemen memori, biasanya disebut **_primitives types_** dan **_reference types_**
--   Semua objek atau dengan kata lain Reference types akan disimpan pada Heap di engine JS.
--   Sedangkan Primitive atau Primitive types akan disimpan pada Call Stack tepatnya didalam execution context dimana mereka dideklarasikan.
--   Pada primitives types, akan mengambil perubahan terakhir.
--   Pada object(reference types), setiap kali membuat perubahan pada salinannya maka data aslinya juga ikut berubah. Karena ketika kita mencoba untuk meng-copy objek, hal ini tidak akan membuat objek baru pada Heap, itu hanya variabel lain pada Stack yang menyimpan referensi ke objek aslinya, jadi kedua variabel ini menunjuk ke alamat memori yang sama di Heap, oleh karenanya jika ada perubahan keduannya akan terpengaruh.
+-
+-   **_Primitives types_** yang dibuat akan disimpan pada Stack engine JS, tepatnya didalam execution context dimana mereka dideklarasikan. Setiap variabel ditempatkan pada Stack yang berbeda. Memperbarui salah satunya tidak akan memengaruhi yang lain.
+-   Semua Objek atau dengan kata lain **_Reference types_** akan disimpan pada Heap engine JS. setiap kali membuat perubahan pada salinannya maka data aslinya juga ikut berubah. Karena ketika kita mencoba untuk meng-copy objek, hal ini tidak akan membuat objek baru pada Heap, itu hanya variabel lain pada Stack yang valuenya merefrensikan ke objek aslinya, jadi kedua variabel ini merujuk ke alamat memori yang sama di Heap, oleh karenanya jika ada perubahan keduannya akan terpengaruh.
 -   Mendeklarasikan variabel const tidak dapat diubah nilainya hanya berlaku untuk nilai Primitive, tetapi tidak untuk nilai Reference. karena ini hanya mengubah nilai objek yang disimpan di Heap.
 
 ### ~ Regular Functions vs. Arrow Functions :
@@ -265,6 +264,55 @@ Kesimpulan dari bagian ini:
 ## [Data-Structures](https://github.com/wahyukmr/JavaScript-Programming/blob/master/09-Data-Structures-Operators/script.js)
 
 </summary>
+
+### ~ Destructuring :
+
+-   Destructuring adalah untuk membongkar nilai Array atau Objek menjadi variabel terpisah. Dengan kata lain destructuring memecah struktur data kompleks menjadi struktur data kecil seperti variabel.
+
+### ~ Spread Operators ( ... ) :
+
+-   **Spread operator** memungkinkan kita menyebarkan atau mengeluarkan elemen yang ada di dalam array atau properti objek ke tempat dimana nilai tersebut diharapkan. Selain array dan objek, operator ini juga bisa digunakan untuk "mengeluarkan" karaketer tunggal di dalam string, tapi ini jarang dilakukan.
+-   Seperti halnya Object.assign, Spread operator juga membuat **_Shallow copy_** artinya hanya menyalin nilai yang berada pada **top value**, nilai yang lebih dalam berupa **Reference types** dimana jika nilai yang disalin dimodifikasi akan berpengaruh juga pada nilai aslinya.
+-   Spread operators bekerja pada semua yang disebut **_iterable_** (Array, String, Set, Map, dan yang bukan Objek).
+-   Dapat membuat Array atau properti objek baru dan atau untuk meneruskan nilai dalam suatu fungsi secara bersamaan. Merupakan dua kasus penggunaan Spread operator.
+
+### ~ Rest Pattern and Parameters :
+
+-   **Spread operator** untuk memecah atau mengeluarkan array sementara **Rest** untuk mengambil beberapa nilai dan kemudian mengemas semuanya ke dalam array.
+
+### ~ Short Circuiting ( && and || ) :
+
+-   Short Circuiting dalam kasus **or operator** || akan mengembalikan nilai pertama yang bernilai truty dari semua operan, atau hanya nilai terakhir jika semuanya falsy, jika nilai kedua adalah nilai yang truty maka akan mengembalikan nilai kedua itu dan operan lain tidak akan dievaluasi.
+-   Dalam praktiknya kita dapat menggunakan **or operator** untk menetapkan nilai default.
+-   Short Circuiting dalam kasus **and operator** && berarti sebaliknya dari **or**, yakni akan mengembalikan nilai pertama yang bernilai falsy atau mengevaluasi dan mengembalikan nilai truty yang terakhir jika semuanya truty. jika nilai kedua adalah nilai yang falsy maka akan mengembalikan nilai kedua itu dan operan selanjutnya tidak akan dievaluasi.
+-   Sering kali kita dapat menggunakan **operator and** untuk benar-benar menghindari if statement, yakni memeriksa apakah properti atau nilai tertentu benar-benar ada. Karena dengan **and operator** akan mengeksekusi kode pada operan ke dua jika operan pertama truty.
+
+### ~ The Nullish Coalescing Operator ( ?? ) :
+
+-   Ini bekerja mirip dengan **or operator**, dan menangani eror pada pendekatan tersebut.
+-   Nilai Nullish adalah: Null dan Undefined (**_tidak termasuk:_** 0 or ""). Jadi jika nilai yang ditentukan berupa Null atau undefined, maka operan kedua yang akan dieksekusi dan direturn.
+-   Dengan ini dapat diasumsikan bahwa 0 dan string kosong tidak dianggap sebagai nilai falsy.
+
+### ~ Logical Assignment Operators :
+
+-   Prinsip dari cara kerjanya sama seperti OR, AND dan NULLISH operators. Tetapi dengan menggunakan Logical Assignment Operators menjadi lebih sederhana.
+
+### ~ Looping Arrays: The for-of Loop
+
+-   Digunakan untuk melakukan perulangan terhadap isi value dari iterable objek( seperti: arrays, strings, maps, sets ).
+-   For-of tidak bisa digunakan untuk melakukan perulangan data di object secara langsung, karena object bukanlah iterable.
+-   Dengan menggunakan for-of loop kita masih bisa menggnakan continue and break keywords.
+
+### ~ Optional Chaining ( ?. ) :
+
+-   Optional Chaining = memeriksa ada atau tidaknya nilai(ada yang berarti tidak Null dan undefined), jika ada akan mengembalikan nilainya, jika tidak akan mengembalikan undefined.
+
+### ~ Looping Object: Object Keys, Values, and Entries :
+
+-   **Object.keys** akan mengembalikan key properti pada objek dan mengubahnya menjadi array.
+-   **Object.values** akan mengembalikan value properti pada objek dan mengubahnya menjadi array.
+-   **Object.entries** akan mengembalikan nomor index dan key serta value pada object dalam bentuk array.
+-   Dengan ketiga method Object diatas, kita dapat melakukan looping pada object menggnakan for-of loop.
 
 ### ~ Arrays vs Sets:
 
@@ -306,156 +354,11 @@ Keunggulan Map:
 
 Penggunaan Objek Array juga umum di JavaScript.
 
-### ~ Destructuring Arrays :
-
--   destructuring is an ES6 feature for disassembling array or object values into separate variables. In other words destructuring is breaking down complex data structures into small data structures such as variables.
--   In arrays, we use distructuring to retrieve elements from the array and store them on a variable
-
-### ~ Destructuring objects :
-
--   In the unimportant order object, just call the name of the property to be retrieved
-
-### ~ Spread Operators ( ... ) :
-
--   Spread operator = used to split up array elements OR object properties
--   The use of the spread operator is to create a new array or pass some value into a function
--   Spread operators are similar to Destructuring, as they help output elements on arrays
--   The big difference is that the spread operator takes the entire element on the array and does't create a new variable
--   That way we can only use it in the place where it should write values separated by commas
--   Two important cases of using spread operators are Copy array and combine with two or more arrays
--   Spread operators work on all iterable data types (can be changed)
-
-### ~ Rest Pattern and Parameters :
-
--   Rest Pattern = used to marge a list of functions arguments into an array
--   Uses it in the argument list of the function, which allows it to accept an unlimited number of arguments and they will all be concatenated into one array
--   Rest Pattern is the opposite of spread operator
--   Operator spread used when writing values and separated by commas
--   While Rest Pattern used when writing variable names and separated by commas
-
-### ~ Short Circuiting ( && and || ) :
-
--   We can use the OR operator to specify a default value
--   We can use the AND operator to execute the code in the second operand if the first operand is true
--   Short Circuiting in OR ( || ) = returns the first truth value, or only the last value if everything is false (doesn't have to be a BOOLEAN)
--   Short Circuiting in OR ( || ) are opposite to Short Circuiting in AND ( && )
--   Short Circuiting in AND ( && ) = returns the first false value, or the last value if everything is true (doesn't have to be a BOOLEAN)
--   Don't use short circuiting to replace if statements, because it will make the code difficult to read
-
-### ~ The Nullish Coalescing Operator ( ?? ) :
-
--   It works similarly to the OR operator, and will fix errors there
--   It works to Nullish: Null and Undefined (**_Not For:_** 0 or "")
-
-### ~ Logical Assignment Operators :
-
--   The principle of its work is the same as that of the OR, AND, NULLISH operators. but with this it is simpler
--   operator OR for give a default value
--   operator NULLISH for used if there is a value Null or Undefined
--   operator AND we can use it if we want to change an existing value
-
-### ~ Looping Arrays: The for-of Loop
-
--   Use a for-of loop when dealing with data iterables( arrays, strings, maps, sets )
--   Use a for-in loop when dealing with data Objects
--   With the for-of loop we can still use the continue and break keywords
-
--   Array or Set = simple list of values and have only values without any description
--   Object or Map = if necessary key and value pairs. So with keys, we have a way of describing or describing values
--   The use of Array Object is also common in JavaScript
-
-### ~ Arrays Vs Sets :
-
--   Array
-    -   Use when you need an ordered list of values (might contain duplicates)
-    -   Use it when you need to manipulate data
--   Set
-    -   Use it when you need to work with unique values
-    -   Use when high performance is really important
-    -   Use to remove duplicates from arrays
-
-### ~ Objects Vs Maps :
-
--   Object
-    -   More “traditional” to store keys/values
-    -   Easier to write and access values whit the dot operator( . ) and bracket( [] )
-    -   Keys are just type strings
-    -   Many developers are familiar with Object
-    -   Use when you need to include functions (method)
-    -   Use when working with JSON
-    -   Objects are still being used all the time
--   Map
-    -   Better performance
-    -   Keys can have any data type
-    -   Easy to iterate
-    -   Easy to calculate length/size data
-    -   Use when you simply need to map key to values
-    -   Use when you need keys that are not strings
-    -   Map is an important data structure for now
-
-### ~ Destructuring Arrays :
-
--   destructuring is an ESX feature for disassembling array or object values into separate variables. In other words destructuring is breaking down complex data structures into small data structures such as variables.
--   In arrays, we use distructuring to retrieve elements from the array and store them on a variable
-
-### ~ Destructuring objects :
-
--   In the unimportant order object, just call the name of the property to be retrieved
-
-### ~ Spread Operators ( ... ) :
-
--   Spread operator = unpacking arrays into individual elements
--   The use of the spread operator is to create a new array or pass some value into a function
--   Spread operators are similar to Destructuring, as they help output elements on arrays
--   The big difference is that the spread operator takes the entire element on the array and does't create a new variable
--   That way we can only use it in the place where it should write values separated by commas
--   Two important cases of using spread operators are Copy array and combine with two or more arrays
--   Spread operators work on all iterable data types (can be changed)
-
-### ~ Rest Pattern and Parameters :
-
--   Rest Pattern = collect some elements (the rest of the elements) and condense them into an array
--   Rest Pattern is the opposite of spread operator
--   Operator spread used when writing values and separated by commas
--   While Rest Pattern used when writing variable names and separated by commas
-
-### ~ Short Circuiting ( && and || ) :
-
--   We can use the OR operator to specify a default value
--   We can use the AND operator to execute the code in the second operand if the first operand is true
--   Short Circuiting in OR ( || ) = returns the first truth value, or only the last value if everything is false (doesn't have to be a BOOLEAN)
--   Short Circuiting in OR ( || ) are opposite to Short Circuiting in AND ( && )
--   Short Circuiting in AND ( && ) = returns the first false value, or the last value if everything is true (doesn't have to be a BOOLEAN)
--   Don't use short circuiting to replace if statements, because it will make the code difficult to read
-
-### ~ The Nullish Coalescing Operator ( ?? ) :
-
--   It works similarly to the OR operator, and will fix errors there
--   It works to Nullish: Null and Undefined (**_Not For:_** 0 or "")
-
-### ~ Logical Assignment Operators :
-
--   The principle of its work is the same as that of the OR, AND, NULLISH operators. but with this it is simpler
--   operator OR for give a default value
--   operator NULLISH for used if there is a value Null or Undefined
--   operator AND we can use it if we want to change an existing value
-
-### ~ Looping Arrays: The for-of Loop
-
--   Use a for-of loop when dealing with data iterables( arrays, strings, maps, sets )
--   Use a for-in loop when dealing with data Objects
--   With the for-of loop we can still use the continue and break keywords
-
-### ~ Optional Chaining ( ?. ) :
-
--   Optional Chaining = check if the value exists or not, otherwise, it will return Undefined
--   If you want to use variable names as property names, you need to use brackets []
--   Use Nullish ( ?? ) to create default values ​​and handle values ​​0 or undefined
-
 ### ~ Working with String :
 
--   Remember that strings cannot be changed (primitive), when using the string method it becomes a string object, after it is finished returning the string back
--   All methods will return a new string
+-   Ingat bahwa String tidak bisa dirubah (primitive), ketika menggunakan String method itu datang dari String objek, setelahnya itu akan mengembalikan String kembali.
+-   Semua String method akan mengembalikan string baru(tidak mempengaruhi string aslinya).
+
 </details>
 
 <details> <summary>
