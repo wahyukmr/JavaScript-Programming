@@ -1,8 +1,8 @@
 "use strict";
 
-/*  ***************************************************************************************************
+/*  **********************
  *   Default Parameters
- *  ***************************************************************************************************/
+ *  **********************/
 {
     /* Default value can contain any expression */
     const bookings = [];
@@ -35,9 +35,9 @@
     createBooking("LH123", undefined, 1000);
 }
 
-/*  ***************************************************************************************************
+/*  **************************************************
  *   How Passing Argument Works: Value Vs Reference
- *  ***************************************************************************************************/
+ *  **************************************************/
 {
     // type data primitive
     const flight = "LH999";
@@ -74,24 +74,9 @@
     console.log(wahyu);
 }
 
-/*  ***************************************************************************************************
- *   First-Class and Higher-Order Functions
- *  **************************************************************************************************
-NOTE:
-    - javascript treats function as firs-class citizens
-    - this means that functions are simply values
-    - functions are just another "type" of object
-    - Nutshell, First-Class = Every function is a value(no practice, it's just a concept)
-    
-    - Higher-Order Functions = a function that receives another function as an argument, that returns a new function, or both. this is only possible because of the "first-calss" function
-    - Example:
-        1. function that recaives another function
-        2. function that returns a new functionn
-        */
-
-/*  ***************************************************************************************************
+/*  ******************************************
  *   Functions Accepting Callback Functions
- *  ***************************************************************************************************/
+ *  ******************************************/
 {
     function oneWord(str) {
         return str.replace(/ /g, "").toLowerCase();
@@ -102,7 +87,8 @@ NOTE:
         return [first.toUpperCase(), ...others].join(" ");
     }
 
-    /* Higher- ordder Function */
+    /* Higher-ordder Function (fungsi yang menerima fungsi lain sebagai argumen)*/
+    // disini fungsi transformer menerapkan konsep "abstraction" yang mana fungsi ini hanya bertindak untuk mengelola input yang diberikan, dan mengandalkan fungsi lain yang akan bertindak memanipulasi input (dalam kasus ini fungsi upperCaseWord dan oneWord).
     function transformer(str, fn) {
         console.log(`Original String: ${str}`);
         console.log(`Transformerd String: ${fn(str)}`);
@@ -116,13 +102,14 @@ NOTE:
         // console.log("😁");
     }
 
+    // Pada dasarnya disini addEventListener function juga merupakan Higher-ordder Function dengan hight-level abstraction yang menerima callback function (high5) yang bertindak memberitahu fungsi addEventListener apa yang harus dilakukan.
     document.body.addEventListener("click", high5); // function high5 is Callback Functions
     ["jonas", "wahyu", "stepan"].forEach(high5);
 }
 
-/*  ***************************************************************************************************
+/*  *********************************
  *   Functions Returning Functions
- *  ***************************************************************************************************/
+ *  *********************************/
 {
     function greet(greetings) {
         return function (name) {
@@ -141,10 +128,9 @@ NOTE:
     greetArr("hello")("wahyu");
 }
 
-/*  ***************************************************************************************************
+/*  ******************************
  *   The Call and Apply Methods
- *  ***************************************************************************************************/
-/////////////////////////////////////////////////////////////
+ *  ******************************/
 /* Manually manipulate this keyword using the Call method */
 {
     // replace this keyword reference to a new object
@@ -175,7 +161,12 @@ NOTE:
     };
 
     // Call Method
+    // fungsi books disini bukan lagi merujuk ke method dalam objek lufthansa, itu hanya salinan dari method tersebut yang membuatnya menjadi regular function.
     const books = lufthansa.book;
+    // Does not work, kata kunci this akan berupa undefined karena books function merupakan fungsi biasa dan bukan lagi method dalam objek lufthansa.
+    // books(45, "justin pardi")
+
+    // solusinya menggunakan call atau apply method. Disini kita tidak memanggil fungsi books itu sendiri, sebagai gantinya kita memanggil call method, call method inilah yang memanggil fungsi book dengan kata kunci this nya disetel ke eurowings
     books.call(eurowings, 45, "justin pardi");
     console.log(eurowings);
 
@@ -190,7 +181,6 @@ NOTE:
     books.call(swiss, 50, "Mukidi Ricart");
 }
 
-/////////////////////////////////////////////////////////////
 /* Manually manipulate this keyword using the Apply method 
 NOTE:
     1. Apply method works the same as the call method
@@ -205,10 +195,11 @@ NOTE:
     books.call(swiss, ...flighData);
 }
 
-/*  ***************************************************************************************************
+/*  *******************
  *   The Bind method
- *  ***************************************************************************************************/
+ *  *******************/
 {
+    // dengan bind method akan membuat fungsi baru dimana kata kunci this disetel ke fungsi yang kita inginkan.
     const bookLH = books.bind(lufthansa);
     const bookEW = books.bind(eurowings);
     const bookWT = books.bind(swiss);
@@ -221,7 +212,7 @@ NOTE:
     bookLH23("joko");
     bookLH23("Thomas");
 
-    // With Event Litenes
+    /* With Event Litenes */
     lufthansa.planes = 300;
     lufthansa.buyPlane = function () {
         console.log(this);
@@ -235,7 +226,7 @@ NOTE:
         .querySelector(".buy")
         .addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
 
-    // Partial Applications (can set parameters)
+    /* Partial Applications (can set parameters) */
     const addTax = (rate, value) => value + value * rate;
     console.log(addTax(0.1, 200)); // 220
 
@@ -244,6 +235,7 @@ NOTE:
     console.log(addVax(100)); // 123
     console.log(addVax(23)); // 28.29
 
+    // sama seperti dibawah
     function addTaxRate(rate) {
         return function (value) {
             return value + value * rate;
@@ -254,9 +246,9 @@ NOTE:
     console.log(addTax2(23)); // 28.29
 }
 
-/*  ***************************************************************************************************
+/*  ************************
  *   CODING CHALLENGE #01
- *  **************************************************************************************************
+ *  ************************
 Let's build a simple poll app!
 A poll has a question, an array of options from which people can choose, and an array with the number of replies for each option. This data is stored in the starter 'poll' object below.
 
@@ -333,9 +325,9 @@ Hints: Use many of the tools you learned about in this and the last section �
         .addEventListener("click", poll.registerNewAnswer.bind(poll));
 }
 
-/*  ***************************************************************************************************
+/*  ***************************************************
  *   Immediately Invoked Function Expressions (IIFE)
- *  ***************************************************************************************************/
+ *  ***************************************************/
 {
     /* can in two ways */
     // regular function
@@ -371,29 +363,27 @@ Hints: Use many of the tools you learned about in this and the last section �
     })();
 }
 
-/*  ***************************************************************************************************
+/*  ************
  *   Closures
- *  ***************************************************************************************************/
+ *  ************/
 {
-    function parent() {
-        let a = 0;
+    // Fungsi booker memiliki akses ke variabel passengerCount, karena pada dasarnya didefinisikan dalam scope dimana fungsi booker dibuat.
+    const secureBooking = function () {
+        let passengerCount = 0;
 
-        // funcion inner can access variables in parent function
-        return function inner() {
-            a++;
-            console.log(`${a} addition!`);
+        return function () {
+            passengerCount++;
+            console.log(`${passengerCount} passenger`);
         };
-    }
-
-    const c = parent();
-    c(); // once used(done)
-    c(); // called back(auto create again)
-    c(); // called back(auto create again)
+    };
+    const booker = secureBooking();
+    booker();
+    booker();
 }
 
-/*  ***************************************************************************************************
+/*  *************************
  *   More Closure Examples
- *  ***************************************************************************************************/
+ *  *************************/
 {
     /* Example 1 */
     let f;
@@ -421,6 +411,7 @@ Hints: Use many of the tools you learned about in this and the last section �
     f();
 
     /* Example 2 */
+    // Berkat adanya closure, fungsi callbacks masih dapat memiliki akses ke variabel yang didefinisikan dalam fungsi boardPassengers yang telah lama selesai dieksekusi (mendapatkan akses ke variabel perGrop dan parameter n)
     function boardPassengers(n, wait) {
         const perGroup = n / 3;
 
@@ -431,11 +422,16 @@ Hints: Use many of the tools you learned about in this and the last section �
 
         console.log(`Will start boarding in ${wait} seconds`);
     }
+
+    // membuktikan Closure memiliki prioritas di atas scope chain
+    const perGrop = 1000;
+
+    boardPassengers(180, 3);
 }
 
-/*  ***************************************************************************************************
+/*  ************************
  *   CODING CHALLENGE #02
- *  **************************************************************************************************
+ *  ************************
 This is more of a thinking challenge than a coding challenge �
 Your tasks:
     1. Take the IIFE below and at the end of the function, attach an event listener that changes the color of the selected h1 element ('header') to blue, each time the body element is clicked. Do not select the h1 element again!

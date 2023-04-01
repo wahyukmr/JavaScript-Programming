@@ -367,36 +367,59 @@ Penggunaan Objek Array juga umum di JavaScript.
 
 </summary>
   
-  ### How Passing Argument Works: Value Vs Reference :
-  - pass on a primitive type to a function is tantamount to copying its value (can't change the original value)
-  - If it is an object, it will copy the object. and if you make changes to the copy it will also happen to the original
-  - Do not interact with different functions with the same object
+### ~ How Passing Argument Works: value vs reference :
   
-  ### Functions Accepting Callback Functions :
-  - Callbacks are very often used in javascript
-  - The advantage:
-    - it makes it easy to break the code into reusable and interconnected part
-    - creating abstractions, that is hides the details of some code implementation
+- Jika kita meneruskan nilai Primitive types sebagai argumen dari sebuah fungsi, maka argumen itu merupakan salinan dari nilai aslinya, akan menjadi nilai atau variabel yang berbeda. Karnanya apabila nilai salinan diubah tidak akan mengubah nilai originalnya.
+- lain halnya jika kita meneruskan Reference types ke fungsi, apa yang disalin sebenarnya hanyalah referensi ke objek di memori Heap atau bisa dikatakan keduanya menunjuk pada objek yang sama di memori Heap. Jadi saat mencoba memanipulasi salinan, sama saja memaniplasi nilai originalnya.
+- Dalam Programming ada dua istilah yang digunakan saat berhadapan dengan fungsi, yakni **passing by value** dan **passing by reference**. Javascript tidak memiliki passing by reference, hanya passing by value. Meskipun terlihat seperti passing by reference, namun reference itu sendiri masih merupakan nilai yang berisi memori address. Jadi pada dasarnya kita meneruskan reference ke fungsi tetapi tidak melakukan **passing by reference** seperti pada pemrograman C++.
   
-  ### Functions Returning Functions :
-  - It's function is useful in some situations. Especially if you use a very important programming paradigm, namely functional programming
+### ~ First-class function and Higher-order functions :
   
-  ### The Bind method :
-  - Just like the call method, Bind also to set this keyword manually to call any function
-  - The difference is that Bind does not call the function directly, but returns a new function to which this keyword is bound
-  - bind method is very useful when using event listener
-  
-  ### Immediately Invoked Function Expressions (IIFE) :
-  - A function that can only be used once 
-  - IIFE can be used when you want to create a private function (limiting functions and variables to global)
-  - As a result, functions and variables declared in IIFE cannot be accessed globally
-  - So the use of IIFE can be a problem solver if there is the same variable name or function name
-  
-  ### Closures :
-  - Closures only happen automatically in certain situations, we just need to recognize those situations
-  - Simply Closure is a function inside a function
-  - In essence, A inner function that has access rights to the scope in the function it belongs to(parent function)
-  - Can access global scope
+- Javascript adalah bahasa yang memiiliki ***First-class function*** yang berarti fungsi hanya diperlakukan sebagai nilai. Karena itu kita dapat melakukan beberapa hal:
+    1. Menyimpan fungsi dalam variabel atau peoperti.
+    2. Meneruskan fungsi sebagai argumen ke fungsi lain, seperti saat menambahkan event listener atau event handler ke DOM Object.
+    3. Dapat me-Return fungsi dari fungsi lain.
+    4. Karna fungsi merupakan objek, dia juga memiliki method (**method function**). Contohnya **bind** method.
+- Fakta bahwa JavaScript memiliki First-class function, memungkinkan kita untuk menggunakan dan menulis ***Higher-order functions***. Higher-order functions adalah fungsi yang menerima fungsi lain (Callback function) sebagai argumen atau fungsi yang mengembalikan fungsi baru.
+- First-class function dan Higher-order functions adalah dua hal yang berbeda. First-class function hanyalah fitur yang dimiliki atau tidak dimiliki oleh bahasa pemrograman.
+
+### ~ Functions Accepting Callback Functions :
+
+-   Callbacks sangat sering digunakan dalam JavaScript.
+-   Beberapa keuntungan utama Callback function:
+    1.  Membuat mudah untuk memecah kode menjadi bagaian yang lebih dapat digunakan kembali dan saling berhubungan.
+    2.  Membuat abstractions, berarti bahwa kita menyembunyikan detail dari beberapa implementasi kode, karena kita tidak terlalu peduli dengan semua detail itu.
+
+### ~ Functions Returning Functions :
+
+-   Fungsi ini berguna dibeberapa situasi. Apalagi jika menggunakan paradigma pemrograman yang sangat penting yaitu **_pemrograman fungsional_**.
+
+### ~ The call and apply methods :
+
+-   Seperti yang dibahas sebelumnya dalam pemanggilan regular function kata kunci this merujuk ke undefined (dalam strict mode);
+-   Pada **call method** argumen pertama akan mengatur kata kunci this merujuk ke fungsi apapun yang ingin kita panggil, dan argumen setelah yang pertama hanyalah argumen dari fungsi aslinya.
+-   **apply method** merupakan method yang melakukan hal yang mirip seperti call method, satu-satunya perbedaan adalah apply method tidak menerima daftar argumen setelah kata kunci this, tetapi akan mengambil array argumen yang kemudian meneruskannya ke fungsi aslinya.
+-   **apply method** tidak digunakan lagi dalam modern javascript. Karena sekarang memiliki cara yang lebih baik untuk melakukan hal yang sama persis dengan call method. Yakni denganmenggunakan spread operator untuk menyebarkan array.
+
+### ~ The Bind method :
+
+-   Sama seperti call method, bind method juga mengatur secara manual kata kunci this untuk memanggil fungsi apapun.
+-   Perbedaannya bind method tidak secara langsung memanggil fungsi, tetapi me-return fungsi baru dimana kata kunci ini terikat.
+-   bind method is very useful when using event listener
+
+### ~ Immediately Invoked Function Expressions (IIFE) :
+
+-   Sebuah fungsi yang hanya bisa digunakan sekali.
+-   IIFE bisa digunakan ketika kita ingin membuat private function (limiting functions and variables to global)
+-   Sebagai hasilnya, fungsi dan variabel yang dideklarasikan pada IIFE tidak bisa diakses secara Global.
+-   Jadi penggunaan dari IIFE bisa menyelesaikan masalah jika terdapat nama variabel atau fungsi yang sama.
+
+### ~ Closures :
+
+-   Closures bukanlah fitur yang digunakan secara eksplisit atau secara manual. jadi closure hanya terjadi secara otomatis dalam situasi tertentu, kita hanya perlu mengenali situasi tersebut.
+-   Closure pada dasarnya adalah lingkungan variabel tertutup yang melekat pada suatu fungsi, persis seperti pada waktu dan tempat fungsi itu dibuat. Jadi closure memastikan bahwa suatu fungsi tidak kehilangan koneksi ke semua variabel yang ada dilingkungan variabel tempat ia dibuat atau didefinisikan, bahkan setelah fungsi kelahirannya hilang (telah di return / dieksekusi).
+-   Analogi sederhananya seperti orang yang tidak kehilangan koneksi ke kampung halamannya, dimana orang adalah fungsi dan kampung halaman adalah scope induk fungsi. Jadi fungsi tidak kehilangan koneksi dengan variabel yang disimpan dalam scope induk fungsi.
+-   Closure juga memiliki prioritas di atas scope chain.
 </details>
 
 <details> <summary>
