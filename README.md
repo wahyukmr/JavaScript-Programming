@@ -374,21 +374,25 @@ Penggunaan Objek Array juga umum di JavaScript.
 - Dalam Programming ada dua istilah yang digunakan saat berhadapan dengan fungsi, yakni **passing by value** dan **passing by reference**. Javascript tidak memiliki passing by reference, hanya passing by value. Meskipun terlihat seperti passing by reference, namun reference itu sendiri masih merupakan nilai yang berisi memori address. Jadi pada dasarnya kita meneruskan reference ke fungsi tetapi tidak melakukan **passing by reference** seperti pada pemrograman C++.
   
 ### ~ First-class function and Higher-order functions :
-  
-- Javascript adalah bahasa yang memiiliki ***First-class function*** yang berarti fungsi hanya diperlakukan sebagai nilai. Karena itu kita dapat melakukan beberapa hal:
-    1. Menyimpan fungsi dalam variabel atau peoperti.
-    2. Meneruskan fungsi sebagai argumen ke fungsi lain, seperti saat menambahkan event listener atau event handler ke DOM Object.
-    3. Dapat me-Return fungsi dari fungsi lain.
-    4. Karna fungsi merupakan objek, dia juga memiliki method (**method function**). Contohnya **bind** method.
-- Fakta bahwa JavaScript memiliki First-class function, memungkinkan kita untuk menggunakan dan menulis ***Higher-order functions***. Higher-order functions adalah fungsi yang menerima fungsi lain (Callback function) sebagai argumen atau fungsi yang mengembalikan fungsi baru.
-- First-class function dan Higher-order functions adalah dua hal yang berbeda. First-class function hanyalah fitur yang dimiliki atau tidak dimiliki oleh bahasa pemrograman.
+
+-   Javascript adalah bahasa yang memiiliki **_First-class function_** yang berarti fungsi hanya diperlakukan sebagai nilai. Karena itu kita dapat melakukan beberapa hal:
+
+1. Menyimpan fungsi dalam variabel atau peoperti.
+2. Meneruskan fungsi sebagai argumen ke fungsi lain, seperti saat menambahkan event listener atau event handler ke DOM Object.
+3. Dapat me-Return fungsi dari fungsi lain.
+4. Karna fungsi merupakan objek, dia juga memiliki method (**method function**). Contohnya **bind** method.
+
+-   Fakta bahwa JavaScript memiliki First-class function, memungkinkan kita untuk menggunakan dan menulis **_Higher-order functions_**. Higher-order functions adalah fungsi yang menerima fungsi lain (Callback function) sebagai argumen atau fungsi yang mengembalikan fungsi baru.
+
+-   First-class function dan Higher-order functions adalah dua hal yang berbeda. First-class function hanyalah fitur yang dimiliki atau tidak dimiliki oleh bahasa pemrograman.
 
 ### ~ Functions Accepting Callback Functions :
 
 -   Callbacks sangat sering digunakan dalam JavaScript.
 -   Beberapa keuntungan utama Callback function:
-    1.  Membuat mudah untuk memecah kode menjadi bagaian yang lebih dapat digunakan kembali dan saling berhubungan.
-    2.  Membuat abstractions, berarti bahwa kita menyembunyikan detail dari beberapa implementasi kode, karena kita tidak terlalu peduli dengan semua detail itu.
+
+1.  Membuat mudah untuk memecah kode menjadi bagaian yang lebih dapat digunakan kembali dan saling berhubungan.
+2.  Membuat abstractions, berarti bahwa kita menyembunyikan detail dari beberapa implementasi kode, karena kita tidak terlalu peduli dengan semua detail itu.
 
 ### ~ Functions Returning Functions :
 
