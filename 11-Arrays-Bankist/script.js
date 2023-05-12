@@ -706,6 +706,8 @@ Test data:
     // return < 0 , A B (small to big value)
     // return > 0 , B A (big to small value)
 
+    const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
     movements.sort((current, nextValue) => {
         // small to big value
         if (current > nextValue) return 1;

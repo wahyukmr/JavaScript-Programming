@@ -29,12 +29,14 @@ Type Coercion atau type coercion adalah konversi nilai dari tipe data yang berbe
 ### ~ Truthy and falsy operators
 
 -   Nilai falsy adalah nalai yang tidak sepenuhnya salah, tetapi akan menjadi false ketika kita mencoba mengubahnya menjadi boolean.
--   Lima nilai falsy di javascript: 0, "", undefined, null, NaN
+
+-   Nilai falsy di javascript: false, 0, string kosong ("", ``), undefined, null, NaN
 
 ### ~ Statements and expressions
 
 -   **Expressions** adalah bagian kode yang menghasilkan nilai.
 -   **Statements** seperti kalimat yang menerjemahkan tindakan kita, tindakan yang kita ingin program lakukan. Jadi pada dasarnya setiap kali sesuatu yang diakhiri dengan titik koma itu adalah statement.
+
 </details>
 
 <details> <summary>
@@ -43,29 +45,38 @@ Type Coercion atau type coercion adalah konversi nilai dari tipe data yang berbe
 
 </summary>
   
-  ### ~ Activating Strict Mode :
-  - Selalu gunakan ***'use strict'*** untuk membantu men-debug code.
-  
-  ### ~ Reviewing Functions :
-  Tiga perbedaan cara menulis fungsi, tetapi semua bekerja dengan cara yang sama. menerima input data, mengubah data, dan kemudian mengeluarkan data. 
-  1. **Fuction declaration**, fungsi yang dapat digunakan sebelum di nyatakan sebelumnya.
-  2. **Function expression**, pada dasarnya fungsu yang nilainya disimpan pada sebuah variabel.
-  3. **Arrow function**, bagus untuk fungsi dengan hanya satu baris statement dan tidak memiliki kata kunci *this*.
-  
+### ~ Activating Strict Mode :
+
+Selalu gunakan **_'use strict'_** untuk membantu men-debug code.
+
+### ~ Reviewing Functions :
+
+Tiga perbedaan cara menulis fungsi, tetapi semua bekerja dengan cara yang sama, menerima input data, mengubah data, dan kemudian mengeluarkan data.
+
+1. **Fuction declaration**, fungsi yang dapat digunakan sebelum di nyatakan sebelumnya.
+2. **Function expression**, pada dasarnya fungsu yang nilainya disimpan pada sebuah variabel.
+3. **Arrow function**, bagus untuk fungsi dengan hanya satu baris statement. Tidak bisa mengakses kata kunci "this" dan Super di OOP.
+
 ### ~ Breaking and Continuing
+
 -   **continue** berarti keluar dari iterasi loop saat ini dan melanjutkan ke loop selanjutnya.
 -   **break** digunakan untuk sepenuhnya mengakhiri seluruh loop.
 
 ### ~ Looping
 
-Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan uncounted loop.
+Penjelasan mengenai beberapa jenis looping di JavaScript.
 
-1. **counted loop**
-    - Merupakan perulangan yang jelas dan sudah diketahui banyaknya perulangannya.
-    - Contoh: for loop, forEach loop, repeat loop.
-2. **uncounted loop**
-    - Merupakan perulangan yang tidak jelas berapa kali perulangannya.
-    - Contoh: while loop dan do/while loop.
+1. for Loop: digunakan untuk mengulangi sebuah blok kode berdasarkan jumlah iterasi yang sudah diketahui sebelumnya. Dalam loop ini, kita harus secara manual mengatur variabel penghitung untuk mengakses setiap elemen dalam objek.
+
+2. while Loop: Looping ini digunakan untuk mengulangi sebuah blok kode selama kondisi yang diberikan masih bernilai benar (true).
+
+3. do-while Loop: Looping ini mirip dengan while loop, namun kode akan dieksekusi setidaknya satu kali bahkan jika kondisi awal tidak terpenuhi.
+
+4. for-in Loop: merupakan perulangan for yang digunakan untuk mengulangi setiap properti yang terdefinisi dalam sebuah objek atau index di array, baik itu properti sendiri objek maupun properti yang diwarisi dari prototype-nya.
+
+5. for-of Loop: Looping ini digunakan untuk melakukan perulangan terhadap isi value dari iterable object (object yang dapat diulang), seperti Array, String, Set, Map, dll.
+
+6. forEach Loop: Looping ini khusus digunakan untuk array dan berfungsi untuk menjalankan sebuah fungsi untuk setiap elemen dalam array.
 
 </details>
 
@@ -115,38 +126,463 @@ Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan unco
 
 ### ~ DOM (Document Object Model)
 
--   **DOM** adalah Struktur yang merepresentasikan html documents. Memungkinkan javascript untuk mengakses elemen html dan memanipulasi style (mengubah teks, atribut html dan bahkan gaya CSS) nya.
+**DOM** adalah Struktur yang merepresentasikan html documents. Memungkinkan javascript untuk mengakses elemen html dan memanipulasi style (mengubah teks, atribut html dan bahkan gaya CSS) nya.
 
--   **DOM bukanlah javascript**, methods DOM dan properti untuk memanipulasi DOM bukan bagian dari JavaScript, tetapi dapat berinteraksi dengan javascript.
+**DOM bukanlah javascript**, melainkan bagian dari Web API. Jadi, methods dan properti untuk memanipulasi DOM bukan bagian dari JavaScript, tetapi dapat berinteraksi dengan javascript.
+
+**Tipe data yang terdapat pada DOM**:
+
+1.  **Document**
+
+    -   Merupakan representasi dari halaman web.
+    -   Dalam satu web, terdapat satu document, dan kita tidak perlu membuatnya secara menual, karena otomatis akan ada di browser.
+    -   Untuk mengakses document kita bisa menggunakan object document.
+    -   **Document Object**, Kita bisa langsung menggunakannya dengan kata kunci "document".
+
+            console.log(document);
+
+            // output:
+            <!DOCTYPE html>
+            <html>
+                <head></head>
+                <body></body>
+            </html>
+
+    -   **Document Property**, property dalam document bisa digunkan untuk melihat semua data yang terdapat dalam document halaman web. Contoh:
+
+            console.log(document.title);
+            console.log(document.head);
+            console.log(document.body);
+
+    -   **Document Method**, banyak method yang terdapat di document digunakan untuk memanipulasi data DOM, misal membuat Node, Element, Attribute atau mengambil dan menyeleksi Node di dalam document. Contoh menyeleksi attribute id dalam element:
+
+            console.log(document.getElementById("getId");
+
+2.  **Node**
+
+    -   Adalah base class untuk semua tipe data di DOM, seperti document, element, dan Attr.
+    -   Artinya semua fitur yang dimiliki di Node akan dimiliki juga oleh turunannya.
+    -   Node dalam DOM itu bentuknya adalah tree, artinya dengan Node kita bisa melihat **Parent** (node diatasnya), **Children** (node dibawahnya), dan **Sibling** (node yang bersebelahan / se-level).
+    -   **Node Method**, method di Node bisa digunakan untuk memanipulasi data Node didalam Node tersebut. Misalnya menghapus Node children :
+
+            <ul id="menu">
+                <li id="first">First</li>
+                <li id="second">Second</li>
+            </ul>
+            <script>
+                const menu = document.getElementById("menu");
+                menu.removeChildren(document.getElementById("first"));
+            </script>
+
+3.  **Element**
+
+    -   Merupakan Node yang berbentuk element dihalaman web, misal: head, body, form, dll.
+    -   Contoh menambahkan konten di element H1:
+
+            <h1 id="title"></h1>
+
+            <script>
+                const title = document.getElementById("title");
+                title.textContent = "Belajar JavaScript";
+            </script>
+
+    -   **Element Property**, karena element adalah turunan dari Node, semua property Node pun bisa digunakan di element.
+    -   **Element Method**, karena element adalah turunan dari Node, semua method Node pun bisa digunakan di element.
+
+4.  **Node List**
+
+    -   Merupakan array/collection atau kumpulan dari Node.
+    -   Biasanya NodeList digunakan ketika kita menyeleksi banyak Node sekaligus, misal ketika kita ingin mengambil semua children di Node misalnya.
+    -   NodeList memiliki 2 tipe, yaitu **live** dan **static**.
+    -   **live** artinya perubahan yang terjadi pada NodeList nya, akan merubah semua NodeList yang sama.
+    -   Contohnya saat kita menggunakan **_element.chiidNodes_**, NodeList tersebut bersifat live.
+    -   **Static** artinya perubahan yang terjadi pada NodeList nya, tidak akan merubah semua NodeList yang sama.
+    -   Contohnya saat kita menggunakan **_document.querySelectorALl()_**, NoteList tersebut bersifat static.
+
+5.  **Attr / Attribute**
+
+    -   Merupakan representasi dari attribute sebuah element, atau singkatnya key-value, key nya adalah nama attribute dan value nya adalah value attribute.
+    -   Contoh mendapatkan nama dan value attribute:
+
+            <img id="example" src="https://example.com" alt="example">
+
+            <script>
+                imageId = document.getElementById("example");
+                attribute = imageId.getAttributeNode("src");
+
+                console.log("attribute.name"); // get name of attribute
+                console.log("attribute.value"); // get value of attribute
+            </script>
+
+    -   **Attr Value**, dalam kebanyakan kasus kita langsung ingin mendapatkan value attribute. Untuk mendapatkan value attribute secara langsung menggunakan method **_getAttribute(name)_** di element.
+    -   Contohnya:
+
+            <img id="example" src="https://example.com" alt="example">
+
+            <script>
+                imageId = document.getElementById("example");
+                attrValue = imageId.getAttribute("src");
+
+                console.log("attrValue");
+            </script>
+
+    -   **Membuat attribute**, untuk membuat attribute bisa menggunakan **_document.createAttribute("name")_**
+    -   Lalu untuk menambahkannya ke element, menggunakan **_element.setAttributeNode(attribute)_**.
+    -   Atau bisa juga langsung membuat attribute dengan name dan value nya menggunakan **_document.setAttribute(name, value)_**.
+
+            <img id="example">
+
+            <script>
+                const image = document.getElementById("example");
+
+                const addAttr = image.setAttribute("src", "http://example.com");
+            </script>
+
+6.  **NamedNodeMap**
+
+    -   Merupakan kumpulan atau collections yang berisikan attribute dalam bentuk Map.
+    -   Mirip seperti NodeList, namun isinya adalah attribute.
+    -   Contoh:
+
+            <img id="example" src="https://example.com" alt="example image">
+
+            <script>
+                const image = document.getElementById("example");
+
+                const attr = image.attributes;
+
+                for (let babi of attr) {
+                    console.log(`${babi.name} : ${babi.value}`)
+                }
+            </script>
+
+**Text Node**, Merupakan Text tanpa tag HTML.
+
+-   Dalam membuat Text Node, kita bisa menggunakan method **_document.createTextNode(string)_**. Hasilnya berupa text yang bisa ditambahkan ke Node lain.
+-   Contoh, menambahkan nama text "wahyu" kedalam element div HTML :
+
+        <div id="name"></div>
+
+        <script>
+            const name = document.querySelector("#name");
+
+            const textName = document.createTextNode("wahyu");
+            name.appendChild(textName);
+        </script>
+
+### ~ Event handlers
+
+Node memiliki kemampuan bereaksi terhadap suatu kejadian, misal kejadian saat di klik atau saat mouse berada diatas node tersebut, dll.
+
+Ada banyak sekali jenis kejadian yang bisa kita buatkan aksinya ketika kejadian tersebut terjadi, atau ini dikenal dengan nama **Event Handler**.
+
+Ada dua cara menambahkan Event Handler ke Node, menggunakan **Event Target** atau **Global Event Handler**.
+
+1.  **Event Target**
+
+    -   merupakan parent class dari Node, artinya semua Node memiliki kemampuan dari Event Target.
+    -   Pada Event Target, kita bisa menggunakan method **_addEventListener(type, callback)_** untuk menambahkan Event Target.
+    -   Contoh, menambahkan suatu kejadian atau event handler ketika input di klik:
+
+            <input id="clickMe" type="button" value="Click Me" />
+
+            <script>
+                const clickMe = document.getElementById("clickMe");
+                clickMe.addEventListener("click", () => {
+                    clickMe.setAttribute("value", "You Already Click Me");
+                };
+            </script>
+
+2.  Global Events Handlers
+
+    -   Untuk menambahkan Event Handler kita juga bisa menggunakan Global Events Handlers.
+    -   Global Events Handlers sendiri bukanlah sebuah super class, hanya kontrak yang bisa digunakan untuk menambahkan event handler sesuai type event nya.
+    -   Contoh:
+
+            <input id="button" type="button" value="Click Me" />
+
+              <script>
+                  const button = document.getElementById("button");
+
+                  button.onclick = () => {
+                      button.setAttribute("value", "You Already Click Me");
+                  }
+              </script>
+
+**Events**, beberapa jenis events yang sering digunakan:
+
+1. **window Event**, adalah event dari browser.
+
+    Event DOMContentLoaded dan load merupakan html event penting wajib diketahui bagi front-end web developer. Sangat disarankan menggunakan event DOMContentLoaded dibandingkan event load ketika menjalankan javascript.
+
+    - **Event DOMContentLoaded** : event html yang dipanggil ketika dokumen HTML telah selesai load dan parsing tanpa menunggu stylesheets atau css, images, atau subframes selesai diproses.
+    - **Event load** : event yang terjadi ketika halaman web telah selesai loading.
+    - **onpageshow** : event yang terjadi jika halaman dikunjungi kembali.
+    - **onresize** : event yang terjadi saat halaman di resize.
+
+2. **Keyboard Event**, saat di tekan atau dilepasnya tombol pada keyboad.
+    - **onkeydown** : terjadi saat menekan keyboard.
+    - **onkeypress** : saat masih dalam keadaan menekan tombol.
+    - **onkeyup** : saat melepas tombol.
+3. **Clipboard Event**, berasal pada saat proses cut,copy atau paste pada element.
+    - **oncopy** : ketika melakukan proses copy.
+    - **oncut** : ketika melakukan proses cut.
+    - **onpaste** : ketika melakukan proses paste.
+4. **Mouse Event**, saat klik mouse.
+    - **onclik** : saat cursor menekan element tertentu.
+    - **ondblclick** : saat cursor menekan element 2x berturut-turut.
+    - **onmouseover** : saat mouse berada di atas element tertentu.
+5. **Form Event**, digunakan untuk menangkap input dari user dalam jumlah banyak sekaligus.
+    - **onsubmit** : terjadi saat menekan tombol submit.
+    - **oninput** : terjadi saat penambahan atau pengurangan karakter.
+    - **onchange** : terjadi setelah memberi input pada field.
+    - **oncopy** : terjadi jika menyalin isi dari element.
+    - **onpaste** : terjadi jika menempel isi hasil copy.
+    - **onfocus** : teraadi saat sebuah element pada form di pilih.
+    - **onblur** : terjadi jika element tidak dipilih lagi.
+6. **Method preventDefault()**, sangat berguna jika kita mau menjalankan perintah JavaScript tanpa adanya efek reload.
+
+### ~ Style
+
+DOM juga bisa digunakan untuk memanipulasi attribute style pada element dengan lebih mudah.
+
+Kita bisa menggunakan **_element.style.name = value_**.
+
+Untuk penamaan Style nya menggunakan format pascalCase, misal backgroundColor.
+
+Contoh:
+
+    <input type="button" value="blue" />
+    <input type="button" value="red" />
+    <input type="button" value="yellow" />
+    <div id="canvas" style="width: 500px; height: 500px; background-color: black;"></div>
+
+    <script>
+        const buttons = document.querySelectorAll("input");
+        const canvas = document.getElementById("canvas");
+
+        for (const button of buttons) {
+        button.addEventListener("click", () => {
+                canvas.style.backgroundColor = button.getAttribute("value");
+            })
+        }
+    </script>
+
+### ~ InnerText and innerHTML
+
+Selain **textContent**, terdapat property lain bernama **innerText** untuk mendapatkan isi text sebuah element.
+
+Tujuannya sama, untuk mengambil atau mengubah isi text konten sebuah element, namun ada perbedaannya.
+
+**TextContent** akan mengambil semua isi dari konten text sebuah element.
+
+**InnerText** bisa tahu, bagaian text mana yang akan ditampilkan, dia hanya akan mengambil text nya saja.
+
+Contoh, perbedaan textContent dan innertext:
+
+    <p id="content">
+        <script>
+            console.log("hai");
+        </script>
+        <b>wahyu</b> komarudin <i>hidayah</i>
+    </p>
+
+    <script>
+        const content = document.getElementById("content");
+        console.log(content.innerText); // wahyu komarudin hidayah
+        console.log(content.textContent); // console.log("hai"); </br> wahyu komarudin hidayah
+    </script>
+
+**innerHTML**, innerHTML akan mengambil seluruh element HTML nya sebagai text.
+
+Ini juga cocok jika ingin mengubah isi dari element menggunakan text yang berisi tag HTML nya sekalian.
+
+Contoh, mengambil seluruh element HTML nya sebagai text:
+
+    <p id="content">
+        <script>
+            console.log("hai");
+        </script>
+        <b>wahyu</b> komarudin <i>hidayah</i>
+    </p>
+
+    <script>
+        const content = document.getElementById("content");
+        console.log(content.innerHTML);
+        // Output:  <script>
+                        console.log("hai");
+                    </script>
+                        <b>wahyu</b> komarudin <i>hidayah</i>
+    </script>
+
+Salah satu kemampuan dari innerHTML adalah bisa mengubah isi dari children sebuah element hanya dengan string.
+
+Tag yang terdapat di dalam string secara otomatis akan menjadi child element.
+
+Contoh :
+
+    <p id="content"></p></p>
+
+    <script>
+        const content = document.getElementById("content");
+        content.innerHTML = "<h1>Title</h1><p>Description</p>";
+    </script>
+
+### ~ Window
+
+**Window** merupakan representasi window yang berisikan DOM Document.
+
+Beberapa JavaScript function sebenarnya berasal dari object window seperti alert(), confirm() dan prompt().
+
+Untuk menggunakan Window, cukup menggunakan kata kunci **window**.
+
+Contoh:
+
+    <p id="content"></p></p>
+
+    <script>
+        const content = document.getElementById("content");
+        const height = window.screen.height;
+        const width = window.screen.width;
+
+        content.textContent = `Window width: ${width} - height: ${height}`;
+    </script>
+
+### ~ Query Selector
+
+**Query Selector** merupakan method untuk menseleksi node sesuai dengan pola yang kita ingin cari.
+
+Terdapat dua method untuk Query Selector :
+
+1. Document.querySelector(pola) digunakan menyeleksi node pertama yang sesuai dengan pola.
+2. Document.querySelectorAll(pola) digunakan untuk menyeleksi semua node yang sesuai dengan pola.
+
+**Pola Query Selector**, Pola untuk Query Selector adalah menggunakan CSS Selector. Jadi, penggunaannya seperti ketika membuat selector di CSS.
+
+**Universal Selector** merupakan selector untuk menyeleksi semua element. Bisa menggunakan karakter \*.
+
+Contoh :
+
+    <script>
+        const element = document.querySelectorAll("*");
+        console.log(element);
+    </script>
+
+**Type Selector** adalah selector yang digunakan untuk menyeleksi tag type HTML yang kita pilih. Untuk menggunakannya, kita bisa langsung sebutkan nama tag nya.
+
+Contoh :
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+        const element = document.querySelectorAll("li");
+        console.log(element);
+    </script>
+
+**Class Selector** merupakan selector untuk menyeleksi semua element yang memiliki class yang sesuai selector. Untuk menggunakannya, kita bisa sebutkan nama class nya diawali dengan titik.
+
+Contoh :
+
+    <ul class="menu">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+        const element = document.querySelectorAll(".menu");
+        console.log(element);
+    </script>
+
+**ID Selector** merupakan selector yang digunakan untuk menyeleksi id yang sesuai selector. Untuk menggunakannya, kita bisa gunakan nama id diawali dengan karakter #.
+
+Contoh :
+
+    <ul class="menu">
+        <li id="menu-item">1</li>
+        <li>2</li>
+        <li id="menu-item">3</li>
+    </ul>
+
+    <script>
+        const element = document.querySelectorAll("#menu-item");
+        console.log(element);
+    </script>
+
+**Attribute Selector** merupakan selector yang bisa digunakan untuk menyeleksi element berdasarkan attribute nya.
+
+Kita bisa menggunakan selector [attribute].
+
+Atau bisa juga untuk tag tertentu, misal menggunakan selector div[attribute].
+
+Contoh :
+
+    <div class="1"></div>
+    <div class="2"></div>
+    <div class="3"></div>
+
+    <script>
+        const element = document.querySelectorAll("[class]");
+        console.log(element);
+    </script>
+
+**Operator di Attribute Selector**, Kita juga bisa menggunakan operator pada attribut selector.
+
+Misal [attribute=value], [attribute^=value] dan lain-lain
+
+Contoh :
+
+    <div class="1"></div>
+    <div class="2"></div>
+    <div class="3"></div>
+
+    <script>
+        const element = document.querySelectorAll("div[class^='1']");
+        console.log(element);
+    </script>
 
 ### ~ Web Storage
 
--   Web storage adalah salah satu Web API (perantara agar kode JavaScript bisa "berkomunikasi" dengan browser) yang dapat menyimpan data secara lokal pada sisi client (disimpan secara lokal pada perangkat kita).
--   Web Storage dapat menampung data maksimal 10MB per domain.
--   Fungsi dari Web Storage:
+**Web storage** adalah salah satu Web API (perantara agar kode JavaScript bisa "berkomunikasi" dengan browser) yang dapat menyimpan data secara lokal pada sisi client (disimpan secara lokal pada perangkat kita).
 
-    1. Menyimpan data dalam bentuk string yang dihasilkan oleh halaman web agar bisa diakses secara offline.
-    2. Cocok juga untuk menyimpan data konfigurasi preference untuk pengguna web.
+Web Storage dapat menampung data maksimal 10MB per domain.
 
--   Macam-macam Web Storage:
-    1. **Local Storage**:
-       ~ Digunakan untuk menyimpan data tanpa ada batasan waktu. Data yang disimpan tidak akan hilang bila browser atau tabs browser ditutup kecuali jika kita menghapusnya.
-       ~ Untuk menggunakan local storage, kita harus mengaksesnya melalui objek yang bernama "localStorage".
-    2. **Session Storage**:
-       ~ Digunakan untuk menyimpan data sementara pada browser. Data akan hilang ketika browser atau tab browser ditutup.
-       ~ Untuk menerapkan Session Storage, kita dapat menggunakan global objek sessionStorage.
--   Data yang tersimpan dalam sessionStorage atau localStorage adalah nilai dengan tipe data primitif seperti number, boolean, atau string. Bisa juga berbentuk JavaScript objek dengan mengubahnya ke dalam string (JSON)
--   **_Key-value_** = Metode yang dapat digunakan untuk menyimpan dan mengakses data pada storage.
--   Fungsi-fungsi yang ada pada Web Storage:
-    1. **_setItem_** = Digunakan untuk menyimpan data pada Web Storage. Fungsi ini membutuhkan dua parameter yakni key (sebagai kunci untuk mendapatkan nilai) dan value (sebagai nilai yang akan disimpan).
-    2. **_getItem_** = Digunakan untuk mengakses data pada Web Storage. Fungsi ini membutuhkan satu parameter yakni key (sebagai kunci untuk mendapatkan nilai), dan data yang disimpan pada Web Storage akan dikembalikan dalam bentuk string.
-    3. **_removeItem(key)_** = menghapus key beserta value-nya.
-    4. **_clear()_** = menghapus semuanya.
-    5. **_key(index)_** = mendapatkan key pada posisi tertentu.
-    6. **_length_** = jumlah item yang disimpan.
--   Menyimpan dan Mendapatkan Data Kompleks pada Web Storage:
-    -   Untuk menyimpan data kompleks seperti objek JavaScript dapat dilakukan dengan mengubah objek menjadi string menggunakan JSON.stringify().
-    -   Untuk mendapatkan data kompleks seperti objek JavaScript dari Web Storage dapat dilakukan dengan mengubah string objek menjadi objek menggunakan JSON.parse().
+Fungsi dari Web Storage:
+
+-   Menyimpan data dalam bentuk string yang dihasilkan oleh halaman web agar bisa diakses secara offline.
+-   Cocok juga untuk menyimpan data konfigurasi preference untuk pengguna web.
+
+Macam-macam Web Storage:
+
+1. **Local Storage**:
+    - Digunakan untuk menyimpan data tanpa ada batasan waktu. Data yang disimpan tidak akan hilang bila browser atau tabs browser ditutup kecuali jika kita menghapusnya.
+    - Untuk menggunakan local storage, kita harus mengaksesnya melalui objek yang bernama "localStorage".
+2. **Session Storage**:
+
+    - Digunakan untuk menyimpan data sementara pada browser. Data akan hilang ketika browser atau tab browser ditutup.
+    - Untuk menerapkan Session Storage, kita dapat menggunakan global objek sessionStorage.
+
+Data yang tersimpan dalam **localStorage** atau **sessionStorage** adalah nilai dengan tipe data primitif seperti number, boolean, atau string. Bisa juga berbentuk JavaScript objek dengan mengubahnya ke dalam string (JSON)
+
+**_Key-value_** = Metode yang dapat digunakan untuk menyimpan dan mengakses data pada storage.
+
+Fungsi-fungsi yang ada pada Web Storage:
+
+1. **_setItem_** = Digunakan untuk menyimpan data pada Web Storage. Fungsi ini membutuhkan dua parameter yakni key (sebagai kunci untuk mendapatkan nilai) dan value (sebagai nilai yang akan disimpan).
+2. **_getItem_** = Digunakan untuk mengakses data pada Web Storage. Fungsi ini membutuhkan satu parameter yakni key (sebagai kunci untuk mendapatkan nilai), dan data yang disimpan pada Web Storage akan dikembalikan dalam bentuk string.
+3. **_removeItem(key)_** = menghapus key beserta value-nya.
+4. **_clear()_** = menghapus semuanya.
+5. **_key(index)_** = mendapatkan key pada posisi tertentu.
+6. **_length_** = jumlah item yang disimpan.
+
+Menyimpan dan Mendapatkan Data Kompleks pada Web Storage:
+
+-   Untuk menyimpan data kompleks seperti objek JavaScript dapat dilakukan dengan mengubah objek menjadi string menggunakan JSON.stringify().
+-   Untuk mendapatkan data kompleks seperti objek JavaScript dari Web Storage dapat dilakukan dengan mengubah string objek menjadi objek menggunakan JSON.parse().
 
 </details>
 
@@ -170,93 +606,139 @@ Secara umum looping / perulangan dibagi menjadi dua, yaitu counted loop dan unco
 
 ### ~ JS Engine
 
--   JS Engine hanyalah sebuah program komputer yang mengeksekusi kode javascript, jadi bertanggung jawab untuk mengurai kode dan mengonversinya menjadi perintah yang dapat dijalankan.
--   Setiap Engine JavaScript selalu berisi **_call stack_** dan **_heap_**.
--   **Call stack** adalah tempat kode kita sebenarnya dieksekusi menggunakan sesuatu yang disebut **_execution context_**.
--   Execution context adalah environment di mana potongan javascript diekseksi, seperti kotak yang menyimpan semua informasi yang diperlukan untuk beberapa kode yang akan dieksekusi. execution context mengandung variable environment, scope chain dan this keyword.
--   Variabel environment mencakup variable declaration(let, const dan var), function dan argument object.
--   **Heap** adalah tempat kumpulan memori yang terstruktur yang menyimpan semua objek(reference types) yang dibutuhkan.
+**JS Engine** hanyalah sebuah program komputer yang mengeksekusi kode javascript, jadi bertanggung jawab untuk mengurai kode dan mengonversinya menjadi perintah yang dapat dijalankan dan dipahami oleh komputer.
+
+Beberapa contoh JS Engine populer adalah V8 dari Google, SpiderMonkey dari Mozilla, dan Chakra dari Microsoft.
+
+Setiap Engine JavaScript selalu berisi **Call Stack** dan **Heap**.
+
+**Call Stack** adalah tempat kode kita sebenarnya dieksekusi menggunakan sesuatu yang disebut **execution context**.
+
+**Execution context** adalah environment di mana potongan javascript diekseksi, seperti kotak yang menyimpan semua informasi yang diperlukan untuk beberapa kode yang akan dieksekusi. execution context mengandung variable environment, scope chain dan this keyword.
+
+**Variabel environment** mencakup variable declaration(let, const dan var), function dan argument object.
+
+**Heap** adalah tempat kumpulan memori yang terstruktur yang menyimpan semua objek(reference types) yang dibutuhkan.
 
 ### ~ JS Runtime
 
--   **JavaScript runtime** seperti kotak yang menyediakan beberapa objek ke JavaScript yang kita butuhkan sehingga dapat berinteraksi dengan dunia luar.
--   Inti dari setiap JS runtime selalu merupakan JS Engine. Misalnya, Browser Chrome dan node.js menggunakan Engine yang sama - V8, tetapi Runtime mereka berbeda: di Chrome memiliki window, objek DOM, dll., sedangkan node memberi kita require, Buffers dan processes.
--   JavaScript runtime biasanya juga menyertakan **_callback queue_**, ini adalah struktur data yang berisi semua fungsi callback yang siap dieksekusi. Misalnya callback fungsi dari DOM event listener(click, timer, dll).
--   ketika call stack kosong, fungsi callback diteruskan ke stack agar dapat dieksekusi. Dan ini terjadi berkat **Event loop**. Jadi event loop mengambil fungsi callback dari callback queue dan menempatkannya ke call stack sehingga dapat dieksekusi.
+**JavaScript runtime** seperti kotak yang menyediakan beberapa objek ke JavaScript yang kita butuhkan sehingga dapat berinteraksi dengan dunia luar.
+
+Inti dari setiap JS runtime selalu merupakan JS Engine. Misalnya, Browser Chrome dan node.js menggunakan Engine yang sama - V8, tetapi Runtime mereka berbeda: di Chrome memiliki window, objek DOM, dll., sedangkan node memberi kita require, Buffers dan processes.
+
+JavaScript runtime biasanya juga menyertakan **_callback queue_**, ini adalah struktur data yang berisi semua fungsi callback yang siap dieksekusi. Misalnya callback fungsi dari DOM event listener(click, timer, dll).
+
+ketika call stack kosong, fungsi callback diteruskan ke stack agar dapat dieksekusi. Dan ini terjadi berkat **Event loop**. Jadi event loop mengambil fungsi callback dari callback queue dan menempatkannya ke call stack sehingga dapat dieksekusi.
 
 ### ~ Scope in JavaScript :
 
-Scope:
+**Scope:**
 
--   ruang atau environment dimana sebuah variabel tertentu dideklarasikan.
--   Ada Global Scope, Function Scope(local Scope), dan Block Scope.
+Scope merupakan area akses sebuah data.
 
-Scope Concepts:
+Analogi sederhana dari Scope, seperti sebuah tas yang berisikan buku, dimana tas adalah scope yang merupakan lingkungan atau environments tempat buku itu berada atau data itu dideklarasikan.
 
--   scoping mengajukan pertanyaan "dimana variabel tinggal?" atau "dimana kita bisa mengakses variabel tertentu dan dimana yang tidak".
--   Hanya let dan const variabel yang merupakan block scope. Variabel yang dideklarasikan dengan var berakhir di local function terdekat.
--   Di JavaScript, kita mempunyai **_lexical scoping_**, Jadi aturan dimana kita bisa mengakses variabel berdasarkan pada dimana tepatnya kode functions dan kode blocks ditulis.
+**Scope Concepts:**
 
-Scope Chain:
+Scoping mengajukan pertanyaan "dimana variabel tinggal?" atau "dimana kita bisa mengakses variabel tertentu dan dimana yang tidak".
 
--   Semua Scope selalu memiliki akses ke semua variabel dari Scope terluarnya. Inilah yang disebut **scope chain!**.
--   Ketika sebuah variabel tidak berada di Scope saat ini, Mesin akan mencari dalam Scope chain sampai menemukan variabel yang dicarinya. Inilah yang disebut **variable lookup**.
--   Scope chain adalah one-way street: artinya Scope induk tidak akan pernah memiliki akses ke variabel dari inner Scope (merujuk pada lingkup variabel yang dibuat di dalam sebuah fungsi atau blok kode tertentu).
--   Scope chain di dalam suatu Scope atau ruang lingkup tertentu sama dengan menambahkan semua variable environment dari semua Scope induk.
--   Scope chain tidak memiliki hubungan dengan urutan di mana fungsi dipanggil. Hal ini sama sekali tidak memengaruhi Scope chain!
+Beberapa konsep scope diantaranya:
 
-Tiga jenis Scope di Javascript:
+1. **lexical scoping**
+
+    Lexical scope adalah cara JavaScript menentukan scope sebuah variabel berdasarkan penempatannya dalam kode. Ketika sebuah variabel didefinisikan dalam sebuah function, variabel tersebut hanya bisa diakses di dalam function tersebut atau di dalam nested function lain yang terdapat di dalam function tersebut. Lexical scoping akan mencari variabel tersebut di dalam nested scope dari function tersebut.
+
+2. **Scope Chain:**
+
+    Scope chain adalah cara JavaScript **mencari variabel** saat variabel yang dipanggil tidak ditemukan di lingkup saat ini. Scope chain mencari variabel secara berurutan, dimulai dari lingkup scope saat ini dan bergerak naik ke lingkup scope parent yang lebih tinggi, sampai variabel tersebut ditemukan.
+
+    Scope chain adalah one-way street: artinya Scope induk tidak akan pernah memiliki akses ke variabel dari inner Scope (merujuk pada lingkup variabel yang dibuat di dalam sebuah fungsi atau blok kode tertentu).
+
+    Scope chain di dalam suatu Scope atau ruang lingkup tertentu sama dengan menambahkan semua variable environment dari semua Scope induk.
+
+    Scope chain tidak memiliki hubungan dengan urutan di mana fungsi dipanggil. Hal ini sama sekali tidak memengaruhi Scope chain!
+
+3. **Variabel Lookup**
+
+    Variabel lookup adalah proses mencari nilai dari sebuah variabel, baik itu di dalam lingkup scope saat ini atau di dalam parent scope dalam scope chain. Variabel lookup akan mencari nilai variabel yang digunakan, terlepas dari di mana variabel itu didefinisikan.
+
+Jadi, lexical scoping dan scope chain saling berkaitan dalam menentukan scope sebuah variabel dan bagaimana scope tersebut diatur secara hierarkis. Sedangkan variabel lookup adalah proses pencarian nilai dari variabel yang digunakan, baik itu di dalam lingkup scope saat ini atau di dalam parent scope dalam scope chain.
+
+**Tiga jenis Scope di Javascript:**
 
 1. Global Scope
     - Berada di luar dari function atau block apapun.
     - Variabel yang dideklarasikan di global scope dapat diakses **dimana saja**.
+    - Data di global scope bisa diakses di local scope dan block scope.
 2. Function Scope
     - Scope atau ruang lingkup dari **function**.
     - Variabel hanya dapat diakses **didalam function, Bukan** diluar.
     - Juga biasa dipanggil **_local scope_**.
+    - Data di local scope bisa diakses di block scope dan tidak bisa di global scope.
 3. Block Scope (ES6)
-    - Scope atau ruang lingkup dari **if block, for loop block, etc**
+    - Mengacu pada kode didalam kurung kurawal seperti pada: **if block, for loop block, etc**
+    - Data di block scope hanya bisa digunakan pada block tersebut.
 
 ### ~ Hoisting in javascript :
 
--   **Hoisting** adalah membuat beberapa jenis variabel dapat diakses/digunakan kembali pada kode sebelum mereka dideklarasikan
-
--   Kesimpulan dari bagian ini:
-    -   Jangan menggunakan **var** untuk mendeklarasikan variabel.
-    -   Gunakan "const" pada bagian dari waktu mendeklarasikan variabel.
-    -   Mengakses variabel sebelum mendeklarasikannya adalah praktik yang buruk dan harus dihindari.
-    -   Selalu mendeklarasikan fungsi terlebih dahulu sebelum menggunakannya.
-
-### ~ How the "this" Keyword works :
-
--   **this keyword/variable** adalah variabel spesial yang dibuat untuk setiap execution context(dalam kasus ini untuk setiap fungsi). Mengambil nilai yang merujuk ke "pemilik" dari fungsi dimana kata kunci **_this_** ini digunakan.
-
--   Pengertian diatas bukan static. Tergantung pada bagaimana fungsi dipanggil, dan nilainya hanya diberikan ketika fungsi sebenarnya dipanggil.
-
--   Penerapan kata kunci **_this_**:
-    -   **Method** 👉 kata kunci **_this_** merujuk ke **objek** yang memanggil method.
-    -   **Simple Function call** 👉 kata kunci **_this_** mengembalikan **undefined** (jika menggunakan strict mode).
-    -   **Arrow Function** 👉 kata kunci **_this_** merujuk ke this dari fungsi induk terdekatnya.
-    -   **Event Listener** 👉 kata kunci **_this_** merujuk ke elemen DOM tempat tempat penanganan dilampirkan.
-
-### ~ Primitives vs. Objects (Primitive vs. Reference Types) :
+**Hoisting** adalah konsep di mana JavaScript mengangkat (memindahkan) deklarasi variabel dan fungsi ke atas scope, sehingga variabel atau fungsi dapat diakses sebelum dideklarasikan dalam kode. Dalam praktiknya, sebaiknya tetap dideklarasikan variabel atau fungsi terlebih dahulu sebelum digunakan agar kode lebih mudah dipahami dan dijaga keamanannya. Namun, pemahaman tentang hoisting akan membantu menghindari kesalahan dalam penulisan kode JavaScript.
 
 Kesimpulan dari bagian ini:
 
--   **Primitive data type**: String, Number, Boolean, Null, bigint, simbool, undefined.
--   **Object**: selain dari primitive seperti Object Literal, Arrays, Functions, banyak lagi...
--   Berbicara tentang memori dan manajemen memori, biasanya disebut **_primitives types_** dan **_reference types_**
--
--   **_Primitives types_** yang dibuat akan disimpan pada Stack engine JS, tepatnya didalam execution context dimana mereka dideklarasikan. Setiap variabel ditempatkan pada Stack yang berbeda. Memperbarui salah satunya tidak akan memengaruhi yang lain.
--   Semua Objek atau dengan kata lain **_Reference types_** akan disimpan pada Heap engine JS. setiap kali membuat perubahan pada salinannya maka data aslinya juga ikut berubah. Karena ketika kita mencoba untuk meng-copy objek, hal ini tidak akan membuat objek baru pada Heap, itu hanya variabel lain pada Stack yang valuenya merefrensikan ke objek aslinya, jadi kedua variabel ini merujuk ke alamat memori yang sama di Heap, oleh karenanya jika ada perubahan keduannya akan terpengaruh.
--   Mendeklarasikan variabel const tidak dapat diubah nilainya hanya berlaku untuk nilai Primitive, tetapi tidak untuk nilai Reference. karena ini hanya mengubah nilai objek yang disimpan di Heap.
+-   Jangan menggunakan **var** untuk mendeklarasikan variabel.
+-   Gunakan "const" pada waktu mendeklarasikan variabel.
+-   Mengakses variabel sebelum mendeklarasikannya adalah praktik yang buruk dan harus dihindari.
+-   Selalu mendeklarasikan fungsi terlebih dahulu sebelum menggunakannya.
+
+### ~ How the "this" Keyword works :
+
+**this keyword/variable** adalah variabel spesial yang dibuat untuk setiap execution context(dalam kasus ini untuk setiap fungsi). Mengambil nilai yang merujuk ke "pemilik" dari fungsi dimana kata kunci **this** ini digunakan.
+
+Pengertian diatas bukan static. Tergantung pada bagaimana fungsi dipanggil, dan nilainya hanya diberikan ketika fungsi sebenarnya dipanggil.
+
+Penerapan kata kunci **this:**
+
+-   Dalam **Object Method** 👉 kata kunci **_this_** merujuk ke **objek** pemilik functionnya.
+-   Di **Function** (jika menggunakan strict mode) 👉 kata kunci **_this_** mengembalikan **undefined**.
+-   **Arrow Function** 👉 kata kunci **_this_** merujuk ke this dari fungsi induk terdekatnya.
+-   **Event Listener** 👉 kata kunci **_this_** merujuk ke elemen DOM tempat tempat penanganan dilampirkan.
+
+### ~ Primitives vs. Objects (Primitive vs. Reference Types) :
+
+**Tipe Data Primitive**
+
+-   Tipe data primitive adalah tipe data yang dianggap sebagai nilai tunggal dan bukan object.
+-   Beberapa contoh diantaranya: String, Number, Boolean, Null, BigInt, Simbool, Undefined.
+-   Dalam management memorinya, **Tipe Data Primitive** yang dibuat akan disimpan pada Stack engine JS, tepatnya didalam execution context (dimana mereka dideklarasikan). Setiap variabel ditempatkan pada Stack yang berbeda.
+-   Jadi pada **Tipe Data Primitive**, ketika kita mengubah nilai sebuah variabel, yang terjadi adalah kita tidak mengubah nilai yang ada di dalam memori, melainkan kita membuat sebuah nilai baru yang kemudian disimpan ke dalam memori dan menggantikan nilai lama yang sebelumnya disimpan di sana. nilai lama yang sebelumnya disimpan di sana kemudian akan dibebaskan atau dihapus dari memori jika tidak digunakan lagi oleh program.
+-   Contoh :
+
+    // menggunakan tipe data primitive
+    let x = 10;
+    let y = x;
+    x = 20;
+
+    console.log(x); // output: 20
+    console.log(y); // output: 10
+
+**Tipe Data Reference**
+
+-   **Tipe data reference** adalah tipe data yang merepresentasikan referensi ke object.
+-   Di JavaScript **Tipe data reference** mencakup semua jenis Object. Seperti Object Literal, Arrays, Functions, Date, Map, Set, RegExp, dan banyak lagi.
+-   Semua **Tipe Data Reference** akan disimpan pada **Heap** engine JS sebagai suatu referensi, bukan sebagai nilai yang sebenarnya. Saat kita membuat variabel yang menunjuk ke suatu objek atau array (tipe data reference), variabel tersebut sebenarnya menyimpan alamat memori di **Heap** di mana objek atau array tersebut disimpan, bukan isi dari objek atau array itu sendiri. Maka dari itu, jika ada perubahan keduannya akan ikut berubah.
+
+Mendeklarasikan variabel const tidak dapat diubah nilainya hanya berlaku untuk nilai Primitive, tetapi tidak untuk nilai Reference. karena ini hanya mengubah nilai objek yang disimpan di Heap.
 
 ### ~ Regular Functions vs. Arrow Functions :
 
--   Jangan menggunakan Arrow Function pada object method.
--   Ketika memiliki fungsi didalam method, solusi terbaik menggunakan arrow function.
--   Penggunaan kata kunci **_this_** bergantung pada object yang memanggilnya.
--   Kata kunci **arguments** tidak lagi penting di javascsript karena ada cara yang lebih modern untuk melakukannya.
+Jangan menggunakan Arrow Function pada object method.
+
+Ketika memiliki fungsi didalam method, solusi terbaik menggunakan arrow function.
+
+Penggunaan kata kunci **this** bergantung pada object yang memanggilnya.
+
+Kata kunci **arguments** tidak lagi penting di javascsript karena ada cara yang lebih modern untuk melakukannya.
+
 </details>
 
 <details> <summary>
@@ -267,35 +749,49 @@ Kesimpulan dari bagian ini:
 
 ### ~ Destructuring :
 
--   Destructuring adalah untuk membongkar nilai Array atau Objek menjadi variabel terpisah. Dengan kata lain destructuring memecah struktur data kompleks menjadi struktur data kecil seperti variabel.
+Destructuring adalah untuk membongkar nilai Array atau Objek menjadi variabel terpisah. Dengan kata lain destructuring memecah struktur data kompleks menjadi struktur data kecil seperti variabel.
 
 ### ~ Spread Operators ( ... ) :
 
--   **Spread operator** memungkinkan kita menyebarkan atau mengeluarkan elemen yang ada di dalam array atau properti objek ke tempat dimana nilai tersebut diharapkan. Selain array dan objek, operator ini juga bisa digunakan untuk "mengeluarkan" karaketer tunggal di dalam string, tapi ini jarang dilakukan.
--   Seperti halnya Object.assign, Spread operator juga membuat **_Shallow copy_** artinya hanya menyalin nilai yang berada pada **top value**, nilai yang lebih dalam berupa **Reference types** dimana jika nilai yang disalin dimodifikasi akan berpengaruh juga pada nilai aslinya.
--   Spread operators bekerja pada semua yang disebut **_iterable_** (Array, String, Set, Map, dan yang bukan Objek).
--   Dapat membuat Array atau properti objek baru dan atau untuk meneruskan nilai dalam suatu fungsi secara bersamaan. Merupakan dua kasus penggunaan Spread operator.
+**Spread operator** memungkinkan kita menyebarkan atau mengeluarkan elemen yang ada di dalam array atau properti objek ke tempat dimana nilai tersebut diharapkan. Selain array dan objek, operator ini juga bisa digunakan untuk "mengeluarkan" karaketer tunggal di dalam string, tapi ini jarang dilakukan.
 
-### ~ Rest Pattern and Parameters :
+Seperti halnya Object.assign, Spread operator juga membuat **Shallow copy** artinya hanya menyalin nilai yang berada pada **top value**, nilai yang lebih dalam berupa **Reference types** dimana jika nilai yang disalin dimodifikasi akan berpengaruh juga pada nilai aslinya.
 
--   **Spread operator** untuk memecah atau mengeluarkan array sementara **Rest** untuk mengambil beberapa nilai dan kemudian mengemas semuanya ke dalam array.
+Spread operators bekerja pada semua yang disebut **iterable** (Array, String, Set, Map, dan yang bukan Objek).
 
-### ~ Short Circuiting ( && and || ) :
+Dapat membuat Array atau properti objek baru dan atau untuk meneruskan nilai dalam suatu fungsi secara bersamaan. Merupakan dua kasus penggunaan Spread operator.
 
--   Short Circuiting dalam kasus **or operator** || akan mengembalikan nilai pertama yang bernilai truty dari semua operan, atau hanya nilai terakhir jika semuanya falsy, jika nilai kedua adalah nilai yang truty maka akan mengembalikan nilai kedua itu dan operan lain tidak akan dievaluasi.
--   Dalam praktiknya kita dapat menggunakan **or operator** untk menetapkan nilai default.
--   Short Circuiting dalam kasus **and operator** && berarti sebaliknya dari **or**, yakni akan mengembalikan nilai pertama yang bernilai falsy atau mengevaluasi dan mengembalikan nilai truty yang terakhir jika semuanya truty. jika nilai kedua adalah nilai yang falsy maka akan mengembalikan nilai kedua itu dan operan selanjutnya tidak akan dievaluasi.
--   Sering kali kita dapat menggunakan **operator and** untuk benar-benar menghindari if statement, yakni memeriksa apakah properti atau nilai tertentu benar-benar ada. Karena dengan **and operator** akan mengeksekusi kode pada operan ke dua jika operan pertama truty.
+### ~ Rest Parameters ( ... ) :
+
+**Rest parameters** adalah fitur dimana kita bisa mengirim data sebanyak-banyakya pada satu parameter function, dan secara otomatis akan dikonversi menjadi array.
+
+**Rest parameters** hanya boleh ada satu di function.
+
+**Rest parameters** hanya boleh berada di posisi paling akhir, tidak boleh di depan atau ditengah, kecuali memang cuma ada 1 parameter.
+
+### ~ Short Circuiting ( && and || ) di Non Boolean :
+
+**Or Operator** (||)
+
+-   membaca operan dari kiri ke kanan.
+-   akan mengembalikan nilai pertama yang bernilai truty dari semua operan, atau hanya nilai terakhir jika semuanya falsy.
+-   Dalam praktiknya kita dapat menggunakan **Or Operator** untuk menetapkan nilai default.
+
+**And Operator** (&&)
+
+-   Membaca operan dari kiri ke kanan.
+-   Berarti sebaliknya dari **Or Operator**, yakni akan mengembalikan nilai pertama yang bernilai falsy.
+-   jika tidak ada satupun yang bernilai falsy, maka operan terakhir yang akan diambil.
+-   Sering kali kita dapat menggunakan **Operator And** untuk benar-benar menghindari if statement, yakni memeriksa apakah properti atau nilai tertentu benar-benar ada.
 
 ### ~ The Nullish Coalescing Operator ( ?? ) :
 
--   Ini bekerja mirip dengan **or operator**, dan menangani eror pada pendekatan tersebut.
--   Nilai Nullish adalah: Null dan Undefined (**_tidak termasuk:_** 0 or ""). Jadi jika nilai yang ditentukan berupa Null atau undefined, maka operan kedua yang akan dieksekusi dan direturn.
--   Dengan ini dapat diasumsikan bahwa 0 dan string kosong tidak dianggap sebagai nilai falsy.
+-   Merupakan operator yang mirip dengan ternary operator, berbeda pada kondisinya, jika berilai null atau undefined maka value default nya dieksekusi.
+-   Nilai Nullish adalah: Null dan Undefined (**_tidak termasuk:_** 0 or ""). Jadi, jika nilainya berupa Null atau undefined, maka operan kedua yang akan dieksekusi dan direturn.
 
 ### ~ Logical Assignment Operators :
 
--   Prinsip dari cara kerjanya sama seperti OR, AND dan NULLISH operators. Tetapi dengan menggunakan Logical Assignment Operators menjadi lebih sederhana.
+Prinsip dari cara kerjanya sama seperti OR, AND dan NULLISH operators. Tetapi dengan menggunakan Logical Assignment Operators menjadi lebih sederhana.
 
 ### ~ Looping Arrays: The for-of Loop
 
@@ -303,7 +799,7 @@ Kesimpulan dari bagian ini:
 -   For-of tidak bisa digunakan untuk melakukan perulangan data di object secara langsung, karena object bukanlah iterable.
 -   Dengan menggunakan for-of loop kita masih bisa menggnakan continue and break keywords.
 
-### ~ Optional Chaining ( ?. ) :
+### ~ Optional Chaining ( ? ) :
 
 -   Optional Chaining = memeriksa ada atau tidaknya nilai(ada yang berarti tidak Null dan undefined), jika ada akan mengembalikan nilainya, jika tidak akan mengembalikan undefined.
 
@@ -369,20 +865,33 @@ Penggunaan Objek Array juga umum di JavaScript.
   
 ### ~ How Passing Argument Works: value vs reference :
   
-- Jika kita meneruskan nilai Primitive types sebagai argumen dari sebuah fungsi, maka argumen itu merupakan salinan dari nilai aslinya, akan menjadi nilai atau variabel yang berbeda. Karnanya apabila nilai salinan diubah tidak akan mengubah nilai originalnya.
-- lain halnya jika kita meneruskan Reference types ke fungsi, apa yang disalin sebenarnya hanyalah referensi ke objek di memori Heap atau bisa dikatakan keduanya menunjuk pada objek yang sama di memori Heap. Jadi saat mencoba memanipulasi salinan, sama saja memaniplasi nilai originalnya.
-- Dalam Programming ada dua istilah yang digunakan saat berhadapan dengan fungsi, yakni **passing by value** dan **passing by reference**. Javascript tidak memiliki passing by reference, hanya passing by value. Meskipun terlihat seperti passing by reference, namun reference itu sendiri masih merupakan nilai yang berisi memori address. Jadi pada dasarnya kita meneruskan reference ke fungsi tetapi tidak melakukan **passing by reference** seperti pada pemrograman C++.
-  
+Jika kita meneruskan nilai Primitive types sebagai argumen dari sebuah fungsi, maka argumen itu merupakan salinan dari nilai aslinya, akan menjadi nilai atau variabel yang berbeda. Karnanya apabila nilai salinan diubah tidak akan mengubah nilai originalnya.
+
+lain halnya jika kita meneruskan Reference types ke fungsi, apa yang disalin sebenarnya hanyalah referensi ke objek di memori Heap atau bisa dikatakan keduanya menunjuk pada objek yang sama di memori Heap. Jadi saat mencoba memanipulasi salinan, sama saja memaniplasi nilai originalnya.
+
+Dalam Programming ada dua istilah yang digunakan saat berhadapan dengan fungsi, yakni **passing by value** dan **passing by reference**. Javascript tidak memiliki passing by reference, hanya passing by value. Meskipun terlihat seperti passing by reference, namun reference itu sendiri masih merupakan nilai yang berisi memori address. Jadi pada dasarnya kita meneruskan reference ke fungsi tetapi tidak melakukan **passing by reference** seperti pada pemrograman C++.
+
+### Fuction return value
+
+Secara default, function tidak menghasilkan value apapun.
+
+Agar function bisa menghasilkan value, kita bisa menggunakan kata kunci return didalam block function nya, diikuti dengan data yang ingin kita hasilkan.
+
+Menghentikan eksekusi dengan return
+
+-   Saat menggunakan kata kunci return, maka kode setelahnya tidak akan dieksekusi.
+-   kita bisa menggunakan return untuk menghentikan eksekusi sebuah function.
+
 ### ~ First-class function and Higher-order functions :
 
-Javascript adalah bahasa yang memiiliki **_First-class function_** yang berarti fungsi hanya diperlakukan sebagai nilai. Karena itu kita dapat melakukan beberapa hal:
+Javascript adalah bahasa yang memiiliki **First-class function** yang berarti fungsi hanya diperlakukan sebagai nilai. Karena itu kita dapat melakukan beberapa hal:
 
 1.  Menyimpan fungsi dalam variabel atau peoperti.
 2.  Meneruskan fungsi sebagai argumen ke fungsi lain, seperti saat menambahkan event listener atau event handler ke DOM Object.
 3.  Dapat me-Return fungsi dari fungsi lain.
 4.  Karna fungsi merupakan objek, dia juga memiliki method (**method function**). Contohnya **bind** method.
 
-Fakta bahwa JavaScript memiliki First-class function, memungkinkan kita untuk menggunakan dan menulis **_Higher-order functions_**. Higher-order functions adalah fungsi yang menerima fungsi lain (Callback function) sebagai argumen atau fungsi yang mengembalikan fungsi baru.
+Fakta bahwa JavaScript memiliki First-class function, memungkinkan kita untuk menggunakan dan menulis **Higher-order functions**. Higher-order functions adalah fungsi yang menerima fungsi lain (Callback function) sebagai argumen atau fungsi yang mengembalikan fungsi baru.
 
 First-class function dan Higher-order functions adalah dua hal yang berbeda. First-class function hanyalah fitur yang dimiliki atau tidak dimiliki oleh bahasa pemrograman.
 
@@ -397,7 +906,7 @@ Beberapa keuntungan utama Callback function:
 
 ### ~ Functions Returning Functions :
 
--   Fungsi ini berguna dibeberapa situasi. Apalagi jika menggunakan paradigma pemrograman yang sangat penting yaitu **_pemrograman fungsional_**.
+-   Fungsi ini berguna dibeberapa situasi. Apalagi jika menggunakan paradigma pemrograman yang sangat penting yaitu **pemrograman fungsional**.
 
 ### ~ The call and apply methods :
 
@@ -414,17 +923,28 @@ Beberapa keuntungan utama Callback function:
 
 ### ~ Immediately Invoked Function Expressions (IIFE) :
 
--   Sebuah fungsi yang hanya bisa digunakan sekali.
--   IIFE bisa digunakan ketika kita ingin membuat private function (limiting functions and variables to global)
--   Sebagai hasilnya, fungsi dan variabel yang dideklarasikan pada IIFE tidak bisa diakses secara Global.
--   Jadi penggunaan dari IIFE bisa menyelesaikan masalah jika terdapat nama variabel atau fungsi yang sama.
+**IIFE** merupakan sebuah teknik dalam JavaScript untuk menjalankan sebuah fungsi secara otomatis pada saat ia didefinisikan.
+
+**IIFE** dibuat dengan menempatkan fungsi dalam tanda kurung () dan menambahkan tanda kurung () lagi di bagian belakang untuk langsung memanggilnya.
+
+**IIFE** sering digunakan untuk menjaga agar variabel yang didefinisikan di dalam fungsi tidak bocor ke lingkup global.
+
+Sebagai contoh, jika kita ingin menjalankan sebuah fungsi secara otomatis pada saat halaman web kita dimuat, kita dapat menulisnya dalam IIsp sehingga fungsi tersebut hanya berjalan sekali saja dan tidak perlu dipanggil lagi di masa mendatang
+
+**IIFE** juga dapat digunakan untuk membuat lingkup scope terisolasi, sehingga variabel yang didefinisikan di dalamnya tidak akan berkonflik dengan variabel di luar lingkup.
+
+**IIFE** dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan dibuat dan dijalankan dari awal.
 
 ### ~ Closures :
 
--   Closures bukanlah fitur yang digunakan secara eksplisit atau secara manual. jadi closure hanya terjadi secara otomatis dalam situasi tertentu, kita hanya perlu mengenali situasi tersebut.
--   Closure pada dasarnya adalah lingkungan variabel tertutup yang melekat pada suatu fungsi, persis seperti pada waktu dan tempat fungsi itu dibuat. Jadi closure memastikan bahwa suatu fungsi tidak kehilangan koneksi ke semua variabel yang ada dilingkungan variabel tempat ia dibuat atau didefinisikan, bahkan setelah fungsi kelahirannya hilang (telah di return / dieksekusi).
--   Analogi sederhananya seperti orang yang tidak kehilangan koneksi ke kampung halamannya, dimana orang adalah fungsi dan kampung halaman adalah scope induk fungsi. Jadi fungsi tidak kehilangan koneksi dengan variabel yang disimpan dalam scope induk fungsi.
--   Closure juga memiliki prioritas di atas scope chain.
+Closures adalah fitur JavaScript yang terjadi secara otomatis dalam situasi tertentu, kita hanya perlu mengenali situasi tersebut.
+
+Contohnya, sebuah fungsi dalam sebuah fungsi akan memiliki akses ke variabel dalam fungsi induk, dan dapat mempertahankan akses tersebut bahkan setelah fungsi induk selesai dieksekusi.
+
+Analogi sederhananya seperti orang yang tidak kehilangan akan memori atau kenangan dan tetap terkoneksi ke kampung halamannya, dimana orang sebagai fungsi dan kenangan sebagai variabel dalam induk fungsi tersebut, sedangkan kampung halaman adalah scope induk fungsi itu sendiri. Jadi fungsi tidak kehilangan koneksi dengan variabel yang disimpan dalam scope induk fungsi.
+
+Closure juga memiliki prioritas di atas scope chain.
+
 </details>
 
 <details> <summary>
@@ -432,26 +952,80 @@ Beberapa keuntungan utama Callback function:
 ## [Arrays-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/11-Arrays-Bankist/script.js)
 
 </summary>
-  
-  ### Looping Arrays: forEach
-  - The forEach method is looping over the array and in each iteration it will execute a callback function
-  - When to use for of loop and when to use forEach:
-    - when you want to use the Continue and Break statements then use the for of loop
-    - other than that it depends on personal preference
-  
-  ### Data Transformation: Map
-  - map: to iterate over an array( similar to forEach ) returns a new array containing the results of applying an operation on all original array element
-  - difference between the map method and forEach:
-    - forEach if you want to change the value of the data itself, for example entering data into the database
-    - map to make changes in the form of an array
-  
-  ### Data Transformation: Filter
-  - filter: returns a new array containing the array elements that passed a specified test condition or filtering elements in the original array that meet certain conditions(use callback function)
-  
-  ### Data Transformation: Reduce
-  - Reduce = Summarizing all the elements in an array into one single value
-  - Sintak reduce:
-  
+
+### ~ Methods Arrays summary :
+
+**Method yang menimpa atau mengubah nilai aslinya:**
+
+1.  Menambahkan array asli
+    -   Method **push** = menambahkan elemen array dari akhir.
+    -   Method **unshift** = menambahkan elemen array dari awal.
+2.  Menghapus dari array asli
+
+    -   Method **pop** = menghapus elemen array dari akhir.
+    -   Method **shift** = menghapus elemen array dari awal.
+    -   Method **splice** = menambah dan/atau menghapus elemen array.
+        Syntax:
+
+                array.splice(index, jumlah item yang dihapus, add 1,...add x).
+
+3.  Lainnya
+    -   reverse = membalik urutan array.
+    -   sort = mengurutkan array berdasarkan kondisi pada callback function.
+    -   fill = mengisi elemen tertentu dalam array dengan nilai yang ditentukan.
+
+**Method yang membuat nilai array baru**
+
+1. Memodifikasi elemen array
+    - map = menyalin array asli, dan membuat kondisi dalam callback function.
+2. Method untuk menyaring elemen array
+    - filter = menyaring elemen array berdasarkan kondisi pada callback function.
+3. Method untuk menyalin elemen sesuai dengan index yang di tentukan
+    - slice = index awal dan index akhir.
+4. Method untuk menambah array asli dengan array yang lainnya
+    - concat = menggabungkan elemen array.
+5. Method untuk meratakan elemen array bersarang agar memiliki kedalaman sesuai dengan yang di tentukan
+    - flat
+    - flatMap
+6. Method untuk mendapatkan index array
+    - indexOf = berdasarkan nilai.
+    - findIndex = mencari elemen dalam array berdasarkan kondisi pada callback function.
+7. Method untuk mendapatkan elemen array
+    - find = berdasarkan kondisi pada callback function.
+8. Method untuk mengetahui elemen yang termasuk kedalam array (mengembalikan boolean, sangat membantu dalam pernyataan if/else)
+    - includes = berdasarkan nilai.
+    - some = mengembalikan true jika salah satu elemen memenuhi kondisi (penggunaan di tandai dengan adanya kata "any").
+    - every = mengembalikan true jika semua elemen memenuhi kondisi.
+9. Method untuk mengubah array menjadi string
+    - join = berdasarkan string pemisah.
+10. Method untuk mengubah nilai
+    - reduce = berdasarkan accumulator mempersingkat array menjadi nilai tunggal jenis apa pun: angka, string, boolean, atau bahkan array atau objek baru.
+11. Method untuk mengulang array tanpa menghasilkan nilai baru
+    - forEach = tidak membuat array baru hanya mengulangnya berdasarkan callback function.
+
+### Looping Arrays: forEach
+
+-   The forEach method is looping over the array and in each iteration it will execute a callback function
+-   When to use for of loop and when to use forEach:
+    -   when you want to use the Continue and Break statements then use the for of loop
+    -   other than that it depends on personal preference
+
+### Data Transformation: Map
+
+-   map: to iterate over an array( similar to forEach ) returns a new array containing the results of applying an operation on all original array element
+-   difference between the map method and forEach:
+    -   forEach if you want to change the value of the data itself, for example entering data into the database
+    -   map to make changes in the form of an array
+
+### Data Transformation: Filter
+
+-   filter: returns a new array containing the array elements that passed a specified test condition or filtering elements in the original array that meet certain conditions(use callback function)
+
+### Data Transformation: Reduce
+
+-   Reduce = Summarizing all the elements in an array into one single value
+-   Sintak reduce:
+
         // arrow function
         reduce((nilaiSebelumnya, nilaiSaatIni, indexSaatIni, array) => { ... }, nilaiAwal)
 
