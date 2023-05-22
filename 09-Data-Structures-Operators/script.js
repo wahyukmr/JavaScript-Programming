@@ -116,6 +116,7 @@ const restaurant = {
     const {
         fri: { open: dataOpen, close: dataClose },
     } = openingHours;
+
     console.log(dataOpen, dataClose);
 
     // passing an object into a function as an argument
@@ -290,7 +291,7 @@ const restaurant = {
     };
 
     /* Or Assignment Operators (memberi nilai default) */
-    rest2.numGuests ||= 10; // sama seperti: rest1.numGuests = rest1.numGuests || 10
+    rest2.numGuests ||= 10; // sama seperti, rest1.numGuests = rest1.numGuests || 10
     console.log(rest2);
 
     /* Nullish Assignment Operators (Null or Undefined) */
@@ -480,7 +481,7 @@ const game = {
  *  ***************************/
 /* Check the property name */
 {
-    // console.log(restaurant.openingHours.mon.open); ERROR
+    // console.log(restaurant.openingHours.mon.open); output: ERROR
     console.log(restaurant.openingHours.mon?.open); // Solution: with Optional Chaining
 
     // Example

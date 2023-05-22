@@ -4,26 +4,26 @@
  *   TECHNIQUE USING PROTOTYPE INHERITANCE: Constructor functions
  *  ***************************************************************************************************/
 
-/* this constructor function will return the object, in this case is "Person" */
+// Prototype Person
 function Person(firstName, birthYear) {
-    // this.property will be instance property of the new object
     this.firstName = firstName;
     this.birthYear = birthYear;
 
-    // Add method property to the object (NEVER TO THIS !!)
+    // Jangan pernah membuat method didalam Constructor function
     // this.calcAge = function() {
     //     console.log(2700 - this.birthYear);
     // }
 }
-// an object instance is an object created from a class(Person)
+// membuat Instance atau object baru berdasarkan Prototype Person.
 const wahyu = new Person("wahyu", 2001);
 console.log(wahyu);
-// we can use constructor function to create as many different objects as we want(e.g object bagong and object dugong)
+
+// membuat lebih banyak Instance yang berbeda berdasarkan Prototype Person.
 const bagong = new Person("bagong", 1950);
 const dugong = new Person("dugong", 2000);
 console.log(bagong, dugong);
 
-// instanceof is operator to test object instance, return boolean value
+// "instanceof" adalah operator untuk menguji instance dari prototype tertentu, mengembalikan boolean.
 const j = "kolor";
 console.log(bagong instanceof Person);
 console.log(wahyu instanceof Person);
@@ -32,28 +32,30 @@ console.log(j instanceof Person);
 /*  ***************************************************************************************************
  *   Prototype
  *  ***************************************************************************************************/
-/* Prototype properties */
+/* property Prototype */
 {
-    // Person.prototype here is actually not the prototype of Person. But otherwise, that's what will be used as the prototype of all objects created with the Person constructor function
+    // Person.prototype disini sebenarnya bukan prototype dari Person. Namun sebaliknya, itulah yang akan digunakan sebagai prototype dari semua object yang dibuat dengan Constructor function Person.
     console.log(Person.prototype);
 
-    // the prototype of wahyu, bagong and dugong is Person.prototype (added method calcAge in the prototype)
+    // prototype dari wahyu, bagong dan dugong adalah Person.prototype (menambahkan method calcAge di prototype Person).
     Person.prototype.calcAge = function () {
         console.log(2037 - this.birthYear);
     };
-    // any object always has access to the methods and properties of its prototype. So object's inherits calcAge method from the prototype
+    // Object apapun selalu dapat mengakses ke method atau properti dari prototype nya. Jadi setiap instance mewarisi method calcAge dari prototype nya.
     wahyu.calcAge();
     bagong.calcAge();
     dugong.calcAge();
 
-    // __proto__  : Person.prototype (always points to an object's prototype)
-    console.log(wahyu.__proto__ === Person.prototype);
-    console.log(wahyu.__proto__);
+    // menggunkaan metode Object.getPrototypeOf() untuk mengakses properti [[Prototype]].
+    console.log(Object.getPrototypeOf(wahyu) === Person.prototype);
+
+    console.log(Object.getPrototypeOf(wahyu));
+
     console.log(Person.prototype.isPrototypeOf(wahyu));
     console.log(Person.prototype.isPrototypeOf(dugong));
     console.log(Person.prototype.isPrototypeOf(bagong));
 
-    // set properties on the prototype (property species is not in the object, but is in its prototype)
+    // Mengatur properti pada prototype (properti species tidak berada dalam object itu sendiri, melainkan pada prototype).
     Person.prototype.species = "Homo Sapiens";
     console.log(wahyu.species, dugong.species);
     // hasOwnProperty is prototype property of the object wahyu ( it works because of the prototype chain )
@@ -63,20 +65,24 @@ console.log(j instanceof Person);
 
 /* Prototypal Inheritance on Built-In Objects */
 {
-    // prototype Inheritance (prototype wahyu which is actually a prototype property of "Person")
-    console.log(wahyu.__proto__); // Person.prototype
+    // prototype Inheritance (prototype wahyu yang sebenarnya merupakan properti prototype milik “Person”)
+    console.log(Object.getPrototypeOf(wahyu)); // Person.prototype
 
-    // prototype Chain (see the prototype of the wahyu prototype or is actually prototype property of object (it's top of prototype chain))
-    console.log(wahyu.__proto__.__proto__); // Object.prototype
-    console.log(wahyu.__proto__.__proto__.__proto__); // Null
+    // prototype Chain (melihat prototype yang lebih dalam dari object wahyu)
+    console.log(Object.getPrototypeOf(Object.getPrototypeOf(wahyu))); // Object.prototype
+    console.log(
+        Object.getPrototypeOf(
+            Object.getPrototypeOf(Object.getPrototypeOf(wahyu))
+        )
+    ); // Null
 
-    // prototype of array (Any array can inherit all methods from its prototype)
+    // prototype of array (Array apapun dapat mewarisi semua method dari Array.prototype)
     const arr = [2, 2, 45, 67, 67, 80, 80];
-    console.log(arr.__proto__); // see the prototype of the array
-    console.log(arr.__proto__ === Array.prototype);
-    console.log(arr.__proto__.__proto__);
+    console.log(Object.getPrototypeOf(arr)); // see the prototype of the array
+    console.log(Object.getPrototypeOf(arr) === Array.prototype); // true
+    console.log(Object.getPrototypeOf(Object.getPrototypeOf(arr)));
 
-    // DON'T MAKE YOURSELF DO THIS WHILE WORKING IN A TEAM (add a new method to the prototype property of the array constructor, consequently all arrays will inherit this method)
+    // DON'T MAKE YOURSELF DO THIS WHILE WORKING IN A TEAM (menambahkan metode baru ke properti prototype dari konstruktor array, akibatnya, semua array akan mewarisi metode ini)
     Array.prototype.unique = function () {
         return [...new Set(this)];
     };
@@ -101,13 +107,13 @@ DATA CAR 2: 'Mercedes' going at 95 km/h
 GOOD LUCK 😀
         */
 {
-    // create a constructor function
+    // membuat constructor function
     function Car(brand, speed) {
         this.brand = brand;
         this.speed = speed;
     }
 
-    // prototype inharitances (implement the methods)
+    // prototype inheritances (implement the methods)
     Car.prototype.accelerate = function () {
         this.speed += 10;
         console.log(`${this.brand} is going at ${this.speed}`);
@@ -141,14 +147,14 @@ GOOD LUCK 😀
     // 1. Class expressions
     // const Person1 = class {};
 
-    // 2. Class deklaration
+    // 2. Class declarations
     class Person2 {
         // add constructor methods
         constructor(firstName, birthYear) {
             this.firstName = firstName;
             this.birthYear = birthYear;
         }
-        // add method in the calass, not in constructor function.
+        // add method in the Class, not in constructor function.
         calcAge() {
             console.log(2022 - this.birthYear);
         }
@@ -166,16 +172,60 @@ GOOD LUCK 😀
     jessica.calcAge();
 }
 
+// Another Class Example
+{
+    class accounts {
+        constructor(owner, currency, pin) {
+            this.owner = owner;
+            this.currency = currency;
+            this.pin = pin;
+            this.movements = [];
+            this.locale = navigator.language;
+
+            console.log(`Thanks for opening an account ${owner}`);
+        }
+
+        // public interface
+        deposit(value) {
+            this.movements.push(value);
+        }
+        // can call other methods into certain methods
+        withdraw(value) {
+            this.deposit(-value);
+        }
+
+        approveLoan() {
+            return true;
+        }
+
+        requestLoan(value) {
+            if (this.approveLoan(value)) {
+                this.deposit(value);
+                console.log(`Loan approved`);
+            }
+        }
+    }
+
+    const acc1 = new accounts("wahyu", "IDR", 1111);
+    acc1.deposit(250);
+    acc1.withdraw(150);
+    acc1.requestLoan(1000);
+    acc1.approveLoan();
+
+    console.log(acc1);
+    console.log(acc1.pin);
+}
+
 /* Setters (set or rate) and getters (return a value) */
 {
-    // how getters and setters work for any regular object
+    /* getters and setters in the object literals */
     const account = {
         owner: "wahyu",
         movement: [200, 590, 500, 340],
 
         // getters
         get latest() {
-            return this.movement.slice(-1).pop();
+            return this.movement.slice(-1);
         },
 
         // setters
@@ -183,12 +233,15 @@ GOOD LUCK 😀
             this.movement.push(value);
         },
     };
+
+    // memnaggil method getter, kita tidak memnaggil method nya, tetapi menulisnya seolah-oalah itu hanya properti.
     console.log(account.latest);
 
+    // sama seperti getter, dalam mengatur value melalui setter, terlihat seperti layaknya mengatur value di properti.
     account.latest = 50;
     console.log(account.movement);
 
-    // getters and setters in Class
+    /* getters and setters in the Class */
     class Person3 {
         constructor(fullName, birthYear) {
             this.fullName = fullName;
@@ -200,24 +253,32 @@ GOOD LUCK 😀
         }
 
         great() {
-            console.log(`Hey my name is ${this.firstName}`);
+            console.log(`Hey my name is ${this.fullName}`);
         }
 
         get age() {
             return 2022 - this.birthYear;
         }
 
-        // set a property that already exists
+        // mengatur properti yang sudah ada.
         set fullName(name) {
+            // Jika memiliki setter yang mencoba mengatur properti yang sudah ada, maka sebagai KONVENSI (bukan fitur JS) tambahkan garis bawah(_).
             if (name.includes(" ")) this._fullName = name;
-            //create a new variable name to avoid conflicts(just doing convention)
             else alert(`${name} is not a fullName!`);
+        }
+
+        // Ketika menambahkan garis bawah di properti, itu akan membuat variable baru, jadi jika kita memanggil variable fullName(tanpa garis bawah) hasilnya berupa `undefined`. Untuk memperbaikinya perlu membuat getter untuk properti fullName.
+        get fullName() {
+            return this._fullName;
         }
     }
     const wahyu = new Person3("wahyu D monkey", 1966);
     console.log(wahyu);
-    wahyu.calcAge();
+
     wahyu.great();
+    wahyu.calcAge();
+
+    console.log(wahyu.fullName);
 }
 
 /* Static Methods */
@@ -442,7 +503,7 @@ GOOD LUCK 😀
  *   inheritance between "classes" using Classes
  *  ***************************************************************************************************/
 {
-    /* Parent constructor function */
+    /* Class dasar */
     class Person {
         constructor(firstName, birthYear) {
             this.firstName = firstName;
@@ -454,12 +515,10 @@ GOOD LUCK 😀
         }
     }
 
-    /* Child constructor functions */
-    // extends = make this Student class inherit the Person class, super = constructor function of parent class
+    /* Class turunan */
     class Student extends Person {
         constructor(firstName, birthYear, course) {
             // super must be called first
-            // if you don't need a new property, then there's no need to write a constructor method in the child class
             super(firstName, birthYear);
             this.course = course;
         }
@@ -469,7 +528,8 @@ GOOD LUCK 😀
                 `My name is ${this.firstName} My birth year is ${this.birthYear} and i study is ${this.course}`
             );
         }
-        // override methods derived from parent class(Polymorphism)
+
+        // override methods derived from parent class (Polymorphism)
         calcAge() {
             console.log(
                 `I'am ${
@@ -502,10 +562,10 @@ GOOD LUCK 😀
             this.birthYear = birthYear;
         },
     };
-    const steven = Object.create(PersonProto);
 
     // Student(child class) inherits from Person(parent class)
     const StudentProto = Object.create(PersonProto);
+
     StudentProto.init = function (firstName, birthYear, course) {
         PersonProto.init.call(this, firstName, birthYear);
         this.course = course;
@@ -522,57 +582,16 @@ GOOD LUCK 😀
     jay.calcAge();
 }
 
-// Another Class Example
-class accounts {
-    constructor(owner, currency, pin) {
-        this.owner = owner;
-        this.currency = currency;
-        this.pin = pin;
-        this.movements = [];
-        this.locale = navigator.language;
-
-        console.log(`Thanks for opening an account ${owner}`);
-    }
-
-    // public interface
-    deposit(value) {
-        this.movements.push(value);
-    }
-    // can call other methods into certain methods
-    withdraw(value) {
-        this.deposit(-value);
-    }
-
-    approveLoan() {
-        return true;
-    }
-
-    requestLoan(value) {
-        if (this.approveLoan(value)) {
-            this.deposit(value);
-            console.log(`Loan approved`);
-        }
-    }
-}
-const acc1 = new accounts("wahyu", "IDR", 1111);
-acc1.deposit(250);
-acc1.withdraw(150);
-acc1.requestLoan(1000);
-acc1.approveLoan();
-
-console.log(acc1);
-console.log(acc1.pin);
-
 /*  ***************************************************************************************************
  *   fake encapsulation using just convention
  *  ***************************************************************************************************/
 {
-    class accounts {
+    class Accounts {
         constructor(owner, currency, pin) {
             this.owner = owner;
             this.currency = currency;
-            this._pin = pin;
             // Protested properties (This property cannot be touched outside the class)
+            this._pin = pin;
             this._movements = [];
             this.locale = navigator.language;
 
@@ -606,7 +625,7 @@ console.log(acc1.pin);
     }
 
     // access movements properties
-    const acc1 = new accounts("wahyu", "IDR", 1111);
+    const acc1 = new Accounts("wahyu", "IDR", 1111);
     acc1._movements.push(250);
     acc1._movements.push(-150);
 }
@@ -615,7 +634,7 @@ console.log(acc1.pin);
  *   encapsulation: Private class fields and methods
  *  ***************************************************************************************************/
 {
-    class accounts {
+    class Accounts {
         // 1. declared a public field (is in the instance)
         locale = navigator.language;
 
@@ -633,7 +652,7 @@ console.log(acc1.pin);
             console.log(`Thanks for opening an account ${owner}`);
         }
 
-        // public methods
+        // public methods (semua method yang digunakan disini termasuk kedalam public methods)
         getMovements() {
             return this.#movements;
         }
@@ -647,28 +666,42 @@ console.log(acc1.pin);
         }
 
         requestLoan(value) {
-            // if (this.#approveLoan(value)) {
-            if (this._approveLoan(value)) {
+            if (this.#approveLoan(value)) {
                 this.deposit(value);
                 console.log(`Loan approved`);
             }
+            // if (this._approveLoan(value)) {
+            //     this.deposit(value);
+            //     console.log(`Loan approved`);
+            // }
         }
 
         // privte method
-        // #approveLoan(value) {
-        _approveLoan() {
+        #approveLoan(val) {
             return true;
+        }
+        // _approveLoan(val) {
+        //     return true;
+        // }
+
+        // static methods
+        static helper() {
+            console.log("helper");
         }
     }
 
     // access movements properties
-    const acc1 = new accounts("wahyu", "IDR", 1111);
+    const acc1 = new Accounts("wahyu", "IDR", 1111);
     console.log(acc1);
 
     // can't access private property
     // console.log(acc1.#movements);
     // console.log(acc1.#pin);
     // console.log(acc1.#approveLoad(100));
+
+    // static method hanya bisa diakses oleh class.
+    Accounts.helper();
+    // acc1.helper();
 }
 
 // Chaining methods
@@ -724,12 +757,15 @@ console.log(acc1.pin);
  *   ES6 Classes Summary
  *  ***************************************************************************************************/
 {
+    // class Student adalah class turunan
     class Student extends Person {
         // Public field
         university = "university of indonesia";
+
         // Private fields
         #studyHours = 0;
         #course;
+
         // static public field
         static numSubjects = 10;
 
@@ -747,6 +783,7 @@ console.log(acc1.pin);
             console.log(`I study ${this.#course} at ${this.university}`);
         }
 
+        // semua method yang ditambahkan disini akan ditambahkan ke Prototypes
         study() {
             // referencing private field and method
             this.#makeCoffe();
@@ -770,11 +807,14 @@ console.log(acc1.pin);
 
         // static methods
         static printCurriculum() {
-            console.log(`There are ${numSubjects} subjects`);
+            console.log(`There are ${this.numSubjects} subjects`);
         }
     }
-    // creating new object with new operator
-    const studen = new Student("wahyu", 2020, 2037, "Medicine");
+    // creating new object with "new" operator
+    const wahyu = new Student("wahyu", 2020, 2037, "Medicine");
+    console.log(wahyu);
+    console.log(Student.numSubjects);
+    Student.printCurriculum();
 }
 
 /*  ***************************************************************************************************
