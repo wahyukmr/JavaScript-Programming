@@ -50,8 +50,8 @@ export const cart = [];
 ////////////////////////////////////////////////////////////////////////////
 // Export Default (exporting a single value in a JavaScript file, be it a primitive value, function, array, object, or class, we use the keyword export default)
 export default function (product, quantity) {
-    cart.push({ product, quantity });
-    console.log(`${quantity} ${product} added to cart`);
+  cart.push({ product, quantity });
+  console.log(`${quantity} ${product} added to cart`);
 }
 
 /*  ***************************************************************************************************

@@ -4,130 +4,130 @@
  *   Activating Strict Mode
  *  **************************/
 {
-    let hasDriversLicense = false;
-    const passTest = true;
+  let hasDriversLicense = false;
+  const passTest = true;
 
-    if (passTest) hasDriversLicense = true;
-    if (hasDriversLicense) console.log("I can drive :D");
+  if (passTest) hasDriversLicense = true;
+  if (hasDriversLicense) console.log("I can drive :D");
 
-    // const interface = 'Audio';
-    // const private = 534;
+  // const interface = 'Audio';
+  // const private = 534;
 }
 
 /*  **************
  *   Functions
  *  **************/
 {
-    // Example function
-    function logger() {
-        console.log("My name is wahyu");
-    }
-    // Calling / running / invoking function
-    logger();
-    logger();
-    logger();
+  // Example function
+  function logger() {
+    console.log("My name is wahyu");
+  }
+  // Calling / running / invoking function
+  logger();
+  logger();
+  logger();
 
-    // function with parameters
-    function fruitProcessor(apples, oranges) {
-        return `Juice with ${apples} apples and ${oranges} oranges.`;
-    }
-    // Pass arguments to function
-    console.log(fruitProcessor(5, 0));
+  // function with parameters
+  function fruitProcessor(apples, oranges) {
+    return `Juice with ${apples} apples and ${oranges} oranges.`;
+  }
+  // Pass arguments to function
+  console.log(fruitProcessor(5, 0));
 
-    // Calling function with parameters
-    const appleJuice = fruitProcessor(9, 5);
-    console.log(appleJuice);
-    const appleOrangeJuice = fruitProcessor(2, 4);
-    console.log(appleOrangeJuice);
+  // Calling function with parameters
+  const appleJuice = fruitProcessor(9, 5);
+  console.log(appleJuice);
+  const appleOrangeJuice = fruitProcessor(2, 4);
+  console.log(appleOrangeJuice);
 
-    // Method Number = Change the type data string to type data number
-    const num = Number("23");
-    console.log(num);
+  // Method Number = Change the type data string to type data number
+  const num = Number("23");
+  console.log(num);
 }
 
 /*  ****************************************
  *   Function Declarations vs. Expressions
  *  ****************************************/
 {
-    // Function declaration
-    function calcAge1(birthYeah) {
-        return 2037 - birthYeah;
-    }
-    const age1 = calcAge1(1991);
+  // Function declaration
+  function calcAge1(birthYeah) {
+    return 2037 - birthYeah;
+  }
+  const age1 = calcAge1(1991);
 
-    // Function expression
-    const calcAge2 = function (birthYeah) {
-        return 2037 - birthYeah;
-    };
-    const age2 = calcAge2(1991);
+  // Function expression
+  const calcAge2 = function (birthYeah) {
+    return 2037 - birthYeah;
+  };
+  const age2 = calcAge2(1991);
 
-    console.log(age1, age2);
+  console.log(age1, age2);
 }
 
 /*  *******************
  *   Arrow functions
  *  *******************/
 {
-    // Arrow function one linear
-    const calcAge3 = (birthYeah) => 2037 - birthYeah;
-    const age3 = calcAge3(1991);
-    console.log(age3);
+  // Arrow function one linear
+  const calcAge3 = (birthYeah) => 2037 - birthYeah;
+  const age3 = calcAge3(1991);
+  console.log(age3);
 
-    // Arrow function more than one linear
-    const yearsUntilRetirement1 = (birthYeah) => {
-        const age = 2037 - birthYeah;
-        return 65 - age;
-    };
-    console.log(yearsUntilRetirement1(2001));
+  // Arrow function more than one linear
+  const yearsUntilRetirement1 = (birthYeah) => {
+    const age = 2037 - birthYeah;
+    return 65 - age;
+  };
+  console.log(yearsUntilRetirement1(2001));
 
-    // Arrow function more than one parameter
-    const yearsUntilRetirement2 = (birthYeah, firstName) => {
-        const age = 2037 - birthYeah;
-        const retirement = 65 - age;
-        return `${firstName} retires in ${retirement} years`;
-    };
-    console.log(yearsUntilRetirement2(1991, "wahyu"));
-    console.log(yearsUntilRetirement2(1980, "Bob"));
+  // Arrow function more than one parameter
+  const yearsUntilRetirement2 = (birthYeah, firstName) => {
+    const age = 2037 - birthYeah;
+    const retirement = 65 - age;
+    return `${firstName} retires in ${retirement} years`;
+  };
+  console.log(yearsUntilRetirement2(1991, "wahyu"));
+  console.log(yearsUntilRetirement2(1980, "Bob"));
 }
 
 /*  *************************************
  *   Functions Calling Other Functions
  *  *************************************/
 {
-    const cutFruitPieces = (fruit) => fruit * 4;
+  const cutFruitPieces = (fruit) => fruit * 4;
 
-    function fruitProcessor2(apples, oranges) {
-        const applePieces = cutFruitPieces(apples);
-        const orangePieces = cutFruitPieces(oranges);
-        return `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
-    }
-    console.log(fruitProcessor2(2, 3));
+  function fruitProcessor2(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+    return `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+  }
+  console.log(fruitProcessor2(2, 3));
 }
 
 /*  ***********************
  *   Reviewing Functions
  *  ***********************/
 {
-    // the same two parameters in different functions, have nothing to do with each other
-    const calcAge = function (birthYeah) {
-        return 2037 - birthYeah;
-    };
+  // the same two parameters in different functions, have nothing to do with each other
+  const calcAge = function (birthYeah) {
+    return 2037 - birthYeah;
+  };
 
-    const yearsUntilRetirement = function (birthYeah, firstName) {
-        const age = calcAge(birthYeah); // Functions Calling Other Functions
-        const retirement = 65 - age;
+  const yearsUntilRetirement = function (birthYeah, firstName) {
+    const age = calcAge(birthYeah); // Functions Calling Other Functions
+    const retirement = 65 - age;
 
-        if (retirement > 0) {
-            console.log(`${firstName} retires in ${retirement} years`);
-            return retirement;
-        } else {
-            console.log(`${firstName} has already retired 🎉`);
-            return -1;
-        }
-    };
+    if (retirement > 0) {
+      console.log(`${firstName} retires in ${retirement} years`);
+      return retirement;
+    } else {
+      console.log(`${firstName} has already retired 🎉`);
+      return -1;
+    }
+  };
 
-    console.log(yearsUntilRetirement(1991, "joko"));
-    console.log(yearsUntilRetirement(1950, "Mike"));
+  console.log(yearsUntilRetirement(1991, "joko"));
+  console.log(yearsUntilRetirement(1950, "Mike"));
 }
 
 /*  ************************
@@ -149,124 +149,124 @@ Hints:
     Apply this to the team's average scores
         */
 {
-    // test data 1
-    const calculateAverage = (a, b, c) => (a + b + c) / 3;
-    let dolphinScore = calculateAverage(44, 23, 71);
-    let koalaScore = calculateAverage(65 + 54 + 49);
+  // test data 1
+  const calculateAverage = (a, b, c) => (a + b + c) / 3;
+  let dolphinScore = calculateAverage(44, 23, 71);
+  let koalaScore = calculateAverage(65 + 54 + 49);
 
-    function checkWinner(avgDolhins, avgKoalas) {
-        if (avgDolhins >= 2 * avgKoalas) {
-            console.log(`Dolphin is win ${avgDolhins} vs ${avgKoalas}`);
-        } else if (avgKoalas >= 2 * avgDolhins) {
-            console.log(`Koala is win ${avgKoalas} vs ${avgDolhins}`);
-        } else {
-            console.log("Nothing to win");
-        }
+  function checkWinner(avgDolhins, avgKoalas) {
+    if (avgDolhins >= 2 * avgKoalas) {
+      console.log(`Dolphin is win ${avgDolhins} vs ${avgKoalas}`);
+    } else if (avgKoalas >= 2 * avgDolhins) {
+      console.log(`Koala is win ${avgKoalas} vs ${avgDolhins}`);
+    } else {
+      console.log("Nothing to win");
     }
-    checkWinner(dolphinScore, koalaScore);
-    checkWinner(500, 100); // try with other values
+  }
+  checkWinner(dolphinScore, koalaScore);
+  checkWinner(500, 100); // try with other values
 
-    // test data 2
-    dolphinScore = calculateAverage(23, 34, 27);
-    koalaScore = calculateAverage(85, 54, 41);
-    checkWinner(dolphinScore, koalaScore);
+  // test data 2
+  dolphinScore = calculateAverage(23, 34, 27);
+  koalaScore = calculateAverage(85, 54, 41);
+  checkWinner(dolphinScore, koalaScore);
 }
 
 /*  *************************
  *   Introduction to Arrays
  *  *************************/
 {
-    // store data with variables
-    const friend1 = "Michael";
-    const friend2 = "Steven";
-    const friend3 = "Peter";
-    console.log(friend1, friend2, friend3);
+  // store data with variables
+  const friend1 = "Michael";
+  const friend2 = "Steven";
+  const friend3 = "Peter";
+  console.log(friend1, friend2, friend3);
 
-    // creating an array (make simple store data with an array)
-    const friends = ["Michael", "Steven", "Peter"];
-    console.log(friends);
+  // creating an array (make simple store data with an array)
+  const friends = ["Michael", "Steven", "Peter"];
+  console.log(friends);
 
-    // another example of creating an array
-    // const y = new Array (1991, 1984, 2008, 2020);
+  // another example of creating an array
+  // const y = new Array (1991, 1984, 2008, 2020);
 
-    // return index array
-    console.log(friends[0]);
-    console.log(friends[1]);
-    console.log(friends[2]);
+  // return index array
+  console.log(friends[0]);
+  console.log(friends[1]);
+  console.log(friends[2]);
 
-    // find the length of the array
-    console.log(friends.length);
-    console.log(friends[friends.length - 1]);
+  // find the length of the array
+  console.log(friends.length);
+  console.log(friends[friends.length - 1]);
 
-    // change array by index
-    friends[3] = "wahyu";
-    console.log(friends);
+  // change array by index
+  friends[3] = "wahyu";
+  console.log(friends);
 
-    // inserting variables and other arrays into arrays
-    const firstName = "wahyu";
-    const wahyu = [firstName, "komarudin", 2037 - 1991, "teacher", friends];
-    console.log(wahyu);
-    console.log(wahyu.length);
+  // inserting variables and other arrays into arrays
+  const firstName = "wahyu";
+  const wahyu = [firstName, "komarudin", 2037 - 1991, "teacher", friends];
+  console.log(wahyu);
+  console.log(wahyu.length);
 
-    // Exercise
-    const calcAge4 = (birthYeah) => 2037 - birthYeah;
-    const years = [1990, 1967, 2002, 2010, 2018];
+  // Exercise
+  const calcAge4 = (birthYeah) => 2037 - birthYeah;
+  const years = [1990, 1967, 2002, 2010, 2018];
 
-    const age01 = calcAge4(years[0]);
-    const age02 = calcAge4(years[1]);
-    const age03 = calcAge4(years[years.length - 2]);
-    console.log(age01, age02, age03);
+  const age01 = calcAge4(years[0]);
+  const age02 = calcAge4(years[1]);
+  const age03 = calcAge4(years[years.length - 2]);
+  console.log(age01, age02, age03);
 
-    // put the result into a new array (in the form of expression)
-    const ages = [
-        calcAge4(years[0]),
-        calcAge4(years[1]),
-        calcAge4(years[years.length - 2]),
-    ];
-    console.log(ages);
+  // put the result into a new array (in the form of expression)
+  const ages = [
+    calcAge4(years[0]),
+    calcAge4(years[1]),
+    calcAge4(years[years.length - 2]),
+  ];
+  console.log(ages);
 }
 
 /*  ***********************************
  *   Basic Array Operations (Methods)
  *  ***********************************/
 {
-    const people = ["Michael", "Steven", "Peter"];
+  const people = ["Michael", "Steven", "Peter"];
 
-    /* Add elements */
-    //push method: adding elements to the end of the array
-    const newLength = people.push("wahyu");
-    console.log(people); // ["Michael", "Steven", "Peter", "wahyu"]
-    console.log(newLength); // 4
-    // unshift method: adding elements to the first of the array
-    people.unshift("John");
-    console.log(people); // ["Jhon", "Michael", "Steven", "Peter", "wahyu"]
+  /* Add elements */
+  //push method: adding elements to the end of the array
+  const newLength = people.push("wahyu");
+  console.log(people); // ["Michael", "Steven", "Peter", "wahyu"]
+  console.log(newLength); // 4
+  // unshift method: adding elements to the first of the array
+  people.unshift("John");
+  console.log(people); // ["Jhon", "Michael", "Steven", "Peter", "wahyu"]
 
-    /* Remove elements */
-    // pop method: remove element from last of the array
-    people.pop();
-    console.log(people); // ["Jhon", "Michael", "Steven", "Peter"]
-    // Mengembalikan elemen yang telah dihapus
-    const popped = people.pop();
-    console.log(people); // ["Jhon", "Michael", "Steven"]
-    console.log(popped); // "Peter"
-    // shift method: menghapus element array dari bagian depan
-    people.shift();
-    console.log(people); // ["Michael", "Steven"]
+  /* Remove elements */
+  // pop method: remove element from last of the array
+  people.pop();
+  console.log(people); // ["Jhon", "Michael", "Steven", "Peter"]
+  // Mengembalikan elemen yang telah dihapus
+  const popped = people.pop();
+  console.log(people); // ["Jhon", "Michael", "Steven"]
+  console.log(popped); // "Peter"
+  // shift method: menghapus element array dari bagian depan
+  people.shift();
+  console.log(people); // ["Michael", "Steven"]
 
-    /* indexOf method: tells the position of an element on an array */
-    console.log(people.indexOf("Steven")); // 1
-    console.log(people.indexOf("Bob")); // -1
+  /* indexOf method: tells the position of an element on an array */
+  console.log(people.indexOf("Steven")); // 1
+  console.log(people.indexOf("Bob")); // -1
 
-    /* includes method: method yang mirip dengan indexOf tetapi lebih modern untuk memeriksa ada atau tidaknya elemen pada array */
-    people.push(23); // ["Michael", "Steven", 23]
-    console.log(people.includes("Steven")); // true
-    console.log(people.includes("Bob")); // false
-    console.log(people.includes(23)); // false
+  /* includes method: method yang mirip dengan indexOf tetapi lebih modern untuk memeriksa ada atau tidaknya elemen pada array */
+  people.push(23); // ["Michael", "Steven", 23]
+  console.log(people.includes("Steven")); // true
+  console.log(people.includes("Bob")); // false
+  console.log(people.includes(23)); // false
 
-    // using include method to write conditionals
-    if (people.includes("Steven")) {
-        console.log("You have a friend called Steven");
-    }
+  // using include method to write conditionals
+  if (people.includes("Steven")) {
+    console.log("You have a friend called Steven");
+  }
 }
 
 /*  ***********************
@@ -284,132 +284,128 @@ Hint:
     Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array)
         */
 {
-    const calcTip = (billValue) =>
-        billValue >= 50 && billValue <= 300
-            ? billValue * 0.15
-            : billValue * 0.2;
-    calcTip();
+  const calcTip = (billValue) =>
+    billValue >= 50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.2;
+  calcTip();
 
-    const bills = [125, 555, 44];
+  const bills = [125, 555, 44];
 
-    const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-    console.log(tips);
+  const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+  console.log(tips);
 
-    const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
-    console.log(total);
+  const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+  console.log(total);
 }
 
 /*  **************************
  *   Introduction to Objects
  *  **************************/
 {
-    // data array: access an array element with its sequence number(index)
-    const jokoArray = [
-        "Joko",
-        "Susanto",
-        2037 - 1991,
-        "teacher",
-        ["Michael", "Peter", "Steven"],
-    ];
-    console.log(jokoArray);
+  // data array: access an array element with its sequence number(index)
+  const jokoArray = [
+    "Joko",
+    "Susanto",
+    2037 - 1991,
+    "teacher",
+    ["Michael", "Peter", "Steven"],
+  ];
+  console.log(jokoArray);
 
-    // a literal object: accessing an element object with a property name. order of unimportant data in the object
-    const andri = {
-        firstName: "andri",
-        lastName: "waluyo",
-        age: 2037 - 1991,
-        job: "teacher",
-        friends: ["Michael", "Peter", "Steven"],
-    };
-    console.log(andri);
+  // a literal object: accessing an element object with a property name. order of unimportant data in the object
+  const andri = {
+    firstName: "andri",
+    lastName: "waluyo",
+    age: 2037 - 1991,
+    job: "teacher",
+    friends: ["Michael", "Peter", "Steven"],
+  };
+  console.log(andri);
 }
 
 /*  ***************************
  *   Dot vs Bracket Notation
  *  ***************************/
 {
-    // object data
-    const wahyu = {
-        firstName: "wahyu",
-        lastName: "komarudin",
-        age: 2037 - 1991,
-        job: "teacher",
-        friends: ["Michael", "Peter", "Steven"],
-    };
-    console.log(wahyu);
+  // object data
+  const wahyu = {
+    firstName: "wahyu",
+    lastName: "komarudin",
+    age: 2037 - 1991,
+    job: "teacher",
+    friends: ["Michael", "Peter", "Steven"],
+  };
+  console.log(wahyu);
 
-    // two ways to get property name of object:
-    console.log(wahyu.lastName); // with dot (.)
-    console.log(wahyu["lastName"]); // with Bracket Notation ([])
+  // two ways to get property name of object:
+  console.log(wahyu.lastName); // with dot (.)
+  console.log(wahyu["lastName"]); // with Bracket Notation ([])
 
-    // inserting an expression can only use Bracket Notation not with dot
-    const nameKey = "Name";
-    console.log(wahyu["first" + nameKey]);
-    console.log(wahyu["last" + nameKey]);
-    // console.log(wahyu.'last' + nameKey) // error
+  // inserting an expression can only use Bracket Notation not with dot
+  const nameKey = "Name";
+  console.log(wahyu["first" + nameKey]);
+  console.log(wahyu["last" + nameKey]);
+  // console.log(wahyu.'last' + nameKey) // error
 
-    // get a property that doesn't already exist
-    const interestedIn = prompt(
-        "What do you want to know about wahyu? Choose between firstName, lastName, age, job, and friends"
-    );
+  // get a property that doesn't already exist
+  const interestedIn = prompt(
+    "What do you want to know about wahyu? Choose between firstName, lastName, age, job, and friends"
+  );
+  console.log(wahyu[interestedIn]);
+
+  if (wahyu[interestedIn]) {
     console.log(wahyu[interestedIn]);
-
-    if (wahyu[interestedIn]) {
-        console.log(wahyu[interestedIn]);
-    } else {
-        console.log(
-            "Wrong request! Choose between firstName, lastName, age, job, and friends"
-        );
-    }
-
-    // Creating a new property with dot and bracket notation
-    wahyu.location = "Indonesian";
-    wahyu["twitter"] = "wahyukmr";
-    console.log(wahyu);
-
-    // Challenge
-    // "wahyu has 3 friends, and his best friend is called Michael"
+  } else {
     console.log(
-        `${wahyu.firstName} has ${wahyu.friends.length} friends, and his best friend is called ${wahyu.friends[0]}`
+      "Wrong request! Choose between firstName, lastName, age, job, and friends"
     );
+  }
+
+  // Creating a new property with dot and bracket notation
+  wahyu.location = "Indonesian";
+  wahyu["twitter"] = "wahyukmr";
+  console.log(wahyu);
+
+  // Challenge
+  // "wahyu has 3 friends, and his best friend is called Michael"
+  console.log(
+    `${wahyu.firstName} has ${wahyu.friends.length} friends, and his best friend is called ${wahyu.friends[0]}`
+  );
 }
 
 /*  ******************
  *   Object Methods
  *  ******************/
 {
-    const wahyu = {
-        firstName: "wahyu",
-        lastName: "komarudin",
-        birthYeah: 1991,
-        job: "teacher",
-        friends: ["Michael", "Peter", "Steven"],
-        hasDriversLicense: true,
+  const wahyu = {
+    firstName: "wahyu",
+    lastName: "komarudin",
+    birthYeah: 1991,
+    job: "teacher",
+    friends: ["Michael", "Peter", "Steven"],
+    hasDriversLicense: true,
 
-        //function in an object are called 'Method'
-        calcAge: function () {
-            // membuat objek properti baru(age)
-            this.age = 2037 - this.birthYeah; // this: called object property
-            return this.age;
-        },
+    //function in an object are called 'Method'
+    calcAge: function () {
+      // membuat objek properti baru(age)
+      this.age = 2037 - this.birthYeah; // this: called object property
+      return this.age;
+    },
 
-        /* Challenge */
-        // "wahyu is a 46-year-old teacher, and he has a driver's license"
-        getSummary: function () {
-            return `${this.firstName} is a ${this.calcAge()}-year old ${
-                wahyu.job
-            }, and he has ${
-                this.hasDriversLicense ? "a" : "no"
-            } driver's license.`;
-        },
-    };
+    /* Challenge */
+    // "wahyu is a 46-year-old teacher, and he has a driver's license"
+    getSummary: function () {
+      return `${this.firstName} is a ${this.calcAge()}-year old ${
+        wahyu.job
+      }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+    },
+  };
 
-    // accessing the method(function in an object)
-    console.log(wahyu.calcAge()); // 46
-    console.log(wahyu["calcAge"]()); // 46
-    console.log(wahyu["getSummary"]());
+  // accessing the method(function in an object)
+  console.log(wahyu.calcAge()); // 46
+  console.log(wahyu["calcAge"]()); // 46
+  console.log(wahyu["getSummary"]());
 
-    console.log(wahyu.age); // 46
+  console.log(wahyu.age); // 46
 }
 
 /*  ************************
@@ -424,176 +420,174 @@ Test data:
     Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
         */
 {
-    const marks = {
-        fullName: "Mark Miller",
-        mass: 78,
-        height: 1.69,
-        calcBMI: function () {
-            this.BMI = this.mass / this.height ** 2;
-            return this.BMI;
-        },
-    };
-    marks.calcBMI();
+  const marks = {
+    fullName: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+      this.BMI = this.mass / this.height ** 2;
+      return this.BMI;
+    },
+  };
+  marks.calcBMI();
 
-    const john = {
-        fullName: "John Smith",
-        mass: 92,
-        height: 1.95,
-        calcBMI: function () {
-            this.BMI = this.mass / this.height ** 2;
-            return this.BMI;
-        },
-    };
-    john.calcBMI();
+  const john = {
+    fullName: "John Smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+      this.BMI = this.mass / this.height ** 2;
+      return this.BMI;
+    },
+  };
+  john.calcBMI();
 
-    if (marks.calcBMI() > john.calcBMI()) {
-        console.log(
-            `${marks.fullName}'s BMI is (${marks.calcBMI()}) is higher than ${
-                john.fullName
-            }'s (${john.calcBMI()})`
-        );
-    } else {
-        console.log(
-            `${john.fullName}'s BMI is (${john.calcBMI()}) is higher than ${
-                marks.fullName
-            }'s (${marks.calcBMI()})`
-        );
-    }
+  if (marks.calcBMI() > john.calcBMI()) {
+    console.log(
+      `${marks.fullName}'s BMI is (${marks.calcBMI()}) is higher than ${
+        john.fullName
+      }'s (${john.calcBMI()})`
+    );
+  } else {
+    console.log(
+      `${john.fullName}'s BMI is (${john.calcBMI()}) is higher than ${
+        marks.fullName
+      }'s (${marks.calcBMI()})`
+    );
+  }
 }
 
 /*  ***************************
  *   Iteration: The for Loop
  *  ***************************/
 {
-    /* Example Manually */
-    // console.log('Lifting weights repetition 1 🏋️‍♀️');
-    // console.log('Lifting weights repetition 2 🏋️‍♀️');
-    // console.log('Lifting weights repetition 3 🏋️‍♀️');
-    // console.log('Lifting weights repetition 4 🏋️‍♀️');
-    // console.log('Lifting weights repetition 5 🏋️‍♀️');
-    // console.log('Lifting weights repetition 6 🏋️‍♀️');
-    // console.log('Lifting weights repetition 7 🏋️‍♀️');
-    // console.log('Lifting weights repetition 8 🏋️‍♀️');
-    // console.log('Lifting weights repetition 9 🏋️‍♀️');
-    // console.log('Lifting weights repetition 10 🏋️‍♀️');
+  /* Example Manually */
+  // console.log('Lifting weights repetition 1 🏋️‍♀️');
+  // console.log('Lifting weights repetition 2 🏋️‍♀️');
+  // console.log('Lifting weights repetition 3 🏋️‍♀️');
+  // console.log('Lifting weights repetition 4 🏋️‍♀️');
+  // console.log('Lifting weights repetition 5 🏋️‍♀️');
+  // console.log('Lifting weights repetition 6 🏋️‍♀️');
+  // console.log('Lifting weights repetition 7 🏋️‍♀️');
+  // console.log('Lifting weights repetition 8 🏋️‍♀️');
+  // console.log('Lifting weights repetition 9 🏋️‍♀️');
+  // console.log('Lifting weights repetition 10 🏋️‍♀️');
 
-    /* for loop keeps running while condition is TRUE */
-    for (let rep = 1; rep <= 30; rep++) {
-        console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
-    }
+  /* for loop keeps running while condition is TRUE */
+  for (let rep = 1; rep <= 30; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+  }
 }
 
 /*  ******************************************
  *   Looping Arrays, Breaking and Continuing
  *  ******************************************/
 {
-    const wahyu = [
-        "wahyu",
-        "komarudin",
-        2037 - 1991,
-        "teacher",
-        ["Michael", "Peter", "Steven"],
-        true,
-    ];
+  const wahyu = [
+    "wahyu",
+    "komarudin",
+    2037 - 1991,
+    "teacher",
+    ["Michael", "Peter", "Steven"],
+    true,
+  ];
 
-    // console.log(wahyu[0])
-    // console.log(wahyu[1])
-    // ...
-    // console.log(wahyu[5])
-    // wahyu[6] does NOT exist
+  // console.log(wahyu[0])
+  // console.log(wahyu[1])
+  // ...
+  // console.log(wahyu[5])
+  // wahyu[6] does NOT exist
 
-    /* LOOPING ARRAYS */
-    const types = [];
-    for (let i = 0; i < wahyu.length; i++) {
-        // Reading from wahyu array
-        console.log(wahyu[i], typeof wahyu[i]);
+  /* LOOPING ARRAYS */
+  const types = [];
+  for (let i = 0; i < wahyu.length; i++) {
+    // Reading from wahyu array
+    console.log(wahyu[i], typeof wahyu[i]);
 
-        // Filling types array
-        // types[i] = typeof wahyu[i]; Don't do this
-        types.push(typeof wahyu[i]);
-    }
-    console.log(types);
+    // Filling types array
+    // types[i] = typeof wahyu[i]; Don't do this
+    types.push(typeof wahyu[i]);
+  }
+  console.log(types);
 
-    const years = [1991, 2007, 1969, 2020];
-    const ages = [];
-    for (let i = 0; i < years.length; i++) {
-        ages.push(2037 - years[i]);
-    }
-    console.log(ages);
+  const years = [1991, 2007, 1969, 2020];
+  const ages = [];
+  for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+  }
+  console.log(ages);
 
-    /* CONTINUE AND BREAK */
-    console.log("--- ONLY STRINGS ---");
-    for (let i = 0; i < wahyu.length; i++) {
-        // Jika bertipe bukan string, akan menghentikan perulangan saat ini dan melanjutkan ke perulangan selanjutnya
-        if (typeof wahyu[i] !== "string") continue;
+  /* CONTINUE AND BREAK */
+  console.log("--- ONLY STRINGS ---");
+  for (let i = 0; i < wahyu.length; i++) {
+    // Jika bertipe bukan string, akan menghentikan perulangan saat ini dan melanjutkan ke perulangan selanjutnya
+    if (typeof wahyu[i] !== "string") continue;
 
-        console.log(wahyu[i], typeof wahyu[i]);
-    }
+    console.log(wahyu[i], typeof wahyu[i]);
+  }
 
-    console.log("--- BREAK WITH OBJECT ---");
-    for (let i = 0; i < wahyu.length; i++) {
-        // jika bertipe objek terpenuhi maka perulangan berhenti sepenuhnya
-        if (typeof wahyu[i] === "object") break;
+  console.log("--- BREAK WITH OBJECT ---");
+  for (let i = 0; i < wahyu.length; i++) {
+    // jika bertipe objek terpenuhi maka perulangan berhenti sepenuhnya
+    if (typeof wahyu[i] === "object") break;
 
-        console.log(wahyu[i], typeof wahyu[i]);
-    }
+    console.log(wahyu[i], typeof wahyu[i]);
+  }
 }
 
 /*  ****************************************
  *   Looping Backwards and Loops in Loops
  *  ****************************************/
 {
-    const wahyu = [
-        "wahyu",
-        "komarudin",
-        2037 - 1991,
-        "teacher",
-        ["Michael", "Peter", "Steven"],
-    ];
+  const wahyu = [
+    "wahyu",
+    "komarudin",
+    2037 - 1991,
+    "teacher",
+    ["Michael", "Peter", "Steven"],
+  ];
 
-    // 0, 1, ..., 4 looping Forward
-    // 4, 3, ..., 0 looping Backward
+  // 0, 1, ..., 4 looping Forward
+  // 4, 3, ..., 0 looping Backward
 
-    // looping Backward
-    for (let i = wahyu.length - 1; i >= 0; i--) {
-        console.log(i, wahyu[i]);
+  // looping Backward
+  for (let i = wahyu.length - 1; i >= 0; i--) {
+    console.log(i, wahyu[i]);
+  }
+
+  // Loops in loops
+  for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`-------- Starting exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+      console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`);
     }
-
-    // Loops in loops
-    for (let exercise = 1; exercise < 4; exercise++) {
-        console.log(`-------- Starting exercise ${exercise}`);
-
-        for (let rep = 1; rep < 6; rep++) {
-            console.log(
-                `Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`
-            );
-        }
-    }
+  }
 }
 
 /*  ******************
  *   The while Loop
  *  ******************/
 {
-    // for loop: digunakan untuk perulangan yang dapat ditentukan berapa kali perulangan terjadi. Misalnya loop pada array
-    for (let rep = 1; rep <= 3; rep++) {
-        console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
-    }
+  // for loop: digunakan untuk perulangan yang dapat ditentukan berapa kali perulangan terjadi. Misalnya loop pada array
+  for (let rep = 1; rep <= 3; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+  }
 
-    // While Loop: Perulangan jenis ini sama dengan perulangan for. Jika for loop jumlah perulangannya sudah ditetapkan, sedangkan while loop akan melakukan perulangan jika kondisi (syarat) terpenuhi / bernilai true tanpa henti (infinity loop).
-    let rep = 1;
-    while (rep <= 3) {
-        console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♀️`);
-        rep++;
-    }
+  // While Loop: Perulangan jenis ini sama dengan perulangan for. Jika for loop jumlah perulangannya sudah ditetapkan, sedangkan while loop akan melakukan perulangan jika kondisi (syarat) terpenuhi / bernilai true tanpa henti (infinity loop).
+  let rep = 1;
+  while (rep <= 3) {
+    console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♀️`);
+    rep++;
+  }
 
-    // example when shaking the dice
-    let dice = Math.trunc(Math.random() * 6) + 1; // generate random data from 1 - 6
-    while (dice !== 6) {
-        console.log(`You rolled a ${dice}`);
-        dice = Math.trunc(Math.random() * 6) + 1; // membuat random angka kembali agar tidak membuat infinite loop
-        if (dice === 6) console.log("Loop is about to end...");
-    }
+  // example when shaking the dice
+  let dice = Math.trunc(Math.random() * 6) + 1; // generate random data from 1 - 6
+  while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1; // membuat random angka kembali agar tidak membuat infinite loop
+    if (dice === 6) console.log("Loop is about to end...");
+  }
 }
 
 /*  ************************
@@ -616,26 +610,26 @@ Bonus:
     4.3. Call the function with the 'totals' array
         */
 {
-    const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-    const tips = [];
-    const totals = [];
+  const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+  const tips = [];
+  const totals = [];
 
-    for (let i = 0; i < bills.length; i++) {
-        const tip = calcTip(bills[i]);
-        tips.push(tip);
-        totals.push(tip + bills[i]);
-    }
-    console.log(tips); //cek data tips
-    console.log(totals); //cek data totals
+  for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+  }
+  console.log(tips); //cek data tips
+  console.log(totals); //cek data totals
 
-    function calcAverage(arr) {
-        let sum = 0;
-        for (let i = 0; i < arr.length; i++) {
-            sum += arr[i];
-        }
-        return sum / arr.length;
+  function calcAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
     }
-    console.log(calcAverage([1, 2, 3]));
-    console.log(calcAverage(totals));
-    console.log(calcAverage(tips));
+    return sum / arr.length;
+  }
+  console.log(calcAverage([1, 2, 3]));
+  console.log(calcAverage(totals));
+  console.log(calcAverage(tips));
 }

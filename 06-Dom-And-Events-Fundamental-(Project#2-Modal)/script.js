@@ -6,17 +6,17 @@ const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 
 function showElement() {
-    modal.classList.remove("hidden");
-    overlay.classList.remove("hidden");
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 }
 
 function closeElement() {
-    modal.classList.add("hidden");
-    overlay.classList.add("hidden");
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
 }
 
 for (let i = 0; i < showModal.length; i++)
-    showModal[i].addEventListener("click", showElement);
+  showModal[i].addEventListener("click", showElement);
 
 // close with click the close button
 btnCloseModal.addEventListener("click", closeElement);
@@ -26,7 +26,7 @@ overlay.addEventListener("click", closeElement);
 
 // closing with pressed Escape button
 document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && !modal.classList.contains("hidden")) {
-        closeElement();
-    }
+  if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeElement();
+  }
 });

@@ -50,11 +50,11 @@ console.log(cart);
 ////////////////////////////////////////////////////////////////////////////
 // how await top level works in the real world
 async function getLAstPost() {
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const data = await res.json();
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
 
-    // return data;
-    return { title: data.at(-1).title, text: data.at(-1).body };
+  // return data;
+  return { title: data.at(-1).title, text: data.at(-1).body };
 }
 
 const lastPost = getLAstPost();
@@ -123,11 +123,11 @@ Note:
 import cloneDeep from "lodash-es";
 
 const state = {
-    cart: [
-        { product: "sugar", quantity: 10 },
-        { product: "bread", quantity: 8 },
-    ],
-    user: { loggedIn: true },
+  cart: [
+    { product: "sugar", quantity: 10 },
+    { product: "bread", quantity: 8 },
+  ],
+  user: { loggedIn: true },
 };
 const stateCloneManually = Object.assign({}, state);
 const stateDeepClone = cloneDeep(state);
@@ -138,18 +138,18 @@ console.log(stateDeepClone);
 
 // make the browser page not reload (This is very useful when we want to test something)
 if (module.hot) {
-    module.hot.accept();
+  module.hot.accept();
 }
 
 /*  ***************************************************************************************************
  *   Configuring Babel and Polyfilling
  *  ***************************************************************************************************/
 class Person {
-    #greeting = "hey";
-    constructor(name) {
-        this.name = name;
-        console.log(`${this.#greeting}, ${this.name}`);
-    }
+  #greeting = "hey";
+  constructor(name) {
+    this.name = name;
+    console.log(`${this.#greeting}, ${this.name}`);
+  }
 }
 const wahyu = new Person("wahyu");
 

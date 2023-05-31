@@ -20,19 +20,19 @@ we work for a company building a smart home thermometer. Our most recent task is
 const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 
 function calcTempAmplitude(temps) {
-    let max = temps[0];
-    let min = temps[0];
+  let max = temps[0];
+  let min = temps[0];
 
-    for (let i = 0; i < temps.length; i++) {
-        const curTemp = temps[i];
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
 
-        if (typeof curTemp !== "number") continue;
+    if (typeof curTemp !== "number") continue;
 
-        if (curTemp > max) max = curTemp;
-        if (curTemp < min) min = curTemp;
-    }
-    console.log(max, min);
-    return max - min;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
 }
 console.log(calcTempAmplitude(temperatures));
 
@@ -47,21 +47,21 @@ function should now receive 2 arrays of temps
     - merge 2 arrays
     */
 function calcTempAmplitudeNew(t1, t2) {
-    const tempsNew = t1.concat(t2);
-    console.log(tempsNew);
+  const tempsNew = t1.concat(t2);
+  console.log(tempsNew);
 
-    let maxNew = tempsNew[0];
-    let minNew = tempsNew[0];
+  let maxNew = tempsNew[0];
+  let minNew = tempsNew[0];
 
-    for (let i = 0; i < tempsNew.length; i++) {
-        const curTempNew = tempsNew[i];
+  for (let i = 0; i < tempsNew.length; i++) {
+    const curTempNew = tempsNew[i];
 
-        if (typeof curTempNew !== "number") continue;
-        if (curTempNew > maxNew) maxNew = curTempNew;
-        if (curTempNew < minNew) minNew = curTempNew;
-    }
-    console.log(maxNew, minNew);
-    return maxNew - minNew;
+    if (typeof curTempNew !== "number") continue;
+    if (curTempNew > maxNew) maxNew = curTempNew;
+    if (curTempNew < minNew) minNew = curTempNew;
+  }
+  console.log(maxNew, minNew);
+  return maxNew - minNew;
 }
 console.log(calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]));
 
@@ -73,49 +73,49 @@ Example:
         */
 /* Debugging with the Console */
 function measureKelvin() {
-    const measurement = {
-        type: "temp",
-        unit: "celcius",
+  const measurement = {
+    type: "temp",
+    unit: "celcius",
 
-        // error because the result of the prompt is always a string
-        // value: prompt('Degree celcius:'),
+    // error because the result of the prompt is always a string
+    // value: prompt('Degree celcius:'),
 
-        // 3. FIXING THE PROBLEM
-        value: Number(prompt("Degree celcius:")),
-    };
+    // 3. FIXING THE PROBLEM
+    value: Number(prompt("Degree celcius:")),
+  };
 
-    // 2. SEARCH AND FIND ERRORS
-    console.table(measurement);
-    //console.log(measurement);
-    //console.warn(measurement);
-    //console.error(measurement);
+  // 2. SEARCH AND FIND ERRORS
+  console.table(measurement);
+  //console.log(measurement);
+  //console.warn(measurement);
+  //console.error(measurement);
 
-    const kelvin = measurement.value + 273;
-    return kelvin;
+  const kelvin = measurement.value + 273;
+  return kelvin;
 }
 // 1. IDENTIFYING THE RESULTS
 console.log(measureKelvin());
 
 /* Debugging with Breakpoints */
 function calcTempAmplitudeBug(t1, t2) {
-    const temps = t1.concat(t2);
-    console.log(temps);
+  const temps = t1.concat(t2);
+  console.log(temps);
 
-    let max = 0;
-    // let min = 0; error
+  let max = 0;
+  // let min = 0; error
 
-    // 3. FIXING THE PROBLEM
-    let min = temps[0];
+  // 3. FIXING THE PROBLEM
+  let min = temps[0];
 
-    for (let i = 0; i < temps.length; i++) {
-        const curTemp = temps[i];
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
 
-        if (typeof curTemp !== "number") continue;
-        if (curTemp > max) max = curTemp;
-        if (curTemp < min) min = curTemp;
-    }
-    console.log(max, min);
-    return max - min;
+    if (typeof curTemp !== "number") continue;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
 }
 // 1. IDENTIFYING THE RESULTS
 console.log(calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]));
@@ -153,10 +153,10 @@ const data2 = [12, 5, -5, 0, 4];
 console.log(`...${data1[0]}°C...${data1[1]}°C...${data1[2]}°C...`);
 
 function printForecast(arr) {
-    let str = "";
-    for (let i = 0; i < arr.length; i++) {
-        str += `${arr[i]}°C in ${i + 1} days...`;
-    }
-    console.log("..." + str);
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}°C in ${i + 1} days...`;
+  }
+  console.log("..." + str);
 }
 printForecast(data1);

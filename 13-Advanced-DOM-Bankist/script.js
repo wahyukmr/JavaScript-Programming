@@ -14,14 +14,14 @@ const tabsContent = document.querySelectorAll(".operations__content");
 ///////////////////////////////////////
 /* Modal window */
 function openModal(e) {
-    e.preventDefault();
-    modal.classList.remove("hidden");
-    overlay.classList.remove("hidden");
+  e.preventDefault();
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 }
 
 function closeModal() {
-    modal.classList.add("hidden");
-    overlay.classList.add("hidden");
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
 }
 
 btnsOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
@@ -30,38 +30,38 @@ btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
 document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-        closeModal();
-    }
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
 });
 
 ///////////////////////////////////////
 /* Button Scrolling */
 btnScrollTo.addEventListener("click", function (e) {
-    // coordinate scrolling
-    const s1coords = section1.getBoundingClientRect();
-    console.log(s1coords);
+  // coordinate scrolling
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
 
-    console.log(e.target.getBoundingClientRect());
+  console.log(e.target.getBoundingClientRect());
 
-    console.log("current scroll (X/Y", window.pageXOffset, window.pageYOffset);
-    // display port dimensions
-    console.log(
-        "height/width viewport",
-        document.documentElement.clientHeight,
-        document.documentElement.clientWidth
-    );
+  console.log("current scroll (X/Y", window.pageXOffset, window.pageYOffset);
+  // display port dimensions
+  console.log(
+    "height/width viewport",
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
 
-    /* Real case Scrolling */
-    // old way
-    // window.scrollTo({
-    //     // current position + scroll
-    //     left: s1coords.left + window.pageXOffset,
-    //     top: s1coords.top + window.pageYOffset,
-    //     behavior: "Smooth",
-    // });
-    // modern way
-    section1.scrollIntoView({ behavior: "smooth" });
+  /* Real case Scrolling */
+  // old way
+  // window.scrollTo({
+  //     // current position + scroll
+  //     left: s1coords.left + window.pageXOffset,
+  //     top: s1coords.top + window.pageYOffset,
+  //     behavior: "Smooth",
+  // });
+  // modern way
+  section1.scrollIntoView({ behavior: "smooth" });
 });
 
 ///////////////////////////////////////
@@ -69,36 +69,36 @@ btnScrollTo.addEventListener("click", function (e) {
 // 1. add Event listener to common parent element
 // 2. Determine what element originated the event
 document.querySelector(".nav__links").addEventListener("click", function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Matching strategy
-    if (e.target.classList.contains("el")) {
-        const ID = e.target.getAttribute("href");
-        document.querySelector(ID).scrollIntoView({ behavior: "smooth" });
-    }
+  // Matching strategy
+  if (e.target.classList.contains("el")) {
+    const ID = e.target.getAttribute("href");
+    document.querySelector(ID).scrollIntoView({ behavior: "smooth" });
+  }
 });
 
 ///////////////////////////////////////
 // Tabbed components
 tabsContainer.addEventListener("click", function (e) {
-    const clicked = e.target.closest(".operations__tab");
+  const clicked = e.target.closest(".operations__tab");
 
-    // Guard clause
-    if (!clicked) return;
+  // Guard clause
+  if (!clicked) return;
 
-    // Remove active class
-    tabs.forEach((tab) => tab.classList.remove("operations__tab--active"));
-    tabsContent.forEach((content) =>
-        content.classList.remove("operations__content--active")
-    );
+  // Remove active class
+  tabs.forEach((tab) => tab.classList.remove("operations__tab--active"));
+  tabsContent.forEach((content) =>
+    content.classList.remove("operations__content--active")
+  );
 
-    // Active tab
-    clicked.classList.add("operations__tab--active");
+  // Active tab
+  clicked.classList.add("operations__tab--active");
 
-    // active content area
-    document
-        .querySelector(`.operations__content--${clicked.dataset.tab}`)
-        .classList.add("operations__content--active");
+  // active content area
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add("operations__content--active");
 });
 
 ///////////////////////////////////////
@@ -107,16 +107,16 @@ tabsContainer.addEventListener("click", function (e) {
 Note:   - opposite of mouseenter is mouseleave
         - opposite of mouseover is mouseout */
 function handleHover(element) {
-    if (element.target.classList.contains("nav__link")) {
-        const link = element.target;
-        const siblings = link.closest(".nav").querySelectorAll(".nav__link");
-        const logo = link.closest(".nav").querySelector("img");
+  if (element.target.classList.contains("nav__link")) {
+    const link = element.target;
+    const siblings = link.closest(".nav").querySelectorAll(".nav__link");
+    const logo = link.closest(".nav").querySelector("img");
 
-        siblings.forEach((el) => {
-            if (el !== link) el.style.opacity = this;
-        });
-        logo.style.opacity = this;
-    }
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
 }
 // method bind can refer this to any object
 nav.addEventListener("mouseover", handleHover.bind(0.5));
@@ -153,16 +153,16 @@ const navHeight = nav.getBoundingClientRect().height;
 console.log(navHeight);
 
 function stickyNav(entries) {
-    const [entry] = entries; // assigns the initial value when an object is created (constructor function)
+  const [entry] = entries; // assigns the initial value when an object is created (constructor function)
 
-    if (!entry.isIntersecting) nav.classList.add("sticky");
-    else nav.classList.remove("sticky");
+  if (!entry.isIntersecting) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
 }
 
 const headerObserver = new IntersectionObserver(stickyNav, {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${navHeight}px`, // A string, formatted similar to the margin value in a CSS property
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`, // A string, formatted similar to the margin value in a CSS property
 });
 // // Declares what to observe, and observes its properties.
 headerObserver.observe(headers);
@@ -172,22 +172,22 @@ headerObserver.observe(headers);
 const allSelections = document.querySelectorAll(".section");
 
 function revealSection(entries, observer) {
-    const [entry] = entries;
+  const [entry] = entries;
 
-    if (!entry.isIntersecting) return;
+  if (!entry.isIntersecting) return;
 
-    entry.target.classList.remove("section--hidden");
-    observer.unobserve(entry.target); // stoped
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target); // stoped
 }
 
 const sectionObserver = new IntersectionObserver(revealSection, {
-    root: null,
-    threshold: 0.15, // revealed when it has 15% view
+  root: null,
+  threshold: 0.15, // revealed when it has 15% view
 });
 
 allSelections.forEach(function (section) {
-    sectionObserver.observe(section);
-    section.classList.add("section--hidden");
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
 });
 
 ///////////////////////////////////////
@@ -195,25 +195,25 @@ allSelections.forEach(function (section) {
 const imgTargets = document.querySelectorAll("img[data-src]");
 
 function loadImg(entries, observer) {
-    const [entry] = entries;
-    console.log(entry);
+  const [entry] = entries;
+  console.log(entry);
 
-    if (!entry.isIntersecting) return;
+  if (!entry.isIntersecting) return;
 
-    // Replace src with data-src
-    entry.target.src = entry.target.dataset.src;
+  // Replace src with data-src
+  entry.target.src = entry.target.dataset.src;
 
-    entry.target.addEventListener("load", function () {
-        entry.target.classList.remove("lazy-img");
-    });
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy-img");
+  });
 
-    observer.unobserve(entry.target);
+  observer.unobserve(entry.target);
 }
 
 const imgObserver = new IntersectionObserver(loadImg, {
-    root: null,
-    threshold: 0,
-    rootMargin: "-200px",
+  root: null,
+  threshold: 0,
+  rootMargin: "-200px",
 });
 
 imgTargets.forEach((img) => imgObserver.observe(img));
@@ -221,85 +221,85 @@ imgTargets.forEach((img) => imgObserver.observe(img));
 ///////////////////////////////////////
 // Sliders
 function slider() {
-    const slides = document.querySelectorAll(".slide");
-    const btnLeft = document.querySelector(".slider__btn--left");
-    const btnRight = document.querySelector(".slider__btn--right");
-    const dotContainer = document.querySelector(".dots");
+  const slides = document.querySelectorAll(".slide");
+  const btnLeft = document.querySelector(".slider__btn--left");
+  const btnRight = document.querySelector(".slider__btn--right");
+  const dotContainer = document.querySelector(".dots");
 
-    let curSlide = 0;
-    const maxSlide = slides.length;
+  let curSlide = 0;
+  const maxSlide = slides.length;
 
-    // Create dots
-    function createDots() {
-        slides.forEach(function (_, i) {
-            dotContainer.insertAdjacentHTML(
-                "beforeend",
-                `<button class="dots__dot" data-slide="${i}"></button>`
-            );
-        });
-    }
-    // Activate dots
-    function activateDot(slide) {
-        document
-            .querySelectorAll(".dots__dot")
-            .forEach((dot) => dot.classList.remove("dots__dot--active"));
-
-        document
-            .querySelector(`.dots__dot[data-slide="${slide}"]`)
-            .classList.add("dots__dot--active");
-    }
-    // Main slide (0%, 100%, 200%,...)
-    function gotoSlide(slide) {
-        slides.forEach(
-            (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-        );
-    }
-    // next slide (-100%, 0%, 100%, 200%,...)
-    function nextSlide() {
-        if (curSlide === maxSlide - 1) {
-            curSlide = 0; // back to the beginning
-        } else {
-            curSlide++; // add and return the previous value
-        }
-
-        gotoSlide(curSlide); // 100*-1, 100*0, 100*1
-        activateDot(curSlide);
-    }
-    // prev slide (..., -300%, -200%, -100%, 0%)
-    function prevSlide() {
-        if (curSlide === 0) {
-            curSlide = maxSlide - 1;
-        } else {
-            curSlide--;
-        }
-        gotoSlide(curSlide);
-        activateDot(curSlide);
-    }
-    // init
-    function init() {
-        gotoSlide(0);
-        createDots();
-
-        activateDot(0);
-    }
-    init();
-
-    // Event handlers
-    btnRight.addEventListener("click", nextSlide);
-    btnLeft.addEventListener("click", prevSlide);
-    // attach event handler to keyboard event
-    document.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowLeft") prevSlide();
-        if (e.key === "ArrowRight") nextSlide();
+  // Create dots
+  function createDots() {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML(
+        "beforeend",
+        `<button class="dots__dot" data-slide="${i}"></button>`
+      );
     });
-    dotContainer.addEventListener("click", function (e) {
-        if (e.target.classList.contains("dots__dot")) {
-            // destructure
-            const { slide } = e.target.dataset; // dataset.slide
-            gotoSlide(slide);
-            activateDot(slide);
-        }
-    });
+  }
+  // Activate dots
+  function activateDot(slide) {
+    document
+      .querySelectorAll(".dots__dot")
+      .forEach((dot) => dot.classList.remove("dots__dot--active"));
+
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add("dots__dot--active");
+  }
+  // Main slide (0%, 100%, 200%,...)
+  function gotoSlide(slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  }
+  // next slide (-100%, 0%, 100%, 200%,...)
+  function nextSlide() {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0; // back to the beginning
+    } else {
+      curSlide++; // add and return the previous value
+    }
+
+    gotoSlide(curSlide); // 100*-1, 100*0, 100*1
+    activateDot(curSlide);
+  }
+  // prev slide (..., -300%, -200%, -100%, 0%)
+  function prevSlide() {
+    if (curSlide === 0) {
+      curSlide = maxSlide - 1;
+    } else {
+      curSlide--;
+    }
+    gotoSlide(curSlide);
+    activateDot(curSlide);
+  }
+  // init
+  function init() {
+    gotoSlide(0);
+    createDots();
+
+    activateDot(0);
+  }
+  init();
+
+  // Event handlers
+  btnRight.addEventListener("click", nextSlide);
+  btnLeft.addEventListener("click", prevSlide);
+  // attach event handler to keyboard event
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") prevSlide();
+    if (e.key === "ArrowRight") nextSlide();
+  });
+  dotContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("dots__dot")) {
+      // destructure
+      const { slide } = e.target.dataset; // dataset.slide
+      gotoSlide(slide);
+      activateDot(slide);
+    }
+  });
 }
 slider();
 

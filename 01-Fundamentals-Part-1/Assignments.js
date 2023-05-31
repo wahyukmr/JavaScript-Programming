@@ -37,13 +37,13 @@ console.log(++population);
 console.log(population > 6);
 console.log(population < 33);
 let description =
-    country +
-    " is in " +
-    continent +
-    " , and is in " +
-    population +
-    " million people speak " +
-    language;
+  country +
+  " is in " +
+  continent +
+  " , and is in " +
+  population +
+  " million people speak " +
+  language;
 console.log(description);
 
 /*  **********************
@@ -89,9 +89,9 @@ console.log(description);
  *   TAKING DECISIONS : IF / ELSE STATEMENT
  *  ******************************************/
 if (population > 33) {
-    console.log(`${country} population is above average`);
+  console.log(`${country} population is above average`);
 } else {
-    console.log(`${country} is ${33 - population} million below average`);
+  console.log(`${country} is ${33 - population} million below average`);
 }
 
 /*  ************************
@@ -105,13 +105,13 @@ Use the BMI example from Challenge #1, and the code you already wrote, and impro
     BMI (28.3) is higher than John's (23.9)!"
         */
 if (marksHeight > johnHeight) {
-    console.log(
-        `Mark's BMI (${marksHeight}) is higher than John's (${johnHeight})!!`
-    );
+  console.log(
+    `Mark's BMI (${marksHeight}) is higher than John's (${johnHeight})!!`
+  );
 } else {
-    console.log(
-        `John's BMI (${johnHeight}) is higher than Mark's (${marksHeight})!!`
-    );
+  console.log(
+    `John's BMI (${johnHeight}) is higher than Mark's (${marksHeight})!!`
+  );
 }
 
 /*  ********************************
@@ -153,9 +153,9 @@ console.log(x); // result '114' + 9 - 4 - 2 = 1143
  *   LOGICAL OPERATOR
  *  ********************/
 if (language === "english" && population < 50 && !isIsland) {
-    console.log(`you should live in ${country}`);
+  console.log(`you should live in ${country}`);
 } else {
-    console.log(`${country} does not meet your criteria`);
+  console.log(`${country} does not meet your criteria`);
 }
 
 /*  ***********************
@@ -181,11 +181,11 @@ const koalasAverage = (88 + 91 + 110) / 3;
 console.log(dolphinsAverage, koalasAverage);
 
 if (dolphinsAverage > koalasAverage) {
-    console.log(`Dolphins is win`);
+  console.log(`Dolphins is win`);
 } else if (koalasAverage > dolphinsAverage) {
-    console.log(`Koalas is win`);
+  console.log(`Koalas is win`);
 } else if (koalasAverage === dolphinsAverage) {
-    console.log(`Draw`);
+  console.log(`Draw`);
 }
 
 // Data Bonus 1
@@ -193,47 +193,47 @@ let dolphinsScore = 97 + 112 + 101;
 let koalasScore = 109 + 95 + 106;
 
 if (dolphinsScore > koalasScore && dolphinsScore >= 100) {
-    console.log(`Dolphins is win`);
+  console.log(`Dolphins is win`);
 } else if (koalasScore > dolphinsScore && koalasScore >= 100) {
-    console.log(`Koalas is win`);
+  console.log(`Koalas is win`);
 } else if (
-    (dolphinsScore === koalasScore && dolphinsAverage) ||
-    koalasAverage >= 100
+  (dolphinsScore === koalasScore && dolphinsAverage) ||
+  koalasAverage >= 100
 ) {
-    console.log(`Draw`);
+  console.log(`Draw`);
 } else {
-    console.log(`Nothing to win`);
+  console.log(`Nothing to win`);
 }
 
 /*  ***********************
  *   THE SWITCH STATEMENT
  *  ***********************/
 switch (language) {
-    case "chinese":
-    case "mandarin":
-        console.log(`MOST number of native speakers!`);
-        break;
-    case "spanish":
-        console.log(`2nd place in number of native speakers`);
-        break;
-    case "english":
-        console.log(`3rd place`);
-        break;
-    case "hindi":
-        console.log(`number 4`);
-        break;
-    case "arabic":
-        console.log(`5th most spoken language`);
-        break;
-    default:
-        console.log(`Great language too :D`);
+  case "chinese":
+  case "mandarin":
+    console.log(`MOST number of native speakers!`);
+    break;
+  case "spanish":
+    console.log(`2nd place in number of native speakers`);
+    break;
+  case "english":
+    console.log(`3rd place`);
+    break;
+  case "hindi":
+    console.log(`number 4`);
+    break;
+  case "arabic":
+    console.log(`5th most spoken language`);
+    break;
+  default:
+    console.log(`Great language too :D`);
 }
 
 /*  ***************************************
  *   THE CONDITIONAL ( TERNARY ) OPERATOR
  *  ***************************************/
 console.log(
-    `${country} population is ${population > 33 ? "above" : "below"} average`
+  `${country} population is ${population > 33 ? "above" : "below"} average`
 );
 
 /*  ***********************
@@ -253,11 +253,11 @@ Hints:
         */
 const billValue = 275;
 const tip =
-    billValue >= 50 && billValue <= 300
-        ? (billValue * 15) / 100
-        : (billValue * 20) / 100;
+  billValue >= 50 && billValue <= 300
+    ? (billValue * 15) / 100
+    : (billValue * 20) / 100;
 console.log(
-    `The bill was ${billValue}, the tip was ${tip}, and the total value ${
-        billValue + tip
-    }`
+  `The bill was ${billValue}, the tip was ${tip}, and the total value ${
+    billValue + tip
+  }`
 );

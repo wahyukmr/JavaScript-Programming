@@ -1,39 +1,39 @@
 /* Data used in exercises */
 const books = [
-    {
-        title: "The Lord of the Rings",
-        publicationDate: "1954-07-29",
-        author: "J. R. R. Tolkien",
-        genres: ["fantasy", "high-fantasy", "adventure"],
-        filmAdaptation: true,
-    },
-    {
-        title: "The Cyberiad",
-        publicationDate: 1965,
-        author: "Stanislaw Lem",
-        genres: ["science fiction"],
-    },
-    {
-        title: "Dune",
-        publicationDate: 1965,
-        author: "Frank Herbert",
-        genres: ["science fiction", "novel", "adventure"],
-        filmAdaptation: true,
-    },
-    {
-        title: "Harry Potter and the Philosopher's Stone",
-        publicationDate: "1997-06-26",
-        author: "J. K. Rowling",
-        genres: ["fantasy", "adventure"],
-        filmAdaptation: true,
-    },
-    {
-        title: "A Game of Thrones",
-        publicationDate: "1996-08-01",
-        author: "George R. R. Martin",
-        genres: ["fantasy", "high-fantasy", "novel", "fantasy fiction"],
-        filmAdaptation: true,
-    },
+  {
+    title: "The Lord of the Rings",
+    publicationDate: "1954-07-29",
+    author: "J. R. R. Tolkien",
+    genres: ["fantasy", "high-fantasy", "adventure"],
+    filmAdaptation: true,
+  },
+  {
+    title: "The Cyberiad",
+    publicationDate: 1965,
+    author: "Stanislaw Lem",
+    genres: ["science fiction"],
+  },
+  {
+    title: "Dune",
+    publicationDate: 1965,
+    author: "Frank Herbert",
+    genres: ["science fiction", "novel", "adventure"],
+    filmAdaptation: true,
+  },
+  {
+    title: "Harry Potter and the Philosopher's Stone",
+    publicationDate: "1997-06-26",
+    author: "J. K. Rowling",
+    genres: ["fantasy", "adventure"],
+    filmAdaptation: true,
+  },
+  {
+    title: "A Game of Thrones",
+    publicationDate: "1996-08-01",
+    author: "George R. R. Martin",
+    genres: ["fantasy", "high-fantasy", "novel", "fantasy fiction"],
+    filmAdaptation: true,
+  },
 ];
 
 /* ⚠️ YOU WILL CALL THE FUNCTIONS BELOW IN EXERCISES.
@@ -43,7 +43,7 @@ const books = [
        YOU CAN CALL THEM AND LOG THE RETURNED VALUE TO THE CONSOLE TO SEE WHAT EXACTLY THEY RETURN. */
 
 const getBooksByGenre = (genre) =>
-    books.filter((book) => book.genres.includes(genre));
+  books.filter((book) => book.genres.includes(genre));
 const getBooksAsArrays = () => books.map((book) => Object.entries(book));
 const getBookAuthors = () => books.map((book) => book.author);
 
