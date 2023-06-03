@@ -151,7 +151,7 @@
       console.log(this);
       console.log(2037 - this.year);
 
-      // solution 1 (the old way)
+      // * solution 1 (the old way)
       // const self = this;
       // const isMillenial = function () {
       //     console.log(self);
@@ -159,7 +159,7 @@
       // };
       // isMillenial();
 
-      // solution 2 (modern)
+      // * solution 2 (modern)
       const isMillenial = () => {
         console.log(this); // merujuk ke induknya (objek sarah)
         console.log(this.year >= 1981 && this.year <= 1996);
