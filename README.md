@@ -10,7 +10,7 @@
 
 </summary>
 
-### ~ Introduction of JavaScript
+### ~ INTRODUCATION of JAVASCRIPT :
 
 <strong>JavaScript is a High-Level, Object-oriented, Multi-paradigm programming language.</strong>
 
@@ -19,23 +19,24 @@
 - **Object-oriented** berarti bahasa tersebut sebagian besar didasarkan pada konsep objek untuk menyimpan sebagian besar jenis data.
 - **Multi-paradigm** berarti fleksibel dan serbaguna, sehingga kita dapat menggunakan semua jenis gaya pemrograman yang berbeda (cara berbeda untuk menyusun kode) seperti imperative dan deklarative programming.
 
-### ~ Type conversion and coercion :
+### ~ TYPE CONVERSION and COERCION :
 
 Type Coercion atau type coercion adalah konversi nilai dari tipe data yang berbeda dan menentukan mana yang memiliki posisi lebih tinggi untuk dieksekusi terlebih dahulu.
 
 - **Type conversion** (ketika kita secara menual mengonversi dari satu tipe data ke tipe lainnya).
 - **Type coercion** (terjadi setiap kali operator berurusan dengan dua nilai yang memiliki tipe data berbeda, Jadi javascript dibalik layar mengonversi salah satu nilai agar sesuai dengan nilai lainnya sehingga operasi dapat dijalankan).
 
-### ~ Truthy and falsy operators
+### ~ TRUTHY anD FALSY :
 
 Truthy dan falsy operator adalah konsep dalam JavaScript yang menentukan apakah suatu nilai dianggap true atau false dalam konteks logika.
 
 - **Truthy operator** adalah nilai yang dianggap true dalam kondisi logika, seperti angka selain 0, string yang tidak kosong, objek, array, dan nilai true itu sendiri.
+
 - **Falsy operator** adalah nilai yang dianggap false dalam kondisi logika, seperti angka 0, string kosong, null, undefined, NaN, dan nilai false itu sendiri.
 
 Ketika menggunakan operator logika seperti if, while, atau for, nilai yang dianggap falsy akan dianggap sebagai false, sedangkan nilai yang dianggap truthy akan dianggap sebagai true. Konsep truthy dan falsy operator ini berguna untuk mengevaluasi nilai yang dihasilkan dari ekspresi atau fungsi yang kompleks, serta membantu pengembang dalam menulis kode yang lebih efisien dan mudah dibaca.
 
-### ~ Statements and expressions
+### ~ STATEMENTS and EXPRESSIONS
 
 - **Expressions** adalah sebuah kode yang menghasilkan nilai. Expression bisa berupa nilai tunggal, operasi matematika, atau pemanggilan fungsi. Contoh:
 
@@ -63,25 +64,56 @@ Perbedaan utama antara expression dan statement adalah bahwa expression menghasi
 
 </summary>
   
-### ~ Activating Strict Mode :
+### ~ ACTIVATING STRICT MODE :
 
 Selalu gunakan **_'use strict'_** untuk membantu men-debug code.
 
-### ~ Reviewing Functions :
+### ~ REVIEWING FUNCTIONS :
 
 Tiga perbedaan cara menulis fungsi, tetapi semua bekerja dengan cara yang sama, menerima input data, mengubah data, dan kemudian mengeluarkan data.
 
-1. **Fuction declaration**, fungsi yang dapat digunakan sebelum di nyatakan sebelumnya.
-2. **Function expression**, pada dasarnya fungsu yang nilainya disimpan pada sebuah variabel.
-3. **Arrow function**, bagus untuk fungsi dengan hanya satu baris statement. Tidak bisa mengakses kata kunci "this" dan Super di OOP.
+1. **Fuction declaration**
 
-### ~ Breaking and Continuing
+   Fuction declaration merupakan fungsi yang dapat dipanggil sebelum atau setelah dideklarasikan, karena ada konsep "Hoisting" di javaScript.
+
+   Situasi yang tepat untuk menggunakan function declaration:
+
+   - ketika ingin membuat fungsi utama yang akan digunakan di seluruh program. Sehingga dapat memanggilnya sebelum dideklarasikan.
+   - ketika ingin mempermudah hoisting dan membuat code terlihat lebih teratur dengan mendeklarasikan semua fungsi di awal program.
+
+2. **Function expression**
+
+   Fungsi ditugaskan ke variabel tertentu. Variabel tersebut kemudian dapat digunakan untuk memanggil fungsi tersebut. Function expression harus didefinisikan sebelum dipanggil, karena variabel harus dideklarasikan terlebih dahulu sebelum digunakan.
+
+   Situasi yang tepat untuk menggunakan function declaration:
+
+   - ketika ingin memberikan fungsi sebagai argument ke fungsi lain (callback function).
+   - ketika ingin membuat fungsi local yang hanya akan digunakan dalam blok if atau loop.
+   - ketika ingin menggunakan fungsi seperti fungsi anonymous atau arrow function.
+
+3. **Arrow function**
+
+   Arrow function adalah cara lain untuk mendeklarasikan fungsi di JavaScript. Mereka memberikan sintaksis yang lebih ringkas dan memiliki perilaku khusus terkait penjelajahan "this" dibandingkan dengan fungsi biasa.
+
+   Arrow function tidak memiliki konteks "this" sendiri, mereka mengikuti konteks "this" dari scope di sekitarnya.
+
+   Situasi yang tepat untuk menggunakan function declaration:
+
+   - arrow function sering digunakan dalam fungsi callback atau ketika ingin menulis fungsi yang lebih pendek dan ringkas.
+   - jika fungsi hanya me-return satu baris statement, kita dapat menghilangkan tanda kurung kurawal dan kata kunci "return" untuk menulisnya lebih ringkas.
+   - jika perlu mendefinisikan fungsi anonymous, misalnya sebagai argumen langsung ke method atau sebagai fungsi yang akan langsung dipanggil.
+
+Meskipun JavaScript memungkinkan pemanggilan fungsi sebelum dideklarasikan, disarankan untuk memanggil fungsi setelah mendeklarasikannya untuk menjaga kejelasan code.
+
+Tidak ada masalah dalam menggunakan ketiga pendekatan tersebut dalam satu file atau code, selama dapat memahami perbedaan dan memastikan penggunaannya sesuai dengan kebutuhan.
+
+### ~ BREAKING and CONTINUING :
 
 - **continue** berarti keluar dari iterasi loop saat ini dan melanjutkan ke loop selanjutnya.
 
 - **break** digunakan untuk sepenuhnya mengakhiri seluruh loop.
 
-### ~ Looping
+### ~ LOOPING :
 
 Penjelasan mengenai beberapa jenis looping di JavaScript.
 
@@ -212,14 +244,14 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
 
 </summary>
 
-### ~ 4 Step to solve any problem :
+### ~ 4 STEP to SOLVE any PROBLEM :
 
 1. Pastikan untuk memahami 100% masalahnya. **_ajukan pertanyaan yang tepat_** untuk mendapatkan gambaran yang jelas tentang masalahnya.
 2. **_Membagi masalah_**. memecah masalah besar menjadi sub-masalah yang lebuh kecil.
 3. Jangan takut untuk melakukan **_research_** pada setiap masalah (Google, stackoverflow, MDN web docs,...)
 4. Untuk masalah yang lebih besar, **_tulis pseudo-code_** atau rancangan program sebelum menulis kode yang sebenarnya.
 
-### ~ The Debugging Process :
+### ~ The DEBUGGING PROCESS :
 
 1. **Identify** (sadar bahwa ada bug)
 
@@ -250,7 +282,7 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
 
 </summary>
 
-### ~ DOM (Document Object Model)
+### ~ DOM (Document Object Model) :
 
 **DOM** adalah Struktur yang merepresentasikan html documents. Memungkinkan javascript untuk mengakses elemen html dan memanipulasi style (mengubah teks, atribut html dan bahkan gaya CSS) nya.
 
@@ -396,7 +428,7 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
           name.appendChild(textName);
       </script>
 
-### ~ Event handlers
+### ~ EVENT HANDLERS :
 
 Node memiliki kemampuan bereaksi terhadap suatu kejadian, misal kejadian saat di klik atau saat mouse berada diatas node tersebut, dll.
 
@@ -468,7 +500,7 @@ Ada dua cara menambahkan Event Handler ke Node, menggunakan **Event Target** ata
    - **onblur** : terjadi jika element tidak dipilih lagi.
 6. **Method preventDefault()**, sangat berguna jika kita mau menjalankan perintah JavaScript tanpa adanya efek reload.
 
-### ~ Style
+### ~ STYLES :
 
 DOM juga bisa digunakan untuk memanipulasi attribute style pada element dengan lebih mudah.
 
@@ -494,7 +526,7 @@ Contoh:
         }
     </script>
 
-### ~ InnerText and innerHTML
+### ~ InnerText and innerHTML :
 
 Selain **textContent**, terdapat property lain bernama **innerText** untuk mendapatkan isi text sebuah element.
 
@@ -554,7 +586,7 @@ Contoh :
         content.innerHTML = "<h1>Title</h1><p>Description</p>";
     </script>
 
-### ~ Window
+### ~ WINDOWS :
 
 **Window** merupakan representasi window yang berisikan DOM Document.
 
@@ -574,7 +606,7 @@ Contoh:
         content.textContent = `Window width: ${width} - height: ${height}`;
     </script>
 
-### ~ Query Selector
+### ~ QUERY SELECTOR :
 
 **Query Selector** merupakan method untuk menseleksi node sesuai dengan pola yang kita ingin cari.
 
@@ -671,7 +703,7 @@ Contoh :
         console.log(element);
     </script>
 
-### ~ Web Storage
+### ~ WEB STORAGE :
 
 **Web storage** adalah salah satu Web API (perantara agar kode JavaScript bisa "berkomunikasi" dengan browser) yang dapat menyimpan data secara lokal pada sisi client (disimpan secara lokal pada perangkat kita).
 
@@ -720,7 +752,7 @@ Menyimpan dan Mendapatkan Data Kompleks pada Web Storage:
 
 </summary>
 
-### ~ Penjelasan singkat bagaimana JavaScript bekerja dibalik layar
+### ~ OVERVIEW - JAVASCRIPT BEHIND the SCENES :
 
 JavaScript adalah bahasa pemrograman yang dijalankan disisi klien (client-side) pada browser. Ketika browser membuka halaman web yang mengandung javascript, browser akan memuat dan mengeksekusi kode JavaScript secara otomatis. Prosesnya meliputi:
 
@@ -732,7 +764,7 @@ JavaScript adalah bahasa pemrograman yang dijalankan disisi klien (client-side) 
 
 Dalam prosesnya, JavaScript juga mengandalkan DOM untuk memanipulasi elemen pada halaman web, dan juga memanfaatkan AJAX (Asynchronous javascript And XML) untuk mengirim dan menerima data dari server tanpa perlu memuat ulang halaman web.
 
-### ~ JavaScript :
+### ~ JAVASCRIPT :
 
 - **High-level** berarti kita tidak perlu memikirkan banyak hal rumit, seperti mengelola memeori komputer. Kelemahannya tidak akan secepat atau dioptimalkan seperti bahasa low-level.
 - **Garbage-collected** adalah algoritma didalam javascript yang secara otomatis menghapus objek lama yang tidak digunakan dari memori.
@@ -744,7 +776,7 @@ Dalam prosesnya, JavaScript juga mengandalkan DOM untuk memanipulasi elemen pada
 - **Single-threaded** berarti bahwa JS hanya dapat melakukan satu hal pada satu waktu. Thread pada dasarnya tempat kode kita dieksekusi di CPU.
 - **Non-blocking event loop** event loop mengambil tugas yang berjalan, mengeksekusi mereka di background dan mengembalikannya ke thread utama setelah selesai.
 
-### ~ JS Engine
+### ~ JS ENGINE :
 
 **JS Engine** hanyalah sebuah program komputer yang mengeksekusi kode javascript, jadi bertanggung jawab untuk mengurai kode dan mengonversinya menjadi perintah yang dapat dijalankan dan dipahami oleh komputer.
 
@@ -760,7 +792,7 @@ Setiap Engine JavaScript selalu berisi **Call Stack** dan **Heap**.
 
 **Heap** adalah tempat kumpulan memori yang terstruktur yang menyimpan semua objek(reference types) yang dibutuhkan.
 
-### ~ JS Runtime
+### ~ JS RUNTIME :
 
 **JavaScript runtime** seperti kotak yang menyediakan beberapa objek ke JavaScript yang kita butuhkan sehingga dapat berinteraksi dengan dunia luar.
 
@@ -770,7 +802,7 @@ JavaScript runtime biasanya juga menyertakan **_callback queue_**, ini adalah st
 
 ketika call stack kosong, fungsi callback diteruskan ke stack agar dapat dieksekusi. Dan ini terjadi berkat **Event loop**. Jadi event loop mengambil fungsi callback dari callback queue dan menempatkannya ke call stack sehingga dapat dieksekusi.
 
-### ~ Scope in JavaScript :
+### ~ SCOPE in JAVASCRIPT :
 
 **Scope:**
 
@@ -807,7 +839,7 @@ Scope chain adalah **one-way street**: artinya Scope induk tidak akan pernah mem
    - Mengacu pada kode didalam kurung kurawal seperti pada: **if block, for loop block, etc**
    - Data di block scope hanya bisa digunakan pada block tersebut.
 
-### ~ Hoisting in javascript :
+### ~ HOISTING in JAVASCRIPT :
 
 **Hoisting** adalah konsep di mana JavaScript mengangkat (memindahkan) deklarasi variabel dan fungsi ke atas scope, sehingga variabel atau fungsi dapat diakses sebelum dideklarasikan dalam kode. Dalam praktiknya, sebaiknya tetap dideklarasikan variabel atau fungsi terlebih dahulu sebelum digunakan agar kode lebih mudah dipahami dan dijaga keamanannya. Namun, pemahaman tentang hoisting akan membantu menghindari kesalahan dalam penulisan kode JavaScript.
 
@@ -818,7 +850,7 @@ Kesimpulan dari bagian ini:
 - Mengakses variabel sebelum mendeklarasikannya adalah praktik yang buruk dan harus dihindari.
 - Selalu mendeklarasikan fungsi terlebih dahulu sebelum menggunakannya.
 
-### ~ How the "this" Keyword works :
+### ~ How the "THIS" KEYWORD WORK :
 
 **this keyword/variable** adalah variabel spesial yang dibuat untuk setiap execution context(dalam kasus ini untuk setiap fungsi). Mengambil nilai yang merujuk ke "pemilik" dari fungsi dimana kata kunci **this** ini digunakan.
 
@@ -831,7 +863,7 @@ Penerapan kata kunci **this:**
 - **Arrow Function** 👉 kata kunci **_this_** merujuk ke this dari fungsi induk terdekatnya.
 - **Event Listener** 👉 kata kunci **_this_** merujuk ke elemen DOM tempat tempat penanganan dilampirkan.
 
-### ~ Primitives vs. Objects (Primitive vs. Reference Types) :
+### ~ PRIMITIVES VS OBJECTS (Primitive vs. Reference Types) :
 
 **Tipe Data Primitive**
 
@@ -874,7 +906,7 @@ Penerapan kata kunci **this:**
 
 Mendeklarasikan variabel const tidak dapat diubah nilainya hanya berlaku untuk nilai Primitive, tetapi tidak untuk nilai Reference. karena ini hanya mengubah nilai objek yang disimpan di Heap.
 
-### ~ Regular Functions vs. Arrow Functions :
+### ~ REGULAR FUNCTIONS VS ARROW FUNCTIONS :
 
 Jangan menggunakan Arrow Function pada object method.
 
@@ -892,11 +924,11 @@ Kata kunci **arguments** tidak lagi penting di javascsript karena ada cara yang 
 
 </summary>
 
-### ~ Destructuring :
+### ~ DESTRUCTURING :
 
 Destructuring adalah untuk membongkar nilai Array atau Objek menjadi variabel terpisah. Dengan kata lain destructuring memecah struktur data kompleks menjadi struktur data kecil seperti variabel.
 
-### ~ Spread Operators ( ... ) :
+### ~ SPREAD OPERATORS ( ... ) :
 
 **Spread operator** adalah operator dalam JavaScript yang digunakan untuk mengambil semua elemen dari sebuah array dan mengeluarkannya sebagai argumen terpisah. Artinya, dengan menggunakan spread operator, kita dapat mengambil semua nilai dari sebuah array dan melemparkannya sebagai argumen terpisah ke dalam sebuah fungsi atau menyimpannya dalam array baru.
 
@@ -922,9 +954,9 @@ Dapat membuat Array atau properti objek baru dan atau untuk meneruskan nilai dal
       console.log(newPerson);
       // output: { name: 'John', age: 30, email: 'john@example.com' }
 
-### ~ Rest Pattern and Rest Parameters ( ... ) :
+### ~ REST PETTERN and REST PARAMETERS ( ... ) :
 
-**Rest parameter** dan **rest pattern** adalah fitur baru di JavaScript yang memungkinkan Anda untuk mengumpulkan atau menggabungkan beberapa nilai ke dalam sebuah array.
+**Rest parameter** dan **rest pattern** adalah fitur baru di JavaScript yang memungkinkan kita untuk mengumpulkan atau menggabungkan beberapa nilai ke dalam sebuah array.
 
 **Rest parameters**
 
@@ -956,42 +988,42 @@ Dapat membuat Array atau properti objek baru dan atau untuk meneruskan nilai dal
 
 Dalam penggunaannya, rest parameter dan rest pattern digunakan pada parameter atau variabel yang berfungsi sebagai penerima nilai, sedangkan spread operator digunakan pada nilai yang ingin disebar atau dipisahkan.
 
-### ~ Short Circuiting ( && and || ) di Non Boolean :
+### ~ SHORT CIRCUITING ( && and || ) in NON BOOLEAN :
 
-**Or Operator** (||)
+**Or Operator** ( || )
 
 - membaca operan dari kiri ke kanan.
 - akan mengembalikan nilai pertama yang bernilai truty dari semua operan, atau hanya nilai terakhir jika semuanya falsy.
 - Dalam praktiknya kita dapat menggunakan **Or Operator** untuk menetapkan nilai default.
 
-**And Operator** (&&)
+**And Operator** ( && )
 
 - Membaca operan dari kiri ke kanan.
 - Berarti sebaliknya dari **Or Operator**, yakni akan mengembalikan nilai pertama yang bernilai falsy.
 - jika tidak ada satupun yang bernilai falsy, maka operan terakhir yang akan diambil.
 - Sering kali kita dapat menggunakan **Operator And** untuk benar-benar menghindari if statement, yakni memeriksa apakah properti atau nilai tertentu benar-benar ada.
 
-### ~ The Nullish Coalescing Operator ( ?? ) :
+### ~ The NULLISH COALESCING OPERATOR ( ?? ) :
 
 Merupakan operator yang mirip dengan ternary operator, berbeda pada kondisinya, jika berilai null atau undefined maka value default nya dieksekusi.
 
 Nilai Nullish adalah: Null dan Undefined (**_tidak termasuk:_** 0 or ""). Jadi, jika nilainya berupa Null atau undefined, maka operan kedua yang akan dieksekusi dan direturn.
 
-### ~ Logical Assignment Operators :
+### ~ LOGICAL ASSIGNMENT OPERATORS :
 
 Prinsip dari cara kerjanya sama seperti OR, AND dan NULLISH operators. Tetapi dengan menggunakan Logical Assignment Operators menjadi lebih sederhana.
 
-### ~ Looping Arrays: The for-of Loop
+### ~ LOOPING ARRAYS - The FOR-OF LOOP :
 
 Looping ini digunakan untuk melakukan perulangan terhadap isi value dari iterable object (object yang dapat diiterasi), seperti Array, String, Set, Map, dll dan mengakses nilai elemen langsung tanpa harus menggunakan indeks seperti pada for loop.
 
 Dengan menggunakan for-of loop kita masih bisa menggunakan **continue** dan **break** keywords.
 
-### ~ Optional Chaining ( ? ) :
+### ~ OPTIONAL CHAINING ( ? ) :
 
 Optional Chaining = memeriksa ada atau tidaknya nilai(ada yang berarti tidak Null dan undefined), jika ada akan mengembalikan nilainya, jika tidak akan mengembalikan undefined.
 
-### ~ Looping Object: Object Keys, Values, and Entries :
+### ~ LOOPING OBJECT - OBJECT KEYS, OBJECT VALUES, and OBJECT ENTRIES :
 
 **Looping object** adalah proses untuk melakukan pengulangan atau iterasi terhadap properti-properti (property) yang ada di dalam sebuah objek. Di JavaScript, terdapat tiga cara untuk melakukan looping pada objek, yaitu:
 
@@ -1045,7 +1077,7 @@ Optional Chaining = memeriksa ada atau tidaknya nilai(ada yang berarti tidak Nul
 
 Ketiga method Object diatas, mengembalikan iterable object (memungkinkan objek untuk dilooping atau diiterasi menggunakan method iterasi built-in, seperti for-of, array.from(), atau spread operator). Dalam bahasa yang lebih sederhana, iterabel object dapat dianggap sebagai objek yang dapat dilakukan iterasi, mirip dengan array.
 
-### ~ Arrays vs Sets:
+### ~ ARRAYS VS SETS :
 
 Keduannya dapat digunakan jika hanya bermain dengan daftar nilai sederhana dan hanya memiliki nilai tanpa deskripsi apa pun.
 
@@ -1060,7 +1092,7 @@ Keunggulan Set:
 2. Digunakan saat mementingkan kinerja yang tinggi.
 3. Dapat digunakan untuk menghapus duplikasi nilai pada Array.
 
-### ~ Objects vs Maps:
+### ~ OBJECTS VS MAPS :
 
 Keduanya dapat digunakan jika perlu pasangan key dan value. Jadi dengan key akan memiliki cara untuk mendeskripsikan atau menggambarkan value.
 
@@ -1085,7 +1117,7 @@ Keunggulan Map:
 
 Penggunaan Objek Array juga umum di JavaScript.
 
-### ~ Working with String :
+### ~ WORKING WITH STRING :
 
 - Ingat bahwa String tidak bisa dirubah (primitive), ketika menggunakan String method itu datang dari String objek, setelahnya itu akan mengembalikan String kembali.
 - Semua String method akan mengembalikan string baru(tidak mempengaruhi string aslinya).
@@ -1098,7 +1130,7 @@ Penggunaan Objek Array juga umum di JavaScript.
 
 </summary>
   
-### ~ How Passing Argument Works: value vs reference :
+### ~ How PASSING ARGUMENT - VALUE VS REFERENCE :
   
 Jika kita meneruskan nilai Primitive types sebagai argumen dari sebuah fungsi, maka argumen itu merupakan salinan dari nilai aslinya, akan menjadi nilai atau variabel yang berbeda. Karnanya apabila nilai salinan diubah tidak akan mengubah nilai originalnya.
 
@@ -1106,7 +1138,7 @@ lain halnya jika kita meneruskan Reference types ke fungsi, apa yang disalin seb
 
 Dalam Programming ada dua istilah yang digunakan saat berhadapan dengan fungsi, yakni **passing by value** dan **passing by reference**. Javascript tidak memiliki passing by reference, hanya passing by value. Meskipun terlihat seperti passing by reference, namun reference itu sendiri masih merupakan nilai yang berisi memori address. Jadi pada dasarnya kita meneruskan reference ke fungsi tetapi tidak melakukan **passing by reference** seperti pada pemrograman C++.
 
-### Fuction return value
+### FUNCION RETURN VALUE :
 
 Secara default, function tidak menghasilkan value apapun.
 
@@ -1116,7 +1148,7 @@ Saat menggunakan kata kunci return, maka kode setelahnya tidak akan dieksekusi.
 
 kita bisa menggunakan return untuk menghentikan eksekusi sebuah function.
 
-### ~ First-class function and Higher-order functions :
+### ~ FIRST-CLASS FUNCTIONS and HIGHER-ORDER FUNCTIONS :
 
 Javascript adalah bahasa yang memiiliki **First-class function** yang berarti fungsi hanya diperlakukan sebagai nilai. Karena itu kita dapat melakukan beberapa hal:
 
@@ -1129,7 +1161,7 @@ Fakta bahwa JavaScript memiliki First-class function, memungkinkan kita untuk me
 
 First-class function dan Higher-order functions adalah dua hal yang berbeda. First-class function hanyalah fitur yang dimiliki atau tidak dimiliki oleh bahasa pemrograman.
 
-### ~ Functions Accepting Callback Functions :
+### ~ FUNCTIONS ACCEPING CALLBACK FUNCTIONS :
 
 Callbacks sangat sering digunakan dalam JavaScript.
 
@@ -1138,11 +1170,11 @@ Beberapa keuntungan utama Callback function:
 1.  Membuat mudah untuk memecah kode menjadi bagaian yang lebih dapat digunakan kembali dan saling berhubungan.
 2.  Membuat abstractions, berarti bahwa kita menyembunyikan detail dari beberapa implementasi kode, karena kita tidak terlalu peduli dengan semua detail itu.
 
-### ~ Functions Returning Functions :
+### ~ FUNCTIONS RETURNING FUNCTIONS :
 
 Fungsi ini berguna dibeberapa situasi. Apalagi jika menggunakan paradigma pemrograman yang sangat penting yaitu **pemrograman fungsional**.
 
-### ~ The Call, Apply, and Bind Methods :
+### ~ The CALL, APPLY, and BIND METHODS :
 
 Sebagai catatan, Seperti yang dibahas sebelumnya dalam pemanggilan regular function kata kunci this merujuk ke undefined (dalam strict mode).
 
@@ -1155,24 +1187,24 @@ Tiga method ini yaitu call, apply, dan bind adalah bagian dari prototipe fungsi 
 
     Cara kerja method ini adalah dengan menggunakan sintaks:
 
-            namaFungsi.call(thisArg, arg1, arg2, ..)
+        namaFungsi.call(thisArg, arg1, arg2, ..)
 
     Contoh method "call" digunakan untuk memanggil fungsi "greet" dari objek "person" dengan mengubah nilai "this" menjadi objek "newPerson" :
 
-            const person = {
-                name: "John",
-                age: 30,
-                greet: function() {
-                    console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
-                }
-            };
+        const person = {
+            name: "John",
+            age: 30,
+            greet: function() {
+                console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+            }
+        };
 
-            const newPerson = {
-                name: "Jane",
-                age: 25
-            };
+        const newPerson = {
+            name: "Jane",
+            age: 25
+        };
 
-            person.greet.call(newPerson); // Output: Hello, my name is Jane and I'm 25 years old.
+        person.greet.call(newPerson); // Output: Hello, my name is Jane and I'm 25 years old.
 
 2.  **Method Apply**
 
@@ -1187,30 +1219,30 @@ Tiga method ini yaitu call, apply, dan bind adalah bagian dari prototipe fungsi 
 
     Cara kerja method ini adalah dengan menggunakan sintaks:
 
-            namaFungsi.call(thisArg, arg1, arg2, ..)
+        namaFungsi.call(thisArg, arg1, arg2, ..)
 
     Contoh penggunaannya :
 
-            const person = {
-                name: "John",
-                age: 30,
-                greet: function(greeting) {
-                    console.log(`${greeting}, my name is ${this.name} and I'm ${this.age} years old.`);
-                }
-            };
+        const person = {
+            name: "John",
+            age: 30,
+            greet: function(greeting) {
+                console.log(`${greeting}, my name is ${this.name} and I'm ${this.age} years old.`);
+            }
+        };
 
-            const newPerson = {
-                name: "Jane",
-                age: 25
-            };
+        const newPerson = {
+            name: "Jane",
+            age: 25
+        };
 
-            const newGreet = person.greet.bind(newPerson, "Hi");
+        const newGreet = person.greet.bind(newPerson, "Hi");
 
-            newGreet(); // Output: Hi, my name is Jane and I'm 25 years old.
+        newGreet(); // Output: Hi, my name is Jane and I'm 25 years old.
 
 Jika nilai argumen diketahui sebelum waktu runtime dan jumlah argumen tidak banyak, maka method "call" adalah pilihan yang baik. Jika jumlah argumen banyak atau nilainya tidak diketahui pada waktu runtime, maka method "apply" lebih cocok digunakan. Sedangkan, jika kita ingin membuat fungsi baru dengan nilai "this" yang tetap dan argumen dapat diubah, maka method "bind" merupakan pilihan yang tepat.
 
-### ~ Immediately Invoked Function Expressions (IIFE) :
+### ~ IMMEDIATELY INVOKED FUNCTIONS EXPRESSIONS (IIFE) :
 
 **IIFE** merupakan sebuah teknik dalam JavaScript untuk menjalankan sebuah fungsi secara otomatis pada saat ia didefinisikan.
 
@@ -1232,7 +1264,7 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
 
 </summary>
 
-### ~ Methods Arrays summary :
+### ~ METHODS ARRAYS SUMMARY :
 
 **Method yang mengubah nilai asli dari array**
 
@@ -1676,7 +1708,7 @@ Method join() mengembalikan sebuah string yang berisi semua elemen pada array ya
 
       console.log(check); // output: true
 
-### ~ The Magic of Chaining Methods :
+### ~ The MAGIC of CHAINING METHODS :
 
 **Chaining method** pada JavaScript adalah teknik menggabungkan beberapa method pada objek atau array menjadi satu baris kode dengan tujuan untuk memperpendek dan memperjelas kode. Dalam chaining method, nilai yang dihasilkan dari method pertama akan langsung digunakan sebagai input untuk method kedua, dan seterusnya.
 
@@ -1690,7 +1722,7 @@ Method join() mengembalikan sebuah string yang berisi semua elemen pada array ya
 
 </summary>
 
-### ~ Event Propagation: Bubbling and Cupturing :
+### ~ EVENT PROPA GATION - BUBBLING and CAPTURING :
 
 **Note:**
 Setiap fungsi atau code yang ditetapkan untuk menangani suatu **event** yang terjadi pada elemen HTML tertentu, atau disebut juga "handler", dapat mengakses **_property object event_**.
@@ -1706,19 +1738,19 @@ Setiap fungsi atau code yang ditetapkan untuk menangani suatu **event** yang ter
 
    **_Poin penting_**: Bubbling sering digunakan untuk menangani event pada elemen HTML secara dinamis dan efisien melalui konsep delegasi event.
 
-### ~ DOM Traversing :
+### ~ DOM TRAVERSING :
 
 **DOM Traversing** adalah konsep dalam JavaScript yang digunakan untuk menjelajahi dan memanipulasi elemen HTML dan node di dalam dokumen HTML.
 
-Dalam DOM Traversing, Anda dapat menggunakan metode dan properti pada objek "**_parentNode_**", "**_childNodes_**", "**_nextSibling_**", "**_previousSibling_**", "**_firstChild_**", dan "**_lastChild_**" untuk menjelajahi struktur dokumen HTML. Metode dan properti ini memungkinkan Anda untuk menelusuri dari satu elemen ke elemen lainnya, dan melakukan manipulasi terhadap elemen tersebut.
+Dalam DOM Traversing, kita dapat menggunakan metode dan properti pada objek "**_parentNode_**", "**_childNodes_**", "**_nextSibling_**", "**_previousSibling_**", "**_firstChild_**", dan "**_lastChild_**" untuk menjelajahi struktur dokumen HTML. Metode dan properti ini memungkinkan kita untuk menelusuri dari satu elemen ke elemen lainnya, dan melakukan manipulasi terhadap elemen tersebut.
 
-Sebagai contoh, Anda dapat menggunakan metode "**_parentNode_**" untuk mengakses elemen induk dari suatu elemen HTML. Anda juga dapat menggunakan metode "**_childNodes_**" untuk mengakses semua node (termasuk elemen, teks, komentar, dll.) yang menjadi anak dari suatu elemen HTML.
+Sebagai contoh, kita dapat menggunakan metode "**_parentNode_**" untuk mengakses elemen induk dari suatu elemen HTML. kita juga dapat menggunakan metode "**_childNodes_**" untuk mengakses semua node (termasuk elemen, teks, komentar, dll.) yang menjadi anak dari suatu elemen HTML.
 
-Selain itu, Anda juga dapat menggunakan metode "**_querySelector_**" dan "**_querySelectorAll_**" untuk mencari elemen HTML berdasarkan selector CSS. Metode "**_querySelector_**" mengembalikan elemen HTML pertama yang cocok dengan selector yang diberikan, sementara metode "**_querySelectorAll_**" mengembalikan semua elemen HTML yang cocok dengan selector tersebut dalam bentuk NodeList.
+Selain itu, kita juga dapat menggunakan metode "**_querySelector_**" dan "**_querySelectorAll_**" untuk mencari elemen HTML berdasarkan selector CSS. Metode "**_querySelector_**" mengembalikan elemen HTML pertama yang cocok dengan selector yang diberikan, sementara metode "**_querySelectorAll_**" mengembalikan semua elemen HTML yang cocok dengan selector tersebut dalam bentuk NodeList.
 
-Dalam DOM Traversing, Anda dapat melakukan manipulasi pada elemen HTML dan node, seperti mengubah nilai atribut, menambah atau menghapus elemen, dan memanipulasi teks. Manipulasi tersebut dapat dilakukan dengan menggunakan metode dan properti pada objek "**_setAttribute_**", "**_getAttribute_**", "**_createElement_**", "**_appendChild_**", "**_removeChild_**", "**_insertBefore_**", "**_replaceChild_**", "**_textContent_**", dan banyak lagi.
+Dalam DOM Traversing, kita dapat melakukan manipulasi pada elemen HTML dan node, seperti mengubah nilai atribut, menambah atau menghapus elemen, dan memanipulasi teks. Manipulasi tersebut dapat dilakukan dengan menggunakan metode dan properti pada objek "**_setAttribute_**", "**_getAttribute_**", "**_createElement_**", "**_appendChild_**", "**_removeChild_**", "**_insertBefore_**", "**_replaceChild_**", "**_textContent_**", dan banyak lagi.
 
-### ~ Efficient script loading: Defer and Async
+### ~ EFFICIENTS SCRIPT LOADING - DEFER AND ASYNC :
 
 **Efficient Script Loading** merujuk pada teknik-teknik yang digunakan untuk memuat script pada halaman web dengan cara yang lebih efisien dan dapat meningkatkan kecepatan dan kinerja halaman tersebut. Ada tiga teknik utama yang digunakan untuk memuat script: defer, regular, dan async.
 
@@ -1751,13 +1783,13 @@ Dalam DOM Traversing, Anda dapat melakukan manipulasi pada elemen HTML dan node,
 
 </summary>
 
-### ~ APA ITU OOP?
+### ~ WHAT IS OOP :
 
 OOP merupakan paradigma (gaya menulis dan mengatur kode) pemrograman yang didasarkan pada konsep object. Program dikembangkan dengan memodelkan dunia nyata sebagai Object yang memiliki property dan method. Object-object ini saling berinteraksi untuk mencapai tujuan yang diinginkan.
 
 Keuntungan OOP adalah membuat kode program lebih terstruktur dan mudah dimengerti. Selain itu, OOP juga memungkinkan menggunakan kembali kode yang sudah ada.
 
-### ~ CLASS dan INSTANCE (Classical OOP)
+### ~ CLASS dan INSTANCE (Classical OOP) :
 
 Paradigma Classical OOP dikenal karena menggunakan class sebagai dasar dari pembuatan objek. Konsep ini digunakan oleh banyak bahasa pemrograman seperti Java, C++, atau C#.
 
@@ -1775,7 +1807,7 @@ Sebagai analogi, kita dapat membayangkan class sebagai blueprint atau sketsa seb
 
 Dalam OOP, ketika kita membuat sebuah **Objek** dari sebuah class, maka kita sedang membuat sebuah **instance** dari class tersebut. Instance ini akan memiliki properti dan method yang sudah didefinisikan di dalam class, namun nilai dari properti tersebut dapat berbeda-beda antara satu instance dengan instance lainnya.
 
-### ~ PRINSIP FUNDAMENTAL OOP
+### ~ PRINSIP FUNDAMENTAL OOP :
 
 Dengan berpaku pada prinsip dasar OOP ini, dapat membantu untuk mengimplementasikan atau men-design class dengan baik. Pada dasarnya, teknik ini juga dapat digunakan diluar OOP, tetapi sangat relevan dalam konteks ini.
 
@@ -1817,7 +1849,7 @@ Ada 4 prinsip utama dalam OOP, dan mereka adalah:
    - menggunakan method yang sama dengan implementasi yang berbeda pada class-class turunannya.
    - Polimorfisme juga dapat diterapkan di JavaScript menggunakan method overloading (method dengan nama yang sama, tetapi bereda jumlah atau tipe parameternya) dan overriding (method dengan nama yang sama pada object induk dan object turunannya, namun perilakunya berbeda).
 
-### ~ PROTOTYPE (OOP di JavaScript)
+### ~ PROTOTYPE (OOP di JavaScript) :
 
 Paradigma OOP lain seperti **prototype-based** yang digunakan oleh JavaScript, menggunakan **Prototype** sebagai dasar dari pembuatan objek. Memiliki konsep serupa dengan classical OOP.
 
@@ -1827,7 +1859,7 @@ Paradigma OOP lain seperti **prototype-based** yang digunakan oleh JavaScript, m
 
 Setiap object yang dibuat berdasarkan Prototype, ini biasa disebut **Instance**.
 
-### ~ TECHNIQUE USING PROTOTYPE INHERITANCE: Constructor Functions dan properti `prototype`
+### ~ TECHNIQUE USING PROTOTYPE INHERITANCE - Constructor Functions dan properti prototype :
 
 Ketika kita membuat sebuah fungsi khusus yang disebut constructor function, fungsi tersebut dapat digunakan untuk membuat objek-objek baru. Ketika objek dibuat menggunakan constructor function, setiap objek tersebut akan memiliki akses ke properti dan method yang didefinisikan dalam constructor function tersebut.
 
@@ -1855,7 +1887,7 @@ Keuntungan menambahkan method atau properti pada properti prototype daripada lan
 - Mendeklarasikan Constructor function selalu memulai dengan huruf besar.
 - Alih-alih membuat method didalam Constructor function, lebih baik membuatnya di properti `prototype` pada Constructor function.
 
-### ~ TECHNIQUE USING PROTOTYPE INHERITANCE: Es6 Classes
+### ~ TECHNIQUE USING PROTOTYPE INHERITANCE - Es6 Classes :
 
 Dalam JavaScript ES6, kita punya fitur yang disebut "classes" yang memudahkan kita membuat objek dan menerapkan pewarisan. Ketika kita mendefinisikan sebuah class, kita bisa menentukan properti dan method yang akan dimiliki oleh objek yang dibuat dari class tersebut.
 
@@ -1877,7 +1909,7 @@ Jadi, dengan menggunakan ES6 Classes, kita bisa membuat objek-objek dengan prope
 - Classes tidak bisa digunakan sebelum ia dideklarasikan.
 - Classes merupakan **first-class sitizens**, yang berarti kita dapat meneruskannya ke fungsi sebagai argument dan me-return dari fungsi lain.
 
-### ~ SETTERS dan GETTERS
+### ~ SETTERS and GETTERS :
 
 Setter dan getter adalah fitur khusus dalam JavaScript yang digunakan untuk mengatur (set) dan mendapatkan (get) nilai properti objek. Mereka biasanya digunakan dalam classes, tetapi juga dapat digunakan di objek biasa.
 
@@ -1887,7 +1919,7 @@ Getter digunakan untuk mendapatkan nilai properti. Untuk membuat getter, kita me
 
 Setter dan Getter sangat berguna untuk memvalidasi data. Mereka memberikan kontrol tambahan atas akses dan manipulasi data dalam objek.
 
-### ~ STATIC METHOD
+### ~ STATIC METHOD :
 
 Static methods (method statis) adalah method yang terkait dengan class itu sendiri, bukan dengan instance (objek) yang dibuat dari class tersebut. Mereka tidak bisa diakses melalui instance objek, tetapi langsung melalui class itu sendiri.
 
@@ -1901,7 +1933,7 @@ Penjelasan lengkap tentang static methods:
 
 4. Penggunaan: Static methods sering digunakan untuk mengimplementasikan fungsi utilitas yang terkait dengan class tersebut atau sebagai method pembantu untuk class. Mereka seringkali tidak bergantung pada data yang spesifik untuk setiap instance objek, tetapi lebih berkaitan dengan karakteristik umum dari class itu sendiri.
 
-### ~ TECHNIQUE USING PROTOTYPE INHERITANCE: Object.create :
+### ~ TECHNIQUE USING PROTOTYPE INHERITANCE - Object.create :
 
 Mekanisme pewarisan prototipe menggunakan `Object.create()` melibatkan pembuatan objek baru yang mewarisi properti dan method dari objek prototipe yang ada. Dalam bahasa yang lebih santai, ini seperti membuat salinan objek prototipe yang dapat digunakan sebagai "pewarisan" untuk objek baru yang dibuat.
 
@@ -1917,7 +1949,7 @@ Berikut adalah penjelasan langkah demi langkah:
 
 Dengan menggunakan `Object.create()`, kita dapat membuat objek baru yang memiliki pewarisan prototipe yang fleksibel. Objek baru akan mewarisi method dan properti dari objek prototipe, dan kita juga dapat menambahkan method atau properti khusus pada objek baru jika diperlukan.
 
-### ~ CARA KERJA PEWARISAN DI JAVASCRIPT
+### ~ CARA KERJA PEWARISAN di JAVASCRIPT :
 
 Pewarisan memungkinkan untuk menentukan class/objek yang mengambil semua fungsionalitas dari class/objek induk dan memungkinkan untuk menambahkan lebih banyak. Menggunakan pewarisan class, class/objek dapat mewarisi semua method dan properti class lain. Ini adalah fitur berguna yang memungkinkan penggunaan kembali kode.
 
@@ -2053,7 +2085,7 @@ Berikut bentuk pewarisan dalam constructor function, class ES6, dan `Object.crea
 
     Dalam contoh ini, `Object.create()` digunakan untuk menciptakan instance `dog1` yang merupakan objek yang mewarisi sifat dan perilaku dari `Dog`. Kita kemudian memanggil method `init` pada `dog1` untuk menginisialisasi properti `nama` dan `ras`, dan menggunakan method `katakanNama()` dan `gonggong()` pada `dog1`.
 
-### CARA KERJA ENCAPSULATION DI JAVASCRIPT :
+### CARA KERJA ENCAPSULATION di JAVASCRIPT :
 
 Encapsulation dapat didefinisikan sebagai "pengemasan data dan fungsi ke dalam satu komponen". Ini juga dikenal sebagai grouping atau bundling, dan hanya berarti menyatukan data dan method yang beroperasi pada data. Ini bisa berupa fungsi, class, atau objek.
 
@@ -2093,7 +2125,7 @@ Encapsulation memungkinkan "mengontrol akses ke komponen itu". Ketika kita memil
 
 </summary>
 
-### ~ ASYNCHRONOUS dan SYNCHRONOUS CODE di JAVASCRIPT
+### ~ ASYNCHRONOUS dan SYNCHRONOUS CODE di JAVASCRIPT :
 
 **Synchronous (blocking):**
 
@@ -2170,7 +2202,30 @@ Konsep penting untuk mengelola kode Asynchronous:
 
     Dengan async/await, kita bisa menulis kode Asynchronous dengan gaya yang lebih mirip dengan kode Synchronous, membuatnya lebih mudah dibaca dan dipahami.
 
-### ~ HTTP dan HTTPS
+### ~ ASYNCHRONOUS BEHIND the SCENES :
+
+Untuk memahami bagaimana operasi asynchronous bekerja di balik layar, mari kita lihat contoh sederhana yang melibatkan sebuah aplikasi web.
+
+Dalam pendekatan asinkron, halaman web akan memulai permintaan ke server, tetapi daripada menunggu respons, program akan terus menjalankan tugas lainnya. Sementara itu, di balik layar, server akan memproses permintaan tersebut dan mengirimkan respons. Begitu respons diterima, fungsi panggilan balik (callback) akan dijalankan untuk mengelola respons tersebut.
+
+Berikut adalah langkah-langkah detail tentang bagaimana operasi asynchronous bekerja di balik layar:
+
+1. Memulai Tugas Asynchronous:
+   Halaman web mengirim Request Asynchronous ke server menggunakan teknologi seperti AJAX (Asynchronous JavaScript and XML) atau Fetch API. Request ini mencakup informasi tentang operasi yang diinginkan dan menentukan callback function atau menggunakan Promise untuk menangani respons yang diterima.
+
+2. Eksekusi Tugas di Latar Belakang:
+   Browser atau lingkungan runtime mengelola eksekusi tugas Asynchronous secara terpisah dari thread utama eksekusi. Hal ini memungkinkan program tetap berjalan dan menjalankan tugas lain tanpa terhalang oleh operasi Asynchronous.
+
+3. Event Loop dan Callback Queues (antrian panggilan balik):
+   Saat tugas Asynchronous sedang dieksekusi, lingkungan runtime memasuki sebuah event loop. Event loop ini terus-menerus memeriksa apakah ada tugas atau event yang telah selesai dan perlu diproses. Setelah tugas Asynchronous selesai, lingkungan runtime akan menempatkan callback function yang terkait dengan tugas tersebut ke dalam sebuah Callback Queues.
+
+4. Callback Execution:
+   Selama event loop, ketika thread utama kosong, ia memeriksa Callback Queues untuk memeriksa apakah ada callback function yang tertunda. Jika ada callback function dalam antrian, ia akan diambil dan dijalankan. Callback function ini akan mengelola respons dari server dan memperbarui tampilan halaman atau menjalankan operasi lain yang diperlukan.
+
+5. User Interface Update:
+   Jika callback function memperbarui tampilan halaman, hal ini mungkin akan memicu proses pembaruan tampilan di browser, di mana elemen-elemen yang diperbarui akan dirender ulang pada halaman web.
+
+### ~ HTTP and HTTPS :
 
 **HTTP** (Hypertext Transfer Protocol) dan **HTTPS** (Hypertext Transfer Protocol Secure) adalah dua protokol yang digunakan untuk mengirimkan data melalui internet. Protokol ini memungkinkan browser web untuk berkomunikasi dengan server web dan mengambil halaman web serta sumber daya lainnya.
 
@@ -2198,7 +2253,7 @@ Konsep penting untuk mengelola kode Asynchronous:
 
    Penggunaan HTTPS sangat dianjurkan untuk semua jenis situs web, terutama yang memerlukan pertukaran informasi sensitif. Ini melindungi privasi pengguna dan memastikan integritas data saat berkomunikasi melalui internet.
 
-### ~ JSON (notasi object javascript)
+### ~ JSON (notasi object javascript) :
 
 JSON adalah sebuah format data untuk pertukaran dan penyimpanan data (mengirim dan menerima data antar server dan client).
 
@@ -2228,17 +2283,13 @@ alur pertukaran data antara browser dan server dengan format JSON:
 
 Awalnya, satu-satunya cara untuk mengirimkan beberapa data formulir ke server adalah melalui tag `<form>` di HTML, dengan Request POST atau GET. Namun, sekarang kita dapat mengirimkan ke server kapan pun tanpa harus berupa `<form>`, melalui AJAX.
 
-### ~ AJAX (Asynchronous JavaScript dan XML)
+### ~ TEKNIK MENGIRIM REQUEST KE SERVER SECARA ASYNC :
 
-Setiap kali berkomunikasi dengan server, kita membuat Request, lalu browser ketika menerima response akan melakukan refresh halaman. AJAX datang untuk memecahkan masalah tersebut.
+1. **AJAX (Asynchronous JavaScript dan XML)**
 
-**AJAX** adalah salah satu cara yang dianjurkan untuk melakukan permintaan atau pengiriman HTTP request ke server dari browser. Dengan menggunakan AJAX, Anda dapat mengirim permintaan ke server dan menerima responnya secara asynchronous tanpa harus memuat ulang seluruh halaman web. AJAX umumnya menggunakan format data JSON (JavaScript Object Notation) sebagai format pertukaran data yang ringan dan mudah dibaca oleh JavaScript.
+   AJAX adalah salah satu cara yang dianjurkan untuk melakukan permintaan atau pengiriman HTTP request ke server dari browser. Dengan menggunakan AJAX, kita dapat mengirim permintaan ke server dan menerima responnya secara asynchronous tanpa harus memuat ulang seluruh halaman web. Meskipun namanya mengacu pada XML, sekarang ini biasanya data yang dikirimkan dan diterima menggunakan format JSON.
 
-**Cara umum menerapkan teknik AJAX dalam JavaScript:**
-
-1. XMLHttpRequest (XHR)
-
-   XMLHttpRequest adalah objek JavaScript yang digunakan untuk membuat dan mengelola permintaan HTTP. Ini adalah metode klasik yang telah digunakan sejak lama sebelum adanya fetch API.
+   AJAX memanfaatkan objek `XMLHttpRequest`(XHR) di JavaScript untuk membuat dan mengelola permintaan HTTP. Ini adalah metode klasik yang telah digunakan sejak lama sebelum adanya fetch API.
 
    Cara kerja:
 
@@ -2249,9 +2300,11 @@ Setiap kali berkomunikasi dengan server, kita membuat Request, lalu browser keti
    - setelah respons diterima, kita dapat memprosesnya sesuai kebutuhan. Respons dari server biasanya berupa data dalam format JSON, XML, atau teks.
    - Selama proses pengiriman permintaan dan menerima respons, terdapat kemungkinan terjadinya kesalahan. kita perlu menangani kesalahan tersebut dengan menggunakan event `onerror`.
 
-2. Fetch API
+2. **Fetch API**
 
    Fetch API adalah API modern yang disediakan oleh JavaScript yang menyediakan antarmuka untuk melakukan permintaan HTTP dan mendapatkan respons berupa Promise dari server secara asynchronous yang membuatnya dapat ditangani dengan lebih mudah dibandingkan dengan XHR.
+
+   Fetch API mengembalikan promise yang memudahkan penanganan respons menggunakan sintaks `async`/`await` atau `then()` untuk chaining.
 
    Cara Kerja:
 
@@ -2262,19 +2315,19 @@ Setiap kali berkomunikasi dengan server, kita membuat Request, lalu browser keti
    - setelah respons diterima, kita dapat memprosesnya sesuai kebutuhan. Respons dari server biasanya berupa data dalam format JSON, XML, atau teks.
    - Selama proses pengiriman permintaan dan menerima respons, terdapat kemungkinan terjadinya kesalahan. kita perlu menangani kesalahan tersebut dengan menggunakan method `catch()`.
 
-### ~ BLOCK TRY-CATCH
+### ~ BLOCK TRY-CATCH :
 
-Block try-catch adalah sebuah mekanisme dalam JavaScript yang digunakan untuk menangkap dan menangani kesalahan (exceptions) yang terjadi selama eksekusi kode. Block try-catch memungkinkan Anda untuk mengontrol alur program ketika terjadi kesalahan, dan melakukan tindakan yang sesuai dengan jenis kesalahan yang terjadi.
+Block try-catch adalah sebuah mekanisme dalam JavaScript yang digunakan untuk menangkap dan menangani kesalahan (exceptions) yang terjadi selama eksekusi kode. Block try-catch memungkinkan kita untuk mengontrol alur program ketika terjadi kesalahan, dan melakukan tindakan yang sesuai dengan jenis kesalahan yang terjadi.
 
 Block try-catch tidak hanya digunakan untuk kode asynchronous. Block try-catch dapat digunakan untuk menangani kesalahan dalam kode synchronous maupun asynchronous.
 
 Pada kode synchronous, block try-catch dapat digunakan untuk menangani kesalahan yang terjadi dalam block kode yang dieksekusi secara berurutan.
 
-Pada kode asinkron, seperti penggunaan async/await atau Promise, blok try-catch digunakan untuk menangani kesalahan yang terjadi selama eksekusi operasi asinkron. Blok try digunakan untuk mencakup operasi asinkron yang mungkin memunculkan kesalahan, dan blok catch digunakan untuk menangani kesalahan yang terjadi.
+Pada kode Asynchronous, seperti penggunaan async/await atau Promise, blok try-catch digunakan untuk menangani kesalahan yang terjadi selama eksekusi operasi Asynchronous. Blok try digunakan untuk mencakup operasi Asynchronous yang mungkin memunculkan kesalahan, dan blok catch digunakan untuk menangani kesalahan yang terjadi.
 
-### ~ PROMISE COMBINATORS
+### ~ PROMISE COMBINATORS :
 
-**Promise combinator** adalah teknik untuk menggabungkan atau mengkombinasikan beberapa Promise menjadi satu Promise tunggal yang akan di-resolve atau di-reject berdasarkan hasil dari Promise-promise yang dikombinasikan tersebut. Ini berguna ketika perlu menangani beberapa operasi asinkron secara bersamaan atau bergantung satu sama lain.
+**Promise combinator** adalah teknik untuk menggabungkan atau mengkombinasikan beberapa Promise menjadi satu Promise tunggal yang akan di-resolve atau di-reject berdasarkan hasil dari Promise-promise yang dikombinasikan tersebut. Ini berguna ketika perlu menangani beberapa operasi Asynchronous secara bersamaan atau bergantung satu sama lain.
 
 Berikut adalah beberapa Promise combinator yang umum digunakan:
 
@@ -2288,34 +2341,174 @@ Berikut adalah beberapa Promise combinator yang umum digunakan:
    menggabungkan beberapa Promise menjadi satu Promise tunggal. Perbedaannya dengan `Promise.all` adalah bahwa `Promise.allSettled` akan menunggu semua Promise selesai, baik itu di-resolve atau di-reject. Kemudian, ia akan mengembalikan array hasil yang berisi objek untuk setiap Promise yang diselesaikan.
 
    Dengan menggunakan `Promise.allSettled`, dapat mengumpulkan semua hasil atau kesalahan dari beberapa Promise secara lengkap, tanpa memperdulikan apakah Promise tersebut di-resolve atau di-reject. Ini berguna dalam situasi di mana kita ingin mengeksekusi beberapa operasi Asynchronous secara paralel dan memproses hasilnya secara terpisah.
+   </details>
 
-<details> <summary>
+<details><summary>
 
 ## [Modern-JS-Modules-Tooling](https://github.com/wahyukmr/JavaScript-Programming/blob/master/16-Modern-JS-Modules-Tooling/script.js)
 
 </summary>
-  
-  ### Introduction to NPM :
-  - how to manage dependencies in a better and more modern way "with NPM"
-  - when starting with NPM , it must first initialize it with "npm init"
-  - after that, will generate a JSON file which is basically what will store the entire project configuration
-  - if we want to move our project to someone else's computer or share it with other developers or even check it to version control like git, we must not include the module_node folder, it must be deleted first before sharing it with others. If we want to use it again on our computer, just type npm i
-  
-  ### Bundling with Parcel and NPM Script :
-  - Install Parcel = npx i parcel --save-dev
-  - Parcel is just a build tool which is also in NPM
-  - So because Parcel is just a tool, it will be stored in the devDependency which is like a tool we need to build applications, but it's not a dependency included in the code
-  - In order to be able to use parcel in the console like "live-server", we can have two options (using NPX or NPM script)
-  - Using NPX = npx parcel berkas_html (write on the command line)
-  - Using NPM script = in the script object add a property with the name start(optional) and the value is parcel_html file in the package.json file, to call it go to command line then write npm run start
 
-- besides being able to be used like a "live-server", parcel is also used to combine several modules together (bundling)
-- to combine modules go to package.json file then in script object add property with the name build(optional) and value is parcel build index.html, to call it go to command line then write npm run build
-- then parcel will create a "dist" folder containing the bundling results, and this folder will be sent for production
+### ~ MODERN JAVASCRIPT DEVELOPMENT :
 
-### Configuring Babel and Polyfilling :
+Berikut adalah beberapa aspek utama dari pengembangan JavaScript modern:
 
-- configuring Babel for a super modern code transpiler reverts back to ES5 code
-- in parcel automatically uses babel to modify the code to make our code support old browsers
-- for features like Promises, all array methods, and async functions we can polyfill them, by installing packages "core-js" and "regenerator-runtime"
+1. **ECMAScript 6 (ES6) dan versi terbaru:**
+
+   ECMAScript adalah standar resmi untuk bahasa JavaScript. Versi terbaru dari ECMAScript, seperti ES6 (juga dikenal sebagai ES2015), ES7, ES8, dan seterusnya, menambahkan banyak fitur baru ke bahasa JavaScript. Misalnya, fitur seperti arrow functions, classes, template literals, dan destructuring assignment. Menggunakan fitur-fitur ini memungkinkan pengembang untuk menulis kode yang lebih bersih, lebih ekspresif, dan lebih efisien.
+
+2. **Kerangka Kerja (Framework) dan Perpustakaan (Library):**
+
+   Ada banyak kerangka kerja dan perpustakaan yang memudahkan pengembangan aplikasi web dengan JavaScript. Beberapa contoh kerangka kerja populer termasuk React, Angular, dan Vue.js. Kerangka kerja ini menyediakan struktur dan alat untuk membangun aplikasi yang kompleks dengan JavaScript. Perpustakaan JavaScript seperti jQuery, Lodash, dan Axios juga sangat berguna dalam pengembangan aplikasi web.
+
+3. **Bundler dan Task Runner:**
+
+   Bundler seperti Webpack dan Parcel digunakan untuk menggabungkan berkas JavaScript dan sumber daya lainnya menjadi satu berkas tunggal yang dapat diunggah ke server. Bundler juga dapat mengoptimalkan dan memampatkan kode JavaScript, serta mengelola dependensi. Task runner seperti Grunt dan Gulp membantu dalam otomatisasi tugas-tugas pengembangan, seperti menggabungkan dan meminify file-file JavaScript, menjalankan pengujian otomatis, dan banyak lagi.
+
+4. **Module System:**
+
+   JavaScript awalnya tidak memiliki dukungan bawaan untuk modul. Namun, dengan ES6, modul menjadi bagian dari bahasa itu sendiri. Sekarang, pengembang dapat menggunakan sintaks `import` dan `export` untuk mengatur kode mereka ke dalam modul yang dapat digunakan kembali. Ini memudahkan pembagian dan pengelolaan kode dalam aplikasi yang lebih besar.
+
+5. **Asynchronous Programming:**
+
+   JavaScript modern menggunakan pendekatan asynchronous programming yang kuat untuk menangani operasi I/O yang lambat, seperti permintaan jaringan atau operasi panggilan API. Ini dicapai dengan menggunakan callback, Promise, dan fitur-fitur baru seperti async/await. Pendekatan ini memastikan bahwa aplikasi tidak terjebak saat menunggu respons dari operasi I/O dan tetap responsif bagi pengguna.
+
+6. **Testing dan Debugging:**
+
+   Dalam pengembangan JavaScript modern, pengujian dan debugging adalah bagian penting. Ada alat-alat seperti Jest, Mocha, dan Jasmine yang membantu dalam menulis dan menjalankan pengujian otomatis pada kode JavaScript. Untuk debugging, browser modern menyediakan konsol JavaScript yang kuat, serta alat-alat pengembangan pihak ketiga seperti **Chrome DevTools**.
+
+7. **Build Tools dan Automasi:**
+
+   Build tools seperti `npm` (Node Package Manager) dan `Yarn` membantu dalam mengelola dependensi, membangun proyek, dan menjalankan tugas-tugas pengembangan lainnya. Automasi dengan menggunakan alat seperti npm scripts memungkinkan pengembang untuk mengatur aliran kerja pengembangan mereka dengan mudah.
+
+### ~ MODULE in JAVASCRIPT :
+
+Modul ES6 di JavaScript adalah mekanisme yang memungkinkan pengorganisasian, pengelompokan, dan pemisahan kode ke dalam unit yang dapat digunakan ulang. Diperkenalkan dalam ECMAScript 6 (ES6), modul ES6 menggunakan sintaksis `impor` dan `ekspor` untuk mengungkapkan dan mengimpor fungsi, variabel, atau class antar file JavaScript. Ini membantu dalam mengelola kompleksitas kode, mendorong pemisahan tanggung jawab, dan mempromosikan praktik pengembangan perangkat lunak yang baik. Modul ES6 dapat digunakan baik di browser maupun di lingkungan Node.js, dan alat bundling seperti Webpack dan Rollup dapat digunakan untuk menggabungkan modul ES6 ke dalam satu file yang dapat dipahami oleh browser atau environment yang lebih tua.
+
+### ~ INTRODUCTION to NPM :
+
+Npm adalah Node Package Manager, sebuah perangkat lunak penting dalam pengembangan perangkat lunak dengan Node.js. Npm digunakan untuk mengelola dan membagikan paket-paket perangkat lunak JavaScript. Pengembang dapat mengunduh, menginstal, dan mengelola dependensi yang diperlukan untuk proyek mereka. Npm memiliki repositori online yang berisi ribuan paket perangkat lunak yang bisa diakses secara gratis atau berbayar. Selain itu, pengembang juga dapat membuat dan membagikan paket mereka sendiri.
+
+Pengembang dapat menggunakan terminal atau command line interface (CLI) untuk menjalankan perintah-perintah npm. Beberapa perintah umum yang sering digunakan antara lain:
+
+1. `npm init`: Perintah ini digunakan untuk membuat file `package.json`, yang berisi informasi tentang proyek dan dependensi yang digunakan.
+
+2. `npm install`: Perintah ini digunakan untuk menginstal semua dependensi yang terdaftar dalam file `package.json` pada proyek yang sedang berjalan.
+
+3. `npm install <nama-paket>`: Perintah ini digunakan untuk menginstal paket perangkat lunak tertentu dari registry npm.
+
+4. `npm uninstall <nama-paket>`: Perintah ini digunakan untuk menghapus paket perangkat lunak yang telah diinstal sebelumnya.
+
+5. `npm update`: Perintah ini digunakan untuk memperbarui semua paket perangkat lunak yang terinstal dalam proyek.
+
+### ~ REVIEW - MODERN and CLEAN CODE :
+
+1. Mudah di baca
+   - tulis code agar orang lain dapat memahaminya.
+   - tulis code agar kita sendiri dapat memahaminya selama satu tahun.
+   - hindari solusi yang terlalu "pintar" dan terlalu rumit.
+   - gunakan nama variabel yang deskriptif: **apa yang dikandungnya**.
+   - gunakan nama fungsi yang deskriptif: **apa yang mereka lakukan**.
+2. Umum
+   - gunakan prinsip DRY (refactor code).
+   - jangan mengotori **global namespace**, sebagai gantinya gunakan **encapsulation**.
+   - jangan gunakan variable `var`.
+   - gunakan pemeriksaan tipe yang kuat (`===` dan `!==`).
+3. Functions
+   - secara umum, fungsi hanya boleh melakukan satu hal.
+   - jangan gunakan lebih dari 3 parameter fungsi.
+   - gunakan default parameter jika memungkinkan.
+   - umumnya, return tipe data yang sama seperti yang diterima.
+   - gunakan arrow function jika ingin membuat kode yang lebih mudah dibaca.
+4. OOP
+   - gunakan ES6 Classes
+   - selalu encapsulate data dan jangan mengubahnya dari luar Class.
+   - implementasikan method chaining.
+   - jangan gunakan arrow function sebagai method (dalam object biasa).
+5. Menghindari code yang bersarang
+   - gunakan **early return**(Guard clauses : memeriksa kondisi awal atau menguji nilai input pada awal sebuah fungsi atau blok kode, dan jika kondisi tersebut tidak terpenuhi, maka fungsi akan keluar secara dini tanpa melanjutkan eksekusi kode yang tersisa).
+   - gunakan operator **ternary**(conditional) atau **logical operaator** daripada `if`.
+   - gunakan beberapa `if` daripada `if`/`else-if`.
+   - hindari penggunaan **for loop**, gunakan method array sebagai gantinya.
+   - hindari penggunaan API Asynchronous berbasis Callback.
+6. Asynchronous Code
+   - komsumsi Promise dengan async/await untuk kejelasan yang terbaik.
+   - bila memungkinkan, jalankan Promise secara paralel (Promise.all).
+   - tangani error dan Promise rejections.
+
+### ~ IMPERATIVE vs DECLARATIVE CODE :
+
+Pendekatan imperative dan declarative adalah dua paradigma atau gaya penulisan kode yang dapat diterapkan dalam JavaScript, serta dalam bahasa pemrograman lainnya.
+
+1.  **Imperative Code**
+
+    Menjelaskan langkah-langkah spesifik yang harus diambil oleh program untuk mencapai tujuan yang diinginkan. Memerinci bagaimana program harus melakukan tugasnya.
+
+    Contoh:
+
+        let numbers = [1, 2, 3, 4, 5];
+        let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+    Situasi penggunaan:
+
+    - cocok digunakan saat perlu mengontrol langkah-langkah dan alur eksekusi yang spesifik.
+    - berguna dalam pengolahan data yang kompleks atau memerlukan pengendalian secara langsung.
+    - lebih cocok untuk pemrosesan data yang bersifat mutable atau berubah-ubah.
+
+2.  **Declarative Code**
+
+    Menjelaskan apa yang harus dicapai tanpa memerinci langkah-langkahnya secara spesifik. Fokus pada apa yang ingin dilakukan, bukan bagaimana melakukannya.
+
+    Paradigma declarative sebenarnya adalah paradigma pemrograman yang sangat besar dan populer, bahkan telah melahirkan subparadigma yang disebut **funcional programming**.
+
+    Contoh:
+
+        let numbers = [1, 2, 3, 4, 5];
+        let sum = numbers.reduce((acc, cur) => acc + cur, 0);
+
+    Situasi penggunaan:
+
+    - lebih fokus pada hasil yang ingin dicapai daripada langkah-langkah spesifik untuk mencapainya.
+    - memisahkan logika bisnis dari detail implementasi.
+    - dapat membuat kode lebih ringkas, mudah dibaca, dan mudah dipahami.
+    - lebih cocok untuk pemrosesan data yang bersifat immutable atau tidak berubah.
+
+    Declarative Syntax:
+
+    - menggunakan array dan object destructuring.
+    - menggunakan spread operator (...).
+    - menggunakan ternary operator.
+    - menggunakan template literal.
+
+Penting untuk dicatat bahwa dalam prakteknya, seringkali ada campuran antara pendekatan imperative dan deklarative dalam sebuah proyek, tidak harus menggunakan 100% deklarative. Kita dapat menggunakan pendekatan yang tepat berdasarkan kebutuhan spesifik tugas atau bagian kode yang sedang di tulis.
+
+### ~ FUNCTIONAL PROGRAMMING (FP) PRINCIPLES :
+
+Functional Programming dan penulisan declarative code telah menjadi cara penulisan kode modern di dunia JavaScript.
+
+**Functional programming** dapat dianggap sebagai salah satu cara untuk mencapai pemrograman declarative, yang didasarkan pada gagasan menulis software dengan menggabungkan banyak **pure functions**, menghindari **side effects**, dan **mutating** data.
+
+**Side Effects** berarti memodifikasi data apapun yang berada di luar fungsi. Contohnya mengubah variabel apapun yang berada diluar scope fungsi akan menyebabkan side effect, memasukkan sesuatu ke console serta mengubah sesuatu di DOM.
+
+**Pure Functions** berarti fungsi tanpa Side Effects, fungsi yang hanya bergantung pada input yang diberikan dan tidak mempengaruhi environment lain di luar fungsi.
+
+**Immutability** berarti State (data) tidak dapat diubah atau dimodifikasi. Daripada mengubah State asli, FP mendorong pembuatan salinan State dan momodifikasinya sesuai keinginan (dapat mencegah Side Effect).
+
+**First-class Functions** berarti dapat menyimpan fungsi dalam variable, mengirimkannya sebagai argument ke fungsi lain, atau mengembalikan fungsi dari fungsi lain.
+
+**higher-order Functions** berarti fungsi yang menerima fungsi lain sebagai argumen atau mengembalikan fungsi. memungkinkan penggunaan pola seperti map, filter, reduce, dan lainnya.
+
+Jadi, FP adalah pendekatan yang lebih spesifik dalam penggunaan **fungsi**, sementara Declarative Programming adalah pendekatan yang lebih umum di mana kita menyatakan **apa yang harus dicapai tanpa memberikan instruksi langkah-demi-langkah yang spesifik**. FP dapat membantu mencapai pendekatan declarative dalam pemrograman, tetapi paradigma declarative dapat diterapkan dalam berbagai paradigma pemrograman lainnya juga (seperti OOP, pendekatan imperative, Logical Programming, Constraint Programming, dan sebagainya) tergantung kebutuhan project.
+
+### ~ MENGGUNAKAN TEKNIK FUNCTIONAL PROGRAMMING :
+
+- mencoba menghindari memutasi data.
+- selalu memilih method atau fungsi bawaan yang tidak menghasilkan Side Effects.
+- melakukan transformasi data dengan method `map()`, `filter()` dan `reduce()`.
+- jika memungkinkan, coba untuk menghindari Side Effects dari fungsi yang ditulis.
+
 </details>
