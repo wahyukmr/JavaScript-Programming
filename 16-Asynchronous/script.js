@@ -176,44 +176,44 @@ function getJSON(url, errorMsg = "") {
 /*  ****************************************************************************************
  *   Chaining Promises
  *  *****************************************************************************************/
-{
-  function getCountryData(country) {
-    getJSON(
-      `https://countryapi.io/api/name/${country}?apikey=SNZ2eNfCPebdlVGJ7zAcF4ooqJJXQPzjyIv5Vu2k`,
-      `Country name ${country} not found`
-    )
-      .then((dataCountry) => {
-        const value = Object.values(dataCountry)[0];
-        renderCountry(value);
+// {
+//   function getCountryData(country) {
+//     getJSON(
+//       `https://countryapi.io/api/name/${country}?apikey=SNZ2eNfCPebdlVGJ7zAcF4ooqJJXQPzjyIv5Vu2k`,
+//       `Country name ${country} not found`
+//     )
+//       .then((dataCountry) => {
+//         const value = Object.values(dataCountry)[0];
+//         renderCountry(value);
 
-        const neighbours = value.borders;
-        if (typeof neighbours == "string")
-          throw new Error("No neighbour found");
+//         const neighbours = value.borders;
+//         if (typeof neighbours == "string")
+//           throw new Error("No neighbour found");
 
-        fetch(
-          `https://countryapi.io/api/all?apikey=SNZ2eNfCPebdlVGJ7zAcF4ooqJJXQPzjyIv5Vu2k`
-        )
-          .then((response) => response.json())
-          .then((dataAllCountries) => {
-            const values = Object.values(dataAllCountries);
-            const neighbourOfCountry = values.filter(
-              (neighbour) => neighbour.alpha3Code === neighbours[0]
-            );
+//         fetch(
+//           `https://countryapi.io/api/all?apikey=SNZ2eNfCPebdlVGJ7zAcF4ooqJJXQPzjyIv5Vu2k`
+//         )
+//           .then((response) => response.json())
+//           .then((dataAllCountries) => {
+//             const values = Object.values(dataAllCountries);
+//             const neighbourOfCountry = values.filter(
+//               (neighbour) => neighbour.alpha3Code === neighbours[0]
+//             );
 
-            renderCountry(neighbourOfCountry[0], "neighbour");
-          });
-      })
-      .catch((err) => renderError(`${err.message}.`))
-      .finally((countriesContainer.style.opacity = 1));
-  }
+//             renderCountry(neighbourOfCountry[0], "neighbour");
+//           });
+//       })
+//       .catch((err) => renderError(`${err.message}.`))
+//       .finally((countriesContainer.style.opacity = 1));
+//   }
 
-  btn.addEventListener("click", function () {
-    getCountryData("Philippines");
-    // getCountryData("indonesia");
+//   btn.addEventListener("click", function () {
+//     getCountryData("Philippines");
+//     // getCountryData("indonesia");
 
-    // getCountryData("ghghg");
-  });
-}
+//     // getCountryData("ghghg");
+//   });
+// }
 
 /*  ****************************************************************************************
  *   Coding Challenge #1
@@ -548,9 +548,9 @@ GOOD LUCK 😀
 //   }, 12000);
 // }
 
-/*  ***************************************************************************************************
+/*  **********************************************************************************************
  *   Running Promise in parallel
- *  ***************************************************************************************************/
+ *  *********************************************************************************************/
 // {
 //   const get3Countries = async function (c1, c2, c3) {
 //     try {
@@ -580,9 +580,9 @@ GOOD LUCK 😀
 //   get3Countries("indonesia", "malaysia", "singapura");
 // }
 
-/*  ***************************************************************************************************
+/*  **********************************************************************************************
  *   Other Promise combinators : race, allSettled and any
- *  ***************************************************************************************************/
+ *  ******************************************************************************************/
 // {
 //   // * Promise.race = mengembalikan hasil (resolve) atau gagal (reject) dari promise yang paling cepat selesai dan mengabaikan sisanya
 //   (async function () {
@@ -648,9 +648,9 @@ GOOD LUCK 😀
 //     .catch((err) => console.log(err));
 // }
 
-/*  ***************************************************************************************************
+/*  *****************************************************************************************
  *   Coding Challenge #3
- *  **************************************************************************************************
+ *  *****************************************************************************************
  PART 1
     Write an async function 'loadNPause' that recreates Coding Challenge #2, this time using async/await (only the part where the promise is consumed). Compare the two versions, think about the big differences, and see which one you like more. Don't forget to test the error handler, and to set the network speed to 'Fast 3G' in the dev tools Network tab.
 
