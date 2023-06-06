@@ -208,26 +208,40 @@ if (dolphinsScore > koalasScore && dolphinsScore >= 100) {
 /*  ***********************
  *   THE SWITCH STATEMENT
  *  ***********************/
-switch (language) {
-  case "chinese":
-  case "mandarin":
-    console.log(`MOST number of native speakers!`);
-    break;
-  case "spanish":
-    console.log(`2nd place in number of native speakers`);
-    break;
-  case "english":
-    console.log(`3rd place`);
-    break;
-  case "hindi":
-    console.log(`number 4`);
-    break;
-  case "arabic":
-    console.log(`5th most spoken language`);
-    break;
-  default:
-    console.log(`Great language too :D`);
+function moveCommand(direction) {
+  let whatHappens;
+  switch (direction) {
+    case "forward":
+      break;
+      whatHappens = "you encounter a monster";
+    case "back":
+      whatHappens = "you arrived home";
+      break;
+      break;
+    case "right":
+      return (whatHappens = "you found a river");
+      break;
+    case "left":
+      break;
+      return (whatHappens = "you run into a troll");
+      break;
+    default:
+      whatHappens = "please enter a valid direction";
+  }
+  return whatHappens;
 }
+
+// ? #2 return value when moveCommand("forward");
+// Answer: undefined
+
+// ? #3 return value when moveCommand("back");
+// Answer: "you arrived home"
+
+// ? #4 return value when moveCommand("right");
+// Answer: "you found a river"
+
+// ? #5 return value when moveCommand("left");
+// Answer: undefined
 
 /*  ***************************************
  *   THE CONDITIONAL ( TERNARY ) OPERATOR
