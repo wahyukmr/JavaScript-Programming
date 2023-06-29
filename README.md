@@ -218,7 +218,6 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
     - validasi input dari user.
 
           let number;
-
           do {
               number = parseInt(prompt("Enter a positive number: "));
           } while (isNaN(number) || number <= 0);
@@ -232,9 +231,6 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
               console.log("The count is: ", count);
               count++;
           } while (count < 5);
-
-4.  **for-in Loop:**
-    Merupakan perulangan for yang digunakan untuk mengulangi setiap properti yang terdefinisi dalam sebuah objek atau index di array, baik dari properti objek itu sendiri maupun properti yang diwarisi dari prototype-nya. Biasanya digunakan pada objek yang kompleks, seperti objek JSON, untuk memproses dan memanipulasi data.
 
 </details>
 
@@ -275,6 +271,12 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
    - Menulis test menggunakan testing software
 
    </details>
+
+<details> <summary>
+
+## [HTML-CSS](https://github.com/wahyukmr/JavaScript-Programming/blob/master/03-Developer-Skills/script.js)
+
+</details>
 
 <details> <summary>
 
@@ -865,44 +867,45 @@ Penerapan kata kunci **this:**
 
 ### ~ PRIMITIVES VS OBJECTS (Primitive vs. Reference Types) :
 
-**Tipe Data Primitive**
+**Tipe Primitive**
 
-- Tipe data primitive adalah tipe data yang dianggap sebagai nilai tunggal dan bukan object.
+- Tipe primitive merepresentasikan nilai tunggal yang sederhana dan bukan object.
+
 - Beberapa contoh diantaranya: String, Number, Boolean, Null, BigInt, Simbool, Undefined.
-- Dalam management memorinya, **Tipe Data Primitive** yang dibuat akan disimpan pada Stack engine JS, tepatnya didalam execution context (dimana mereka dideklarasikan). Setiap variabel ditempatkan pada Stack yang berbeda.
-- Jadi pada **Tipe Data Primitive**, ketika kita mengubah nilai sebuah variabel, yang terjadi adalah kita tidak mengubah nilai yang ada di dalam memori, melainkan kita membuat sebuah nilai baru yang kemudian disimpan ke dalam memori dan menggantikan nilai lama yang sebelumnya disimpan di sana. nilai lama yang sebelumnya disimpan di sana kemudian akan dibebaskan atau dihapus dari memori jika tidak digunakan lagi oleh program.
+
+- Dalam management memorinya, **Tipe Primitive** yang dibuat akan disimpan pada Stack engine JS, tepatnya didalam execution context (dimana mereka dideklarasikan). Setiap variabel ditempatkan pada Stack yang berbeda.
+
+- Dengan pernyataan diatas, membuat tipe primitive dianggap sebagai nilai yang tidak berubah atau "immutable". Artinya, ketika sebuah variabel dengan tipe primitif diubah nilainya, sebenarnya variabel tersebut menciptakan salinan baru dari nilai primitif tersebut. Jadi, perubahan tidak akan mempengaruhi nilai sebelumnya.
+
 - Contoh :
 
-      // menggunakan tipe data primitive
-      let x = 10;
-      let y = x;
-      x = 20;
+        // variabel `x` dengan tipe data primitive diubah nilainya, variabel `y` tidak terpengaruh karena `x` dan `y` memiliki salinan terpisah.
+        let x = 10;
+        let y = x;
+        y = 20;
 
-      console.log(x); // output: 20
-      console.log(y); // output: 10
+        console.log(x); // output: 20
+        console.log(y); // output: 10
 
-**Tipe Data Reference**
+**Tipe Reference**
 
-- **Tipe data reference** adalah tipe data yang merepresentasikan referensi ke object.
-- Di JavaScript **Tipe data reference** mencakup semua jenis Object. Seperti Object Literal, Arrays, Functions, Date, Map, Set, RegExp, dan banyak lagi.
-- Semua **Tipe Data Reference** akan disimpan pada **Heap** engine JS sebagai suatu referensi, bukan sebagai nilai yang sebenarnya. Saat kita membuat variabel yang menunjuk ke suatu objek atau array (tipe data reference), variabel tersebut sebenarnya menyimpan alamat memori di **Heap** di mana objek atau array tersebut disimpan, bukan isi dari objek atau array itu sendiri. Maka dari itu, jika ada perubahan keduannya akan ikut berubah.
+- **Tipe reference** merepresentasikan referensi ke object yang kompleks dan dapat memiliki properti dan method.
+
+- Di JavaScript **Tipe reference** mencakup semua jenis Object. Seperti Object Literal, Arrays, Functions, Date, Map, Set, RegExp, dan banyak lagi.
+
+- Semua **Tipe Reference** akan disimpan pada **Heap** engine JS sebagai suatu referensi, bukan sebagai nilai yang sebenarnya.
+
+- Tipe reference ini dianggap sebagai nilai yang dapat berubah atau "mutable". Ketika sebuah variabel dengan tipe referensi diubah, variabel tersebut masih merujuk pada objek yang sama di memori Heap, dan perubahan tersebut akan tercermin di semua referensi ke objek tersebut.
+
 - Contoh :
 
+        // saat variabel `obj1` dengan tipe data reference diubah propertinya, perubahan tersebut juga mempengaruhi variabel `obj2` karena keduanya merujuk pada object yang sama.
         let obj1 = { value: 10 };
         let obj2 = obj1;
-
-        console.log(obj1.value); // Output: 10
-        console.log(obj2.value); // Output: 10
-
-        obj1.value = 20;
+        obj2.value = 20;
 
         console.log(obj1.value); // Output: 20
         console.log(obj2.value); // Output: 20
-
-        obj2.value = 30;
-
-        console.log(obj1.value); // Output: 30
-        console.log(obj2.value); // Output: 30
 
 Mendeklarasikan variabel const tidak dapat diubah nilainya hanya berlaku untuk nilai Primitive, tetapi tidak untuk nilai Reference. karena ini hanya mengubah nilai objek yang disimpan di Heap.
 
@@ -920,7 +923,17 @@ Kata kunci **arguments** tidak lagi penting di javascsript karena ada cara yang 
 
 <details> <summary>
 
-## [Data-Structures](https://github.com/wahyukmr/JavaScript-Programming/blob/master/09-Data-Structures-Operators/script.js)
+## [Regular-Expressions](https://github.com/wahyukmr/JavaScript-Programming/blob/master/09-Regular-Expressions/script.js)
+
+</summary>
+
+Regular-Expressions, sering disingkat menjadi "regex" atau "regExp", adalah pola yang membantu pemrogram mencocokkan, mencari, dan mengganti teks.
+
+</details>
+
+<details> <summary>
+
+## [Data-Structures](https://github.com/wahyukmr/JavaScript-Programming/blob/master/10-Data-Structures-Operators/script.js)
 
 </summary>
 
@@ -1023,59 +1036,69 @@ Dengan menggunakan for-of loop kita masih bisa menggunakan **continue** dan **br
 
 Optional Chaining = memeriksa ada atau tidaknya nilai(ada yang berarti tidak Null dan undefined), jika ada akan mengembalikan nilainya, jika tidak akan mengembalikan undefined.
 
-### ~ LOOPING OBJECT - OBJECT KEYS, OBJECT VALUES, and OBJECT ENTRIES :
+### ~ LOOPING OBJECT - For-in loop, Object.keys(), Object.values(), Object.entries() :
 
-**Looping object** adalah proses untuk melakukan pengulangan atau iterasi terhadap properti-properti (property) yang ada di dalam sebuah objek. Di JavaScript, terdapat tiga cara untuk melakukan looping pada objek, yaitu:
+**Looping object** adalah proses untuk melakukan pengulangan atau iterasi terhadap properti-properti (property) yang ada di dalam sebuah objek. Di JavaScript.
 
-1.  Looping melalui **Object.keys**
+- Looping melalui **For-in** loop :
 
-    Digunakan untuk mengambil semua kunci (key) dari objek dan melakukan iterasi terhadap nilai-nilai (value) dari setiap properti di dalam objek tersebut.
+  Merupakan perulangan for yang digunakan untuk mengulangi setiap properti yang terdefinisi dalam sebuah objek atau index di array, baik dari properti objek itu sendiri maupun properti yang diwarisi dari prototype-nya. Biasanya digunakan pada objek yang kompleks, seperti objek JSON, untuk memproses dan memanipulasi data.
 
-    Contohnya seperti ini:
+- Looping melalui Object method di javascript :
 
-            const person = {
-                name: 'John',
-                age: 25,
-                gender: 'Male'
-            };
+  1.  Looping melalui method **Object.keys()**
 
-            for (const key of Object.keys(person)) {
-                console.log(key);
-            }
+      Digunakan untuk mengambil semua kunci (key) dari objek dan melakukan iterasi terhadap nilai-nilai (value) dari setiap properti di dalam objek tersebut.
 
-2.  Looping melalui **Object.values**
+      Contohnya seperti ini:
 
-    Digunakan untuk mengambil semua nilai (value) dari objek dan melakukan iterasi terhadap nilai-nilai tersebut.
+          const person = {
+              name: 'John',
+              age: 25,
+              gender: 'Male'
+          };
 
-    Contohnya seperti ini:
+          for (const key of Object.keys(person)) {
+              console.log(key);
+          }
 
-            const person = {
-                name: 'John',
-                age: 25,
-                gender: 'Male'
-            };
+  2.  Looping melalui method **Object.values()**
 
-            for (const value of Object.values(person)) {
-                console.log(value);
-            }
+      Digunakan untuk mengambil semua nilai (value) dari objek dan melakukan iterasi terhadap nilai-nilai tersebut.
 
-3.  Looping melalui **Object.entries**
+      Contohnya seperti ini:
 
-    Digunakan untuk mengambil semua kunci dan nilai (key dan value) dari objek dan melakukan iterasi terhadap kunci dan nilai tersebut.
+          const person = {
+              name: 'John',
+              age: 25,
+              gender: 'Male'
+          };
 
-    Contohnya seperti ini:
+          for (const value of Object.values(person)) {
+              console.log(value);
+          }
 
-            const person = {
-                name: 'John',
-                age: 25,
-                gender: 'Male'
-            };
+  3.  Looping melalui method **Object.entries()**
 
-            for (const [key, value] of Object.entries(person)) {
-                console.log(key + ': ' + value);
-            }
+      Digunakan untuk mengambil semua kunci dan nilai (key dan value) dari objek dan melakukan iterasi terhadap kunci dan nilai tersebut.
 
-Ketiga method Object diatas, mengembalikan iterable object (memungkinkan objek untuk dilooping atau diiterasi menggunakan method iterasi built-in, seperti for-of, array.from(), atau spread operator). Dalam bahasa yang lebih sederhana, iterabel object dapat dianggap sebagai objek yang dapat dilakukan iterasi, mirip dengan array.
+      Contohnya seperti ini:
+
+          const person = {
+              name: 'John',
+              age: 25,
+              gender: 'Male'
+          };
+
+          for (const [key, value] of Object.entries(person)) {
+              console.log(key + ': ' + value);
+          }
+
+  Ketiga method Object diatas, mengembalikan iterable object (memungkinkan objek untuk dilooping atau diiterasi menggunakan method iterasi built-in, seperti for-of, array.from(), atau spread operator). Dalam bahasa yang lebih sederhana, iterabel object dapat dianggap sebagai objek yang dapat dilakukan iterasi, mirip dengan array.
+
+### ~ Object.fromEntries() :
+
+Metode JavaScript `Object.fromEntries()` adalah untuk membuat objek dari daftar pasangan key-value.
 
 ### ~ ARRAYS VS SETS :
 
@@ -1126,7 +1149,7 @@ Penggunaan Objek Array juga umum di JavaScript.
 
 <details> <summary>
 
-## [Functions](https://github.com/wahyukmr/JavaScript-Programming/blob/master/10-Functions/script.js)
+## [Functions](https://github.com/wahyukmr/JavaScript-Programming/blob/master/11-Functions/script.js)
 
 </summary>
   
@@ -1250,17 +1273,45 @@ IIFE dibuat dengan menempatkan fungsi dalam tanda kurung () dan menambahkan tand
 
 IIFE sering digunakan untuk menjaga agar variabel yang didefinisikan di dalam fungsi tidak bocor ke lingkup global.
 
-Sebagai contoh, jika kita ingin menjalankan sebuah fungsi secara otomatis pada saat halaman web kita dimuat, kita dapat menulisnya dalam IIsp sehingga fungsi tersebut hanya berjalan sekali saja dan tidak perlu dipanggil lagi di masa mendatang
+Sebagai contoh, jika kita ingin menjalankan sebuah fungsi secara otomatis pada saat halaman web kita dimuat, kita dapat menulisnya dalam IIFE sehingga fungsi tersebut hanya berjalan sekali saja dan tidak perlu dipanggil lagi di masa mendatang
 
 IIFE juga dapat digunakan untuk membuat lingkup scope terisolasi, sehingga variabel yang didefinisikan di dalamnya tidak akan berkonflik dengan variabel di luar lingkup.
 
 IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan dibuat dan dijalankan dari awal.
 
+### ~ CLOSURE :
+
+Memungkinkan fungsi untuk mengambil nilai dari variabel yang berada di luar scope fungsi itu sendiri, dan menjaga akses ke nilai tersebut bahkan setelah fungsi tersebut selesai dieksekusi.
+
+### ~ CURRYING :
+
+Memecah fungsi dengan banyak argumen menjadi serangkaian fungsi yang masing-masing menerima satu argumen.
+
+Ini seperti membuat versi baru dari fungsi tersebut yang membagi argumen-argumennya menjadi beberapa tahap. Pada setiap tahap, fungsi tersebut hanya menerima satu argumen dan mengembalikan fungsi baru yang siap untuk menerima argumen berikutnya.
+
+### ~ COMPOSE :
+
+Compose adalah sebuah fungsi utilitas yang digunakan untuk menggabungkan beberapa fungsi menjadi satu fungsi tunggal. Fungsi ini mengambil sejumlah fungsi sebagai argumen dan mengembalikan fungsi baru yang menerapkan fungsi-fungsi tersebut secara berurutan dari kanan ke kiri.
+
+Ini juga meningkatkan keterbacaan implementasi. Alih-alih fungsi bersarang, kita dapat dengan jelas menggabungkan fungsi dan membuat fungsi urutan yang lebih tinggi dengan nama yang bermakna.
+
+Implementasi sederhana dari compose adalah:
+
+    const compose = (f1, f2) => value => f2( f1(value) );
+
+Untuk mendapatkan lebih banyak fleksibilitas, kita dapat menggunakan fungsi `reduceRight`:
+
+    const compose = (...fns) => (initialVal) => fns.reduceRight((val, fn) => fn(val), initialVal);
+
+### ~ AVOIDING SIDE-EFFECTS :
+
+Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi yang mengubah data di luar scope fungsi itu sendiri) dan memiliki pure functionality yang disebut **Deterministic** (input yang dimasukkan dalam fungsi selalu mengembalikan hal yang sama)
+
 </details>
 
 <details> <summary>
 
-## [Arrays-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/11-Arrays-Bankist/script.js)
+## [Arrays-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/12-Arrays-Bankist/script.js)
 
 </summary>
 
@@ -1310,7 +1361,7 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
 
 - **splice()** = untuk mengubah isi dari sebuah array dengan menghapus atau menambahkan elemen ke dalam array tersebut. Method ini mengembalikan array baru yang berisi elemen-elemen yang dihapus.
 
-  Format umum dari method splice() adalah sebagai berikut:
+  Format umum dari method `splice()` adalah sebagai berikut:
 
       array.splice(start, deleteCount, item1, item2...)
 
@@ -1356,7 +1407,7 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
 
       console.log(angka); // output: [0, 0, 0, 0, 0]
 
-  Method fill() juga dapat menerima dua argumen opsional, yaitu indeks awal dan indeks akhir dari bagian array yang ingin diisi dengan nilai yang sama, seperti berikut:
+  Method `fill()` juga dapat menerima dua argumen opsional, yaitu indeks awal dan indeks akhir dari bagian array yang ingin diisi dengan nilai yang sama, seperti berikut:
 
       let angka = [1, 2, 3, 4, 5];
       angka.fill(0, 1, 4); // nilai dari angka sekarang adalah [1, 0, 0, 0, 5]
@@ -1378,7 +1429,7 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
       console.log(angka); // output: [1, 2, 3, 4, 5]
       console.log(angkaKuadrat); // output: [1, 4, 9, 16, 25]
 
-  Fungsi yang digunakan dalam map() dapat menerima tiga argumen opsional, yaitu nilai dari elemen saat ini, indeks elemen, dan array asli. Namun, biasanya hanya nilai dari elemen saat ini yang digunakan dalam fungsi tersebut, seperti berikut:
+  Fungsi yang digunakan dalam `map()` dapat menerima tiga argumen opsional, yaitu nilai dari elemen saat ini, indeks elemen, dan array asli. Namun, biasanya hanya nilai dari elemen saat ini yang digunakan dalam fungsi tersebut, seperti berikut:
 
       let angka = [1, 2, 3, 4, 5];
 
@@ -1418,7 +1469,7 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
 
       console.log(sum); // output: 15
 
-  Kita dapat memberikan argumen opsional sebagai nilai awal untuk akumulator pada method reduce(). Jika argumen tidak diberikan, maka nilai awal akan diambil dari elemen pertama pada array.
+  Kita dapat memberikan argumen opsional sebagai nilai awal untuk akumulator pada method `reduce()`. Jika argumen tidak diberikan, maka nilai awal akan diambil dari elemen pertama pada array.
 
   Contoh penggunaan dengan nilai awal yang diberikan:
 
@@ -1462,7 +1513,7 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
       console.log(buah3); // output: ['kiwi']
       console.log(buah4); // output: ['apel', 'mangga', 'pisang', 'jeruk', 'durian', 'kiwi']
 
-  Jika ingin menggabungkan array dengan nilai skalar atau string, dapat memasukkan nilai tersebut sebagai argumen pada method concat(), seperti berikut:
+  Jika ingin menggabungkan array dengan nilai skalar atau string, dapat memasukkan nilai tersebut sebagai argumen pada method `concat()`, seperti berikut:
 
       let buah1 = ['apel', 'mangga'];
       let buah2 = ['pisang', 'jeruk', 'durian'];
@@ -1483,7 +1534,7 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
       console.log(arr); // output: [1, 2, [3, 4]]
       console.log(arrFlat); // output: [1, 2, 3, 4]
 
-  Jika ingin menentukan level kedalaman penggabungan array, dapat menggunakan argumen depth pada method flat(). Jika argumen depth tidak ditentukan, maka defaultnya adalah 1. Contohnya sebagai berikut:
+  Jika ingin menentukan level kedalaman penggabungan array, dapat menggunakan argumen depth pada method `flat()`. Jika argumen depth tidak ditentukan, maka defaultnya adalah 1. Contohnya sebagai berikut:
 
       let arr = [1, 2, [3, [4, 5]]];
       let arrFlat = arr.flat(2); // nilai dari arrFlat adalah [1, 2, 3, 4, 5]
@@ -1497,7 +1548,7 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
       arr4.flat(Infinity);
       // output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-- **flatMap()** adalah method pada Array di JavaScript yang menggabungkan dua metode yaitu **map()** dan **flat()**. Metode ini melakukan operasi pada setiap elemen array dan mengembalikan array baru yang dihasilkan dari hasil pemetaan elemen-elemen tersebut, kemudian menggabungkan array yang dihasilkan tersebut menjadi satu array dengan level yang sama.
+- **flatMap()** adalah method pada Array di JavaScript yang menggabungkan dua metode yaitu `map()` dan `flat()`. Metode ini melakukan operasi pada setiap elemen array dan mengembalikan array baru yang dihasilkan dari hasil pemetaan elemen-elemen tersebut, kemudian menggabungkan array yang dihasilkan tersebut menjadi satu array dengan level yang sama.
 
   Contoh penggunaan:
 
@@ -1507,7 +1558,7 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
       console.log(arr); // output: [1, 2, 3]
       console.log(arrFlatMap); // output: [2, 4, 6]
 
-  Method flatMap() akan menghilangkan nilai-nilai yang kosong (null, undefined, NaN, atau '') dari array yang dihasilkan. Contohnya sebagai berikut:
+  Method `flatMap()` akan menghilangkan nilai-nilai yang kosong (null, undefined, NaN, atau '') dari array yang dihasilkan. Contohnya sebagai berikut:
 
       let arr = [1, 2, 3];
       let arrFlatMap = arr.flatMap((num) => [num * 2, null, undefined, NaN, '']); // nilai dari arrFlatMap adalah [2, null, undefined, NaN, '', 4, null, undefined, NaN, '', 6, null, undefined, NaN, '']
@@ -1515,7 +1566,7 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
       console.log(arr); // output: [1, 2, 3]
       console.log(arrFlatMap); // output: [2, null, undefined, NaN, '', 4, null, undefined, NaN, '', 6, null, undefined, NaN, '']
 
-  Berikut adalah contoh penggunaan metode flatMap() dan map() dengan flat() secara terpisah pada nested array:
+  Berikut adalah contoh penggunaan metode `flatMap()` dan `map()` dengan `flat()` secara terpisah pada nested array:
 
       // menggunakan flatMap()
       const nestedArr = [[1, 2], [3, 4], [5, 6]];
@@ -1542,9 +1593,9 @@ IIFE dapat dipanggil beberapa kali, tetapi setiap kali dipanggil, fungsi akan di
 
       console.log(str2); // output: "apple - banana - cherry"
 
-Method join() mengembalikan sebuah string yang berisi semua elemen pada array yang sudah digabungkan dengan separator. String yang dihasilkan tidak merubah nilai asli dari array.
+Method `join()` mengembalikan sebuah string yang berisi semua elemen pada array yang sudah digabungkan dengan separator. String yang dihasilkan tidak merubah nilai asli dari array.
 
-- **Looping Arrays: forEach()** = untuk melakukan iterasi atau perulangan pada setiap elemen pada array dan menjalankan fungsi yang telah ditentukan pada setiap elemen tersebut. Fungsi yang diberikan sebagai parameter pada forEach() akan menerima tiga argumen, yaitu elemen saat ini, indeks elemen, dan array itu sendiri. Namun, pada umumnya kita hanya memerlukan elemen saat ini dalam penggunaan forEach().
+- **Looping Arrays: forEach()** = untuk melakukan iterasi atau perulangan pada setiap elemen pada array dan menjalankan fungsi yang telah ditentukan pada setiap elemen tersebut. Fungsi yang diberikan sebagai parameter pada `forEach()` akan menerima tiga argumen, yaitu elemen saat ini, indeks elemen, dan array itu sendiri. Namun, pada umumnya kita hanya memerlukan elemen saat ini dalam penggunaan `forEach()`.
 
   Contoh penggunaan:
 
@@ -1561,7 +1612,7 @@ Method join() mengembalikan sebuah string yang berisi semua elemen pada array ya
       // 4
       // 5
 
-  method forEach() tidak mengembalikan nilai apa pun dan hanya digunakan untuk menjalankan fungsi pada setiap elemen pada array. Oleh karena itu, method **forEach()** tidak dapat digunakan untuk mengubah elemen pada array seperti halnya method **map()**. Namun, kita masih dapat memanfaatkan forEach() untuk melakukan operasi yang diperlukan pada setiap elemen pada array, seperti menghitung nilai atau memanggil fungsi lain pada setiap elemen.
+  method `forEach()` tidak mengembalikan nilai apa pun dan hanya digunakan untuk menjalankan fungsi pada setiap elemen pada array. Oleh karena itu, method `forEach()` tidak dapat digunakan untuk mengubah elemen pada array seperti halnya method `map()`. Namun, kita masih dapat memanfaatkan `forEach()` untuk melakukan operasi yang diperlukan pada setiap elemen pada array, seperti menghitung nilai atau memanggil fungsi lain pada setiap elemen.
 
 **Method untuk mencari index atau elemen**
 
@@ -1574,7 +1625,7 @@ Method join() mengembalikan sebuah string yang berisi semua elemen pada array ya
 
       console.log(index); // output: 2
 
-  Method indexOf() juga dapat menerima argumen kedua, yaitu fromIndex. Argumen ini digunakan untuk menentukan indeks awal pencarian. Jika fromIndex tidak ditentukan, maka pencarian dimulai dari indeks 0. Jika fromIndex negatif, maka pencarian dimulai dari indeks akhir dengan mengurangi nilai fromIndex dari panjang array.
+  Method `indexOf()` juga dapat menerima argumen kedua, yaitu fromIndex. Argumen ini digunakan untuk menentukan indeks awal pencarian. Jika fromIndex tidak ditentukan, maka pencarian dimulai dari indeks 0. Jika fromIndex negatif, maka pencarian dimulai dari indeks akhir dengan mengurangi nilai fromIndex dari panjang array.
 
   Contoh penggunaan dengan fromIndex:
 
@@ -1585,14 +1636,14 @@ Method join() mengembalikan sebuah string yang berisi semua elemen pada array ya
 
 - **findIndex()** = untuk mencari indeks dari elemen pertama pada sebuah array yang memenuhi kondisi tertentu. Jika tidak ada elemen yang memenuhi kondisi tersebut, maka method ini akan mengembalikan nilai -1.
 
-  Contoh penggunaan, mencari indeks dari elemen pertama pada array arr yang nilainya lebih besar dari 3. Karena elemen dengan nilai 4 ditemukan pada indeks ke-3, maka nilai 3 menjadi nilai kembalian dari method findIndex() :
+  Contoh penggunaan, mencari indeks dari elemen pertama pada array arr yang nilainya lebih besar dari 3. Karena elemen dengan nilai 4 ditemukan pada indeks ke-3, maka nilai 3 menjadi nilai kembalian dari method `findIndex()` :
 
       let arr = [1, 2, 3, 4, 5];
       let index = arr.findIndex((num) => num > 3); // nilai dari index adalah 3
 
       console.log(index); // output: 3
 
-  Method findIndex() menerima sebuah fungsi sebagai argumen. Fungsi ini akan dieksekusi pada setiap elemen pada array sampai ditemukan elemen yang memenuhi kondisi yang ditentukan. Fungsi ini menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri.
+  Method `findIndex()` menerima sebuah fungsi sebagai argumen. Fungsi ini akan dieksekusi pada setiap elemen pada array sampai ditemukan elemen yang memenuhi kondisi yang ditentukan. Fungsi ini menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri.
 
   Contoh penggunaan dengan fungsi:
 
@@ -1612,7 +1663,7 @@ Method join() mengembalikan sebuah string yang berisi semua elemen pada array ya
 
       console.log(result); // output: 4
 
-  Method find() menerima sebuah fungsi sebagai argumen. Fungsi ini akan dieksekusi pada setiap elemen pada array sampai ditemukan elemen yang memenuhi kondisi yang ditentukan. Fungsi ini menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri.
+  Method `find()` menerima sebuah fungsi sebagai argumen. Fungsi ini akan dieksekusi pada setiap elemen pada array sampai ditemukan elemen yang memenuhi kondisi yang ditentukan. Fungsi ini menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri.
 
   Contoh penggunaan dengan fungsi:
 
@@ -1637,7 +1688,7 @@ Method join() mengembalikan sebuah string yang berisi semua elemen pada array ya
       let check2 = arr.includes(6); // nilai dari check2 adalah false
       console.log(check2); // output: false
 
-  Method includes() juga memiliki parameter opsional kedua, yaitu indeks awal pencarian. Dengan parameter ini, kita dapat membatasi pencarian hanya pada bagian tertentu dari array.
+  Method `includes()` juga memiliki parameter opsional kedua, yaitu indeks awal pencarian. Dengan parameter ini, kita dapat membatasi pencarian hanya pada bagian tertentu dari array.
 
   Contoh penggunaan dengan parameter indeks:
 
@@ -1664,7 +1715,7 @@ Method join() mengembalikan sebuah string yang berisi semua elemen pada array ya
       });
       console.log(check2); // output: false
 
-  Fungsi yang digunakan sebagai parameter pada method some() akan menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri. Kita dapat menggunakan argumen kedua atau ketiga untuk melakukan operasi atau pemrosesan tambahan dalam fungsi tersebut.
+  Fungsi yang digunakan sebagai parameter pada method `some()` akan menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri. Kita dapat menggunakan argumen kedua atau ketiga untuk melakukan operasi atau pemrosesan tambahan dalam fungsi tersebut.
 
   Contoh penggunaan dengan fungsi yang menggunakan argumen tambahan:
 
@@ -1695,7 +1746,7 @@ Method join() mengembalikan sebuah string yang berisi semua elemen pada array ya
 
       console.log(check2); // output: false
 
-  Fungsi yang digunakan sebagai parameter pada method every() akan menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri. Kita dapat menggunakan argumen kedua atau ketiga untuk melakukan operasi atau pemrosesan tambahan dalam fungsi tersebut.
+  Fungsi yang digunakan sebagai parameter pada method `every()` akan menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri. Kita dapat menggunakan argumen kedua atau ketiga untuk melakukan operasi atau pemrosesan tambahan dalam fungsi tersebut.
 
   Contoh penggunaan dengan fungsi yang menggunakan argumen tambahan:
 
@@ -1718,7 +1769,7 @@ Method join() mengembalikan sebuah string yang berisi semua elemen pada array ya
 
 <details> <summary>
 
-## [Advanced-DOM-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/13-Advanced-DOM-Bankist/script.js)
+## [Advanced-DOM-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/14-Advanced-DOM-Bankist/script.js)
 
 </summary>
 
@@ -1779,7 +1830,7 @@ Dalam DOM Traversing, kita dapat melakukan manipulasi pada elemen HTML dan node,
 
 <details> <summary>
 
-## [OOP (Object-Oriented Programming)](https://github.com/wahyukmr/JavaScript-Programming/blob/master/14-OOP/script.js)
+## [OOP (Object-Oriented Programming)](https://github.com/wahyukmr/JavaScript-Programming/blob/master/15-OOP/script.js)
 
 </summary>
 
@@ -2121,7 +2172,7 @@ Encapsulation memungkinkan "mengontrol akses ke komponen itu". Ketika kita memil
 
 <details> <summary>
 
-## [Asynchronous](https://github.com/wahyukmr/JavaScript-Programming/blob/master/15-Asynchronous/script.js)
+## [Asynchronous](https://github.com/wahyukmr/JavaScript-Programming/blob/master/17-Asynchronous/script.js)
 
 </summary>
 
@@ -2157,7 +2208,7 @@ Konsep penting untuk mengelola kode Asynchronous:
 
     Method `.catch()` digunakan untuk menangani hasil ketika promise mengalami kesalahan (reject)
 
-    Promise memiliki tiga keadaan yang penting:
+    Promise memiliki tiga status, yaitu:
 
     1. **pending** (sedang menunggu), kondisi atau keadaan awal Promise.
     2. **fulfilled** (terpenuhi), ketika tugas selesai dengan sukses.
@@ -2345,7 +2396,7 @@ Berikut adalah beberapa Promise combinator yang umum digunakan:
 
 <details><summary>
 
-## [Modern-JS-Modules-Tooling](https://github.com/wahyukmr/JavaScript-Programming/blob/master/16-Modern-JS-Modules-Tooling/script.js)
+## [Modern-JS-Modules-Tooling](https://github.com/wahyukmr/JavaScript-Programming/blob/master/18-Modern-JS-Modules-Tooling/script.js)
 
 </summary>
 
@@ -2492,7 +2543,7 @@ Functional Programming dan penulisan declarative code telah menjadi cara penulis
 
 **Functional programming** dapat dianggap sebagai salah satu cara untuk mencapai pemrograman declarative, yang didasarkan pada gagasan menulis software dengan menggabungkan banyak **pure functions**, menghindari **side effects**, dan **mutating** data.
 
-**Side Effects** berarti memodifikasi data apapun yang berada di luar fungsi. Contohnya mengubah variabel apapun yang berada diluar scope fungsi akan menyebabkan side effect, memasukkan sesuatu ke console serta mengubah sesuatu di DOM.
+**Side Effects** adalah sesuatu yang dilakukan fungsi untuk mempengaruhi atau memodifikasi data apapun yang berada di luar fungsi. Contohnya mengubah variabel apapun yang berada diluar scope fungsi akan menyebabkan side effect, memasukkan sesuatu ke console serta mengubah sesuatu di DOM.
 
 **Pure Functions** berarti fungsi tanpa Side Effects, fungsi yang hanya bergantung pada input yang diberikan dan tidak mempengaruhi environment lain di luar fungsi.
 
