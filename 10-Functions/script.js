@@ -379,9 +379,7 @@ Hints: Use many of the tools you learned about in this and the last section �
   booker();
 }
 
-/*  *************************
- *   More Closure Examples
- *  *************************/
+// *   More Closure Examples
 {
   /* Example 1 */
   let f;
@@ -425,6 +423,71 @@ Hints: Use many of the tools you learned about in this and the last section �
   const perGrop = 1000;
 
   boardPassengers(180, 3);
+}
+
+/*  ************
+ *   Currying
+ *  ************/
+{
+  // * Example:
+  function add(a, b) {
+    return a + b;
+  }
+
+  // diubah dengan teknik Currying
+  function add(a) {
+    return function (b) {
+      return a + b;
+    };
+  }
+  const addTwo = add(2); // Mengembalikan fungsi yang siap menerima argumen berikutnya
+  const result = addTwo(3); // Menghasilkan hasil penjumlahan 2 + 3 = 5
+
+  // * Another example:
+  function curry(func) {
+    return function curried(...args) {
+      if (args.length >= func.length) {
+        return func.apply(this, args);
+      } else {
+        return function (...moreArgs) {
+          return curried.apply(this, args.concat(moreArgs));
+        };
+      }
+    };
+  }
+
+  function calculateTotal(tax, price, discount) {
+    return price + price * tax - discount;
+  }
+
+  const calculateTotalWithTax = curry(calculateTotal)(0.1);
+
+  const total1 = calculateTotalWithTax(100, 20);
+  const total2 = calculateTotalWithTax(50, 10);
+
+  console.log(total1); // Output: 90
+  console.log(total2); // Output: 45
+}
+
+/*  ************
+ *   Compose
+ *  ************/
+{
+  const compose = (f, g) => (a) => f(g(a));
+
+  const add1 = (num) => num + 1;
+  const add5 = (num) => num + 5;
+
+  compose(add1, add5)(10); // 16
+}
+
+/*  *************************
+ *   Avoiding Side-effects
+ *  *************************/
+// Side-effects example:
+let a = 1;
+function b() {
+  return (a = 2);
 }
 
 /*  ************************
