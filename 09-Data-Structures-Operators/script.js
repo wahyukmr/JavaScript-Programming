@@ -502,11 +502,31 @@ const game = {
   else console.log("user array is empty");
 }
 
-/*  ****************************************************
- *   Looping Object: Object Keys, Values, and Entries
- *  ****************************************************/
-/* Property Names ( Object.keys() ) */
+/*  ************************************************************************
+ *   Looping Object: For-in Loop, Object.keys(), Object.values(), and Object.entries()
+ *  ************************************************************************/
 {
+  // * For-in Loop
+  amazonBasket = {
+    glasses: 1,
+    books: 2,
+    floss: 100,
+  };
+
+  function checkBasket(basket, lookingFor) {
+    for (item in basket) {
+      if (item === lookingFor) {
+        return `${lookingFor} is in your basket`;
+      }
+    }
+    return "that does not exist in your basket";
+  }
+
+  console.log(checkBasket(amazonBasket, "books"));
+}
+
+{
+  // * Object.keys()
   const properties = Object.keys(restaurant.openingHours);
   console.log(properties);
 
@@ -518,14 +538,14 @@ const game = {
   console.log(openStr);
 }
 
-/* property value ( Oject.value() ) */
 {
+  // * Object.value()
   const value = Object.values(restaurant.openingHours);
   console.log(value);
 }
 
 {
-  /* entries in Object (Change Object to Arrays) */
+  // * Object.entries()
   const entries = Object.entries(restaurant.openingHours);
   console.log(entries);
 
@@ -533,6 +553,30 @@ const game = {
   for (const [key, { open, close }] of entries) {
     console.log(`on ${key} we open at ${open} and close at ${close}`);
   }
+}
+
+/*  **************************
+ *   Object.fromEntries()
+ *  **************************/
+{
+  // * example 1:
+  const entries = new Map([
+    ["foo", "bar"],
+    ["baz", 42],
+  ]);
+
+  const obj = Object.fromEntries(entries);
+  console.log(obj); // Expected output: Object { foo: "bar", baz: 42 }
+
+  // * example 2:
+  const arrays = [
+    ["user1", 18273],
+    ["user2", 92833],
+    ["user3", 90315],
+  ];
+
+  const object = Object.fromArrays(arrays);
+  console.log(object); // { "user1": 18273, "user2": 92833, "user3": 90315 }
 }
 
 /*  ***********************
@@ -767,7 +811,7 @@ Your tasks:
 /*  ***********************
  *   Working with String
  *  ***********************/
-/* Working With String Part-1 */
+/* Method String Part-1 */
 {
   const airplane = "TAP Air Indonesia";
   const plane = "A349";
@@ -824,7 +868,7 @@ Your tasks:
   checkMiddleSeat("3E");
 }
 
-/* Working With String Part-2 */
+/* Method String Part-2 */
 {
   const text = "INDONESIA is Beautiful Country";
 
@@ -884,7 +928,7 @@ Your tasks:
   checkBaggage("Got some snacks and Gun for protection");
 }
 
-/* Working With String Part-3 */
+/* Method String Part-3 */
 {
   /* Split and Join */
   // split the string into parts based on the divisor string ( Split() ) return Arrays
