@@ -1,33 +1,30 @@
-console.log("****************Exporting the module*******************");
-
-/*  ****************************************************************************************
+/*  **************************************
  *   Exporting in the ES6 module
- *  ****************************************************************************************/
-/*
-////////////////////////////////////////////////////////////////////////////
-// Blocking code
-console.log("Start fetching user");
+ *  **************************************/
 
-const getUserResponse = await fetch(
-    "https://jsonplaceholder.typicode.com/users"
-);
-console.log(getUserResponse);
+// * Blocking code
+// console.log("Start fetching user");
 
-console.log("Finish fetching user");
+// const getUserResponse = await fetch(
+//     "https://jsonplaceholder.typicode.com/users"
+// );
+// console.log(getUserResponse);
 
-const shippingCost = 10;
-console.log(shippingCost);
+// console.log("Finish fetching user");
 
-////////////////////////////////////////////////////////////////////////////
-// Only can exporting code in top-level
-export function addToCart(product, quantity) {
-  cart.push({ product, quantity });
-  console.log(`${quantity} ${product} added to cart`);
-}
-addToCart("sugar", 100);
+// const shippingCost = 10;
+// console.log(shippingCost);
 
-////////////////////////////////////////////////////////////////////////////
-// can't exporting code in low-level
+// ----------------------------------------------------
+
+// * Hanya bisa mengeksport code di top-level
+// export function addToCart(product, quantity) {
+//   cart.push({ product, quantity });
+//   console.log(`${quantity} ${product} added to cart`);
+// }
+// addToCart("sugar", 100);
+
+// * Tidak bisa mengeksport code di low-level
 // if (true) {
 //     export function addToCart(product, quality) {
 //         cart.push({ product, quality });
@@ -36,32 +33,35 @@ addToCart("sugar", 100);
 //     addToCart("sugar", 100);
 // }
 
-////////////////////////////////////////////////////////////////////////////
-// Exporting with variable name and by changing the name
+// ----------------------------------------------------
+
+// * Mengeksport dengan nama variabel dan mengubah namanya
 const totalPrice = 234;
 const totalQuantity = 100;
 
 export { totalPrice, totalQuantity as qt };
-*/
-////////////////////////////////////////////////////////////////////////////
-// exporting array
+
+// ----------------------------------------------------
+
+// * Mengeksport array
 export const cart = [];
 
-////////////////////////////////////////////////////////////////////////////
-// Export Default (exporting a single value in a JavaScript file, be it a primitive value, function, array, object, or class, we use the keyword export default)
+// * Export Default (mengeksport nilai tunggal pada file JavaScript (baik itu primitive value, function, array, object, atau class).
 export default function (product, quantity) {
   cart.push({ product, quantity });
   console.log(`${quantity} ${product} added to cart`);
 }
 
-/*  ******************************************************************************************
- *   Exporting in the CommonJS Module
- *  ******************************************************************************************
-Note:   
-        - export and require keywords are objects which are not defined in code and browser environment, but in node they are important objects to use 
+// ----------------------------------------------------
+
+/*  ***************************************
+ *  Exporting in the CommonJS Module
+ *  ***************************************
+    Note:
+      - kata kunci "export" atau "export default" dan "import" hanya berjalan di browser environment (berjalan di sisi client), tidak dapat berjalan di sisi server.
+      - Untuk mengeksport module di sisi server menggunakan kata kunci "module.export" atau "exports"
 */
-////////////////////////////////////////////////////////////////////////////
-// Export
+// * Export
 // module.export.addToCart = function (product, quantity) {
 //   cart.push({ product, quantity });
 //   console.log(`${quantity} ${product} added to carts!!`);
