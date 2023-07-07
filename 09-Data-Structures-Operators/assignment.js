@@ -49,7 +49,7 @@ const getBookAuthors = () => books.map((book) => book.author);
 
 /*
  *  ********************************************
- *  1) DESTRUCTURING ARRAYS                    *
+ *  DESTRUCTURING ARRAYS
  *  ********************************************
  */
 
@@ -84,7 +84,7 @@ console.log(title);
 
 /*
  *  ********************************************
- *  2) DESTRUCTURING OBJECTS                   *
+ *  DESTRUCTURING OBJECTS
  *  ********************************************
  */
 
@@ -117,7 +117,7 @@ console.log(author);
 
 /*
  *  ********************************************
- *  3) THE SPREAD SYNTAX                       *
+ *  THE SPREAD SYNTAX
  *  ********************************************
  */
 
