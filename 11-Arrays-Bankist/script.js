@@ -664,20 +664,24 @@ Test data:
  *  *****************************************************************************************/
 // flat method
 {
-  // Depth 1
+  // example 1:
   const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
   console.log(arr.flat());
 
-  // Depth 2
+  // example 2:
   const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
   console.log(arrDeep.flat(2)); // depth 2
 
-  // Flat method
+  // example 3:
   const overalBalance = accounts
     .map((acc) => acc.movements)
     .flat()
     .reduce((acc, current) => acc + current, 0);
   console.log(overalBalance);
+
+  // example 4:
+  const trapped = [[[[[[[[[[[[[[[[[[[[[[[[[[3]]]]]]]]]]]]]]]]]]]]]]]]]];
+  console.log(trapped.flat(Infinity));
 }
 
 // FlatMap method
