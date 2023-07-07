@@ -1,5 +1,3 @@
-<p align="right">27/11/2022</p>
-
 <h1 align="center"> :clipboard: Notes </h1>
 
 </br>
