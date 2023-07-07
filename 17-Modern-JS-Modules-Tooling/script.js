@@ -1,31 +1,31 @@
-console.log("****************Importing the module*******************");
-
-/*  ***************************************************************************************************
+/*  ********************************
  *   Importing in the ES6 module
- *  ***************************************************************************************************/
-/*
-////////////////////////////////////////////////////////////////////////////
-// importing the module and by changing the name
-import { addToCart, totalPrice as price, qt } from "./shoppingCart.js";
+ *  ********************************/
 
-addToCart("bread", 5);
-console.log(price, qt);
+// * Mengimport dan mengubah namanya
+// import { addToCart, totalPrice as price, qt } from "./shoppingCart.js";
 
-console.log("Importing the module");
+// addToCart("bread", 5);
+// console.log(price, qt);
 
-////////////////////////////////////////////////////////////////////////////
-// import them all at the same time
-import * as ShoppingCart from "./shoppingCart.js";
-ShoppingCart.addToCart("bread", 5);
-console.log(ShoppingCart.totalPrice, ShoppingCart.qt);
+// console.log("Importing the module");
 
-////////////////////////////////////////////////////////////////////////////
-// importing export default (we can change its variable name directly)
-import add from "./shoppingCart.js";
-add("pizza", 2);
-*/
-////////////////////////////////////////////////////////////////////////////
-// Importing Array
+// ----------------------------------------------------
+
+// * Mengimport semua dalam waktu yang bersamaan sebagai object
+// import * as ShoppingCart from "./shoppingCart.js";
+// ShoppingCart.addToCart("bread", 5);
+// console.log(ShoppingCart.totalPrice, ShoppingCart.qt);
+
+// ----------------------------------------------------
+
+// * Mengimport file dari export defauld (tanpa kurung kurawal dan selalu dapat memilih nama saat diimport)
+// import add from "./shoppingCart.js";
+// add("pizza", 2);
+
+// ----------------------------------------------------
+
+// * Mengimport array
 import arr, { cart } from "./shoppingCart.js";
 arr("melon", 5);
 arr("banana", 9);
@@ -33,12 +33,11 @@ arr("apples", 3);
 
 console.log(cart);
 
-/*  ***************************************************************************************************
+/*  ***********************************
  *   Top-Level await (ES2020)
- *  ***************************************************************************************************/
+ *  ***********************************/
 
-////////////////////////////////////////////////////////////////////////////
-// Await keyword in moduls (will block code)
+// * Kata kunci Await di moduls (akan memblock kode)
 // console.log("...starting...");
 
 // const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -47,8 +46,9 @@ console.log(cart);
 
 // console.log("...Finished...");
 
-////////////////////////////////////////////////////////////////////////////
-// how await top level works in the real world
+// ----------------------------------------------------
+
+// * Cara kerja await top level di real world
 async function getLAstPost() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const data = await res.json();
@@ -61,14 +61,15 @@ const lastPost = getLAstPost();
 console.log(lastPost);
 
 // "Not very clean"
-lastPost.then((last) => console.log(last));
+// lastPost.then((last) => console.log(last));
 
 // "best practice" in the CommonJS Module
 // const lastPost2 = await getLAstPost();
 // console.log(lastPost2);
-/*
-////////////////////////////////////////////////////////////////////////////
-// Implementing the module pattern
+
+// ----------------------------------------------------
+
+// * Menerapkan pola module
 const ShoppingCart2 = (function () {
   const carts = [];
   const amountOfFruits = 5;
@@ -98,23 +99,24 @@ ShoppingCart2.addToProduct("bath soap", 3);
 ShoppingCart2.addToProduct("shampoo", 8);
 console.log(ShoppingCart2);
 console.log(ShoppingCart2.amountOfFruits); // private variable, not accessible
-*/
 
-/*  ***************************************************************************************************
- *   Importing in the CommonJS Module
- *  **************************************************************************************************
-Note:   
-        - export and require keywords are objects which are not defined in code and browser environment, but in node they are important objects to use 
+// ----------------------------------------------------
+
+/*  ***************************************
+ *  Importing in the CommonJS Module
+ *  ***************************************
+    Note:
+    - kata kunci "export" atau "export default" dan "import" hanya berjalan di browser environment (berjalan di sisi client), tidak dapat berjalan di sisi server.
+    - Untuk mengimport module di sisi server menggunakan kata kunci "require"
 */
-////////////////////////////////////////////////////////////////////////////
-// Import
+// * Import module
 // const { addToCartNodeJs } = require("./shoppingCart.js");
 // addToCartNodeJs.addToCart("sugar", 10);
 // addToCartNodeJs.addToCart("bread", 5);
 
-/*  ***************************************************************************************************
+/*  *****************************************
  *   Bundling with Parcel and NPM Script
- *  **************************************************************************************************
+ *  *****************************************
 
 /* lodash-es pakages (will be make our code cleaner and tidier) */
 // deep clone ( if you want to make deepCopy or deepClone manually it will be difficult, the solution is to use the functions provided by lodash, so we use open source software to solve the problems we face in javascript )
@@ -141,9 +143,9 @@ if (module.hot) {
   module.hot.accept();
 }
 
-/*  ***************************************************************************************************
+/*  ****************************************
  *   Configuring Babel and Polyfilling
- *  ***************************************************************************************************/
+ *  ****************************************/
 class Person {
   #greeting = "hey";
   constructor(name) {
@@ -159,9 +161,8 @@ console.log(cart.find((el) => el.quantity > 2));
 
 Promise.resolve("TEST").then((x) => console.log(x));
 
-////////////////////////////////////////////////////////////////////////////
-// Polyfilling
 
+// * Polyfilling
 /* core-js packages (Polyfilling Promises and all method arrays) */
 import "core-js/actual";
 // import "core-js/stable/array/find";
