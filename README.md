@@ -10,7 +10,7 @@
 
 </summary>
 
-### ~ INTRODUCATION of JAVASCRIPT :
+### ~ INTRODUCATION OF JAVASCRIPT :
 
 <strong>JavaScript is a High-Level, Object-oriented, Multi-paradigm programming language.</strong>
 
@@ -19,42 +19,42 @@
 - **Object-oriented** berarti bahasa tersebut sebagian besar didasarkan pada konsep objek untuk menyimpan sebagian besar jenis data.
 - **Multi-paradigm** berarti fleksibel dan serbaguna, sehingga kita dapat menggunakan semua jenis gaya pemrograman yang berbeda (cara berbeda untuk menyusun kode) seperti imperative dan deklarative programming.
 
-### ~ TYPE CONVERSION and COERCION :
+### ~ TYPE CONVERSION AND COERCION :
 
-Type Coercion atau type coercion adalah konversi nilai dari tipe data yang berbeda dan menentukan mana yang memiliki posisi lebih tinggi untuk dieksekusi terlebih dahulu.
+Type Conversion atau Type Coercion adalah konversi nilai dari tipe data yang berbeda dan menentukan mana yang memiliki posisi lebih tinggi untuk dieksekusi terlebih dahulu.
 
-- **Type conversion** (ketika kita secara menual mengonversi dari satu tipe data ke tipe lainnya).
-- **Type coercion** (terjadi setiap kali operator berurusan dengan dua nilai yang memiliki tipe data berbeda, Jadi javascript dibalik layar mengonversi salah satu nilai agar sesuai dengan nilai lainnya sehingga operasi dapat dijalankan).
+- **Type Conversion**, ketika kita secara menual mengonversi dari satu tipe data ke tipe lainnya.
+- **Type Coercion**, terjadi setiap kali operator berurusan dengan dua nilai yang memiliki tipe data berbeda, Jadi javascript dibalik layar mengonversi salah satu nilai agar sesuai dengan nilai lainnya sehingga operasi dapat dijalankan.
 
-### ~ TRUTHY anD FALSY :
+### ~ TRUTHY AND FALSY :
 
-Truthy dan falsy operator adalah konsep dalam JavaScript yang menentukan apakah suatu nilai dianggap true atau false dalam konteks logika.
+Operator Truthy dan falsy adalah konsep dalam JavaScript yang menentukan apakah suatu nilai dianggap true atau false dalam konteks logika.
 
 - **Truthy operator** adalah nilai yang dianggap true dalam kondisi logika, seperti angka selain 0, string yang tidak kosong, objek, array, dan nilai true itu sendiri.
 
 - **Falsy operator** adalah nilai yang dianggap false dalam kondisi logika, seperti angka 0, string kosong, null, undefined, NaN, dan nilai false itu sendiri.
 
-Ketika menggunakan operator logika seperti if, while, atau for, nilai yang dianggap falsy akan dianggap sebagai false, sedangkan nilai yang dianggap truthy akan dianggap sebagai true. Konsep truthy dan falsy operator ini berguna untuk mengevaluasi nilai yang dihasilkan dari ekspresi atau fungsi yang kompleks, serta membantu pengembang dalam menulis kode yang lebih efisien dan mudah dibaca.
+Ketika menggunakan operator logika pada if atau while, nilai yang dianggap falsy akan dianggap sebagai false, sedangkan nilai yang dianggap truthy akan dianggap sebagai true. Konsep truthy dan falsy operator ini berguna untuk mengevaluasi nilai yang dihasilkan dari ekspresi atau fungsi yang kompleks, serta membantu pengembang dalam menulis kode yang lebih efisien dan mudah dibaca.
 
-### ~ STATEMENTS and EXPRESSIONS
+### ~ STATEMENTS AND EXPRESSIONS
 
-- **Expressions** adalah sebuah kode yang menghasilkan nilai. Expression bisa berupa nilai tunggal, operasi matematika, atau pemanggilan fungsi. Contoh:
+**Expressions** adalah sebuah kode yang menghasilkan nilai atau representasi dari nilai itu sendiri. Expression bisa berupa nilai tunggal, operasi matematika, atau pemanggilan fungsi. Contoh:
 
-      1 + 2; // Ini adalah sebuah expression yang menghasilkan nilai 3
-      x = 3; // Ini juga sebuah expression yang menghasilkan nilai 3, yaitu nilai yang ditetapkan pada variabel x
+    let z = 1 + 2; // Ini adalah sebuah expression yang menghasilkan nilai 3 dan menyimpannya pada variabel z.
+    let x = 3; // Ini juga sebuah expression yang memberi nilai 3 pada variabel x.
 
-- **Statements** adalah sebuah kode yang menghasilkan aksi atau perintah. Jadi pada dasarnya setiap kali sesuatu yang diakhiri dengan titik koma itu adalah statement. Statement bisa berupa deklarasi variabel, perulangan, atau percabangan. Contoh:
+**Statements** adalah sebuah intruksi yang melakukan tindakan tertentu. Statement bisa berupa deklarasi variabel, perulangan, atau percabangan. Contoh:
 
-      let x; // Ini adalah sebuah statement deklarasi variabel
+    let x; // Ini adalah sebuah statement deklarasi variabel
 
-      for (let i = 0; i < 5; i++) { // Ini adalah sebuah statement perulangan
-          console.log(i);
-      }
-      if (x === 3) { // Ini adalah sebuah statement percabangan
-          console.log("Nilai x sama dengan 3");
-      }
+    for (let i = 0; i < 5; i++) { // Ini adalah sebuah statement perulangan
+        console.log(i);
+    }
+    if (x === 3) { // Ini adalah sebuah statement percabangan
+        console.log("Nilai x sama dengan 3");
+    }
 
-Perbedaan utama antara expression dan statement adalah bahwa expression menghasilkan nilai, sedangkan statement menghasilkan aksi. Selain itu, expression dapat digunakan sebagai bagian dari statement, seperti pada pengisian nilai variabel atau pada kondisi if-else.
+Perbedaan utama antara expression dan statement adalah bahwa **expression menghasilkan nilai**, sedangkan **statement melakukan tindakan**. Selain itu, expression dapat digunakan sebagai bagian dari statement.
 
 </details>
 
@@ -70,7 +70,7 @@ Selalu gunakan **_'use strict'_** untuk membantu men-debug code.
 
 ### ~ REVIEWING FUNCTIONS :
 
-Tiga perbedaan cara menulis fungsi, tetapi semua bekerja dengan cara yang sama, menerima input data, mengubah data, dan kemudian mengeluarkan data.
+Tiga perbedaan cara menulis fungsi, tetapi semua bekerja dengan cara yang sama (menerima input data, mengubah data, dan kemudian mengeluarkan data).
 
 1. **Fuction declaration**
 
@@ -103,11 +103,11 @@ Tiga perbedaan cara menulis fungsi, tetapi semua bekerja dengan cara yang sama, 
    - jika fungsi hanya me-return satu baris statement, kita dapat menghilangkan tanda kurung kurawal dan kata kunci "return" untuk menulisnya lebih ringkas.
    - jika perlu mendefinisikan fungsi anonymous, misalnya sebagai argumen langsung ke method atau sebagai fungsi yang akan langsung dipanggil.
 
-Meskipun JavaScript memungkinkan pemanggilan fungsi sebelum dideklarasikan, disarankan untuk memanggil fungsi setelah mendeklarasikannya untuk menjaga kejelasan code.
+Meskipun JavaScript memungkinkan pemanggilan fungsi sebelum dideklarasikan, disarankan untuk memanggil fungsi setelah dideklarasikan untuk menjaga kejelasan code.
 
 Tidak ada masalah dalam menggunakan ketiga pendekatan tersebut dalam satu file atau code, selama dapat memahami perbedaan dan memastikan penggunaannya sesuai dengan kebutuhan.
 
-### ~ BREAKING and CONTINUING :
+### ~ BREAKING AND CONTINUING :
 
 - **continue** berarti keluar dari iterasi loop saat ini dan melanjutkan ke loop selanjutnya.
 
@@ -115,60 +115,48 @@ Tidak ada masalah dalam menggunakan ketiga pendekatan tersebut dalam satu file a
 
 ### ~ LOOPING :
 
-Penjelasan mengenai beberapa jenis looping di JavaScript.
+Berikut penjelasan mengenai beberapa jenis looping di JavaScript.
 
-1.  **for Loop:**
+1.  **For Loop:**
 
-    Digunakan untuk mengulang sejumlah iterasi yang diketahui sebelumnya. Biasanya digunakan untuk melakukan iterasi pada tipe data array dengan menggunakan indeks sebagai variabel pengontrol.
+    digunakan untuk mengulang sejumlah iterasi yang diketahui sebelumnya. Biasanya digunakan untuk melakukan iterasi pada tipe data array dengan menggunakan indeks sebagai variabel pengontrol.
 
-    Beberapa contoh penggunaan For loop:
+    beberapa contoh penggunaan For loop:
 
-    - Mengulangi setiap elemen dalam sebuah array dan melakukan operasi pada setiap elemen.
+    - mengulangi setiap elemen dalam sebuah array dan melakukan operasi pada setiap elemen.
 
-      const numbers = [1, 2, 3, 4, 5];
+          const numbers = [1, 2, 3, 4, 5];
 
-      for (let i = 0; i < numbers.length; i++) {
-      console.log(numbers[i]);
-      }
+          for (let i = 0; i < numbers.length; i++) {
+            console.log(numbers[i]);
+          }
 
-    - Mengulang sejumlah kali dan melakukan operasi pada setiap iterasi.
+    - mengulang sejumlah kali dan melakukan operasi pada setiap iterasi.
 
           for (let i = 0; i < 10; i++) {
-              console.log(i);
+            console.log(i);
           }
 
-    - Mengulang setiap properti pada object.
-
-          const person = {
-              name: 'John',
-              age: 30,
-              location: 'USA'
-          };
-
-          for (const key in person) {
-              console.log(`${key}: ${person[key]}`);
-          }
-
-    - Mengulang setiap karakter dalam sebuah string.
+    - mengulang setiap karakter dalam sebuah string.
 
           const str = 'JavaScript';
 
           for (let i = 0; i < str.length; i++) {
-              console.log(str[i]);
+            console.log(str[i]);
           }
 
     - mengulang setiap elemen dalam array multidimensi.
 
           const matrix = [
-              [1, 2],
-              [3, 4],
-              [5, 6]
+            [1, 2],
+            [3, 4],
+            [5, 6]
           ];
 
           for (let i = 0; i < matrix.length; i++) {
-              for (let j = 0; j < matrix[i].length; j++) {
-                  console.log(matrix[i][j]);
-              }
+            for (let j = 0; j < matrix[i].length; j++) {
+              console.log(matrix[i][j]);
+            }
           }
 
 2.  **while Loop:**
@@ -177,36 +165,36 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
 
     Beberapa contoh penggunaan while loop:
 
-    - Melakukan pengulangan selama kondisi terpenuhi.
+    - melakukan pengulangan selama kondisi terpenuhi.
 
           let i = 0;
           while (i < 10) {
-              console.log(i);
-              i++;
+            console.log(i);
+            i++;
           }
 
-    - Membaca input dari pengguna hingga input yang benar diberikan.
+    - membaca input dari pengguna hingga input yang benar diberikan.
 
           let input;
           while (input !== 'yes') {
-              input = prompt('Apakah kamu yakin ingin melanjutkan?');
+            input = prompt('Apakah kamu yakin ingin melanjutkan?');
           }
 
-    - Mengakses data pada sebuah array dengan index.
+    - mengakses data pada sebuah array dengan index.
 
           const numbers = [1, 2, 3, 4, 5];
           let i = 0;
           while (i < numbers.length) {
-              console.log(numbers[i]);
-              i++;
+            console.log(numbers[i]);
+            i++;
           }
 
-    - Melakukan proses tertentu selama kondisi terpenuhi.
+    - melakukan proses tertentu selama kondisi terpenuhi.
 
           let count = 0;
           while (count < 10) {
-              console.log('Ini adalah iterasi ke-', count);
-              count++;
+            console.log('Ini adalah iterasi ke-', count);
+            count++;
           }
 
 3.  **do-while Loop:**
@@ -219,7 +207,7 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
 
           let number;
           do {
-              number = parseInt(prompt("Enter a positive number: "));
+            number = parseInt(prompt("Enter a positive number: "));
           } while (isNaN(number) || number <= 0);
 
           console.log("Valid number entered: ", number);
@@ -228,8 +216,8 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
 
           let count = 0;
           do {
-              console.log("The count is: ", count);
-              count++;
+            console.log("The count is: ", count);
+            count++;
           } while (count < 5);
 
 </details>
@@ -240,53 +228,47 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
 
 </summary>
 
-### ~ 4 STEP to SOLVE any PROBLEM :
+### ~ 4 STEP TO SOLVE ANY PROBLEM :
 
-1. Pastikan untuk memahami 100% masalahnya. **_ajukan pertanyaan yang tepat_** untuk mendapatkan gambaran yang jelas tentang masalahnya.
-2. **_Membagi masalah_**. memecah masalah besar menjadi sub-masalah yang lebuh kecil.
-3. Jangan takut untuk melakukan **_research_** pada setiap masalah (Google, stackoverflow, MDN web docs,...)
+1. Pastikan untuk memahami 100% masalahnya. **_ajukan pertanyaan yang tepat_** untuk mendapatkan gambaran yang jelas tentang masalah yang dihadapi.
+2. **_Membagi masalah_**, memecah masalah besar menjadi sub-masalah yang lebih kecil.
+3. Jangan takut untuk melakukan **_research_** pada setiap masalah (Google, stackoverflow, MDN web docs,...).
 4. Untuk masalah yang lebih besar, **_tulis pseudo-code_** atau rancangan program sebelum menulis kode yang sebenarnya.
 
-### ~ The DEBUGGING PROCESS :
+### ~ THE DEBUGGING PROCESS :
 
-1. **Identify** (sadar bahwa ada bug)
+1. **Identify**
 
-   - Selama development
-   - Testing software
-   - Report dari pengguna selama production
-   - Context: browsers, user, etc
+   - Mengidentifiksinya selama proses development.
+   - Mengidentifiksinya melalui testing software.
+   - Report dari pengguna (user) selama production.
+   - Context: browsers, user, etc.
 
-2. **Find** (Mengisolasi dimana tepatnya bug terjadi dalam kode)
+2. **Find**
 
-   - Developer console (simple code)
-   - Debugger (complex code)
+   - Mencari bug melalui **developer console** (simple code).
+   - Mencari bug melalui **Debugger** (complex code).
 
-3. **Fix** (Perbaiki bugnya)
+3. **Fix**
 
-   - Ubah solusi yang salah dengan solusi yang benar
+   - Memperbaiki bug yang didapat dengan mengubah solusi yang salah dengan solusi yang benar.
 
 4. **Prevent** (Mencegahnya agar tidak terjadi lagi)
 
-   - Mencari untuk bug yang sama dalam kode serupa
-   - Menulis test menggunakan testing software
+   - Mencari bug yang kemungkinan atau sama didalam code.
+   - Menulis test menggunakan testing software.
 
    </details>
 
 <details> <summary>
 
-## [HTML-CSS](https://github.com/wahyukmr/JavaScript-Programming/blob/master/03-Developer-Skills/script.js)
-
-</details>
-
-<details> <summary>
-
-## [DOM and Events](<https://github.com/wahyukmr/JavaScript-Programming/blob/master/05-Dom-And-Events-Fundamental-(Project#1-Guess-My-Number)/script.js>)
+## [DOM and Events](<https://github.com/wahyukmr/JavaScript-Programming/blob/master/04-Dom-And-Events-Fundamental-(Project#1-Guess-My-Number)/script.js>)
 
 </summary>
 
 ### ~ DOM (Document Object Model) :
 
-**DOM** adalah Struktur yang merepresentasikan html documents. Memungkinkan javascript untuk mengakses elemen html dan memanipulasi style (mengubah teks, atribut html dan bahkan gaya CSS) nya.
+**DOM** adalah Struktur yang merepresentasikan html documents. Memungkinkan javascript untuk mengakses elemen html dan memanipulasi style (mengubah teks, atribut html dan bahkan gaya CSS nya).
 
 **DOM bukanlah javascript**, melainkan bagian dari Web API. Jadi, methods dan properti untuk memanipulasi DOM bukan bagian dari JavaScript, tetapi dapat berinteraksi dengan javascript.
 
@@ -294,141 +276,143 @@ Penjelasan mengenai beberapa jenis looping di JavaScript.
 
 1.  **Document**
 
-    - Merupakan representasi dari halaman web.
-    - Dalam satu web, terdapat satu document, dan kita tidak perlu membuatnya secara menual, karena otomatis akan ada di browser.
-    - Untuk mengakses document kita bisa menggunakan object document.
-    - **Document Object**, Kita bisa langsung menggunakannya dengan kata kunci "document".
+    merupakan representasi dari halaman web.
+
+    dalam satu web, terdapat satu document, dan kita tidak perlu membuatnya secara menual, karena otomatis akan ada di browser.
+
+    **Document Object** adalah cara untuk mengakses document, dengan menggunakan kata kunci "document".
 
           console.log(document);
 
           // output:
           <!DOCTYPE html>
           <html>
-              <head></head>
-              <body></body>
+            <head></head>
+            <body></body>
           </html>
 
-    - **Document Property**, property dalam document bisa digunkan untuk melihat semua data yang terdapat dalam document halaman web. Contoh:
+    **Document Property**, property dalam document bisa digunkan untuk melihat semua data yang terdapat dalam document halaman web. Contoh:
 
           console.log(document.title);
           console.log(document.head);
           console.log(document.body);
 
-    - **Document Method**, banyak method yang terdapat di document digunakan untuk memanipulasi data DOM, misal membuat Node, Element, Attribute atau mengambil dan menyeleksi Node di dalam document. Contoh menyeleksi attribute id dalam element:
+    **Document Method**, banyak method yang terdapat di document digunakan untuk memanipulasi data DOM, misal membuat Node, Element, Attribute atau mengambil dan menyeleksi Node di dalam document. Contoh menyeleksi attribute id dalam element:
 
+          // contoh mendapatkan id "getId"
           console.log(document.getElementById("getId");
 
 2.  **Node**
 
-    - Adalah base class untuk semua tipe data di DOM, seperti document, element, dan Attr.
-    - Artinya semua fitur yang dimiliki di Node akan dimiliki juga oleh turunannya.
-    - Node dalam DOM itu bentuknya adalah tree, artinya dengan Node kita bisa melihat **Parent** (node diatasnya), **Children** (node dibawahnya), dan **Sibling** (node yang bersebelahan / se-level).
-    - **Node Method**, method di Node bisa digunakan untuk memanipulasi data Node didalam Node tersebut. Misalnya menghapus Node children :
+    node adalah base class untuk semua tipe data di DOM, seperti document, element, dan Attr.
 
-          <ul id="menu">
-              <li id="first">First</li>
-              <li id="second">Second</li>
-          </ul>
-          <script>
-              const menu = document.getElementById("menu");
-              menu.removeChildren(document.getElementById("first"));
-          </script>
+    artinya semua fitur yang dimiliki di Node akan dimiliki juga oleh turunannya.
+
+    node dalam DOM itu bentuknya adalah tree, artinya dengan Node kita bisa melihat **Parent** (induk node), **Children** (anak node), dan **Sibling** (node yang bersebelahan / se-level).
+
+    **Node Method**, method di Node bisa digunakan untuk memanipulasi data Node didalam Node tersebut. Misalnya menghapus Node children :
+
+        <ul id="menu">
+            <li id="first">First</li>
+            <li id="second">Second</li>
+        </ul>
+        <script>
+            const menu = document.getElementById("menu");
+            menu.removeChildren(document.getElementById("first"));
+        </script>
 
 3.  **Element**
 
-    - Merupakan Node yang berbentuk element dihalaman web, misal: head, body, form, dll.
-    - Contoh menambahkan konten di element H1:
+    element merupakan Node yang berbentuk element dihalaman web, misal: head, body, form, dll.
 
-          <h1 id="title"></h1>
+    contoh menambahkan konten di element H1:
 
-          <script>
-              const title = document.getElementById("title");
-              title.textContent = "Belajar JavaScript";
-          </script>
+        <h1 id="title"></h1>
 
-    - **Element Property**, karena element adalah turunan dari Node, semua property Node pun bisa digunakan di element.
-    - **Element Method**, karena element adalah turunan dari Node, semua method Node pun bisa digunakan di element.
+        <script>
+            const title = document.getElementById("title");
+            title.textContent = "Belajar JavaScript";
+        </script>
 
-4.  **Node List**
+    **Element Property**, karena element adalah turunan dari Node, semua property Node pun bisa digunakan di element.
 
-    - Merupakan array/collection atau kumpulan dari Node.
-    - Biasanya NodeList digunakan ketika kita menyeleksi banyak Node sekaligus, misal ketika kita ingin mengambil semua children di Node misalnya.
-    - NodeList memiliki 2 tipe, yaitu **live** dan **static**.
-    - **live** artinya perubahan yang terjadi pada NodeList nya, akan merubah semua NodeList yang sama.
-    - Contohnya saat kita menggunakan **_element.chiidNodes_**, NodeList tersebut bersifat live.
-    - **Static** artinya perubahan yang terjadi pada NodeList nya, tidak akan merubah semua NodeList yang sama.
-    - Contohnya saat kita menggunakan **_document.querySelectorALl()_**, NoteList tersebut bersifat static.
+    **Element Method**, karena element adalah turunan dari Node, semua method Node pun bisa digunakan di element.
+
+4.  **NodeList**
+
+    NodeList merupakan array/collection atau kumpulan dari Node.
+
+    biasanya NodeList digunakan ketika kita menyeleksi banyak Node sekaligus, misal ketika kita ingin mengambil semua children di Node misalnya.
+
+    NodeList memiliki 2 tipe, yaitu **live** dan **static**.
+
+    **live**, artinya perubahan yang terjadi pada NodeList nya, akan merubah semua NodeList yang sama. Contohnya saat kita menggunakan `element.chiidNodes`, NodeList tersebut bersifat live.
+
+    **Static**, artinya perubahan yang terjadi pada NodeList nya, tidak akan merubah semua NodeList yang sama. Contohnya saat kita menggunakan `document.querySelectorALl()`, NoteList tersebut bersifat static.
 
 5.  **Attr / Attribute**
 
-    - Merupakan representasi dari attribute sebuah element, atau singkatnya key-value, key nya adalah nama attribute dan value nya adalah value attribute.
-    - Contoh mendapatkan nama dan value attribute:
+    attr / attribute merupakan representasi dari attribute sebuah element. Singkatnya attr / attribute bisa dikatakan sebagai key-value, key nya adalah nama attribute dan value nya adalah value attribute. Contoh mendapatkan nama dan value attribute:
 
-          <img id="example" src="https://example.com" alt="example">
+        <img id="example" src="https://example.com" alt="example">
 
-          <script>
-              imageId = document.getElementById("example");
-              attribute = imageId.getAttributeNode("src");
+        <script>
+          imageId = document.getElementById("example");
+          attribute = imageId.getAttributeNode("src");
 
-              console.log("attribute.name"); // get name of attribute
-              console.log("attribute.value"); // get value of attribute
-          </script>
+          console.log("attribute.name"); // get name of attribute
+          console.log("attribute.value"); // get value of attribute
+        </script>
 
-    - **Attr Value**, dalam kebanyakan kasus kita langsung ingin mendapatkan value attribute. Untuk mendapatkan value attribute secara langsung menggunakan method **_getAttribute(name)_** di element.
-    - Contohnya:
+    **Attr Value**, dalam kebanyakan kasus kita langsung ingin mendapatkan value attribute. Untuk mendapatkan value attribute secara langsung menggunakan method `getAttribute("nameAttr")` di element. Contohnya:
 
-          <img id="example" src="https://example.com" alt="example">
+        <img id="example" src="https://example.com" alt="example">
 
-          <script>
-              imageId = document.getElementById("example");
-              attrValue = imageId.getAttribute("src");
+        <script>
+          imageId = document.getElementById("example");
+          attrValue = imageId.getAttribute("src");
 
-              console.log("attrValue");
-          </script>
+          console.log("attrValue");
+        </script>
 
-    - **Membuat attribute**, untuk membuat attribute bisa menggunakan **_document.createAttribute("name")_**
-    - Lalu untuk menambahkannya ke element, menggunakan **_element.setAttributeNode(attribute)_**.
-    - Atau bisa juga langsung membuat attribute dengan name dan value nya menggunakan **_document.setAttribute(name, value)_**.
+    **Membuat attribute**, untuk membuat attribute bisa menggunakan `document.createAttribute("nameAttr")`. Lalu untuk menambahkannya ke element menggunakan `element.setAttributeNode(attribute)`. Atau bisa juga langsung membuat attribute dengan name dan value nya sekaligus menggunakan `document.setAttribute(name, value)`.
 
-          <img id="example">
+        <img id="example">
 
-          <script>
-              const image = document.getElementById("example");
+        <script>
+          const image = document.getElementById("example");
 
-              const addAttr = image.setAttribute("src", "http://example.com");
-          </script>
+          const addAttr = image.setAttribute("src", "http://example.com");
+        </script>
 
 6.  **NamedNodeMap**
 
-    - Merupakan kumpulan atau collections yang berisikan attribute dalam bentuk Map.
-    - Mirip seperti NodeList, namun isinya adalah attribute.
-    - Contoh:
+    namedNodeMap merupakan kumpulan atau collections yang berisikan attribute dalam bentuk Map. Mirip seperti NodeList, namun isinya adalah attribute. Contoh:
 
-          <img id="example" src="https://example.com" alt="example image">
+        <img id="example" src="https://example.com" alt="example image">
 
-          <script>
-              const image = document.getElementById("example");
+        <script>
+          const image = document.getElementById("example");
+          const attributes = image.attributes;
 
-              const attr = image.attributes;
+          for (let attr of attributes) {
+            console.log(`${attr.name} : ${attr.value}`)
+          }
+        </script>
 
-              for (let babi of attr) {
-                  console.log(`${babi.name} : ${babi.value}`)
-              }
-          </script>
+7.  **Text Node**
 
-**Text Node**, Merupakan Text tanpa tag HTML.
+    text node merupakan Text tanpa tag HTML. Dalam membuat Text Node, kita bisa menggunakan `document.createTextNode(string)`. Hasilnya berupa text yang bisa ditambahkan ke Node lain. Contoh:
 
-- Dalam membuat Text Node, kita bisa menggunakan method **_document.createTextNode(string)_**. Hasilnya berupa text yang bisa ditambahkan ke Node lain.
-- Contoh, menambahkan nama text "wahyu" kedalam element div HTML :
+        // menambahkan nama text "wahyu" kedalam element div HTML
+        <div id="name"></div>
 
-      <div id="name"></div>
-
-      <script>
+        <script>
           const name = document.querySelector("#name");
 
           const textName = document.createTextNode("wahyu");
           name.appendChild(textName);
-      </script>
+        </script>
 
 ### ~ EVENT HANDLERS :
 
@@ -440,34 +424,35 @@ Ada dua cara menambahkan Event Handler ke Node, menggunakan **Event Target** ata
 
 1.  **Event Target**
 
-    - merupakan parent class dari Node, artinya semua Node memiliki kemampuan dari Event Target.
-    - Pada Event Target, kita bisa menggunakan method **_addEventListener(type, callback)_** untuk menambahkan Event Target.
-    - Contoh, menambahkan suatu kejadian atau event handler ketika input di klik:
+    merupakan parent class dari Node, artinya semua Node memiliki kemampuan dari Event Target.
 
-          <input id="clickMe" type="button" value="Click Me" />
+    pada Event Target, kita bisa menggunakan method `addEventListener(type, callback)` untuk menambahkan Event Target.
 
-          <script>
-              const clickMe = document.getElementById("clickMe");
-              clickMe.addEventListener("click", () => {
-                  clickMe.setAttribute("value", "You Already Click Me");
-              };
-          </script>
+    contoh: menambahkan suatu kejadian atau event handler ketika input di klik:
 
-2.  Global Events Handlers
+        <input id="clickMe" type="button" value="Click Me" />
 
-    - Untuk menambahkan Event Handler kita juga bisa menggunakan Global Events Handlers.
-    - Global Events Handlers sendiri bukanlah sebuah super class, hanya kontrak yang bisa digunakan untuk menambahkan event handler sesuai type event nya.
-    - Contoh:
+        <script>
+          const clickMe = document.getElementById("clickMe");
 
-          <input id="button" type="button" value="Click Me" />
+          clickMe.addEventListener("click", () => {
+            clickMe.setAttribute("value", "You Already Click Me");
+          };
+        </script>
 
-            <script>
-                const button = document.getElementById("button");
+2.  **Global Events Handlers**
 
-                button.onclick = () => {
-                    button.setAttribute("value", "You Already Click Me");
-                }
-            </script>
+    Global Events Handlers sendiri bukanlah sebuah super class, hanya kontrak yang bisa digunakan untuk menambahkan event handler sesuai type event nya. Contoh:
+
+        <input id="button" type="button" value="Click Me" />
+
+        <script>
+          const button = document.getElementById("button");
+
+          button.onclick = () => {
+            button.setAttribute("value", "You Already Click Me");
+          }
+        </script>
 
 **Events**, beberapa jenis events yang sering digunakan:
 
@@ -504,13 +489,7 @@ Ada dua cara menambahkan Event Handler ke Node, menggunakan **Event Target** ata
 
 ### ~ STYLES :
 
-DOM juga bisa digunakan untuk memanipulasi attribute style pada element dengan lebih mudah.
-
-Kita bisa menggunakan **_element.style.name = value_**.
-
-Untuk penamaan Style nya menggunakan format pascalCase, misal backgroundColor.
-
-Contoh:
+DOM juga bisa digunakan untuk memanipulasi attribute style pada element dengan lebih mudah. Kita bisa menggunakan `element.style.name = value`. Untuk penamaan Style nya menggunakan format pascalCase, misal backgroundColor. Contoh:
 
     <input type="button" value="blue" />
     <input type="button" value="red" />
@@ -518,75 +497,70 @@ Contoh:
     <div id="canvas" style="width: 500px; height: 500px; background-color: black;"></div>
 
     <script>
-        const buttons = document.querySelectorAll("input");
-        const canvas = document.getElementById("canvas");
+      const buttons = document.querySelectorAll("input");
+      const canvas = document.getElementById("canvas");
 
-        for (const button of buttons) {
+      for (const button of buttons) {
         button.addEventListener("click", () => {
-                canvas.style.backgroundColor = button.getAttribute("value");
-            })
-        }
+          canvas.style.backgroundColor = button.getAttribute("value");
+        })
+      }
     </script>
 
 ### ~ InnerText and innerHTML :
 
-Selain **textContent**, terdapat property lain bernama **innerText** untuk mendapatkan isi text sebuah element.
+1.  **InnerText**
 
-Tujuannya sama, untuk mengambil atau mengubah isi text konten sebuah element, namun ada perbedaannya.
+    selain **textContent**, terdapat property lain bernama **innerText** untuk mendapatkan isi text sebuah element.
 
-**TextContent** akan mengambil semua isi dari konten text sebuah element.
+    tujuannya sama, untuk mengambil atau mengubah isi text konten sebuah element, namun ada perbedaannya. **TextContent** akan mengambil semua isi dari konten text sebuah element. **InnerText** bisa tahu, bagaian text mana yang akan ditampilkan, dia hanya akan mengambil text nya saja. Contoh perbedaan textContent dan innertext:
 
-**InnerText** bisa tahu, bagaian text mana yang akan ditampilkan, dia hanya akan mengambil text nya saja.
-
-Contoh, perbedaan textContent dan innertext:
-
-    <p id="content">
-        <script>
+        <p id="content">
+          <script>
             console.log("hai");
-        </script>
-        <b>wahyu</b> komarudin <i>hidayah</i>
-    </p>
+          </script>
+          <b>wahyu</b> komarudin <i>hidayah</i>
+        </p>
 
-    <script>
-        const content = document.getElementById("content");
-        console.log(content.innerText); // wahyu komarudin hidayah
-        console.log(content.textContent); // console.log("hai"); </br> wahyu komarudin hidayah
-    </script>
-
-**innerHTML**, innerHTML akan mengambil seluruh element HTML nya sebagai text.
-
-Ini juga cocok jika ingin mengubah isi dari element menggunakan text yang berisi tag HTML nya sekalian.
-
-Contoh, mengambil seluruh element HTML nya sebagai text:
-
-    <p id="content">
         <script>
-            console.log("hai");
+          const content = document.getElementById("content");
+
+          console.log(content.innerText); // wahyu komarudin hidayah
+
+          console.log(content.textContent); // console.log("hai"); </br> wahyu komarudin hidayah
         </script>
-        <b>wahyu</b> komarudin <i>hidayah</i>
-    </p>
 
-    <script>
-        const content = document.getElementById("content");
-        console.log(content.innerHTML);
-        // Output:  <script>
-                        console.log("hai");
-                    </script>
-                        <b>wahyu</b> komarudin <i>hidayah</i>
-    </script>
+2.  **innerHTML**
 
-Salah satu kemampuan dari innerHTML adalah bisa mengubah isi dari children sebuah element hanya dengan string.
+    innerHTML akan mengambil seluruh element HTML nya sebagai text. Ini juga cocok jika ingin mengubah isi dari element menggunakan text yang berisi tag HTML nya sekalian. Contoh, mengambil seluruh element HTML nya sebagai text:
 
-Tag yang terdapat di dalam string secara otomatis akan menjadi child element.
+        <p id="content">
+          <script>
+            console.log("hai");
+          </script>
+          <b>wahyu</b> komarudin <i>hidayah</i>
+        </p>
 
-Contoh :
+        <script>
+          const content = document.getElementById("content");
 
-    <p id="content"></p></p>
+          console.log(content.innerHTML);
+          // Output:
+          // <script>
+                console.log("hai");
+             </script>
+             <b>wahyu</b> komarudin <i>hidayah</i>
+        </script>
 
-    <script>
-        const content = document.getElementById("content");
-        content.innerHTML = "<h1>Title</h1><p>Description</p>";
-    </script>
+    salah satu kemampuan dari innerHTML adalah bisa mengubah isi dari children sebuah element hanya dengan string. Tag yang terdapat di dalam string secara otomatis akan menjadi child element. Contoh:
+
+        <p id="content"></p>
+
+        <script>
+          const content = document.getElementById("content");
+
+          content.innerHTML = "<h1>Title</h1><p>Description</p>";
+        </script>
 
 ### ~ WINDOWS :
 
@@ -601,11 +575,11 @@ Contoh:
     <p id="content"></p></p>
 
     <script>
-        const content = document.getElementById("content");
-        const height = window.screen.height;
-        const width = window.screen.width;
+      const content = document.getElementById("content");
+      const height = window.screen.height;
+      const width = window.screen.width;
 
-        content.textContent = `Window width: ${width} - height: ${height}`;
+      content.textContent = `Window width: ${width} - height: ${height}`;
     </script>
 
 ### ~ QUERY SELECTOR :
@@ -619,99 +593,94 @@ Terdapat dua method untuk Query Selector :
 
 **Pola Query Selector**, Pola untuk Query Selector adalah menggunakan CSS Selector. Jadi, penggunaannya seperti ketika membuat selector di CSS.
 
-**Universal Selector** merupakan selector untuk menyeleksi semua element. Bisa menggunakan karakter \*.
+- **Universal Selector** merupakan selector untuk menyeleksi semua element. Bisa menggunakan karakter `*`.
 
-Contoh :
+  Contoh :
 
-    <script>
-        const element = document.querySelectorAll("*");
-        console.log(element);
-    </script>
+        <script>
+          const element = document.querySelectorAll("*");
+          console.log(element);
+        </script>
 
-**Type Selector** adalah selector yang digunakan untuk menyeleksi tag type HTML yang kita pilih. Untuk menggunakannya, kita bisa langsung sebutkan nama tag nya.
+- **Type Selector** adalah selector yang digunakan untuk menyeleksi tag type HTML yang kita pilih. Untuk menggunakannya, kita bisa langsung sebutkan **nama tag** nya.
 
-Contoh :
+  Contoh :
 
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
 
-    <script>
-        const element = document.querySelectorAll("li");
-        console.log(element);
-    </script>
+        <script>
+          const element = document.querySelectorAll("li");
 
-**Class Selector** merupakan selector untuk menyeleksi semua element yang memiliki class yang sesuai selector. Untuk menggunakannya, kita bisa sebutkan nama class nya diawali dengan titik.
+          console.log(element);
+        </script>
 
-Contoh :
+- **Class Selector** merupakan selector untuk menyeleksi semua element yang memiliki class yang sesuai selector. Untuk menggunakannya, memakai tanda `.` kemudian dilanjutkan dengan nama kelasnya.
 
-    <ul class="menu">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
+  Contoh :
 
-    <script>
-        const element = document.querySelectorAll(".menu");
-        console.log(element);
-    </script>
+        <ul class="menu">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
 
-**ID Selector** merupakan selector yang digunakan untuk menyeleksi id yang sesuai selector. Untuk menggunakannya, kita bisa gunakan nama id diawali dengan karakter #.
+        <script>
+          const element = document.querySelectorAll(".menu");
 
-Contoh :
+          console.log(element);
+        </script>
 
-    <ul class="menu">
-        <li id="menu-item">1</li>
-        <li>2</li>
-        <li id="menu-item">3</li>
-    </ul>
+- **ID Selector** merupakan selector yang digunakan untuk menyeleksi id yang sesuai selector. Untuk menggunakannya, kita bisa gunakan nama id diawali dengan karakter `#`.
 
-    <script>
-        const element = document.querySelectorAll("#menu-item");
-        console.log(element);
-    </script>
+  Contoh :
 
-**Attribute Selector** merupakan selector yang bisa digunakan untuk menyeleksi element berdasarkan attribute nya.
+        <ul class="menu">
+          <li id="menu-item">1</li>
+          <li>2</li>
+          <li id="menu-item">3</li>
+        </ul>
 
-Kita bisa menggunakan selector [attribute].
+        <script>
+          const element = document.querySelectorAll("#menu-item");
 
-Atau bisa juga untuk tag tertentu, misal menggunakan selector div[attribute].
+          console.log(element);
+        </script>
 
-Contoh :
+- **Attribute Selector** merupakan selector yang bisa digunakan untuk menyeleksi element berdasarkan attribute nya. Kita bisa menggunakan selector [attribute]. Atau bisa juga untuk tag tertentu, misal menggunakan selector div[attribute].
 
-    <div class="1"></div>
-    <div class="2"></div>
-    <div class="3"></div>
+  Contoh :
 
-    <script>
-        const element = document.querySelectorAll("[class]");
-        console.log(element);
-    </script>
+        <div class="1"></div>
+        <div class="2"></div>
+        <div class="3"></div>
 
-**Operator di Attribute Selector**, Kita juga bisa menggunakan operator pada attribut selector.
+        <script>
+          const element = document.querySelectorAll("[class]");
 
-Misal [attribute=value], [attribute^=value] dan lain-lain
+          console.log(element);
+        </script>
 
-Contoh :
+- **Operator di Attribute Selector**, Kita juga bisa menggunakan operator pada attribut selector. Misal [attribute=value], [attribute^=value] dan lain-lain
 
-    <div class="1"></div>
-    <div class="2"></div>
-    <div class="3"></div>
+  Contoh :
 
-    <script>
-        const element = document.querySelectorAll("div[class^='1']");
-        console.log(element);
-    </script>
+        <div class="1"></div>
+        <div class="2"></div>
+        <div class="3"></div>
+
+        <script>
+          const element = document.querySelectorAll("div[class^='1']");
+
+          console.log(element);
+        </script>
 
 ### ~ WEB STORAGE :
 
-**Web storage** adalah salah satu Web API (perantara agar kode JavaScript bisa "berkomunikasi" dengan browser) yang dapat menyimpan data secara lokal pada sisi client (disimpan secara lokal pada perangkat kita).
-
-Web Storage dapat menampung data maksimal 10MB per domain.
-
-Fungsi dari Web Storage:
+**Web storage** adalah salah satu Web API (perantara agar kode JavaScript bisa "berkomunikasi" dengan browser) yang dapat menyimpan data secara lokal pada sisi client (disimpan secara lokal pada perangkat kita). Web Storage dapat menampung data maksimal 10MB per domain. Fungsi dari Web Storage:
 
 - Menyimpan data dalam bentuk string yang dihasilkan oleh halaman web agar bisa diakses secara offline.
 - Cocok juga untuk menyimpan data konfigurasi preference untuk pengguna web.
@@ -720,13 +689,15 @@ Macam-macam Web Storage:
 
 1. **Local Storage**:
 
-   - Digunakan untuk menyimpan data tanpa ada batasan waktu. Data yang disimpan tidak akan hilang bila browser atau tabs browser ditutup kecuali jika kita menghapusnya.
-   - Untuk menggunakan local storage, kita harus mengaksesnya melalui objek yang bernama "localStorage".
+   digunakan untuk menyimpan data tanpa ada batasan waktu. Data yang disimpan tidak akan hilang bila browser atau tabs browser ditutup kecuali jika kita menghapusnya.
+
+   untuk menggunakan local storage, kita harus mengaksesnya melalui objek yang bernama "localStorage".
 
 2. **Session Storage**:
 
-   - Digunakan untuk menyimpan data sementara pada browser. Data akan hilang ketika browser atau tab browser ditutup.
-   - Untuk menerapkan Session Storage, kita dapat menggunakan global objek sessionStorage.
+   digunakan untuk menyimpan data sementara pada browser. Data akan hilang ketika browser atau tab browser ditutup.
+
+   untuk menerapkan Session Storage, kita dapat menggunakan global objek sessionStorage.
 
 Data yang tersimpan dalam **localStorage** atau **sessionStorage** adalah nilai dengan tipe data primitif seperti number, boolean, atau string. Bisa juga berbentuk JavaScript objek dengan mengubahnya ke dalam string (JSON)
 
@@ -750,7 +721,7 @@ Menyimpan dan Mendapatkan Data Kompleks pada Web Storage:
 
 <details> <summary>
 
-## [Behind-the-Scenes](https://github.com/wahyukmr/JavaScript-Programming/blob/master/08-Behind-the-Scenes/script.js)
+## [Behind-the-Scenes](https://github.com/wahyukmr/JavaScript-Programming/blob/master/07-Behind-the-Scenes/script.js)
 
 </summary>
 
@@ -852,7 +823,7 @@ Kesimpulan dari bagian ini:
 - Mengakses variabel sebelum mendeklarasikannya adalah praktik yang buruk dan harus dihindari.
 - Selalu mendeklarasikan fungsi terlebih dahulu sebelum menggunakannya.
 
-### ~ How the "THIS" KEYWORD WORK :
+### ~ "THIS" KEYWORD :
 
 **this keyword/variable** adalah variabel spesial yang dibuat untuk setiap execution context(dalam kasus ini untuk setiap fungsi). Mengambil nilai yang merujuk ke "pemilik" dari fungsi dimana kata kunci **this** ini digunakan.
 
@@ -860,10 +831,10 @@ Pengertian diatas bukan static. Tergantung pada bagaimana fungsi dipanggil, dan 
 
 Penerapan kata kunci **this:**
 
-- Dalam **Object Method** 👉 kata kunci **_this_** merujuk ke **objek** pemilik functionnya.
-- Di **Function** (jika menggunakan strict mode) 👉 kata kunci **_this_** mengembalikan **undefined**.
-- **Arrow Function** 👉 kata kunci **_this_** merujuk ke this dari fungsi induk terdekatnya.
-- **Event Listener** 👉 kata kunci **_this_** merujuk ke elemen DOM tempat tempat penanganan dilampirkan.
+- This dalam **Object Method** 👉 kata kunci **_this_** merujuk ke **objek** pemilik functionnya.
+- this dalam sebuah **Function** (jika menggunakan strict mode) 👉 kata kunci **_this_** mengembalikan **undefined**.
+- This dalam **Arrow Function** 👉 kata kunci **_this_** merujuk ke this dari fungsi induk terdekatnya.
+- This dalam **Event Listener** 👉 kata kunci **_this_** merujuk ke elemen DOM tempat tempat penanganan dilampirkan.
 
 ### ~ PRIMITIVES VS OBJECTS (Primitive vs. Reference Types) :
 
@@ -923,17 +894,145 @@ Kata kunci **arguments** tidak lagi penting di javascsript karena ada cara yang 
 
 <details> <summary>
 
-## [Regular-Expressions](https://github.com/wahyukmr/JavaScript-Programming/blob/master/09-Regular-Expressions/script.js)
+## [Regular-Expressions](https://github.com/wahyukmr/JavaScript-Programming/blob/master/08-Regular-Expressions/script.js)
 
 </summary>
 
-Regular-Expressions, sering disingkat menjadi "regex" atau "regExp", adalah pola yang membantu pemrogram mencocokkan, mencari, dan mengganti teks.
+**Pengertian RegExp**
+
+Regex (Regular Expression) adalah suatu alat yang kuat dalam pemrograman untuk mencocokkan dan memanipulasi pola string. Dalam JavaScript, Anda dapat menggunakan objek `RegExp` untuk membuat dan bekerja dengan ekspresi reguler. Ekspresi reguler digunakan untuk mencari, mencocokkan, dan mengubah teks berdasarkan pola yang ditentukan.
+
+**Membuat Ekspresi Reguler**
+
+KIta dapat membuat ekspresi reguler dengan menggunakan **_sintaks literal_** atau menggunakan **_konstruktor RegExp_**.
+
+1.  sintaks literal
+
+        // Syntax:
+        let regex = /pola/flags;
+
+        // Contoh penggunaan:
+        let regex = /hello/;
+
+2.  konstruktor RegExp
+
+        // Syntax:
+        let regex = new RegExp(pola, flags);
+
+
+        // Contoh penggunaan:
+        let regex = new RegExp("hello");
+
+**Method String**
+
+Method string digunakan untuk melakukan pencocokan dan pemodifikasian:
+
+- `search(regex)` : Mencari string untuk kecocokan dengan ekspresi reguler dan mengembalikan indeks pertama kecocokan atau -1 jika tidak ditemukan.
+- `match(regex)` : Mengembalikan array hasil pencocokan dengan ekspresi reguler atau null jika tidak ditemukan.
+- `replace(regex, replacement)` : Menggantikan kecocokan dengan ekspresi reguler dengan string pengganti.
+- `split(regex)` : Membagi string menjadi array substring berdasarkan ekspresi reguler.
+
+Contoh penggunaan:
+
+    let regex = /hello/;
+    let str = "Hello, world!";
+
+    console.log(str.search(regex)); // Output: -1 (tidak ditemukan)
+
+    console.log(str.match(regex)); // Output: null (tidak ditemukan)
+
+    console.log(str.replace(regex, "Hi")); // Output: Hi, world!
+
+    console.log(str.split(regex)); // Output: ["Hello, world!"] (tidak ada pembagian)
+
+**Method Object**
+
+- `test(string)` : Menguji apakah string cocok dengan ekspresi reguler dan mengembalikan nilai true atau false.
+- `exec(string)` : Mencari kecocokan dalam string dan mengembalikan array hasil atau null jika tidak ditemukan. Namun jika ingin mendapatkan hasil kecocokan yang lain harus menggunakan perulangan, karena penggunaan flag global (g) tidak bisa.
+
+Contoh penggunaan:
+
+    // method test:
+    let regex = /hello/;
+    let str = "Hello, world!";
+
+    let result = regex.test(str);
+    console.log(result); // Output: true
+
+    // method exec:
+    let regex = /apple/g;
+    let str = "I have an apple, an apple pie, and an apple tree.";
+
+    let match;
+    while ((match = regex.exec(str)) !== null) {
+      console.log(match[0]); // Output: "apple", "apple", "apple"
+    }
+
+**Modifiers (Modifier Flags)**
+
+Flags (bendera) bersifat opsional dan dapat digunakan untuk mengubah perilaku ekspresi reguler:
+
+- `g` (global): Mencocokkan semua kejadian yang cocok, bukan hanya yang pertama.
+- `i` (ignore case): Tidak memperhatikan perbedaan antara huruf besar dan kecil.
+- `m` (multiline): Mencocokkan awal dan akhir setiap baris baru dalam sebuah teks.
+- `u` (unicode): Mengaktifkan fitur Unicode untuk memanipulasi karakter yang tidak termasuk dalam BMP (Basic Multilingual Plane).
+- `s` (dotAll): memungkinkan karakter `.` dalam regex untuk mencocokkan karakter baru (\n).
+
+**Karakter Special**
+
+- `.` : Mencocokkan karakter apa pun kecuali karakter baru (\n).
+- `\d` : Mencocokkan angka (digit) dari 0 hingga 9.
+- `\D` : Mencocokkan karakter selain angka.
+- `\w` : Mencocokkan karakter alfanumerik (huruf, angka, dan underscore) atau singkatan dari `[a-zA-Z0-9_]`.
+- `\W` : Mencocokkan karakter selain karakter alfanumerik.
+- `\s` : Mencocokkan karakter spasi putih (spasi, tab, baris baru).
+- `\S` : Mencocokkan karakter selain karakter spasi putih.
+- `\n` : Mencocokkan karakter mencocokkan karakter baris baru.
+- `x|y` : Mencocokkan salah satu ekspresi x atau y.
+
+**Karakter Kuantifier** (menunjukan jumlah atau kuantitas)
+
+- `*` : Mencocokkan 0 atau lebih kejadian dari karakter sebelumnya.
+- `+` : Mencocokkan 1 atau lebih kejadian dari karakter sebelumnya.
+- `?` : Mencocokkan 0 atau 1 kejadian dari karakter sebelumnya.
+- `{n}` : Mencocokkan tepat n kejadian dari karakter sebelumnya.
+- `{n,}` : Mencocokkan setidaknya n kejadian dari karakter sebelumnya.
+- `{n,m}` : Mencocokkan antara n dan m kejadian dari karakter sebelumnya.
+
+**Karakter Set dan Ranges**
+
+- `[abc]` : Mencocokkan salah satu karakter yang ada di dalam tanda kurung.
+- `[^abc]` : Mencocokkan karakter yang tidak ada di dalam tanda kurung.
+- `[a-z]` : Mencocokkan karakter dalam rentang a hingga z (huruf kecil).
+- `[A-Z]` : Mencocokkan karakter dalam rentang A hingga Z (huruf besar).
+- `[0-9]` : Mencocokkan karakter dalam rentang 0 hingga 9.
+
+**Anchors (Pengikat)**
+
+- `^` : Mencocokkan pola di awal string.
+- `$` : Mencocokkan pola di akhir string.
+- `\b` : Mencocokkan batas kata (word boundary).
+- `\B` : Mencocokkan posisi selain batas kata.
+
+**Grup dan Backreferences**
+
+- `(pola)` (regular group): untuk mencocokkan dan menangkap pola tertentu.
+- `(?:pola)` (non-capturing group): digunakan saat hanya ingin mencocokkan pola tanpa menangkap hasilnya.
+- `(?<name>pola)` (named capturing group): memungkinkan untuk memberi nama grup penangkapan sehingga hasilnya dapat diakses dengan nama tersebut.
+- `\n` (n adalah angka): untuk mencocokkan teks yang cocok dengan grup yang sudah ada sebelumnya.
+
+**Lookahead dan Lookbehind**
+
+- `x(?=y)` : Lookahead positif, mencocokkan `x` hanya jika diikuti oleh karakter `y`, tetapi karakter `y` tidak diikutsertakan dalam hasil pencocokan.
+- `x(?!y)` : Lookahead negatif, mencocokkan `x` hanya jika tidak diikuti oleh `y`, dan karakter `y` tidak diikutsertakan dalam hasil pencocokan.
+- `(?<=y)x` : Lookbehind positif, mencocokkan `x` hanya jika diawali oleh `y` tanpa mengonsumsi karakter `y`.
+- `(?<!y)x` : Lookbehind negatif, mencocokkan `x` hanya jika tidak diawali oleh `y` tanpa mengonsumsi karakter `y`.
 
 </details>
 
 <details> <summary>
 
-## [Data-Structures](https://github.com/wahyukmr/JavaScript-Programming/blob/master/10-Data-Structures-Operators/script.js)
+## [Data-Structures](https://github.com/wahyukmr/JavaScript-Programming/blob/master/09-Data-Structures-Operators/script.js)
 
 </summary>
 
@@ -967,7 +1066,7 @@ Dapat membuat Array atau properti objek baru dan atau untuk meneruskan nilai dal
       console.log(newPerson);
       // output: { name: 'John', age: 30, email: 'john@example.com' }
 
-### ~ REST PETTERN and REST PARAMETERS ( ... ) :
+### ~ REST PETTERN AND REST PARAMETERS ( ... ) :
 
 **Rest parameter** dan **rest pattern** adalah fitur baru di JavaScript yang memungkinkan kita untuk mengumpulkan atau menggabungkan beberapa nilai ke dalam sebuah array.
 
@@ -979,9 +1078,9 @@ Dapat membuat Array atau properti objek baru dan atau untuk meneruskan nilai dal
 - Contoh penggunaan rest parameter adalah sebagai berikut:
 
       function myFunction(a, b, ...args) {
-          console.log(a); // output: 1
-          console.log(b); // output: 2
-          console.log(args); // output: [3, 4, 5]
+        console.log(a); // output: 1
+        console.log(b); // output: 2
+        console.log(args); // output: [3, 4, 5]
       }
 
       myFunction(1, 2, 3, 4, 5);
@@ -1001,7 +1100,7 @@ Dapat membuat Array atau properti objek baru dan atau untuk meneruskan nilai dal
 
 Dalam penggunaannya, rest parameter dan rest pattern digunakan pada parameter atau variabel yang berfungsi sebagai penerima nilai, sedangkan spread operator digunakan pada nilai yang ingin disebar atau dipisahkan.
 
-### ~ SHORT CIRCUITING ( && and || ) in NON BOOLEAN :
+### ~ SHORT CIRCUITING ( && and || ) IN NON BOOLEAN :
 
 **Or Operator** ( || )
 
@@ -1016,7 +1115,7 @@ Dalam penggunaannya, rest parameter dan rest pattern digunakan pada parameter at
 - jika tidak ada satupun yang bernilai falsy, maka operan terakhir yang akan diambil.
 - Sering kali kita dapat menggunakan **Operator And** untuk benar-benar menghindari if statement, yakni memeriksa apakah properti atau nilai tertentu benar-benar ada.
 
-### ~ The NULLISH COALESCING OPERATOR ( ?? ) :
+### ~ THE NULLISH COALESCING OPERATOR ( ?? ) :
 
 Merupakan operator yang mirip dengan ternary operator, berbeda pada kondisinya, jika berilai null atau undefined maka value default nya dieksekusi.
 
@@ -1026,7 +1125,7 @@ Nilai Nullish adalah: Null dan Undefined (**_tidak termasuk:_** 0 or ""). Jadi, 
 
 Prinsip dari cara kerjanya sama seperti OR, AND dan NULLISH operators. Tetapi dengan menggunakan Logical Assignment Operators menjadi lebih sederhana.
 
-### ~ LOOPING ARRAYS - The FOR-OF LOOP :
+### ~ LOOPING ARRAYS - the for-of loop :
 
 Looping ini digunakan untuk melakukan perulangan terhadap isi value dari iterable object (object yang dapat diiterasi), seperti Array, String, Set, Map, dll dan mengakses nilai elemen langsung tanpa harus menggunakan indeks seperti pada for loop.
 
@@ -1053,13 +1152,13 @@ Optional Chaining = memeriksa ada atau tidaknya nilai(ada yang berarti tidak Nul
       Contohnya seperti ini:
 
           const person = {
-              name: 'John',
-              age: 25,
-              gender: 'Male'
+            name: 'John',
+            age: 25,
+            gender: 'Male'
           };
 
           for (const key of Object.keys(person)) {
-              console.log(key);
+            console.log(key);
           }
 
   2.  Looping melalui method **Object.values()**
@@ -1069,13 +1168,13 @@ Optional Chaining = memeriksa ada atau tidaknya nilai(ada yang berarti tidak Nul
       Contohnya seperti ini:
 
           const person = {
-              name: 'John',
-              age: 25,
-              gender: 'Male'
+            name: 'John',
+            age: 25,
+            gender: 'Male'
           };
 
           for (const value of Object.values(person)) {
-              console.log(value);
+            console.log(value);
           }
 
   3.  Looping melalui method **Object.entries()**
@@ -1085,13 +1184,13 @@ Optional Chaining = memeriksa ada atau tidaknya nilai(ada yang berarti tidak Nul
       Contohnya seperti ini:
 
           const person = {
-              name: 'John',
-              age: 25,
-              gender: 'Male'
+            name: 'John',
+            age: 25,
+            gender: 'Male'
           };
 
           for (const [key, value] of Object.entries(person)) {
-              console.log(key + ': ' + value);
+            console.log(key + ': ' + value);
           }
 
   Ketiga method Object diatas, mengembalikan iterable object (memungkinkan objek untuk dilooping atau diiterasi menggunakan method iterasi built-in, seperti for-of, array.from(), atau spread operator). Dalam bahasa yang lebih sederhana, iterabel object dapat dianggap sebagai objek yang dapat dilakukan iterasi, mirip dengan array.
@@ -1100,16 +1199,76 @@ Optional Chaining = memeriksa ada atau tidaknya nilai(ada yang berarti tidak Nul
 
 Metode JavaScript `Object.fromEntries()` adalah untuk membuat objek dari daftar pasangan key-value.
 
+### ~ METHODS OBJECT SUMMARY :
+
+- `hasOwnProperty(property)` = untuk memeriksa apakah object memiliki properti dengan nama yang ditentukan. Mengembalikan `true` jika nilai tersebut ada dalam object dan `false` jika tidak.
+- `keys()` = mengembalikan array yang berisi semua property keys object.
+- `values()` = mengembalikan array yang berisi semua property values object.
+- `entries()` = mengembalikan array yang berisi pasangan property key-value object dalam bentuk array dua dimensi.
+- `assign(target, source1, source2, ..., sourceX)` = menggabungkan property-property dari satu atau lebih `source` object ke `target` object. Jika terdapat property dengan nama yang sama, property di `source` object kemudian akan menggantikan property dengan nama yang sama di `target` object.
+- `freeze()` = untuk membekukan object, sehingga tidak dapat mengubah nilai property atau menambah property baru. Method ini mengembalikan object yang telah dibekukan.
+- `seal()` = menyegel object, sehingga tidak dapat menambah atau menghapus property, tetapi masih memungkinkan untuk mengubah nilai property yang ada. Method ini mengembalikan object yang disegel.
+- `isFrozen(object)` = memeriksa apakah object telah dibekukan. Mengembalikan `true` jika object telah dibekukan dan `false` jika tidak.
+- `isSealed(object)` = memeriksa apakah object telah disegel. Mengembalikan `true` jika object telah dibekukan dan `false` jika tidak.
+- `getOwnPropertyDescriptor(property)` = mengembalikan deskriptor property sendiri untuk peroperty yang ditentukan.
+- `defineProperty(property, descriptor)` = menentukan property baru atau memodifikasi property yang ada dengan deskriptor yang ditentukan.
+- `toString()` = mengembalikan representasi string dari object.
+- `toLocaleString()` = mengembalikan representasi string dari object yang sesuai dengan pengaturan local.
+- `valueOf()` = mengembalikan nilai primitif object.
+
+### ~ METHODS SET SUMMARY :
+
+- `add(value)` = untuk menambahkan nilai baru ke dalam Set.
+- `delete(value)` = untuk menghapus nilai tertentu dari Set.
+- `has(value)` = untuk memeriksa apakah Set mengandung nilai tertentu. Mengembalikan `true` jika nilai tersebut ada dalam Set dan `false` jika tidak.
+- `clear()` = untuk menghapus semua nilai dari Set, menjadikannya kosong.
+- `size` = properti yang mengemmbalikan jumlah elemen (nilai) dalam Set.
+- `value()` = mengembalikan iterator yang berisi semua nilai dalam Set, dalam urutan penambahan.
+- `entries()` = mengembalikan iterator yang berisi pasangan `[value, value]` untuk setiap elemen dalam Set, dalam urutan penambahan.
+- `forEach(callbackFn, thisArg)` = menjalankan fungsi callback pada setiap nilai dalam Set. Fungsi callback menerima tiga argumen: nilai saat ini, nilai saat ini juga sebagai kunci, dan Set itu sendiri. Opsi `thisArg` dapat digunakan untuk menentukan konteks `this` dalam pemanggilan fungsi callback.
+
+### ~ METHODS MAP SUMMARY :
+
+- `set(key, value)` = untuk menentukan pasangan key-value baru dalam Map.
+- `get(key)` = mengembalikan nilai yang terkait dengan key tertentu dalam Map. Jika key tidak ditemukan, mengembalikan `undefined`.
+- `has(key)` = untuk memeriksa apakah Map mengandung key tertentu. Mengembalikan `true` jika key tersebut ada dalam Map dan `false` jika tidak.
+- `delete()` = untuk menghapus pasangan key-value yang terkait dengan key tertentu dari Map.
+- `clear()` = untuk menghapus semua pasangan key-value dari Map, menjadikannya kosong.
+- `size` = properti yang mengemmbalikan jumlah pasangan key-value dalam Map.
+- `keys()` = mengembalikan iterator yang berisi semua key dalam Map, dalam urutan penambahan.
+- `value()` = mengembalikan iterator yang berisi semua value dalam Map, dalam urutan penambahan.
+- `entries()` = mengembalikan iterator yang berisi pasangan `[key, value]` untuk setiap elemen dalam Map, dalam urutan penambahan.
+- `forEach(callbackFn, thisArg)` = menjalankan fungsi callback pada setiap pasangan key-value dalam Map. Fungsi callback menerima tiga argumen: nilai saat ini, nilai saat ini juga sebagai kunci, dan Map itu sendiri. Opsi `thisArg` dapat digunakan untuk menentukan konteks `this` dalam pemanggilan fungsi callback.
+
+### ~ METHODS STRING SUMMARY :
+
+- `charAt(index)` = mengembalikan karakter pada posisi index yang ditentukan dalam string.
+- `charCodeAt(index)` = mengembalikan kode Unicode dari karekter pada posisi index yang ditentukan dalam string.
+- `concat(string2, string3, ..., stringX)` = menggabungkan dua atau lebih string dan mengembalikan string baru yang dihasilkan.
+- `includes(searchString, position)` = memeriksa apakah string mengandung substring yang ditentukan. Jika ditemukan, mengembalikan `true` jika tidak mengembalikan `false`.
+- `indexOf(searchValue, fromIndex)` = mengembalikan index pertama yang ditemukan `searchValue` dalam string. Jika tidak ditemukan, mengembalikan -1.
+- `lastIndexOf(searchValue, fromIndex)` = mengembalikan index terakhir yang ditemukan `searchValue` dalam string. Jika tidak ditemukan, mengembalikan -1.
+- `length` = mengembalikan jumlah karakter dalam string.
+- `replace(searchValue, replaceValue)` = menggantikan `searchValue` dengan `replaceValue` dalam string dan mengembalikan string baru yang dihasilkan.
+- `slice(startIndex, endIndex)` = mengambil potongan (substring) dari string berdasarkan `startIndex` dan `endIndex` yang ditentukan, dan mengembalikan potongan tersebut sebagai string baru.
+- `split(separator, limit)` = memisahkan string menjadi array substring berdasarkan separator yang ditentukan. Opsi limit dapat digunakan untuk membatasi jumlah elemen dalam array yang dihasilkan.
+- `substring(startIndex, endIndex)` = mengambil potongan (substring) dari string berdasarkan `startIndex` dan `endIndex` yang ditentukan, dan mengembalikan potongan tersebut sebagai string baru. Method ini mirip dengan `slice()` tetapi tidak mendukung index negatif.
+- `toLowerCase()` = mengkonversi semua karakter dalam string menjadi huruf kecil dan mengembalikan string baru.
+- `toUpperCase()` = mengkonversi semua karakter dalam string menjadi huruf besar dan mengembalikan string baru.
+- `trim()` = menghapus spasi kosong di awal dan akhir string dan mengembalikan string baru sebagai hasilnya.
+- `startsWith(searchString, position)` = memeriksa apakah string dimulai dengan substring yang ditentukan. Jika benar, mengembalikan nilai `true`, jika tidak mengembalikan nilai `false`.
+- `endsWith(searchString, length)` = memeriksa apakah string diakhir dengan substring yang ditentukan. Jika benar, mengembalikan nilai `true`, jika tidak mengembalikan nilai `false`.
+
 ### ~ ARRAYS VS SETS :
 
 Keduannya dapat digunakan jika hanya bermain dengan daftar nilai sederhana dan hanya memiliki nilai tanpa deskripsi apa pun.
 
-Keunggulan Array:
+**Keunggulan Array**:
 
 1. Dapat digunakan jika membutuhkan daftar nilai yang berurutan (mungkin berisi nilai yang sama).
 2. Dapat digunakan saat perlu untuk memaniplasi data.
 
-Keunggulan Set:
+**Keunggulan Set**:
 
 1. Digunakan ketika perlu bekerja dengan nilai yang unik (tidak ada nilai yang sama).
 2. Digunakan saat mementingkan kinerja yang tinggi.
@@ -1119,7 +1278,7 @@ Keunggulan Set:
 
 Keduanya dapat digunakan jika perlu pasangan key dan value. Jadi dengan key akan memiliki cara untuk mendeskripsikan atau menggambarkan value.
 
-Keunggulan Object:
+**Keunggulan Object**:
 
 1. Cara **sederhana** untuk menyimpan keys/value.
 2. Mudah untuk menulis dan mengakses value ( menggunakan operator dot atau bracket[] ).
@@ -1128,7 +1287,7 @@ Keunggulan Object:
 5. Gunakan jika ingin bekerja dengan JSON.
 6. Penggunaan data Object masih digunakan sepanjang waktu.
 
-Keunggulan Map:
+**Keunggulan Map**:
 
 1. Performa yang lebih baik.
 2. Key bisa bertipe data apapun.
@@ -1149,11 +1308,11 @@ Penggunaan Objek Array juga umum di JavaScript.
 
 <details> <summary>
 
-## [Functions](https://github.com/wahyukmr/JavaScript-Programming/blob/master/11-Functions/script.js)
+## [Functions](https://github.com/wahyukmr/JavaScript-Programming/blob/master/10-Functions/script.js)
 
 </summary>
   
-### ~ How PASSING ARGUMENT - VALUE VS REFERENCE :
+### ~ HOW PASSING ARGUMENT - value vs reference :
   
 Jika kita meneruskan nilai Primitive types sebagai argumen dari sebuah fungsi, maka argumen itu merupakan salinan dari nilai aslinya, akan menjadi nilai atau variabel yang berbeda. Karnanya apabila nilai salinan diubah tidak akan mengubah nilai originalnya.
 
@@ -1171,7 +1330,7 @@ Saat menggunakan kata kunci return, maka kode setelahnya tidak akan dieksekusi.
 
 kita bisa menggunakan return untuk menghentikan eksekusi sebuah function.
 
-### ~ FIRST-CLASS FUNCTIONS and HIGHER-ORDER FUNCTIONS :
+### ~ FIRST-CLASS FUNCTIONS AND HIGHER-ORDER FUNCTIONS :
 
 Javascript adalah bahasa yang memiiliki **First-class function** yang berarti fungsi hanya diperlakukan sebagai nilai. Karena itu kita dapat melakukan beberapa hal:
 
@@ -1197,7 +1356,7 @@ Beberapa keuntungan utama Callback function:
 
 Fungsi ini berguna dibeberapa situasi. Apalagi jika menggunakan paradigma pemrograman yang sangat penting yaitu **pemrograman fungsional**.
 
-### ~ The CALL, APPLY, and BIND METHODS :
+### ~ THE CALL, APPLY, AND BIND METHODS :
 
 Sebagai catatan, Seperti yang dibahas sebelumnya dalam pemanggilan regular function kata kunci this merujuk ke undefined (dalam strict mode).
 
@@ -1311,7 +1470,7 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
 
 <details> <summary>
 
-## [Arrays-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/12-Arrays-Bankist/script.js)
+## [Arrays-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/11-Arrays-Bankist/script.js)
 
 </summary>
 
@@ -1319,84 +1478,19 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
 
 **Method yang mengubah nilai asli dari array**
 
-- **push()** = untuk menambahkan satu atau lebih elemen ke akhir dari sebuah array. Method ini mengembalikan panjang array yang baru setelah elemen baru ditambahkan.
+- **push(element1, element2, ..., elementX)** = untuk menambahkan satu atau lebih elemen ke akhir array dan mengembalikan panjang array yang baru setelah elemen baru ditambahkan.
 
-  Contoh penggunaan:
+- **unshift(element1, element2, ..., elementX)** = untuk menambahkan satu atau lebih elemen ke awal array dan mengembalikan panjang array yang baru setelah elemen baru ditambahkan.
 
-      let buah = ['apel', 'mangga', 'jeruk'];
-      let panjangArrayBaru = buah.push('pisang', 'kiwi'); // nilai dari panjangArrayBaru adalah 5
+- **pop()** = untuk menghapus dan mengembalikan elemen terakhir dari array.
 
-      console.log(buah); // output: ["apel", "mangga", "jeruk", "pisang", "kiwi"]
-      console.log(panjangArrayBaru); // output: 5
+- **shift()** = untuk Menghapus dan mengembalikan elemen pertama dari array, menggeser semua elemen lain ke indeks yang lebih rendah.
 
-- **unshift()** = untuk menambahkan satu atau lebih elemen ke awal dari sebuah array. Method ini mengembalikan panjang array yang baru setelah elemen baru ditambahkan.
-
-  Contoh penggunaan:
-
-      let buah = ['apel', 'mangga', 'jeruk'];
-      let panjangArrayBaru = buah.unshift('pisang', 'kiwi'); // nilai dari panjangArrayBaru adalah 5, dan nilai dari buah sekarang adalah ["pisang", "kiwi", "apel", "mangga", "jeruk"]
-
-      console.log(buah); // output: ["pisang", "kiwi", "apel", "mangga", "jeruk"]
-      console.log(panjangArrayBaru); // output: 5
-
-- **pop()** = untuk menghapus elemen terakhir dari sebuah array dan mengembalikan elemen yang dihapus.
-
-  Contoh penggunaan:
-
-      let buah = ['apel', 'mangga', 'jeruk', 'pisang', 'kiwi'];
-      let buahTerakhir = buah.pop(); // nilai dari buahTerakhir adalah "kiwi", dan nilai dari buah sekarang adalah ["apel", "mangga", "jeruk", "pisang"]
-
-      console.log(buah); // output: ["apel", "mangga", "jeruk", "pisang"]
-      console.log(buahTerakhir); // output: "kiwi"
-
-- **shift()** = untuk menghapus elemen pertama dari sebuah array dan mengembalikan elemen yang dihapus.
-
-  Contoh penggunaan:
-
-      let buah = ['apel', 'mangga', 'jeruk'];
-      let buahPertama = buah.shift(); // nilai dari buahPertama adalah "apel", dan nilai dari buah sekarang adalah ["mangga", "jeruk"]
-
-      console.log(buah); // output: ["mangga", "jeruk"]
-      console.log(buahPertama); // output: "apel"
-
-- **splice()** = untuk mengubah isi dari sebuah array dengan menghapus atau menambahkan elemen ke dalam array tersebut. Method ini mengembalikan array baru yang berisi elemen-elemen yang dihapus.
-
-  Format umum dari method `splice()` adalah sebagai berikut:
-
-      array.splice(start, deleteCount, item1, item2...)
-
-  - start: Angka yang menentukan index array mulai dari mana penghapusan atau penambahan elemen akan dimulai.
-  - deleteCount: Jumlah elemen yang akan dihapus, dimulai dari index start. Jika nilai ini dihilangkan, maka semua elemen setelah index start akan dihapus.
-  - item1, item2, ...: Elemen yang akan ditambahkan ke dalam array, dimulai dari index start. Jika nilai ini dihilangkan, maka tidak ada elemen yang ditambahkan ke dalam array.
-
-  Contoh penggunaan:
-
-      let buah = ['apel', 'mangga', 'jeruk', 'pisang', 'kiwi'];
-      let buahDihapus = buah.splice(2, 2, 'anggur', 'semangka'); // nilai dari buahDihapus adalah ["jeruk", "pisang"], dan nilai dari buah sekarang adalah ["apel", "mangga", "anggur", "semangka", "kiwi"]
-
-      console.log(buah); // output: ["apel", "mangga", "anggur", "semangka", "kiwi"]
-      console.log(buahDihapus); // output: ["jeruk", "pisang"]
+- **splice(startIndex, deleteCount, item1, item2, ..., itemX)** = untuk mengubah isi array dengan menghapus, menambahkan, atau mengganti elemen-elemen yang ada. Menghapus sejumlah deleteCount elemen mulai dari startIndex dan, jika diperlukan, menambahkan elemen item1, item2, dan seterusnya ke array. Mengembalikan array yang berisi elemen-elemen yang dihapus.
 
 - **reverse()** = untuk membalik urutan elemen-elemen dalam sebuah array.
 
-  Contoh penggunaan:
-
-      let buah = ['apel', 'mangga', 'jeruk', 'pisang', 'kiwi'];
-      buah.reverse(); // nilai dari buah sekarang adalah ["kiwi", "pisang", "jeruk", "mangga", "apel"]
-
-      console.log(buah); // output: ["kiwi", "pisang", "jeruk", "mangga", "apel"]
-
-- **sort()** = untuk mengurutkan elemen-elemen dalam sebuah array berdasarkan kondisi pada callback function. Secara default, method ini akan mengurutkan elemen-elemen dalam array berdasarkan urutan karakter Unicode dari nilai-nilai elemen tersebut.
-
-  Contoh penggunaan:
-
-      let angka = [5, 2, 8, 1, 9];
-
-      angka.sort(function(a, b) {
-          return a - b;
-      }); // nilai dari angka sekarang adalah [1, 2, 5, 8, 9]
-
-      console.log(angka); // output: [1, 2, 5, 8, 9]
+- **sort(compareFunction)** = untuk mengurutkan elemen-elemen dalam array secara leksikografis atau berdasarkan fungsi pembanding yang ditentukan. Secara default, method ini akan mengurutkan elemen-elemen dalam array berdasarkan urutan karakter Unicode dari nilai-nilai elemen tersebut.
 
 - **fill()** = untuk mengisi semua elemen dalam array dengan nilai yang sama.
 
@@ -1416,82 +1510,27 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
 
 **Method yang membuat salinan baru dari array**
 
-- **Data Transformation: map()** = untuk membuat array baru dengan mengaplikasikan sebuah fungsi pada setiap elemen dari array asli.
+- **map(callback(currentValue, index, array), thisArg)** = untuk membuat array baru dengan hasil pemanggilan fungsi callback pada setiap elemen array. Fungsi callback dapat mengubah nilai elemen saat ini dan mengembalikan nilai baru.
+
+- **filter(callback(currentValue, index, array), thisArg)** = untuk membuat array baru dengan elemen-elemen yang lulus uji kondisi yang ditentukan dalam fungsi callback. Fungsi callback mengembalikan true untuk elemen yang harus disertakan dalam array baru.
+
+- **reduce(callback(accumulator, currentValue, index, array), initialValue)** = untuk menerapkan fungsi callback pada setiap elemen array untuk menghasilkan nilai akhir tunggal. Fungsi callback mengakumulasi nilai menggunakan accumulator dan mengoperasikan currentValue.
 
   Contoh penggunaan:
 
-      let angka = [1, 2, 3, 4, 5];
+      const products = [
+        { name: 'Laptop', price: 1000 },
+        { name: 'Mouse', price: 20 },
+        { name: 'Keyboard', price: 50 },
+      ];
+      const total = products.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue.price;
+      }, 0);
+      console.log(total); // Output: 1070
 
-      let angkaKuadrat = angka.map(function(x) {
-          return x * x;
-      }); // nilai dari angkaKuadrat adalah [1, 4, 9, 16, 25], dan nilai dari angka tidak berubah
+- **slice(startIndex, endIndex)** = untuk mengambil potongan (subarray) dari array berdasarkan indeks awal dan akhir yang ditentukan, dan mengembalikan subarray tersebut sebagai array baru.
 
-      console.log(angka); // output: [1, 2, 3, 4, 5]
-      console.log(angkaKuadrat); // output: [1, 4, 9, 16, 25]
-
-  Fungsi yang digunakan dalam `map()` dapat menerima tiga argumen opsional, yaitu nilai dari elemen saat ini, indeks elemen, dan array asli. Namun, biasanya hanya nilai dari elemen saat ini yang digunakan dalam fungsi tersebut, seperti berikut:
-
-      let angka = [1, 2, 3, 4, 5];
-
-      let angkaGanjil = angka.map(function(x, index) {
-          if (index % 2 == 0) {
-              return x;
-          } else {
-              return 0;
-          }
-      }); // nilai dari angkaGanjil adalah [1, 0, 3, 0, 5]
-
-      console.log(angka); // output: [1, 2, 3, 4, 5]
-      console.log(angkaGanjil); // output: [1, 0, 3, 0, 5]
-
-- **Data Transformation: filter()** = untuk membuat array baru dengan menyaring elemen yang memenuhi kondisi tertentu dari array asli.
-
-  Contoh penggunaan:
-
-      let angka = [1, 2, 3, 4, 5];
-
-      let angkaGanjil = angka.filter(function(x) {
-          return x % 2 == 1;
-      }); // nilai dari angkaGanjil adalah [1, 3, 5], dan nilai dari angka tidak berubah
-
-      console.log(angka); // output: [1, 2, 3, 4, 5]
-      console.log(angkaGanjil); // output: [1, 3, 5]
-
-- **Data Transformation: reduce()** = untuk mereduksi semua elemen pada sebuah array menjadi sebuah nilai tunggal dengan memanggil sebuah fungsi untuk setiap elemen. Fungsi tersebut akan menerima dua argumen, yaitu nilai akumulator dan nilai elemen saat ini. Nilai akumulator akan digunakan untuk menyimpan hasil dari pemrosesan sebelumnya dan diberikan ke fungsi untuk diproses bersamaan dengan elemen saat ini.
-
-  Contoh penggunaan:
-
-      let arr = [1, 2, 3, 4, 5];
-
-      let sum = arr.reduce(function(accumulator, current) {
-          return accumulator + current;
-      });
-
-      console.log(sum); // output: 15
-
-  Kita dapat memberikan argumen opsional sebagai nilai awal untuk akumulator pada method `reduce()`. Jika argumen tidak diberikan, maka nilai awal akan diambil dari elemen pertama pada array.
-
-  Contoh penggunaan dengan nilai awal yang diberikan:
-
-      let arr = [2, 4, 6, 8, 10];
-
-      let sum = arr.reduce(function(accumulator, current) {
-          return accumulator + current;
-      }, 10);
-
-      console.log(sum); // output: 40
-
-- **slice()** = untuk membuat array baru yang merupakan sub-array dari array asli. Method ini dapat menerima 2 argumen opsional: indeks awal dan indeks akhir dari sub-array yang ingin diambil.
-
-  Contoh penggunaan:
-
-      let buah = ['apel', 'mangga', 'pisang', 'jeruk', 'durian'];
-      let buah2 = buah.slice(1, 4); // nilai dari buah2 adalah ['mangga', 'pisang', 'jeruk'], dan nilai dari buah tidak berubah
-
-      console.log(buah); // output: ['apel', 'mangga', 'pisang', 'jeruk', 'durian']
-      console.log(buah2); // output: ['mangga', 'pisang', 'jeruk']
-
-  Jika ingin mengambil sub-array dari awal array hingga indeks tertentu, dapat memberikan nilai 0 sebagai indeks awal pada method slice(), seperti berikut:
+  Contoh penggunaan: jika ingin mengambil sub-array dari awal array hingga indeks tertentu, dapat memberikan nilai 0 sebagai indeks awal pada method slice(), seperti berikut:
 
       let buah = ['apel', 'mangga', 'pisang', 'jeruk', 'durian'];
       let buah2 = buah.slice(0, 3); // nilai dari buah2 adalah ['apel', 'mangga', 'pisang'], dan nilai dari buah tidak berubah
@@ -1499,61 +1538,35 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
       console.log(buah); // output: ['apel', 'mangga', 'pisang', 'jeruk', 'durian']
       console.log(buah2); // output: ['apel', 'mangga', 'pisang']
 
-- **concat()** = untuk menggabungkan dua atau lebih array dan menghasilkan array baru. Method ini tidak mengubah nilai asli dari array yang digabungkan, melainkan membuat array baru.
+- **concat(array2, array3, ..., arrayX)** = untuk menggabungkan dua atau lebih array dan mengembalikan array baru yang dihasilkan.
+
+- **flat(depth)** untuk menggabungkan semua elemen pada array, dengan level kedalaman yang ditentukan, ke dalam array baru.
 
   Contoh penggunaan:
 
-      let buah1 = ['apel', 'mangga'];
-      let buah2 = ['pisang', 'jeruk', 'durian'];
-      let buah3 = ['kiwi'];
-      let buah4 = buah1.concat(buah2, buah3); // nilai dari buah4 adalah ['apel', 'mangga', 'pisang', 'jeruk', 'durian', 'kiwi'], dan nilai dari buah1, buah2, dan buah3 tidak berubah
-
-      console.log(buah1); // output: ['apel', 'mangga']
-      console.log(buah2); // output: ['pisang', 'jeruk', 'durian']
-      console.log(buah3); // output: ['kiwi']
-      console.log(buah4); // output: ['apel', 'mangga', 'pisang', 'jeruk', 'durian', 'kiwi']
-
-  Jika ingin menggabungkan array dengan nilai skalar atau string, dapat memasukkan nilai tersebut sebagai argumen pada method `concat()`, seperti berikut:
-
-      let buah1 = ['apel', 'mangga'];
-      let buah2 = ['pisang', 'jeruk', 'durian'];
-      let buah3 = 'kiwi';
-      let buah4 = buah1.concat(buah2, buah3); // nilai dari buah4 adalah ['apel', 'mangga', 'pisang', 'jeruk', 'durian', 'kiwi'], dan nilai dari buah1 dan buah2 tidak berubah
-
-      console.log(buah1); // output: ['apel', 'mangga']
-      console.log(buah2); // output: ['pisang', 'jeruk', 'durian']
-      console.log(buah4); // output: ['apel', 'mangga', 'pisang', 'jeruk', 'durian', 'kiwi']
-
-- **flat()** untuk menggabungkan semua elemen pada array, dengan level kedalaman yang ditentukan, ke dalam array baru.
-
-  Contoh penggunaan:
-
+      // example 1:
       let arr = [1, 2, [3, 4]];
-      let arrFlat = arr.flat(); // nilai dari arrFlat adalah [1, 2, 3, 4]
-
+      let arrFlat = arr.flat();
       console.log(arr); // output: [1, 2, [3, 4]]
       console.log(arrFlat); // output: [1, 2, 3, 4]
 
-  Jika ingin menentukan level kedalaman penggabungan array, dapat menggunakan argumen depth pada method `flat()`. Jika argumen depth tidak ditentukan, maka defaultnya adalah 1. Contohnya sebagai berikut:
-
+      // example 2:
       let arr = [1, 2, [3, [4, 5]]];
-      let arrFlat = arr.flat(2); // nilai dari arrFlat adalah [1, 2, 3, 4, 5]
-
+      let arrFlat = arr.flat(2);
       console.log(arr); // output: [1, 2, [3, [4, 5]]]
       console.log(arrFlat); // output: [1, 2, 3, 4, 5]
 
-  Atau nested array yang lebih dalam bisa menggunakan:
-
+      // example 3:
       const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
       arr4.flat(Infinity);
       // output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-- **flatMap()** adalah method pada Array di JavaScript yang menggabungkan dua metode yaitu `map()` dan `flat()`. Metode ini melakukan operasi pada setiap elemen array dan mengembalikan array baru yang dihasilkan dari hasil pemetaan elemen-elemen tersebut, kemudian menggabungkan array yang dihasilkan tersebut menjadi satu array dengan level yang sama.
+- **flatMap()** adalah method pada Array di JavaScript yang menggabungkan dua method yaitu `map()` dan `flat()`. Metode ini melakukan operasi pada setiap elemen array dan mengembalikan array baru yang dihasilkan dari hasil pemetaan elemen-elemen tersebut, kemudian menggabungkan array yang dihasilkan tersebut menjadi satu array dengan level yang sama.
 
   Contoh penggunaan:
 
       let arr = [1, 2, 3];
-      let arrFlatMap = arr.flatMap((num) => num * 2); // nilai dari arrFlatMap adalah [2, 4, 6]
+      let arrFlatMap = arr.flatMap((num) => num * 2);
 
       console.log(arr); // output: [1, 2, 3]
       console.log(arrFlatMap); // output: [2, 4, 6]
@@ -1561,12 +1574,12 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
   Method `flatMap()` akan menghilangkan nilai-nilai yang kosong (null, undefined, NaN, atau '') dari array yang dihasilkan. Contohnya sebagai berikut:
 
       let arr = [1, 2, 3];
-      let arrFlatMap = arr.flatMap((num) => [num * 2, null, undefined, NaN, '']); // nilai dari arrFlatMap adalah [2, null, undefined, NaN, '', 4, null, undefined, NaN, '', 6, null, undefined, NaN, '']
+      let arrFlatMap = arr.flatMap((num) => [num * 2, null, undefined, NaN, '']);
 
       console.log(arr); // output: [1, 2, 3]
       console.log(arrFlatMap); // output: [2, null, undefined, NaN, '', 4, null, undefined, NaN, '', 6, null, undefined, NaN, '']
 
-  Berikut adalah contoh penggunaan metode `flatMap()` dan `map()` dengan `flat()` secara terpisah pada nested array:
+  Berikut adalah perbandingan contoh penggunaan method `flatMap()` dan `map()`, `flat()` secara terpisah pada nested array:
 
       // menggunakan flatMap()
       const nestedArr = [[1, 2], [3, 4], [5, 6]];
@@ -1579,130 +1592,86 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
 
       console.log(flattenedArr2); // [2, 4, 6, 8, 10, 12]
 
-- **join()** = untuk menggabungkan semua elemen pada array menjadi sebuah string dengan memasukkan separator di antara setiap elemen. Kita dapat menentukan separator yang ingin digunakan sebagai argumen pada method ini, dan jika argumen tidak diberikan, maka separator yang digunakan adalah koma ','.
+- **join(separator)** = untuk menggabungkan semua elemen dalam array menjadi sebuah string, dengan memisahkan elemen-elemen tersebut menggunakan separator yang ditentukan.
 
-  Contoh penggunaan:
-
-      let arr = ["apple", "banana", "cherry"];
-
-      let str = arr.join();
-
-      console.log(str); // output: "apple,banana,cherry"
-
-      let str2 = arr.join(" - ");
-
-      console.log(str2); // output: "apple - banana - cherry"
-
-Method `join()` mengembalikan sebuah string yang berisi semua elemen pada array yang sudah digabungkan dengan separator. String yang dihasilkan tidak merubah nilai asli dari array.
-
-- **Looping Arrays: forEach()** = untuk melakukan iterasi atau perulangan pada setiap elemen pada array dan menjalankan fungsi yang telah ditentukan pada setiap elemen tersebut. Fungsi yang diberikan sebagai parameter pada `forEach()` akan menerima tiga argumen, yaitu elemen saat ini, indeks elemen, dan array itu sendiri. Namun, pada umumnya kita hanya memerlukan elemen saat ini dalam penggunaan `forEach()`.
-
-  Contoh penggunaan:
-
-      let arr = [1, 2, 3, 4, 5];
-
-      arr.forEach(function(element) {
-          console.log(element);
-      });
-
-      // output:
-      // 1
-      // 2
-      // 3
-      // 4
-      // 5
+- **forEach(callback(currentValue, index, array), thisArg)** = untuk menjalankan fungsi callback pada setiap elemen array, dengan argumen berupa `currentValue`, `index`, dan `array`. Opsi `thisArg` dapat digunakan untuk menentukan konteks this dalam pemanggilan fungsi callback.
 
   method `forEach()` tidak mengembalikan nilai apa pun dan hanya digunakan untuk menjalankan fungsi pada setiap elemen pada array. Oleh karena itu, method `forEach()` tidak dapat digunakan untuk mengubah elemen pada array seperti halnya method `map()`. Namun, kita masih dapat memanfaatkan `forEach()` untuk melakukan operasi yang diperlukan pada setiap elemen pada array, seperti menghitung nilai atau memanggil fungsi lain pada setiap elemen.
 
 **Method untuk mencari index atau elemen**
 
-- **indexOf()** = untuk mencari indeks pertama dari suatu elemen dalam sebuah array. Method ini akan mengembalikan nilai -1 jika elemen yang dicari tidak ditemukan dalam array.
+- **indexOf(searchElement, fromIndex)** = untuk mengembalikan indeks pertama kali ditemukannya `searchElement` dalam array. Jika tidak ditemukan, mengembalikan -1.
 
   Contoh penggunaan:
 
       let arr = [1, 2, 3, 4, 5, 3];
-      let index = arr.indexOf(3); // nilai dari index adalah 2
-
-      console.log(index); // output: 2
-
-  Method `indexOf()` juga dapat menerima argumen kedua, yaitu fromIndex. Argumen ini digunakan untuk menentukan indeks awal pencarian. Jika fromIndex tidak ditentukan, maka pencarian dimulai dari indeks 0. Jika fromIndex negatif, maka pencarian dimulai dari indeks akhir dengan mengurangi nilai fromIndex dari panjang array.
-
-  Contoh penggunaan dengan fromIndex:
-
-      let arr = [1, 2, 3, 4, 5, 3];
-      let index = arr.indexOf(3, 3); // nilai dari index adalah 5
+      let index = arr.indexOf(3, 3);
 
       console.log(index); // output: 5
 
-- **findIndex()** = untuk mencari indeks dari elemen pertama pada sebuah array yang memenuhi kondisi tertentu. Jika tidak ada elemen yang memenuhi kondisi tersebut, maka method ini akan mengembalikan nilai -1.
+- **findIndex(callback(currentValue, index, array), thisArg)** = untuk mencari indeks dari elemen pertama pada sebuah array yang memenuhi kondisi tertentu. Jika tidak ada elemen yang memenuhi kondisi tersebut, maka method ini akan mengembalikan nilai -1.
 
-  Contoh penggunaan, mencari indeks dari elemen pertama pada array arr yang nilainya lebih besar dari 3. Karena elemen dengan nilai 4 ditemukan pada indeks ke-3, maka nilai 3 menjadi nilai kembalian dari method `findIndex()` :
+  Contoh penggunaan:
 
+      // example 1:
       let arr = [1, 2, 3, 4, 5];
       let index = arr.findIndex((num) => num > 3); // nilai dari index adalah 3
 
       console.log(index); // output: 3
 
-  Method `findIndex()` menerima sebuah fungsi sebagai argumen. Fungsi ini akan dieksekusi pada setiap elemen pada array sampai ditemukan elemen yang memenuhi kondisi yang ditentukan. Fungsi ini menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri.
-
-  Contoh penggunaan dengan fungsi:
-
+      // example 2:
       let arr = [1, 2, 3, 4, 5];
       let index = arr.findIndex((num, index, array) => {
           return num > 3 && index > 1 && array.length > 4;
-      }); // nilai dari index adalah 3
+      });
 
       console.log(index); // output: 3
 
-- **find()** = untuk mencari elemen pertama pada sebuah array yang memenuhi kondisi tertentu. Jika tidak ada elemen yang memenuhi kondisi tersebut, maka method ini akan mengembalikan nilai undefined.
+- **find(callback(currentValue, index, array), thisArg)** = untuk mencari elemen pertama pada sebuah array yang memenuhi kondisi tertentu. Jika tidak ada elemen yang memenuhi kondisi tersebut, maka method ini akan mengembalikan nilai undefined.
 
   Contoh panggunaan:
 
-      let arr = [1, 2, 3, 4, 5];
-      let result = arr.find((num) => num > 3); // nilai dari result adalah 4
+      // example 1:
+      const arr = [1, 2, 3, 4, 5];
+      const result = arr.find((num) => num > 3);
 
       console.log(result); // output: 4
 
-  Method `find()` menerima sebuah fungsi sebagai argumen. Fungsi ini akan dieksekusi pada setiap elemen pada array sampai ditemukan elemen yang memenuhi kondisi yang ditentukan. Fungsi ini menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri.
-
-  Contoh penggunaan dengan fungsi:
-
-      let arr = [1, 2, 3, 4, 5];
-
-      let result = arr.find((num, index, array) => {
+      // example 2:
+      const arr = [1, 2, 3, 4, 5];
+      const result = arr.find((num, index, array) => {
           return num > 3 && index > 1 && array.length > 4;
-      }); // nilai dari result adalah 4
+      });
 
       console.log(result); // output: 4
 
 **Method untuk mengecek ada atau tidaknya elemen pada array**
 
-- **includes()** = untuk memeriksa apakah sebuah nilai tertentu terdapat pada sebuah array. Jika nilai tersebut ditemukan, maka method ini akan mengembalikan nilai true. Jika tidak ditemukan, maka method ini akan mengembalikan nilai false.
+- **includes(element, start)** = untuk memeriksa apakah sebuah nilai tertentu terdapat pada sebuah array. Jika nilai tersebut ditemukan, maka method ini akan mengembalikan nilai true. Jika tidak ditemukan, maka method ini akan mengembalikan nilai false.
 
   Contoh penggunaan:
 
+      // example 1:
       let arr = [1, 2, 3, 4, 5];
-      let check = arr.includes(3); // nilai dari check adalah true
+      let check = arr.includes(3);
       console.log(check); // output: true
 
-      let check2 = arr.includes(6); // nilai dari check2 adalah false
+      let check2 = arr.includes(6);
       console.log(check2); // output: false
 
-  Method `includes()` juga memiliki parameter opsional kedua, yaitu indeks awal pencarian. Dengan parameter ini, kita dapat membatasi pencarian hanya pada bagian tertentu dari array.
-
-  Contoh penggunaan dengan parameter indeks:
-
+      // example 2:
       let arr = [1, 2, 3, 4, 5];
-      let check = arr.includes(3, 2); // nilai dari check adalah true
+      let check = arr.includes(3, 2);
       console.log(check); // output: true
 
-      let check2 = arr.includes(2, 3); // nilai dari check2 adalah false
+      let check2 = arr.includes(2, 3);
       console.log(check2); // output: false
 
-- **some()** = untuk memeriksa apakah setidaknya satu elemen pada array memenuhi kondisi tertentu yang diuji oleh sebuah fungsi. Method ini akan mengembalikan nilai true jika setidaknya satu elemen pada array memenuhi kondisi tersebut, dan mengembalikan nilai false jika tidak ada elemen yang memenuhi kondisi.
+- **some(callback(currentValue, index, array), thisArg)** = untuk memeriksa apakah setidaknya satu elemen pada array memenuhi kondisi tertentu yang diuji oleh sebuah fungsi. Method ini akan mengembalikan nilai true jika setidaknya satu elemen pada array memenuhi kondisi tersebut, dan mengembalikan nilai false jika tidak ada elemen yang memenuhi kondisi.
 
   Contoh penggunaan:
 
+      // example 1:
       let arr = [1, 2, 3, 4, 5];
 
       let check = arr.some(function(elem) {
@@ -1715,48 +1684,39 @@ Method `join()` mengembalikan sebuah string yang berisi semua elemen pada array 
       });
       console.log(check2); // output: false
 
-  Fungsi yang digunakan sebagai parameter pada method `some()` akan menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri. Kita dapat menggunakan argumen kedua atau ketiga untuk melakukan operasi atau pemrosesan tambahan dalam fungsi tersebut.
-
-  Contoh penggunaan dengan fungsi yang menggunakan argumen tambahan:
-
+      // example 2:
       let arr = [1, 2, 3, 4, 5];
 
       let check = arr.some(function(elem, index, array) {
           console.log(`Index of ${elem} is ${index} in [${array}]`);
           return elem > 3;
       });
-
       console.log(check); // output: true
 
-- **every()** = untuk memeriksa apakah semua elemen pada array memenuhi kondisi tertentu yang diuji oleh sebuah fungsi. Method ini akan mengembalikan nilai true jika semua elemen pada array memenuhi kondisi tersebut, dan mengembalikan nilai false jika ada setidaknya satu elemen yang tidak memenuhi kondisi.
+- **every(callback(currentValue, index, array), thisArg)** = untuk memeriksa apakah semua elemen pada array memenuhi kondisi tertentu yang diuji oleh sebuah fungsi. Method ini akan mengembalikan nilai true jika semua elemen pada array memenuhi kondisi tersebut, dan mengembalikan nilai false jika ada setidaknya satu elemen yang tidak memenuhi kondisi.
 
   Contoh penggunaan:
 
+      // example 1:
       let arr = [2, 4, 6, 8, 10];
 
       let check = arr.every(function(elem) {
           return elem % 2 === 0;
       });
-
       console.log(check); // output: true
 
       let check2 = arr.every(function(elem) {
           return elem > 5;
       });
-
       console.log(check2); // output: false
 
-  Fungsi yang digunakan sebagai parameter pada method `every()` akan menerima tiga argumen, yaitu nilai elemen, indeks elemen, dan array itu sendiri. Kita dapat menggunakan argumen kedua atau ketiga untuk melakukan operasi atau pemrosesan tambahan dalam fungsi tersebut.
-
-  Contoh penggunaan dengan fungsi yang menggunakan argumen tambahan:
-
+      // example 2:
       let arr = [2, 4, 6, 8, 10];
 
       let check = arr.every(function(elem, index, array) {
           console.log(`Index of ${elem} is ${index} in [${array}]`);
           return elem % 2 === 0;
       });
-
       console.log(check); // output: true
 
 ### ~ The MAGIC of CHAINING METHODS :
@@ -1765,15 +1725,40 @@ Method `join()` mengembalikan sebuah string yang berisi semua elemen pada array 
 
 **chaining method** juga dapat membuat kode menjadi sulit dibaca dan sulit untuk diperbaiki jika terjadi kesalahan. Oleh karena itu, penggunaan chaining method sebaiknya dibatasi hanya pada kasus yang sederhana dan mudah dibaca.
 
+### ~ PROJECT PALNNING :
+
+1. **User Stories**
+
+   adalah deskripsi fungsionalitas aplikasi dari sudut pandang pengguna / user. Kemudian semua user stories disatukan dengan jelas dan akan menggambarkan fungsionalitas seluruh aplikasi.
+
+   format umum: sebagai siapa (user, admin, dll). Ingin melakukan **apa**, apa manfaatnya (**kenapa**).
+
+2. **Features**
+
+   setelah mendeskripsikan gambaran umum dari keseluruhan aplikasi, langkah selanjutnya memungkinkan developer untuk menentukan fitur yang tepat dalam aplikasi agar membuat user storie dapat benar-benar berfungsi.
+
+3. **Flowchart**
+
+   flowchart digunakan untuk menerapkan semua fitur yang telah ditentukan sebelumnya dan memvisualisasikan berbagai tindakan serta bagaimana program tersebut bereaksi terhadap tindakan dari user / pengguna.
+
+4. **Architecture**
+
+   adalah bagaimana cara kita mengatur code dan fitur atau package javascript apa saja yang akan kita gunakan untuk menerapkan flowchart yang telah dibuat.
+   Architecture juga bisa diartikan untuk menyatukan semua kode dan memberi kita struktur dimana kita dapat mengembangkan fungsionalitas aplikasi.
+
+5. **Development**
+
+   adalah langkah untuk mengimplementasikan semua rencana yang kita buat menggunakan kode.
+
 </details>
 
 <details> <summary>
 
-## [Advanced-DOM-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/14-Advanced-DOM-Bankist/script.js)
+## [Advanced-DOM-Bankist](https://github.com/wahyukmr/JavaScript-Programming/blob/master/13-Advanced-DOM-Bankist/script.js)
 
 </summary>
 
-### ~ EVENT PROPA GATION - BUBBLING and CAPTURING :
+### ~ EVENT PROPA GATION - bubbling and capturing :
 
 **Note:**
 Setiap fungsi atau code yang ditetapkan untuk menangani suatu **event** yang terjadi pada elemen HTML tertentu, atau disebut juga "handler", dapat mengakses **_property object event_**.
@@ -1793,15 +1778,15 @@ Setiap fungsi atau code yang ditetapkan untuk menangani suatu **event** yang ter
 
 **DOM Traversing** adalah konsep dalam JavaScript yang digunakan untuk menjelajahi dan memanipulasi elemen HTML dan node di dalam dokumen HTML.
 
-Dalam DOM Traversing, kita dapat menggunakan metode dan properti pada objek "**_parentNode_**", "**_childNodes_**", "**_nextSibling_**", "**_previousSibling_**", "**_firstChild_**", dan "**_lastChild_**" untuk menjelajahi struktur dokumen HTML. Metode dan properti ini memungkinkan kita untuk menelusuri dari satu elemen ke elemen lainnya, dan melakukan manipulasi terhadap elemen tersebut.
+Dalam DOM Traversing, kita dapat menggunakan method dan properti pada objek "**_parentNode_**", "**_childNodes_**", "**_nextSibling_**", "**_previousSibling_**", "**_firstChild_**", dan "**_lastChild_**" untuk menjelajahi struktur dokumen HTML. Method dan properti ini memungkinkan kita untuk menelusuri dari satu elemen ke elemen lainnya, dan melakukan manipulasi terhadap elemen tersebut.
 
-Sebagai contoh, kita dapat menggunakan metode "**_parentNode_**" untuk mengakses elemen induk dari suatu elemen HTML. kita juga dapat menggunakan metode "**_childNodes_**" untuk mengakses semua node (termasuk elemen, teks, komentar, dll.) yang menjadi anak dari suatu elemen HTML.
+Sebagai contoh, kita dapat menggunakan method "**_parentNode_**" untuk mengakses elemen induk dari suatu elemen HTML. kita juga dapat menggunakan method "**_childNodes_**" untuk mengakses semua node (termasuk elemen, teks, komentar, dll.) yang menjadi anak dari suatu elemen HTML.
 
-Selain itu, kita juga dapat menggunakan metode "**_querySelector_**" dan "**_querySelectorAll_**" untuk mencari elemen HTML berdasarkan selector CSS. Metode "**_querySelector_**" mengembalikan elemen HTML pertama yang cocok dengan selector yang diberikan, sementara metode "**_querySelectorAll_**" mengembalikan semua elemen HTML yang cocok dengan selector tersebut dalam bentuk NodeList.
+Selain itu, kita juga dapat menggunakan method "**_querySelector_**" dan "**_querySelectorAll_**" untuk mencari elemen HTML berdasarkan selector CSS. Metode "**_querySelector_**" mengembalikan elemen HTML pertama yang cocok dengan selector yang diberikan, sementara method "**_querySelectorAll_**" mengembalikan semua elemen HTML yang cocok dengan selector tersebut dalam bentuk NodeList.
 
-Dalam DOM Traversing, kita dapat melakukan manipulasi pada elemen HTML dan node, seperti mengubah nilai atribut, menambah atau menghapus elemen, dan memanipulasi teks. Manipulasi tersebut dapat dilakukan dengan menggunakan metode dan properti pada objek "**_setAttribute_**", "**_getAttribute_**", "**_createElement_**", "**_appendChild_**", "**_removeChild_**", "**_insertBefore_**", "**_replaceChild_**", "**_textContent_**", dan banyak lagi.
+Dalam DOM Traversing, kita dapat melakukan manipulasi pada elemen HTML dan node, seperti mengubah nilai atribut, menambah atau menghapus elemen, dan memanipulasi teks. Manipulasi tersebut dapat dilakukan dengan menggunakan method dan properti pada objek "**_setAttribute_**", "**_getAttribute_**", "**_createElement_**", "**_appendChild_**", "**_removeChild_**", "**_insertBefore_**", "**_replaceChild_**", "**_textContent_**", dan banyak lagi.
 
-### ~ EFFICIENTS SCRIPT LOADING - DEFER AND ASYNC :
+### ~ EFFICIENTS SCRIPT LOADING - defer and async :
 
 **Efficient Script Loading** merujuk pada teknik-teknik yang digunakan untuk memuat script pada halaman web dengan cara yang lebih efisien dan dapat meningkatkan kecepatan dan kinerja halaman tersebut. Ada tiga teknik utama yang digunakan untuk memuat script: defer, regular, dan async.
 
@@ -1830,7 +1815,7 @@ Dalam DOM Traversing, kita dapat melakukan manipulasi pada elemen HTML dan node,
 
 <details> <summary>
 
-## [OOP (Object-Oriented Programming)](https://github.com/wahyukmr/JavaScript-Programming/blob/master/15-OOP/script.js)
+## [OOP (Object-Oriented Programming)](https://github.com/wahyukmr/JavaScript-Programming/blob/master/14-OOP/script.js)
 
 </summary>
 
@@ -1840,7 +1825,7 @@ OOP merupakan paradigma (gaya menulis dan mengatur kode) pemrograman yang didasa
 
 Keuntungan OOP adalah membuat kode program lebih terstruktur dan mudah dimengerti. Selain itu, OOP juga memungkinkan menggunakan kembali kode yang sudah ada.
 
-### ~ CLASS dan INSTANCE (Classical OOP) :
+### ~ CLASS and INSTANCE (Classical OOP) :
 
 Paradigma Classical OOP dikenal karena menggunakan class sebagai dasar dari pembuatan objek. Konsep ini digunakan oleh banyak bahasa pemrograman seperti Java, C++, atau C#.
 
@@ -1924,13 +1909,13 @@ Melalui mekanisme pewarisan prototipe, jika suatu method atau properti tidak dit
 
 Keuntungan menambahkan method atau properti pada properti prototype daripada langsung pada constructor function adalah:
 
-- Efisiensi memori: method atau properti yang ditambahkan pada properti prototype dibagikan oleh semua objek yang dihasilkan dari constructor function, menghemat memori.
+- **Efisiensi memori**: method atau properti yang ditambahkan pada properti prototype dibagikan oleh semua objek yang dihasilkan dari constructor function, menghemat memori.
 
-- Kemudahan perubahan: Perubahan pada method atau properti pada properti prototype langsung mempengaruhi objek-objek yang menggunakannya, memberikan fleksibilitas dalam mengubah atau menambahkan fungsionalitas.
+- **Kemudahan perubahan**: Perubahan pada method atau properti pada properti prototype langsung mempengaruhi objek-objek yang menggunakannya, memberikan fleksibilitas dalam mengubah atau menambahkan fungsionalitas.
 
-- Kode yang terstruktur: Menambahkan method atau properti pada properti prototype memisahkan definisi objek prototipe dari constructor function, membuat kode lebih terstruktur dan mudah dibaca.
+- **Kode yang terstruktur**: Menambahkan method atau properti pada properti prototype memisahkan definisi objek prototipe dari constructor function, membuat kode lebih terstruktur dan mudah dibaca.
 
-  Namun, ada kasus-kasus tertentu di mana menambahkan method atau properti langsung pada constructor function lebih cocok, terutama jika method atau properti tersebut bersifat unik dan tidak perlu diwarisi oleh objek-objek lain.
+Namun, ada kasus-kasus tertentu di mana menambahkan method atau properti langsung pada constructor function lebih cocok, terutama jika method atau properti tersebut bersifat unik dan tidak perlu diwarisi oleh objek-objek lain.
 
 **Note:**
 
@@ -1954,7 +1939,7 @@ Jadi, dengan menggunakan ES6 Classes, kita bisa membuat objek-objek dengan prope
 
 **Note:**
 
-- Classes di JavaScript bekerja persis seperti constructor function, tetapi penggunaan yang lebih baik dan lebih modern syntax. Jadi masih mengimplementasikan prototype inheritance di balik layar, namun dengan menggunakan sebuah syntax yang masuk akal bagi orang-orang yang berasal dari bahasa pemrogramman lain.
+- **Classes di JavaScript bekerja persis seperti constructor function**, tetapi penggunaan yang lebih baik dan lebih modern syntax. Jadi masih mengimplementasikan prototype inheritance di balik layar, namun dengan menggunakan sebuah syntax yang masuk akal bagi orang-orang yang berasal dari bahasa pemrogramman lain.
 - ES6 Classes TIDAK berperilaku seperti classes di "Classical OOP" pada pembahasan sebelumnya.
 - Semua method dalam Classes akan ada di object prototype, TIDAK berada di object itu sendiri, sama seperti properti `prototype` pada constructor function.
 - Classes tidak bisa digunakan sebelum ia dideklarasikan.
@@ -1976,13 +1961,13 @@ Static methods (method statis) adalah method yang terkait dengan class itu sendi
 
 Penjelasan lengkap tentang static methods:
 
-1. Definisi: Static methods adalah method yang terkait dengan class itu sendiri, bukan dengan instance (objek) yang dibuat dari class tersebut.
+1. **Definisi**: Static methods adalah method yang terkait dengan class itu sendiri, bukan dengan instance (objek) yang dibuat dari class tersebut.
 
-2. Deklarasi: Static methods dideklarasikan di dalam class dengan menggunakan kata kunci static sebelum nama method.
+2. **Deklarasi**: Static methods dideklarasikan di dalam class dengan menggunakan kata kunci static sebelum nama method.
 
-3. Aksesibilitas: Static methods dapat diakses langsung melalui class tanpa harus membuat instance objek dari class tersebut.
+3. **Aksesibilitas**: Static methods dapat diakses langsung melalui class tanpa harus membuat instance objek dari class tersebut.
 
-4. Penggunaan: Static methods sering digunakan untuk mengimplementasikan fungsi utilitas yang terkait dengan class tersebut atau sebagai method pembantu untuk class. Mereka seringkali tidak bergantung pada data yang spesifik untuk setiap instance objek, tetapi lebih berkaitan dengan karakteristik umum dari class itu sendiri.
+4. **Penggunaan**: Static methods sering digunakan untuk mengimplementasikan fungsi utilitas yang terkait dengan class tersebut atau sebagai method pembantu untuk class. Mereka seringkali tidak bergantung pada data yang spesifik untuk setiap instance objek, tetapi lebih berkaitan dengan karakteristik umum dari class itu sendiri.
 
 ### ~ TECHNIQUE USING PROTOTYPE INHERITANCE - Object.create :
 
@@ -2014,20 +1999,20 @@ Berikut bentuk pewarisan dalam constructor function, class ES6, dan `Object.crea
 
         // Fungsi konstruktor dasar
         function Animal(nama) {
-            this.nama = nama;
+          this.nama = nama;
         }
 
         // Menambahkan method ke prototype Animal
         Animal.prototype.katakanNama = function() {
-            console.log("Nama saya " + this.nama);
+          console.log("Nama saya " + this.nama);
         }
 
         // Fungsi konstruktor turunan
         function Dog(nama, ras) {
-            // Memanggil fungsi konstruktor dasar dengan menggunakan method "call" untuk mengatur konteks dan meneruskan argumen yang diperlukan
-            Animal.call(this, nama);
+          // Memanggil fungsi konstruktor dasar dengan menggunakan method "call" untuk mengatur konteks dan meneruskan argumen yang diperlukan
+          Animal.call(this, nama);
 
-            this.ras = ras;
+          this.ras = ras;
         }
 
         // Membentuk prototype chain dengan membuat objek baru dengan prototype Animal
@@ -2035,7 +2020,7 @@ Berikut bentuk pewarisan dalam constructor function, class ES6, dan `Object.crea
 
         // Menambahkan method ke prototype Dog
         Dog.prototype.gonggong = function() {
-            console.log("Guk!");
+          console.log("Guk!");
         }
 
         // Membuat instance dari fungsi konstruktor Dog
@@ -2057,25 +2042,25 @@ Berikut bentuk pewarisan dalam constructor function, class ES6, dan `Object.crea
 
         // class dasar (superclass)
         class Animal {
-            constructor(nama) {
-                this.nama = nama;
-            }
+          constructor(nama) {
+            this.nama = nama;
+          }
 
-            katakanNama() {
-                console.log(`Nama saya ${this.nama}`);
-            }
+          katakanNama() {
+            console.log(`Nama saya ${this.nama}`);
+          }
         }
 
         // class turunan (subclass)
         class Dog extends Animal {
-            constructor(nama, ras) {
-                super(nama);
+          constructor(nama, ras) {
+            super(nama);
                 this.ras = ras;
-            }
+          }
 
-            gonggong() {
-                console.log("Guk!");
-            }
+          gonggong() {
+            console.log("Guk!");
+          }
         }
 
         // Membuat instance dari class Dog
@@ -2097,29 +2082,29 @@ Berikut bentuk pewarisan dalam constructor function, class ES6, dan `Object.crea
 
 3.  **Object.Create()**
 
-    Dengan menggunakan `Object.create()`, kita dapat membangun inheritance menggunakan prototype chain dengan lebih fleksibel, di mana objek turunan dapat mewarisi metode-metode dari objek dasar dan menambahkan method atau properti tambahan sesuai kebutuhan. Berikut adalah contoh implementasi inheritance menggunakan `Object.create()` :
+    Dengan menggunakan `Object.create()`, kita dapat membangun inheritance menggunakan prototype chain dengan lebih fleksibel, di mana objek turunan dapat mewarisi method-method dari objek dasar dan menambahkan method atau properti tambahan sesuai kebutuhan. Berikut adalah contoh implementasi inheritance menggunakan `Object.create()` :
 
         // Kelas dasar (superclass)
         const Animal = {
-            init: function(nama) {
-                this.nama = nama;
-            },
+          init: function(nama) {
+            this.nama = nama;
+          },
 
-            katakanNama: function() {
-                console.log(`Nama saya ${this.nama}`);
-            }
+          katakanNama: function() {
+            console.log(`Nama saya ${this.nama}`);
+          }
         };
 
         // Kelas turunan (subclass)
         const Dog = Object.create(Animal);
 
         Dog.init = function(nama, ras) {
-            Animal.init.call(this, nama); // Memanggil metode init dari superclass
-            this.ras = ras;
+          Animal.init.call(this, nama); // Memanggil method init dari superclass
+          this.ras = ras;
         };
 
         Dog.gonggong = function() {
-            console.log("Guk!");
+          console.log("Guk!");
         };
 
         // Membuat instance dari kelas Dog
@@ -2148,9 +2133,9 @@ Encapsulation memungkinkan "mengontrol akses ke komponen itu". Ketika kita memil
 
 2. **Private Class fields dan Methods**
 
-   Proposal untuk private class fields and methods dalam JavaScript saat ini berada di tahap tiga dan belum menjadi bagian dari bahasa JavaScript. Proposal ini memungkinkan kita untuk memiliki field (properti yang akan ada disemua instance) dan metode yang tidak dapat diakses dari luar kelas, mirip dengan properti dan metode private dalam bahasa OOP tradisional seperti Java dan C++.
+   Proposal untuk private class fields and methods dalam JavaScript saat ini berada di tahap tiga dan belum menjadi bagian dari bahasa JavaScript. Proposal ini memungkinkan kita untuk memiliki field (properti yang akan ada disemua instance) dan method yang tidak dapat diakses dari luar kelas, mirip dengan properti dan method private dalam bahasa OOP tradisional seperti Java dan C++.
 
-   Dalam proposal untuk meningkatkan dan mengubah kelas JavaScript yang disebut "class field", ada empat field(properti) dan metode yang akan kita bahas: publick fields, private fields, publick method, dan private method.
+   Dalam proposal untuk meningkatkan dan mengubah kelas JavaScript yang disebut "class field", ada empat field(properti) dan method yang akan kita bahas: publick fields, private fields, publick method, dan private method.
 
    **Publick fields** adalah properti yang akan ada pada semua instance class (jadi, tidak berada di Prototypes) dan dapat diakses melalui kata kunci "this".
 
@@ -2158,13 +2143,13 @@ Encapsulation memungkinkan "mengontrol akses ke komponen itu". Ketika kita memil
 
    **Public method** adalah fungsi yang akan ada di semua instance dari class. Semua method ini akan berada di dalam prototype instance.
 
-   **Private method** sangat berguna untuk menyembunyikan detail implementasi dari luar, karena dengan private method yang hanya dapat diakses dari dalam class. Private method diasosiasikan dengan prototipe, tetapi tidak secara langsung milik prototipe. memiliki private method di class meningkatkan penggunaan memori heap dibandingkan dengan memiliki metode di prototipe.
+   **Private method** sangat berguna untuk menyembunyikan detail implementasi dari luar, karena dengan private method yang hanya dapat diakses dari dalam class. Private method diasosiasikan dengan prototipe, tetapi tidak secara langsung milik prototipe. memiliki private method di class meningkatkan penggunaan memori heap dibandingkan dengan memiliki method di prototipe.
 
    Ada tambahan,
 
    **Static public field** adalah properti yang dimiliki oleh kelas itu sendiri dan dapat diakses tanpa membuat instance.
 
-   **Static method** adalah metode yang didefinisikan pada kelas dan dapat dipanggil langsung pada kelas tanpa membuat instance.
+   **Static method** adalah method yang didefinisikan pada kelas dan dapat dipanggil langsung pada kelas tanpa membuat instance.
 
    Kedua static diatas berguna untuk menyimpan data bersama dan mendefinisikan fungsi utilitas pada level kelas.
 
@@ -2172,7 +2157,7 @@ Encapsulation memungkinkan "mengontrol akses ke komponen itu". Ketika kita memil
 
 <details> <summary>
 
-## [Asynchronous](https://github.com/wahyukmr/JavaScript-Programming/blob/master/17-Asynchronous/script.js)
+## [Asynchronous](https://github.com/wahyukmr/JavaScript-Programming/blob/master/16-Asynchronous/script.js)
 
 </summary>
 
@@ -2217,31 +2202,31 @@ Konsep penting untuk mengelola kode Asynchronous:
     Contoh penggunaan:
 
         function fetchUser(id) {
-            return new Promise((resolve, reject) => {
-                fetch(`http://swapi.dev/api/people/${id}`)
-                .then((response) => {
-                    if (response.ok) {
-                    return response.json();
-                    } else {
-                    throw new Error("Gagal mendapatkan data pengguna.");
-                    }
-                })
-                .then((user) => {
-                    resolve(user);
-                })
-                .catch((error) => {
-                    reject(error);
-                });
-            });
+          return new Promise((resolve, reject) => {
+            fetch(`http://swapi.dev/api/people/${id}`)
+              .then((response) => {
+                if (response.ok) {
+                  return response.json();
+                } else {
+                  throw new Error("Gagal mendapatkan data pengguna.");
+                }
+              })
+              .then((user) => {
+                resolve(user);
+              })
+              .catch((error) => {
+                reject(error);
+              });
+          });
         }
 
         // Menggunakan promise
         fetchUser(1)
         .then((user) => {
-            console.log("Pengguna:", user);
+          console.log("Pengguna:", user);
         })
         .catch((error) => {
-            console.error("Kesalahan:", error);
+          console.error("Kesalahan:", error);
         });
 
 3.  **Asycn/await**
@@ -2318,7 +2303,7 @@ alur pertukaran data antara browser dan server dengan format JSON:
    - kemudian permintaan dikirim dalam bentuk HTTP Request, yang berisi informasi seperti method (GET, POST, dll.), URL, header, dan data payload (jika diperlukan).
 2. Pemrosesan permintaan di server:
    - server menerima HTTP Request dari browser.
-   - server memproses permintaan sesuai dengan metode yang digunakan dan URL yang dituju.
+   - server memproses permintaan sesuai dengan method yang digunakan dan URL yang dituju.
    - jika diperlukan, server dapat memanipulasi atau memperoleh data dari sumber eksternal, seperti basis data.
 3. Pembuatan respons dari server ke browser:
    - server menghasilkan respons yang akan dikirim kembali ke browser.
@@ -2340,7 +2325,7 @@ Awalnya, satu-satunya cara untuk mengirimkan beberapa data formulir ke server ad
 
    AJAX adalah salah satu cara yang dianjurkan untuk melakukan permintaan atau pengiriman HTTP request ke server dari browser. Dengan menggunakan AJAX, kita dapat mengirim permintaan ke server dan menerima responnya secara asynchronous tanpa harus memuat ulang seluruh halaman web. Meskipun namanya mengacu pada XML, sekarang ini biasanya data yang dikirimkan dan diterima menggunakan format JSON.
 
-   AJAX memanfaatkan objek `XMLHttpRequest`(XHR) di JavaScript untuk membuat dan mengelola permintaan HTTP. Ini adalah metode klasik yang telah digunakan sejak lama sebelum adanya fetch API.
+   AJAX memanfaatkan objek `XMLHttpRequest`(XHR) di JavaScript untuk membuat dan mengelola permintaan HTTP. Ini adalah method klasik yang telah digunakan sejak lama sebelum adanya fetch API.
 
    Cara kerja:
 
@@ -2396,7 +2381,7 @@ Berikut adalah beberapa Promise combinator yang umum digunakan:
 
 <details><summary>
 
-## [Modern-JS-Modules-Tooling](https://github.com/wahyukmr/JavaScript-Programming/blob/master/18-Modern-JS-Modules-Tooling/script.js)
+## [Modern-JS-Modules-Tooling](https://github.com/wahyukmr/JavaScript-Programming/blob/master/17-Modern-JS-Modules-Tooling/script.js)
 
 </summary>
 
@@ -2452,37 +2437,37 @@ Pengembang dapat menggunakan terminal atau command line interface (CLI) untuk me
 
 5. `npm update`: Perintah ini digunakan untuk memperbarui semua paket perangkat lunak yang terinstal dalam proyek.
 
-### ~ REVIEW - MODERN and CLEAN CODE :
+### ~ REVIEW - modern and clean code :
 
-1. Mudah di baca
+1. **Mudah di baca**
    - tulis code agar orang lain dapat memahaminya.
    - tulis code agar kita sendiri dapat memahaminya selama satu tahun.
    - hindari solusi yang terlalu "pintar" dan terlalu rumit.
    - gunakan nama variabel yang deskriptif: **apa yang dikandungnya**.
    - gunakan nama fungsi yang deskriptif: **apa yang mereka lakukan**.
-2. Umum
+2. **Umum**
    - gunakan prinsip DRY (refactor code).
    - jangan mengotori **global namespace**, sebagai gantinya gunakan **encapsulation**.
    - jangan gunakan variable `var`.
    - gunakan pemeriksaan tipe yang kuat (`===` dan `!==`).
-3. Functions
+3. **Functions**
    - secara umum, fungsi hanya boleh melakukan satu hal.
    - jangan gunakan lebih dari 3 parameter fungsi.
    - gunakan default parameter jika memungkinkan.
    - umumnya, return tipe data yang sama seperti yang diterima.
    - gunakan arrow function jika ingin membuat kode yang lebih mudah dibaca.
-4. OOP
+4. **OOP**
    - gunakan ES6 Classes
    - selalu encapsulate data dan jangan mengubahnya dari luar Class.
    - implementasikan method chaining.
    - jangan gunakan arrow function sebagai method (dalam object biasa).
-5. Menghindari code yang bersarang
+5. **Menghindari code yang bersarang**
    - gunakan **early return**(Guard clauses : memeriksa kondisi awal atau menguji nilai input pada awal sebuah fungsi atau blok kode, dan jika kondisi tersebut tidak terpenuhi, maka fungsi akan keluar secara dini tanpa melanjutkan eksekusi kode yang tersisa).
    - gunakan operator **ternary**(conditional) atau **logical operaator** daripada `if`.
    - gunakan beberapa `if` daripada `if`/`else-if`.
    - hindari penggunaan **for loop**, gunakan method array sebagai gantinya.
    - hindari penggunaan API Asynchronous berbasis Callback.
-6. Asynchronous Code
+6. **Asynchronous Code**
    - komsumsi Promise dengan async/await untuk kejelasan yang terbaik.
    - bila memungkinkan, jalankan Promise secara paralel (Promise.all).
    - tangani error dan Promise rejections.
@@ -2501,7 +2486,7 @@ Pendekatan imperative dan declarative adalah dua paradigma atau gaya penulisan k
         let sum = 0;
 
         for (let i = 0; i < numbers.length; i++) {
-            sum += numbers[i];
+          sum += numbers[i];
         }
 
     Situasi penggunaan:
