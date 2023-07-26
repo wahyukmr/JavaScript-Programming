@@ -1476,21 +1476,21 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
 
 **Method yang mengubah nilai asli dari array**
 
-- **push(element1, element2, ..., elementX)** = untuk menambahkan satu atau lebih elemen ke akhir array dan mengembalikan panjang array yang baru setelah elemen baru ditambahkan.
+- `push(element1, element2, ..., elementX)` = untuk menambahkan satu atau lebih elemen ke akhir array dan mengembalikan panjang array yang baru setelah elemen baru ditambahkan.
 
-- **unshift(element1, element2, ..., elementX)** = untuk menambahkan satu atau lebih elemen ke awal array dan mengembalikan panjang array yang baru setelah elemen baru ditambahkan.
+- `unshift(element1, element2, ..., elementX)` = untuk menambahkan satu atau lebih elemen ke awal array dan mengembalikan panjang array yang baru setelah elemen baru ditambahkan.
 
-- **pop()** = untuk menghapus dan mengembalikan elemen terakhir dari array.
+- `pop()` = untuk menghapus dan mengembalikan elemen terakhir dari array.
 
-- **shift()** = untuk Menghapus dan mengembalikan elemen pertama dari array, menggeser semua elemen lain ke indeks yang lebih rendah.
+- `shift()` = untuk Menghapus dan mengembalikan elemen pertama dari array, menggeser semua elemen lain ke indeks yang lebih rendah.
 
-- **splice(startIndex, deleteCount, item1, item2, ..., itemX)** = untuk mengubah isi array dengan menghapus, menambahkan, atau mengganti elemen-elemen yang ada. Menghapus sejumlah deleteCount elemen mulai dari startIndex dan, jika diperlukan, menambahkan elemen item1, item2, dan seterusnya ke array. Mengembalikan array yang berisi elemen-elemen yang dihapus.
+- `splice(startIndex, deleteCount, item1, item2, ..., itemX)` = untuk mengubah isi array dengan menghapus, menambahkan, atau mengganti elemen-elemen yang ada. Menghapus sejumlah deleteCount elemen mulai dari startIndex dan, jika diperlukan, menambahkan elemen item1, item2, dan seterusnya ke array. Mengembalikan array yang berisi elemen-elemen yang dihapus.
 
-- **reverse()** = untuk membalik urutan elemen-elemen dalam sebuah array.
+- `reverse()` = untuk membalik urutan elemen-elemen dalam sebuah array.
 
-- **sort(compareFunction)** = untuk mengurutkan elemen-elemen dalam array secara leksikografis atau berdasarkan fungsi pembanding yang ditentukan. Secara default, method ini akan mengurutkan elemen-elemen dalam array berdasarkan urutan karakter Unicode dari nilai-nilai elemen tersebut.
+- `sort(compareFunction)` = untuk mengurutkan elemen-elemen dalam array secara leksikografis atau berdasarkan fungsi pembanding yang ditentukan. Secara default, method ini akan mengurutkan elemen-elemen dalam array berdasarkan urutan karakter Unicode dari nilai-nilai elemen tersebut.
 
-- **fill()** = untuk mengisi semua elemen dalam array dengan nilai yang sama.
+- `fill()` = untuk mengisi semua elemen dalam array dengan nilai yang sama.
 
   Contoh penggunaan:
 
@@ -1506,13 +1506,13 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
 
       console.log(angka); // output: [1, 0, 0, 0, 5]
 
-**Method yang membuat salinan baru dari array**
+`Method yang membuat salinan baru dari array`
 
-- **map(callback(currentValue, index, array), thisArg)** = untuk membuat array baru dengan hasil pemanggilan fungsi callback pada setiap elemen array. Fungsi callback dapat mengubah nilai elemen saat ini dan mengembalikan nilai baru.
+- `map(callback(currentValue, index, array), thisArg)` = untuk membuat array baru dengan hasil pemanggilan fungsi callback pada setiap elemen array. Fungsi callback dapat mengubah nilai elemen saat ini dan mengembalikan nilai baru.
 
-- **filter(callback(currentValue, index, array), thisArg)** = untuk membuat array baru dengan elemen-elemen yang lulus uji kondisi yang ditentukan dalam fungsi callback. Fungsi callback mengembalikan true untuk elemen yang harus disertakan dalam array baru.
+- `filter(callback(currentValue, index, array), thisArg)` = untuk membuat array baru dengan elemen-elemen yang lulus uji kondisi yang ditentukan dalam fungsi callback. Fungsi callback mengembalikan true untuk elemen yang harus disertakan dalam array baru.
 
-- **reduce(callback(accumulator, currentValue, index, array), initialValue)** = untuk menerapkan fungsi callback pada setiap elemen array untuk menghasilkan nilai akhir tunggal. Fungsi callback mengakumulasi nilai menggunakan accumulator dan mengoperasikan currentValue.
+- `reduce(callback(accumulator, currentValue, index, array), initialValue)` = untuk menerapkan fungsi callback pada setiap elemen array untuk menghasilkan nilai akhir tunggal. Fungsi callback mengakumulasi nilai menggunakan accumulator dan mengoperasikan currentValue.
 
   Contoh penggunaan:
 
@@ -1526,7 +1526,7 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
       }, 0);
       console.log(total); // Output: 1070
 
-- **slice(startIndex, endIndex)** = untuk mengambil potongan (subarray) dari array berdasarkan indeks awal dan akhir yang ditentukan, dan mengembalikan subarray tersebut sebagai array baru.
+- `slice(startIndex, endIndex)` = untuk mengambil potongan (subarray) dari array berdasarkan indeks awal dan akhir yang ditentukan, dan mengembalikan subarray tersebut sebagai array baru.
 
   Contoh penggunaan: jika ingin mengambil sub-array dari awal array hingga indeks tertentu, dapat memberikan nilai 0 sebagai indeks awal pada method slice(), seperti berikut:
 
@@ -1536,9 +1536,9 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
       console.log(buah); // output: ['apel', 'mangga', 'pisang', 'jeruk', 'durian']
       console.log(buah2); // output: ['apel', 'mangga', 'pisang']
 
-- **concat(array2, array3, ..., arrayX)** = untuk menggabungkan dua atau lebih array dan mengembalikan array baru yang dihasilkan.
+- `concat(array2, array3, ..., arrayX)` = untuk menggabungkan dua atau lebih array dan mengembalikan array baru yang dihasilkan.
 
-- **flat(depth)** untuk menggabungkan semua elemen pada array, dengan level kedalaman yang ditentukan, ke dalam array baru.
+- `flat(depth)` untuk menggabungkan semua elemen pada array, dengan level kedalaman yang ditentukan, ke dalam array baru.
 
   Contoh penggunaan:
 
@@ -1559,7 +1559,7 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
       arr4.flat(Infinity);
       // output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-- **flatMap()** adalah method pada Array di JavaScript yang menggabungkan dua method yaitu `map()` dan `flat()`. Metode ini melakukan operasi pada setiap elemen array dan mengembalikan array baru yang dihasilkan dari hasil pemetaan elemen-elemen tersebut, kemudian menggabungkan array yang dihasilkan tersebut menjadi satu array dengan level yang sama.
+- `flatMap()` adalah method pada Array di JavaScript yang menggabungkan dua method yaitu `map()` dan `flat()`. Metode ini melakukan operasi pada setiap elemen array dan mengembalikan array baru yang dihasilkan dari hasil pemetaan elemen-elemen tersebut, kemudian menggabungkan array yang dihasilkan tersebut menjadi satu array dengan level yang sama.
 
   Contoh penggunaan:
 
@@ -1590,15 +1590,15 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
 
       console.log(flattenedArr2); // [2, 4, 6, 8, 10, 12]
 
-- **join(separator)** = untuk menggabungkan semua elemen dalam array menjadi sebuah string, dengan memisahkan elemen-elemen tersebut menggunakan separator yang ditentukan.
+- `join(separator)` = untuk menggabungkan semua elemen dalam array menjadi sebuah string, dengan memisahkan elemen-elemen tersebut menggunakan separator yang ditentukan.
 
-- **forEach(callback(currentValue, index, array), thisArg)** = untuk menjalankan fungsi callback pada setiap elemen array, dengan argumen berupa `currentValue`, `index`, dan `array`. Opsi `thisArg` dapat digunakan untuk menentukan konteks this dalam pemanggilan fungsi callback.
+- `forEach(callback(currentValue, index, array), thisArg)` = untuk menjalankan fungsi callback pada setiap elemen array, dengan argumen berupa `currentValue`, `index`, dan `array`. Opsi `thisArg` dapat digunakan untuk menentukan konteks this dalam pemanggilan fungsi callback.
 
   method `forEach()` tidak mengembalikan nilai apa pun dan hanya digunakan untuk menjalankan fungsi pada setiap elemen pada array. Oleh karena itu, method `forEach()` tidak dapat digunakan untuk mengubah elemen pada array seperti halnya method `map()`. Namun, kita masih dapat memanfaatkan `forEach()` untuk melakukan operasi yang diperlukan pada setiap elemen pada array, seperti menghitung nilai atau memanggil fungsi lain pada setiap elemen.
 
 **Method untuk mencari index atau elemen**
 
-- **indexOf(searchElement, fromIndex)** = untuk mengembalikan indeks pertama kali ditemukannya `searchElement` dalam array. Jika tidak ditemukan, mengembalikan -1.
+- `indexOf(searchElement, fromIndex)` = untuk mengembalikan indeks pertama kali ditemukannya `searchElement` dalam array. Jika tidak ditemukan, mengembalikan -1.
 
   Contoh penggunaan:
 
@@ -1607,7 +1607,7 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
 
       console.log(index); // output: 5
 
-- **findIndex(callback(currentValue, index, array), thisArg)** = untuk mencari indeks dari elemen pertama pada sebuah array yang memenuhi kondisi tertentu. Jika tidak ada elemen yang memenuhi kondisi tersebut, maka method ini akan mengembalikan nilai -1.
+- `findIndex(callback(currentValue, index, array), thisArg)` = untuk mencari indeks dari elemen pertama pada sebuah array yang memenuhi kondisi tertentu. Jika tidak ada elemen yang memenuhi kondisi tersebut, maka method ini akan mengembalikan nilai -1.
 
   Contoh penggunaan:
 
@@ -1625,7 +1625,7 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
 
       console.log(index); // output: 3
 
-- **find(callback(currentValue, index, array), thisArg)** = untuk mencari elemen pertama pada sebuah array yang memenuhi kondisi tertentu. Jika tidak ada elemen yang memenuhi kondisi tersebut, maka method ini akan mengembalikan nilai undefined.
+- `find(callback(currentValue, index, array), thisArg)` = untuk mencari elemen pertama pada sebuah array yang memenuhi kondisi tertentu. Jika tidak ada elemen yang memenuhi kondisi tersebut, maka method ini akan mengembalikan nilai undefined.
 
   Contoh panggunaan:
 
@@ -1645,7 +1645,7 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
 
 **Method untuk mengecek ada atau tidaknya elemen pada array**
 
-- **includes(element, start)** = untuk memeriksa apakah sebuah nilai tertentu terdapat pada sebuah array. Jika nilai tersebut ditemukan, maka method ini akan mengembalikan nilai true. Jika tidak ditemukan, maka method ini akan mengembalikan nilai false.
+- `includes(element, start)` = untuk memeriksa apakah sebuah nilai tertentu terdapat pada sebuah array. Jika nilai tersebut ditemukan, maka method ini akan mengembalikan nilai true. Jika tidak ditemukan, maka method ini akan mengembalikan nilai false.
 
   Contoh penggunaan:
 
@@ -1665,7 +1665,7 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
       let check2 = arr.includes(2, 3);
       console.log(check2); // output: false
 
-- **some(callback(currentValue, index, array), thisArg)** = untuk memeriksa apakah setidaknya satu elemen pada array memenuhi kondisi tertentu yang diuji oleh sebuah fungsi. Method ini akan mengembalikan nilai true jika setidaknya satu elemen pada array memenuhi kondisi tersebut, dan mengembalikan nilai false jika tidak ada elemen yang memenuhi kondisi.
+- `some(callback(currentValue, index, array), thisArg)` = untuk memeriksa apakah setidaknya satu elemen pada array memenuhi kondisi tertentu yang diuji oleh sebuah fungsi. Method ini akan mengembalikan nilai true jika setidaknya satu elemen pada array memenuhi kondisi tersebut, dan mengembalikan nilai false jika tidak ada elemen yang memenuhi kondisi.
 
   Contoh penggunaan:
 
@@ -1691,7 +1691,7 @@ Sebisa mungkin untuk membuat fungsi yang meminimalkan **Side-effects** (fungsi y
       });
       console.log(check); // output: true
 
-- **every(callback(currentValue, index, array), thisArg)** = untuk memeriksa apakah semua elemen pada array memenuhi kondisi tertentu yang diuji oleh sebuah fungsi. Method ini akan mengembalikan nilai true jika semua elemen pada array memenuhi kondisi tersebut, dan mengembalikan nilai false jika ada setidaknya satu elemen yang tidak memenuhi kondisi.
+- `every(callback(currentValue, index, array), thisArg)` = untuk memeriksa apakah semua elemen pada array memenuhi kondisi tertentu yang diuji oleh sebuah fungsi. Method ini akan mengembalikan nilai true jika semua elemen pada array memenuhi kondisi tersebut, dan mengembalikan nilai false jika ada setidaknya satu elemen yang tidak memenuhi kondisi.
 
   Contoh penggunaan:
 
