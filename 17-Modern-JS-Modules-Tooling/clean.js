@@ -116,5 +116,7 @@ function logBigExpenses(state, bigLimit) {
   console.log(bigExpenses);
 }
 
+// The original data remains unchanged.
 console.log(budget);
+
 logBigExpenses(finalBudget, 500);
