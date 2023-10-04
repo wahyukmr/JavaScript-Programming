@@ -2526,15 +2526,17 @@ Functional Programming dan penulisan declarative code telah menjadi cara penulis
 
 **Functional programming** dapat dianggap sebagai salah satu cara untuk mencapai pemrograman declarative, yang didasarkan pada gagasan menulis software dengan menggabungkan banyak **pure functions**, menghindari **side effects**, dan **mutating** data.
 
-**Side Effects** adalah sesuatu yang dilakukan fungsi untuk mempengaruhi atau memodifikasi data apapun yang berada di luar fungsi. Contohnya mengubah variabel apapun yang berada diluar scope fungsi akan menyebabkan side effect, memasukkan sesuatu ke console serta mengubah sesuatu di DOM.
+Beberapa konsep dan ide dalam functional programming:
 
-**Pure Functions** berarti fungsi tanpa Side Effects, fungsi yang hanya bergantung pada input yang diberikan dan tidak mempengaruhi environment lain di luar fungsi.
+- **Side Effects** adalah sesuatu yang dilakukan fungsi untuk mempengaruhi atau memodifikasi data apapun yang berada di luar fungsi. Contohnya mengubah variabel apapun yang berada diluar scope fungsi akan menyebabkan side effect, memasukkan sesuatu ke console serta mengubah sesuatu di DOM.
 
-**Immutability** berarti State (data) tidak dapat diubah atau dimodifikasi. Daripada mengubah State asli, FP mendorong pembuatan salinan State dan momodifikasinya sesuai keinginan (dapat mencegah Side Effect).
+- **Pure Functions** berarti fungsi tanpa Side Effects, fungsi yang hanya bergantung pada input yang diberikan dan tidak mempengaruhi environment lain di luar fungsi.
 
-**First-class Functions** berarti dapat menyimpan fungsi dalam variable, mengirimkannya sebagai argument ke fungsi lain, atau mengembalikan fungsi dari fungsi lain.
+- **Immutability** berarti State (data) tidak dapat diubah atau dimodifikasi. Daripada mengubah State asli, FP mendorong pembuatan salinan State dan momodifikasinya sesuai keinginan (dapat mencegah Side Effect).
 
-**higher-order Functions** berarti fungsi yang menerima fungsi lain sebagai argumen atau mengembalikan fungsi. memungkinkan penggunaan pola seperti map, filter, reduce, dan lainnya.
+- **First-class Functions** berarti dapat menyimpan fungsi dalam variable, mengirimkannya sebagai argument ke fungsi lain, atau mengembalikan fungsi dari fungsi lain.
+
+- **higher-order Functions** berarti fungsi yang menerima fungsi lain sebagai argumen atau mengembalikan fungsi. memungkinkan penggunaan pola seperti map, filter, reduce, dan lainnya.
 
 Jadi, FP adalah pendekatan yang lebih spesifik dalam penggunaan **fungsi**, sementara Declarative Programming adalah pendekatan yang lebih umum di mana kita menyatakan **apa yang harus dicapai tanpa memberikan instruksi langkah-demi-langkah yang spesifik**. FP dapat membantu mencapai pendekatan declarative dalam pemrograman, tetapi paradigma declarative dapat diterapkan dalam berbagai paradigma pemrograman lainnya juga (seperti OOP, pendekatan imperative, Logical Programming, Constraint Programming, dan sebagainya) tergantung kebutuhan project.
 
