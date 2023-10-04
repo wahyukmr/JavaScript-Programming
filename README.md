@@ -2528,7 +2528,7 @@ Functional Programming dan penulisan declarative code telah menjadi cara penulis
 
 Beberapa konsep dan ide dalam functional programming:
 
-- **Side Effects** adalah sesuatu yang dilakukan fungsi untuk mempengaruhi atau memodifikasi data apapun yang berada di luar fungsi. Contohnya mengubah variabel apapun yang berada diluar scope fungsi akan menyebabkan side effect, memasukkan sesuatu ke console serta mengubah sesuatu di DOM.
+- **Side Effects** adalah sesuatu yang dilakukan fungsi untuk mempengaruhi atau memodifikasi data apapun yang berada di luar fungsi. Contohnya mengubah nilai variabel di luar fungsi itu sendiri atau bahkan bergantung pada variabel luar, memanggil API Browser (bahkan console itu sendiri!), serta mengubah sesuatu di DOM.
 
 - **Pure Functions** berarti fungsi tanpa Side Effects, fungsi yang hanya bergantung pada input yang diberikan dan tidak mempengaruhi environment lain di luar fungsi.
 
@@ -2536,7 +2536,9 @@ Beberapa konsep dan ide dalam functional programming:
 
 - **First-class Functions** berarti dapat menyimpan fungsi dalam variable, mengirimkannya sebagai argument ke fungsi lain, atau mengembalikan fungsi dari fungsi lain.
 
-- **higher-order Functions** berarti fungsi yang menerima fungsi lain sebagai argumen atau mengembalikan fungsi. memungkinkan penggunaan pola seperti map, filter, reduce, dan lainnya.
+  Dengan kata lain, fungsi dalam JavaScript hanyalah sebuah nilai - dari sudut pandang ini, hampir tidak ada bedanya dengan string atau number.
+
+- **higher-order Functions** berarti dapat mengoper sebuah fungsi ke fungsi lain, atau mengembalikan fungsi dari fungsi lain. memungkinkan penggunaan pola seperti map, filter, reduce, dan lainnya.
 
 Jadi, FP adalah pendekatan yang lebih spesifik dalam penggunaan **fungsi**, sementara Declarative Programming adalah pendekatan yang lebih umum di mana kita menyatakan **apa yang harus dicapai tanpa memberikan instruksi langkah-demi-langkah yang spesifik**. FP dapat membantu mencapai pendekatan declarative dalam pemrograman, tetapi paradigma declarative dapat diterapkan dalam berbagai paradigma pemrograman lainnya juga (seperti OOP, pendekatan imperative, Logical Programming, Constraint Programming, dan sebagainya) tergantung kebutuhan project.
 
