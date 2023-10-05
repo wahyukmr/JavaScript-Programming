@@ -1876,7 +1876,7 @@ Ada 4 prinsip utama dalam OOP, dan mereka adalah:
 
 4. **Polymorphism:**
 
-   Memungkinkan object untuk mengambil banyak bentuk, sehingga method yang sama dapat berperilaku berbeda pada object yang berbeda.
+   Memungkinkan object untuk mengambil banyak bentuk, sehingga dapat menggunakan method yang sama dari kelas dasar, tetapi mengimplementasikannya kembali dengan perilaku yang berbeda di kelas sub.
 
    Contoh penerapan konsep:
 
